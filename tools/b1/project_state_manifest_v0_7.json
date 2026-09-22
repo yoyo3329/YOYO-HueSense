@@ -1,0 +1,34 @@
+{
+  "manifest_version": "0.7.0",
+  "current_phase": "CANDIDATE_FROZEN_WAITING_HUMAN_VALIDATION",
+  "updated_at": "2026-09-10T15:18:32.892Z",
+  "foundation": {
+    "v0_6d1": "PASS_REQUIRED_PREREQUISITE"
+  },
+  "perceptual_relation": {
+    "v0_5": {
+      "status": "FAILED_BOUNDARY_STRESS_REDESIGN_REQUIRED",
+      "tone": "2/9",
+      "high_confidence_contradictions": "7/9",
+      "production_eligible": false
+    },
+    "v0_7": {
+      "stage": "CANDIDATE_FROZEN_WAITING_HUMAN_VALIDATION",
+      "production_eligible": false,
+      "universality_status": "UNVALIDATED",
+      "independent_validation": null
+    }
+  },
+  "research_discipline": {
+    "retired_holdout": "TAXONOMY_ONLY",
+    "fresh_train_count": 24,
+    "independent_validation_count": 12,
+    "validation_sealed_until_candidate_freeze": true,
+    "direct_human_required": true,
+    "ai_agreement_is_gold": false,
+    "validation_retuning_forbidden": true
+  },
+  "live_runtime": {
+    "integrated": false
+  }
+}

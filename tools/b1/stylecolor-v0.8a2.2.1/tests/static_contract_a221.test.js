@@ -1,0 +1,21 @@
+'use strict';
+const fs=require('fs'),path=require('path');
+const root=path.resolve(__dirname,'..'),cfg=JSON.parse(fs.readFileSync(path.join(root,'config','stylecolor_v0_8a2_2_1.config.json'),'utf8')),q=fs.readFileSync(path.join(root,'python','evidence_integrity_a221.py'),'utf8');
+let p=0,f=0;function t(x,s){console.log((x?'PASS  ':'FAIL  ')+s);x?p++:f++}
+t(cfg.authority==='NONE','authority NONE');
+t(cfg.model_inference==='NONE_POSTPROCESS_ONLY','postprocess only');
+t(cfg.role_semantics==='OVERLAPPING_ROLE_EVIDENCE_NOT_CLASS_TRUTH','role evidence not role truth');
+t(cfg.role_authority_matrix.GLOBAL_CONTEXT_CANDIDATE.local_recovery_authority===false,'global context local recovery forbidden');
+t(cfg.role_authority_matrix.BACKGROUND_PLANE_CANDIDATE.local_recovery_authority===false,'background plane local recovery forbidden');
+t(cfg.role_authority_matrix.AMBIGUOUS.local_recovery_authority===false,'ambiguous local recovery forbidden');
+t(cfg.role_authority_matrix.LOCAL_COMPONENT_CANDIDATE.local_recovery_authority===true,'local component may provide local recovery evidence');
+t(q.includes('foundation_union_coverage_local_authority_eligible'),'local-authority coverage implemented');
+t(q.includes('unique_coverage_weighted_mean'),'descriptive weighted recovery implemented');
+t(q.includes('unstable_unique_coverage_fraction'),'stability tail impact implemented');
+t(q.includes('semantic_prompt_evidence'),'semantic prior formally downgraded to semantic prompt evidence');
+t(q.includes('NON_DISCRIMINATIVE_FEATURE_WARNING'),'semantic vector discrimination diagnostic implemented');
+t(q.includes('evidence_generation_provenance'),'evidence-level provenance implemented');
+t(q.includes('UPSTREAM_INFERENCE_ENVIRONMENT_NOT_CLEANLY_CERTIFIED'),'upstream inference environment cannot be washed clean');
+t(q.includes('HOLD_EVIDENCE_LAYER_VALIDATION'),'strict Go/No-Go hold implemented');
+t(cfg.forbidden.includes('STYLE_GRAPH')&&cfg.forbidden.includes('PRODUCTION_INTEGRATION'),'Style Graph / production forbidden');
+console.log(`\n${p}/${p+f} A2.2.1 static contract ${f?'FAIL':'PASS'}`);process.exit(f?1:0);

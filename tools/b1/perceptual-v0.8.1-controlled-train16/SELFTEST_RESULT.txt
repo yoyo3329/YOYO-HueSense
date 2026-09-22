@@ -1,0 +1,42 @@
+=== YOYO v0.8.1 Controlled Fresh Chroma Train16 ===
+Usable B3 modes        : 53
+sRGB-safe modes        : 53
+Historical+pilot excl. : 81
+Fresh candidate pairs  : 991
+Selected cases         : 16
+LOW_LOW             : 4
+LOW_MIDHIGH         : 4
+MEDIUM_MEDIUM       : 4
+MIDHIGH_HIGH        : 4
+Max same-stratum run   : 2
+Queue SHA-256          : 1463d70becbde510dd14aec38bc3a7d11d08ea62701ae5596dc1c2d5ba29764a
+Status                 : PREPARED_WAITING_DIRECT_HUMAN_BLIND_CONTROLLED_TRAIN
+Built controlled blind lab: /mnt/data/YOYO_PERCEPTUAL_v0.8.1_CONTROLLED_CHROMA_TRAIN16/_selftest_output/v0_8_1_controlled_chroma_blind_lab.html
+PASS  case_count = 16
+PASS  LOW_LOW = 4
+PASS  LOW_MIDHIGH = 4
+PASS  MEDIUM_MEDIUM = 4
+PASS  MIDHIGH_HIGH = 4
+PASS  pair keys unique
+PASS  prior pilot pairs explicitly excluded
+PASS  all selected stimuli sRGB-safe
+PASS  sequence guard max run <= 2
+PASS  neutral surround = #777777
+PASS  initial adaptation = 5000ms
+PASS  inter-stimulus interval = 600ms
+PASS  lightness-interference flag enabled
+PASS  candidate predictions not used
+PASS  historical answers not used
+PASS  independent validation not materialized
+PASS  queue commitment SHA-256 exact match
+PASS  presentation manifest SHA-256 exact match
+
+18/18 controlled Train16 gates PASS.
+PASS  controlled UI uses neutral gray surround
+PASS  stimulus has no visual shadow
+PASS  display gamut capability captured
+PASS  optional lightness-interference flag exported
+PASS  adaptation interval encoded
+PASS  inter-stimulus interval encoded
+
+6/6 controlled UI static checks PASS.

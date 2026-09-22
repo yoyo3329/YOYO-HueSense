@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.8a1.1",
+  "name": "YOYO v0.8-A.1.1 Stable Atomic Regions + Relationship Diagnostics",
+  "version": "0.8a1.1",
+  "created_at": "2026-09-12T04:25:49.720Z",
+  "scope": "OFFLINE_POC_ONLY",
+  "b1_path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\y2k_color_mvp_b1_observations.json",
+  "b1_sha256": "cab25c3558081b402791cb486143b526b12c478fad68c1084743f7bd947f84cf",
+  "config_path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\stylecolor-v0.8a1.1\\config\\stylecolor_v0_8a1.config.json",
+  "config_sha256": "9406cc6bdcb0da87e3a0e6fe3d98d652f666a244c6245535cec05a9c491725e9",
+  "node_version": "v24.18.0",
+  "python_executable": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\stylecolor-v0.8a1.1\\.venv\\Scripts\\python.exe",
+  "platform": {
+    "os": "win32",
+    "release": "10.0.26200",
+    "arch": "x64"
+  },
+  "architecture": {
+    "atomic_regions_immutable": true,
+    "destructive_merge": false,
+    "relationship_graph": true,
+    "style_graph": false,
+    "semantic_prior": "DEFERRED_TO_v0.8-A.2",
+    "embedding_agreement": "DEFERRED_TO_v0.8-A.2"
+  },
+  "score_semantics": "HEURISTIC_SCORES_NOT_CALIBRATED_PROBABILITIES",
+  "clip": {
+    "available": true,
+    "device": "cpu",
+    "model": "ViT-B-32",
+    "ok": true,
+    "pretrained": "openai",
+    "status": "ready",
+    "regions_total": 317,
+    "regions_requested": 250,
+    "regions_scored": 250,
+    "regions_error": 0,
+    "selection_policy": "DIVERSIFIED_AREA_SALIENCY_MINORITY_CONTRAST"
+  },
+  "safety": {
+    "production_app_js_touched": false,
+    "live_runtime_integrated": false,
+    "no_destructive_merge": true,
+    "no_style_graph": true
+  }
+}

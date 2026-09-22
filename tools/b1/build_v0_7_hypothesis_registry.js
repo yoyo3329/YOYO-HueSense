@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+'use strict';const U=require('./v0_7_common.js');
+const out={metadata:{name:'YOYO v0.7 Generalized Hypothesis Registry',version:'0.7.0',status:'PREREGISTERED_UNVALIDATED',created_before_new_human_labels:true},discipline:{retired_holdout_role:'FAILURE_TAXONOMY_ONLY',no_case_specific_rules:true,no_mode_specific_rules:true,no_thresholds_copied_from_retired_holdout:true,new_validation_labels_hidden_until_candidate_frozen:true,validation_cannot_retune_candidate:true},hypotheses:[
+{id:'H_L_AXIS',statement:'Perceived lightness relation should be modeled as its own ordered relation using objective lightness separation, rather than inferred from a combined Tone score.',status:'UNVALIDATED'},
+{id:'H_C_AXIS',statement:'Perceived chroma/vividness relation should be modeled separately from lightness and hue applicability.',status:'UNVALIDATED'},
+{id:'H_T_DECOMPOSE',statement:'Overall Tone should be predicted from a small pre-registered family of rules over independently estimated lightness and chroma relations, not from a mode-specific exception table.',status:'UNVALIDATED'},
+{id:'H_HUE_SPLIT',statement:'Hue applicability and hue relation are distinct decisions; low-chroma applicability must be evaluated before comparing hue.',status:'UNVALIDATED'},
+{id:'H_CONFIDENCE',statement:'A candidate that has not passed independent validation must not emit production-grade high-confidence authority merely from distance to a fitted threshold.',status:'UNVALIDATED'}
+],pre_registered_tone_rule_family:['CONSENSUS_AXES','CONSERVATIVE_DIFFERENT','LIGHTNESS_DOMINANT','CHROMA_DOMINANT'],forbidden_examples:['if case_id === ...','if mode_id === mode_09 ...','special Y2K pair overrides','retune after reading validation labels']};
+U.write('v0_7_hypothesis_registry.json',out);console.log('Hypothesis registry: 5 generalized hypotheses / 4 pre-registered Tone rule families.');

@@ -1,0 +1,21 @@
+=== YOYO v0.8 Stage A Fresh Chroma Train Queue ===
+Usable B3 modes       : 53
+Historical pairs excl.: 65
+Fresh candidate pairs : 1313
+Selected cases        : 16
+LOW_LOW             : 4
+LOW_MIDHIGH         : 4
+MEDIUM_MEDIUM       : 4
+MIDHIGH_HIGH        : 4
+Queue SHA-256         : a26426d397082e5561cf27be3e4ddc48ef66ca3c7ef8d5e1a94609a2f55d0d1d
+Status                : PREPARED_WAITING_DIRECT_HUMAN_BLIND_TRAIN
+PASS  exactly 16 fresh Train cases selected
+PASS  strata are exactly 4/4/4/4
+PASS  all selected pair keys are unique
+PASS  retired labels/predictions were not used for selection
+PASS  historical pairs are exclusion-only
+PASS  independent validation is NOT materialized
+PASS  human UI hides numeric physical features and model outputs
+PASS  commitment hashes queue before human labels
+
+8/8 v0.8 Stage A Train16 checks PASS.

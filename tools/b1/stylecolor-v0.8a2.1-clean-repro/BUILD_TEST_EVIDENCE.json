@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.8a2.1-clean-repro-build-test",
+  "created_at": "2026-09-12T17:15:58Z",
+  "static_contract": "12/12 PASS",
+  "synthetic_topology": "PASS",
+  "python_syntax": "PASS",
+  "node_syntax": "PASS",
+  "drift_comparator_same_run": {
+    "old_masks": 440,
+    "new_masks": 440,
+    "mutual_iou_median": 1.0,
+    "high_geometry_embedding_cosine_median": 1.0,
+    "semantic_mean_abs_delta_median": 0.0,
+    "graph_retention": 1.0,
+    "neighbor_margin_delta_median": 0.0
+  },
+  "real_model_inference_in_build_environment": "NOT_RUN_NO_NETWORK_MODEL_ENV",
+  "claim": "PACKAGE_ENGINEERING_TEST_ONLY_NOT_EVIDENCE_VALIDATION"
+}

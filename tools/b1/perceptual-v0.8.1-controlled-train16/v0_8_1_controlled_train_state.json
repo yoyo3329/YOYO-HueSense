@@ -1,0 +1,14 @@
+{
+  "status": "PREPARED_WAITING_DIRECT_HUMAN_BLIND_CONTROLLED_TRAIN",
+  "cases": 16,
+  "prior_pilot_pairs_excluded": true,
+  "gamut_audit": {
+    "usable_modes_total": 53,
+    "srgb_safe_modes": 53,
+    "srgb_unsafe_modes": 0,
+    "selected_cases_all_srgb_safe": true
+  },
+  "max_same_stratum_run": 2,
+  "queue_sha256": "13fc3e8c698e1cf42d66d0e4efeb4770555a36f2435151485e75fc114d72149a",
+  "next": "Open v0_8_1_controlled_chroma_blind_lab.html, keep normal browser zoom, label all 16 cases without AI, export JSON."
+}

@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "name": "YOYO Shadow Pipeline v0.3 Node Microbenchmark",
+    "version": "0.3.0",
+    "environment": "Node.js local synthetic benchmark",
+    "browser_claim": false,
+    "note": "This is a development microbenchmark only. It does not prove Chrome/Safari/mobile performance."
+  },
+  "rows": [
+    {
+      "items": 30,
+      "samples": 100,
+      "p50_ms": 0.0459,
+      "p95_ms": 0.123,
+      "max_ms": 0.2451
+    },
+    {
+      "items": 60,
+      "samples": 100,
+      "p50_ms": 0.0572,
+      "p95_ms": 0.1591,
+      "max_ms": 0.209
+    },
+    {
+      "items": 120,
+      "samples": 100,
+      "p50_ms": 0.0973,
+      "p95_ms": 0.192,
+      "max_ms": 0.3227
+    }
+  ]
+}

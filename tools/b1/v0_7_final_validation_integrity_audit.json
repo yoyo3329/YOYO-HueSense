@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7.0b Final Validation Integrity Audit",
+    "version": "0.7.0b",
+    "status": "PASS"
+  },
+  "summary": {
+    "pass": 20,
+    "total": 20,
+    "fail": 0
+  },
+  "result_status": "PILOT_FAIL_REDESIGN_REQUIRED",
+  "checks": [
+    {
+      "id": "validation authority DIRECT_HUMAN_BLIND",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "validation AI assistance false",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "validation algorithm outputs hidden",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "validation has exactly 12 cases",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "validation pair order exactly matches materialized queue",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "validation pair digest matches pre-train commitment",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "train/validation overlap is zero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "candidate config hash unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "candidate code hash unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "train labels hash unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "validation exported after freeze",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "report says commitment verified",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "report says no validation retuning",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "report production gate remains false",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "report universality remains UNVALIDATED",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "retirement blocks training",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "retirement blocks threshold tuning",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "retirement blocks formula selection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "retirement blocks reuse as independent validation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "report status matches preregistered gate",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

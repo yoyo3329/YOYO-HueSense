@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "name": "YOYO Safe Foundation Integrity Audit v0.6D",
+    "version": "0.6D",
+    "status": "PASS"
+  },
+  "summary": {
+    "pass": 34,
+    "total": 34,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "id": "file exists: reference-discovery-contract-v0_1.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: reference-manifest-contract-v0_1.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: cache-manifest-contract-v0_1.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: evaluation-set-contract-v0_1.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: data-readiness-gate-v0_1.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: data_ingestion_policy_v0_6d.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: build_reference_manifest_v0_6d.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: build_cache_manifest_v0_6d.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: build_generic_evaluation_set_v0_6d.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: run_reference_quality_audit_v0_6d.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: apply_workspace_ingestion_v0_6d.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "file exists: run_cross_style_preflight_v0_6d.js",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "v0.6C.1 prior safety still PASS",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Y2K reference manifest has 24 migrated records",
+      "pass": true,
+      "detail": "got 24"
+    },
+    {
+      "id": "Y2K migration is explicitly not a new discovery run",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Y2K reference manifest contains no human/AI labels",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Y2K cache is complete",
+      "pass": true,
+      "detail": "24/24"
+    },
+    {
+      "id": "Y2K reference audit PASS",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Y2K query families >= 3",
+      "pass": true,
+      "detail": "got 4"
+    },
+    {
+      "id": "Y2K source concentration <= 0.5",
+      "pass": true,
+      "detail": "got 0.08333333333333333"
+    },
+    {
+      "id": "Y2K observed URL failure ratio <= 0.2",
+      "pass": true,
+      "detail": "got 0.08333333333333333"
+    },
+    {
+      "id": "Y2K unresolved cache misses = 0",
+      "pass": true,
+      "detail": "got 0"
+    },
+    {
+      "id": "Y2K fallback recovery is explicit",
+      "pass": true,
+      "detail": "got 2"
+    },
+    {
+      "id": "Y2K evaluation set has 24 cached items",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Raw Reference Discovery cannot directly become eval set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Y2K DATA_READY gate PASS",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Workspace auto-ingestion is sidecar-only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Quiet Luxury dry-run PASS expected pending",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Quiet Luxury remains DATA_PENDING",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Quiet Luxury fake references = 0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Quiet Luxury pipeline not run",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Cross-style preflight PASS",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Cross-style accuracy claim remains false",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "Live runtime integration remains OFF",
+      "pass": true,
+      "detail": null
+    }
+  ]
+}

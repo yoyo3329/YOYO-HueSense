@@ -1,0 +1,10 @@
+PASS  end-to-end LOCAL pipeline returns authority NONE
+PASS  fake candidate is deterministic for identical input
+PASS  ABSTAIN items never receive a shadow rank
+PASS  DELTA batch processes only newly appended items
+PASS  route change before deferred execution blocks candidate work
+PASS  OFF runner produces DISABLED shadow output, never ranking authority
+PASS  WORKER mode is intentionally blocked in v0.3
+PASS  Shadow projection does not expose raw provider payload
+
+8/8 Shadow Pipeline v0.3 checks PASS.

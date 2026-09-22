@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.8a2.2.1",
+  "name": "YOYO v0.8-A.2.2.1 Evidence Provenance & Authority Hotfix",
+  "authority": "NONE",
+  "model_inference": "NONE_POSTPROCESS_ONLY",
+  "upstream_required": "v0.8-A.2.2 + referenced v0.8-A.2.1 inference run",
+  "role_semantics": "OVERLAPPING_ROLE_EVIDENCE_NOT_CLASS_TRUTH",
+  "role_authority_matrix": {
+    "GLOBAL_CONTEXT_CANDIDATE": {
+      "scene_context_allowed": true,
+      "palette_context_allowed": true,
+      "local_split_authority": false,
+      "local_group_authority": false,
+      "local_recovery_authority": false
+    },
+    "BACKGROUND_PLANE_CANDIDATE": {
+      "scene_context_allowed": true,
+      "palette_context_allowed": true,
+      "local_split_authority": false,
+      "local_group_authority": false,
+      "local_recovery_authority": false
+    },
+    "LOCAL_COMPONENT_CANDIDATE": {
+      "scene_context_allowed": "AUXILIARY",
+      "palette_context_allowed": true,
+      "local_split_authority": true,
+      "local_group_authority": true,
+      "local_recovery_authority": true
+    },
+    "NESTED_COMPONENT_CANDIDATE": {
+      "scene_context_allowed": "AUXILIARY",
+      "palette_context_allowed": true,
+      "local_split_authority": true,
+      "local_group_authority": true,
+      "local_recovery_authority": true
+    },
+    "AMBIGUOUS": {
+      "scene_context_allowed": "AUXILIARY",
+      "palette_context_allowed": "AUXILIARY",
+      "local_split_authority": false,
+      "local_group_authority": false,
+      "local_recovery_authority": false
+    }
+  },
+  "role_authority_policy": {
+    "preserve_all_masks": true,
+    "allow_role_overlap": true,
+    "forbid_scalar_role_truth": true,
+    "conservative_resolution": "ANY_FALSE_LOCAL_AUTHORITY_EVIDENCE_BLOCKS_LOCAL_AUTHORITY_AT_THIS_STAGE",
+    "future_independent_evidence_may_reopen_authority": true,
+    "no_authority_override_executed_in_this_hotfix": true
+  },
+  "recovery_policy": {
+    "raw_and_local_both_required": true,
+    "distribution_fields": [
+      "candidate_count",
+      "positive_ratio",
+      "negative_ratio",
+      "zero_ratio",
+      "median",
+      "p25",
+      "p75",
+      "best",
+      "unique_coverage_weighted_mean",
+      "unique_coverage_weighted_positive_gain"
+    ],
+    "descriptive_weight": "MASK_UNIQUE_COVERAGE_ONLY_NOT_DECISION_WEIGHT"
+  },
+  "semantic_prompt_evidence_policy": {
+    "top_label_authority": "NONE",
+    "pairwise_cosine_warning_median": 0.99,
+    "pairwise_cosine_warning_p05": 0.98,
+    "semantics": "DIAGNOSTIC_WARNING_ONLY_NOT_ROUTING_OR_GROUPING_AUTHORITY"
+  },
+  "stability_tail_thresholds": [0.9, 0.8, 0.5],
+  "go_no_go_required_checks": [
+    "GLOBAL_MASK_LOCAL_RECOVERY_BLOCKED",
+    "STICKER_SPLIT_RETAINED",
+    "FASHION_MIXED_UNKNOWN_RETAINED",
+    "STABILITY_MEANINGFUL_TAIL_EXPOSED",
+    "SEMANTIC_AMBIGUITY_NOT_CLASS_TRUTH",
+    "UPSTREAM_INFERENCE_ENVIRONMENT_CLEANLY_CERTIFIED"
+  ],
+  "forbidden": [
+    "DESTRUCTIVE_MASK_DELETE",
+    "SCENE_CONTEXT_AS_LOCAL_RECOVERY_AUTHORITY",
+    "AMBIGUOUS_ROLE_AS_LOCAL_RECOVERY_AUTHORITY",
+    "ROLE_AS_GROUND_TRUTH",
+    "SEMANTIC_TOP_LABEL_AS_TRUTH",
+    "MNN_AS_GROUPING_AUTHORITY",
+    "FINAL_PROPOSAL_INFORMATION_SCORE",
+    "STYLE_GRAPH",
+    "PRODUCTION_INTEGRATION",
+    "RETROACTIVE_ENVIRONMENT_CLEAN_CLAIM"
+  ]
+}

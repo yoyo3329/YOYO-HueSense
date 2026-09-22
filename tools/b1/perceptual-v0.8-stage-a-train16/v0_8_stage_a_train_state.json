@@ -1,0 +1,14 @@
+{
+  "status": "PREPARED_WAITING_DIRECT_HUMAN_BLIND_TRAIN",
+  "cases": 16,
+  "strata": {
+    "LOW_LOW": 4,
+    "LOW_MIDHIGH": 4,
+    "MEDIUM_MEDIUM": 4,
+    "MIDHIGH_HIGH": 4
+  },
+  "historical_pairs_excluded": 65,
+  "fresh_candidate_pairs_after_exclusion": 1313,
+  "queue_sha256": "efb1487e6e3ec1b02e7d2cc410f3ac5303ef92ad98b8944adbb5177cd490f97a",
+  "next": "Open v0_8_stage_a_chroma_blind_lab.html, label all 16 cases, export JSON."
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('fs');const path=require('path');
+const HUMAN=process.argv[2]?path.resolve(process.argv[2]):path.join(__dirname,'gold_holdout_human_v0_5.json');
+const GRAPH=path.join(__dirname,'y2k_color_relation_graph_v0_5_candidate.json');
+const OUT=path.join(__dirname,'gold_holdout_regression_v0_5.json');
+if(!fs.existsSync(HUMAN)){console.error(`❌ Missing holdout labels: ${HUMAN}`);process.exit(1)}
+const h=JSON.parse(fs.readFileSync(HUMAN,'utf8')),g=JSON.parse(fs.readFileSync(GRAPH,'utf8'));const em=new Map(g.edges.map(e=>[e.pair_key,e]));const key=(a,b)=>[a,b].sort().join('||');
+let rows=[],ha=0,hr=0,hrt=0,tone=0,all=0,complete=0;
+for(const c of h.cases){const y=c.human_label;if(!y||!y.hue_applicability||!y.hue_relation||!y.tone_relation||!y.confidence){rows.push({case_id:c.case_id,status:'INCOMPLETE'});continue;}complete++;const e=em.get(key(c.a.mode_id,c.b.mode_id));const p=e.perceptual_relations_candidate_v0_5;const a=p.hue_applicability===y.hue_applicability;let r=p.hue_relation===y.hue_relation;if(y.hue_applicability==='reliable'){hrt++;if(r)hr++;}const t=p.tone_relation===y.tone_relation;if(a)ha++;if(t)tone++;if(a&&r&&t)all++;rows.push({case_id:c.case_id,pair_key:e.pair_key,confidence:y.confidence,expected:y,predicted:{hue_applicability:p.hue_applicability,hue_relation:p.hue_relation,tone_relation:p.tone_relation},pass:{hue_applicability:a,hue_relation:r,tone_relation:t,all:a&&r&&t}})}
+const out={metadata:{name:'YOYO Independent Holdout Regression v0.5',version:'0.5.0',status:complete===h.cases.length?'INDEPENDENT_HOLDOUT_EVALUATED':'INCOMPLETE_HOLDOUT',note:'This is the first independent validation layer for the candidate formula.'},summary:{complete,total:h.cases.length,hue_applicability:{correct:ha,total:complete},hue_relation_reliable:{correct:hr,total:hrt},tone:{correct:tone,total:complete},all:{correct:all,total:complete}},rows};fs.writeFileSync(OUT,JSON.stringify(out,null,2)+'\n');console.log('=== YOYO Gold Holdout Regression v0.5 ===');console.log(`Complete: ${complete}/${h.cases.length}`);console.log(`Hue applicability: ${ha}/${complete}`);console.log(`Hue relation: ${hr}/${hrt}`);console.log(`Tone: ${tone}/${complete}`);console.log(`All: ${all}/${complete}`);console.log(`Output: ${OUT}`);

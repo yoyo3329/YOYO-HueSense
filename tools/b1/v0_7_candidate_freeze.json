@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Candidate Freeze",
+    "version": "0.7.0",
+    "status": "FROZEN_BEFORE_VALIDATION_LABELS"
+  },
+  "candidate_config_sha256": "be14b6a28210b5f391bd2d059ff21a2a9bca1484aea8dacffa365794d142a2a5",
+  "candidate_code_sha256": "02f87b059d901aedf6a79cd334ca66d2e59de3ba1340fbfc817288c1c83946f7",
+  "train_labels_sha256": "477130fd18d19cfc62831f2fac5ebc2f728ab7b2714d3114b9b59116a34c3dae",
+  "frozen_at": "2026-09-10T15:18:32.558Z",
+  "forbidden_after_freeze": [
+    "RETUNE_FROM_VALIDATION",
+    "READ_RETIRED_HOLDOUT_FOR_FORMULA_SELECTION",
+    "MODE_SPECIFIC_OVERRIDES"
+  ]
+}

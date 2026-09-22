@@ -1,0 +1,15 @@
+PASS  real B1 fixture provides exactly 120 nodes
+PASS  soak plan contains exactly 500 jobs
+PASS  warm-up/formal split is exactly 50 + 450
+PASS  phase counts sum to 500
+PASS  expected status counts are 375 completed / 75 aborted / 50 stale
+PASS  DELTA phase is 25 chains of 4 jobs and each job projects 30 nodes
+PASS  checkpoints are exactly 50..500 every 50
+PASS  job release instrumentation fires after refs are cleared
+PASS  memory warning requires growth + last5 monotonic + positive slope
+PASS  stable/sawtooth heap passes memory heuristic
+PASS  HTML does not load production app.js
+PASS  harness does not append per-job DOM log nodes
+PASS  Fake Candidate remains explicitly TEST ONLY
+
+13/13 Shadow Soak v0.5 static checks PASS.

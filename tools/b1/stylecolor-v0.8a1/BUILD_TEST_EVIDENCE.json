@@ -1,0 +1,21 @@
+{
+  "version": "0.8a1.0",
+  "static_contract": "11/11 PASS",
+  "synthetic_worker": "PASS",
+  "real_24_b1_integration": {
+    "images_processed": 24,
+    "atomic_regions_total": 317,
+    "relationship_edges_total": 632,
+    "destructive_merges_executed": 0,
+    "clip_mode": "OFF in build environment",
+    "physical_audit_counts": {
+      "stability_extreme_low": 1,
+      "high_bimodal_regions": 131,
+      "foreground_dilution_regions": 58,
+      "clip_scored_low_input_coherence": 0,
+      "relationship_edges_with_contradictions": 518,
+      "high_palette_impact_relationships": 0
+    }
+  },
+  "output_gates": "12/12 PASS"
+}

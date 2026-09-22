@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Independent Validation Commitment",
+    "version": "0.7.0",
+    "status": "SEALED_BEFORE_TRAIN_LABELS",
+    "case_count": 12
+  },
+  "cipher_sha256": "1ef7109b3afd778a75b1f9d6ea632d8cd84643ea7565715272c0a3907de785b5",
+  "pool_sha256": "a0d90dda27090a34c7a0a17c4031f4878e593d0f9cef1091a2da68cccf4764a2",
+  "selection_algorithm": "SPACE_FILLING_OBJECTIVE_FEATURES_v1",
+  "selection_seed_commitment": "65d8f535b4cd441abab8126934b7e502ed996cb5096cf843a15d099d5edd3b2b",
+  "train_pair_digest": "550e85b4b3d2f8f7b4d1571382d48c30e3d10e31644314774b2ace39380a63d4",
+  "validation_pair_digest": "4f792d11ec8c6f54650b597d9b376f00fa7e3733ed8dcfa27508b6f686fa6721",
+  "note": "Validation case identities use a random local selection seed and are process-sealed until the v0.7 candidate is frozen. This prevents accidental pre-freeze exposure; it is not a hostile-user security boundary."
+}

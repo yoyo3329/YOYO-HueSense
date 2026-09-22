@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Fresh Case Selection Report",
+    "version": "0.7.0",
+    "status": "PREPARED"
+  },
+  "counts": {
+    "graph_pairs": 1378,
+    "prior_labeled_pairs": 29,
+    "fresh_pool": 1349,
+    "train": 24,
+    "validation_sealed": 12,
+    "train_validation_overlap": 0
+  },
+  "selection": {
+    "objective_features": [
+      "delta_L",
+      "delta_C",
+      "hue_chord",
+      "min_chroma",
+      "max_chroma"
+    ],
+    "max_train_mode_appearances": 3,
+    "max_validation_mode_appearances": 2,
+    "uses_retired_holdout_taxonomy": false,
+    "uses_v0_5_candidate_predictions": false
+  },
+  "digests": {
+    "train_pairs": "550e85b4b3d2f8f7b4d1571382d48c30e3d10e31644314774b2ace39380a63d4",
+    "validation_pairs": "4f792d11ec8c6f54650b597d9b376f00fa7e3733ed8dcfa27508b6f686fa6721",
+    "validation_cipher": "1ef7109b3afd778a75b1f9d6ea632d8cd84643ea7565715272c0a3907de785b5"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.8a1.1",
+  "style_id": "y2k",
+  "concept": "Y2K aesthetic",
+  "scope": "OFFLINE_STABLE_ATOMIC_REGION_DIAGNOSTICS_HOTFIX",
+  "atomic_segmentation": {
+    "engine": "SLIC_ATOMIC_BASELINE",
+    "segments": 28,
+    "compactness": 10.0,
+    "max_dim": 512,
+    "semantic_segmentation_claim": false,
+    "destructive_merge": false
+  },
+  "stability_diagnostics": {
+    "multiscale_segment_multipliers": [
+      0.75,
+      1.25,
+      1.5
+    ],
+    "perturbations": [
+      "brightness_minus_3pct",
+      "brightness_plus_3pct",
+      "contrast_plus_3pct",
+      "tiny_blur"
+    ],
+    "stability_metric": "BEST_IOU_TO_ALTERNATE_PARTITION"
+  },
+  "region_palette": {
+    "working_color_space": "OKLab",
+    "derived_color_space": "OKLCH",
+    "k": 2,
+    "lightness_trim_percent": [
+      5,
+      95
+    ]
+  },
+  "relationship_graph": {
+    "destructive_merge": false,
+    "semantic_prior": "DEFERRED_TO_v0.8-A.2",
+    "embedding_agreement": "DEFERRED_TO_v0.8-A.2",
+    "actions_are_heuristic_not_probability": true
+  },
+  "clip": {
+    "service_base": "http://127.0.0.1:8765",
+    "batch_size": 8,
+    "max_regions_per_image": 12,
+    "timeout_ms": 120000,
+    "asset_server_port": 8792,
+    "selection_policy": "DIVERSIFIED_AREA_SALIENCY_MINORITY_CONTRAST",
+    "role": "REGION_STYLE_EVIDENCE_ONLY",
+    "hard_threshold": false
+  },
+  "policy": {
+    "atomic_regions_immutable": true,
+    "no_destructive_merge": true,
+    "no_style_graph": true,
+    "no_generic_corpus": true,
+    "no_style_lift": true,
+    "no_npmi": true,
+    "no_probability_claim_from_heuristic_scores": true,
+    "production_integration": false
+  }
+}

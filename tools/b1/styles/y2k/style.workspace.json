@@ -1,0 +1,32 @@
+{
+  "contract": {
+    "name": "YOYO Generic Style Workspace Contract",
+    "version": "0.1.0"
+  },
+  "style": {
+    "id": "y2k",
+    "display_name": "Y2K",
+    "concept_text": "Y2K"
+  },
+  "data_status": "READY",
+  "validation_scope": "Y2K_ONLY_CURRENT_DATASET",
+  "paths": {
+    "evaluation_set": "../../y2k_color_mvp_evaluation_set_v1.json",
+    "cache_dir": "../../b1_cache",
+    "fallback_map": "fallback_map.json",
+    "artifact_dir": "artifacts",
+    "b1_observations_seed": "../../y2k_color_mvp_b1_observations.json"
+  },
+  "baseline_compare": {
+    "enabled": true,
+    "b1": "../../y2k_color_mvp_b1_observations.json",
+    "b2": "../../y2k_color_mvp_b2_aggregation.json",
+    "b3a": "../../y2k_color_mvp_b3_hierarchy.json",
+    "relation": "../../y2k_color_relation_graph.json"
+  },
+  "authority": {
+    "mode": "OFFLINE_RND_ONLY",
+    "can_modify_live_runtime": false,
+    "can_promote_candidate_semantics": false
+  }
+}

@@ -1,0 +1,10 @@
+PASS  job keeps only a small frozen context snapshot, not cloned results
+PASS  DELTA projection processes only the new index range
+PASS  abort/unmount releases resultsRef before queued work executes
+PASS  route/view generation mismatch becomes STALE before projection/work
+PASS  newer job supersedes and releases older queued job
+PASS  idle-callback fallback works when requestIdleCallback is unavailable
+PASS  mid-projection cooperative abort stops further projection and releases cleanly
+PASS  successful scheduled projection releases raw results after completion
+
+8/8 Shadow Lifecycle v0.2 checks PASS.

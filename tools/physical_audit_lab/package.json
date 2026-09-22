@@ -1,0 +1,12 @@
+{
+  "name": "yoyo-physical-audit-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YOYO / HueSense physical and perceptual audit lab",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

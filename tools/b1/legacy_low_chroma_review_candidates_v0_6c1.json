@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "name": "YOYO Legacy Low-Chroma Review Candidates",
+    "version": "0.6C.1",
+    "status": "DIAGNOSTIC_ONLY",
+    "auto_edit": false,
+    "threshold": 0.01,
+    "threshold_role": "REVIEW_HEURISTIC_NOT_PRODUCTION"
+  },
+  "cases": [
+    {
+      "case_id": "CAL_Y2K_005",
+      "a_mode": "mode_09",
+      "b_mode": "mode_53",
+      "min_chroma": 0.00155141,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_006",
+      "a_mode": "mode_01",
+      "b_mode": "mode_09",
+      "min_chroma": 0.00155141,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_009",
+      "a_mode": "mode_04",
+      "b_mode": "mode_53",
+      "min_chroma": 0.00532758,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_015",
+      "a_mode": "mode_09",
+      "b_mode": "mode_33",
+      "min_chroma": 0.00155141,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_019",
+      "a_mode": "mode_04",
+      "b_mode": "mode_21",
+      "min_chroma": 0.00532758,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    }
+  ]
+}

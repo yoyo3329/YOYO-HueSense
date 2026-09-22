@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "name": "YOYO v0.6D.1 Governance / v0.6E Precondition Audit",
+    "version": "0.6D.1",
+    "status": "PASS"
+  },
+  "summary": {
+    "pass": 20,
+    "total": 20,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "id": "v0.6D prior integrity remains PASS",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "holdout debt evidence exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "v0.5 holdout explicitly failed boundary stress",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "v0.5 Tone score recorded as 2/9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "v0.5 reliable Hue recorded as 6/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "v0.5 high-confidence contradictions recorded as 7/9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "perceptual candidate promotion blocked",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "v0.6D ingestion closure is scoped, not product readiness",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "legacy quarantine threshold is 0.01 heuristic",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "legacy quarantine has exactly five cases",
+      "pass": true,
+      "detail": "CAL_Y2K_005,CAL_Y2K_006,CAL_Y2K_009,CAL_Y2K_015,CAL_Y2K_019"
+    },
+    {
+      "id": "case_018 is intentionally outside the C<=0.01 review heuristic",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "active train provenance remains AI-assisted human-approved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "active train is not an independent holdout",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "holdout authority remains independent at collection time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "holdout remains training-ineligible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "network sandbox is replay-only for deterministic tests",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "live capture is isolated",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "live capture cannot mutate frozen fixture",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "network failure fixtures include 404/429/timeout/malformed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "status script does not fabricate BOUNDARY_CONTRADICTION_FOUND fallback",
+      "pass": true,
+      "detail": null
+    }
+  ]
+}

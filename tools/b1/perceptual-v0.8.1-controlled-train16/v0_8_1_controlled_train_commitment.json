@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8.1 Controlled Train Commitment",
+    "version": "0.8.1-stage-a-controlled-train16",
+    "committed_before_human_labels": true
+  },
+  "queue_sha256": "13fc3e8c698e1cf42d66d0e4efeb4770555a36f2435151485e75fc114d72149a",
+  "presentation_manifest_sha256": "7fc9102532f06e1abbe74d391994ed76ca3287a0f62e26d6c4abfc9dd68d3949",
+  "case_count": 16,
+  "pair_keys_in_presentation_order": [
+    "mode_20||mode_36",
+    "mode_32||mode_42",
+    "mode_10||mode_29",
+    "mode_09||mode_12",
+    "mode_17||mode_22",
+    "mode_30||mode_53",
+    "mode_18||mode_20",
+    "mode_09||mode_29",
+    "mode_44||mode_53",
+    "mode_03||mode_43",
+    "mode_03||mode_40",
+    "mode_28||mode_42",
+    "mode_45||mode_46",
+    "mode_13||mode_30",
+    "mode_06||mode_23",
+    "mode_09||mode_32"
+  ],
+  "policy": {
+    "retired_v0_7_validation_taxonomy_only": true,
+    "prior_uncontrolled_pilot_not_formal_freeze_evidence": true,
+    "validation_not_materialized": true,
+    "hue_frozen": true,
+    "hue_applicability_frozen": true,
+    "lightness_baseline_frozen": true,
+    "chroma_primary_redesign_axis": true
+  }
+}

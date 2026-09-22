@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "name": "YOYO Relation Graph Audit v0.5",
+    "version": "0.5.0",
+    "status": "candidate_distribution_audit",
+    "source": "y2k_color_relation_graph_v0_5_candidate.json",
+    "note": "Boundary counts are audit signals, not automatic errors."
+  },
+  "graph": {
+    "nodes": 53,
+    "edges": 1378
+  },
+  "distributions": {
+    "hue_applicability": {
+      "reliable": 820,
+      "low_chroma": 558
+    },
+    "hue_relation": {
+      "same_or_adjacent": 196,
+      "different": 624,
+      "not_applicable": 558
+    },
+    "tone_relation": {
+      "similar": 81,
+      "similar_or_partial": 643,
+      "different": 654
+    }
+  },
+  "boundary_audit": {
+    "hue_applicability_margin_lt_0_005": 195,
+    "hue_relation_margin_lt_10_degrees": 91,
+    "tone_different_margin_lt_0_05": 155,
+    "examples": {
+      "hue_applicability": [
+        "mode_03||mode_07",
+        "mode_03||mode_08",
+        "mode_03||mode_12",
+        "mode_03||mode_23",
+        "mode_03||mode_43",
+        "mode_06||mode_07",
+        "mode_06||mode_08",
+        "mode_06||mode_12",
+        "mode_06||mode_23",
+        "mode_06||mode_43",
+        "mode_07||mode_08",
+        "mode_07||mode_10",
+        "mode_07||mode_12",
+        "mode_07||mode_13",
+        "mode_07||mode_14",
+        "mode_07||mode_17",
+        "mode_07||mode_19",
+        "mode_07||mode_21",
+        "mode_07||mode_22",
+        "mode_07||mode_23"
+      ],
+      "hue_relation": [
+        "mode_03||mode_08",
+        "mode_03||mode_32",
+        "mode_03||mode_34",
+        "mode_03||mode_50",
+        "mode_06||mode_28",
+        "mode_06||mode_41",
+        "mode_06||mode_47",
+        "mode_06||mode_50",
+        "mode_08||mode_12",
+        "mode_08||mode_23",
+        "mode_08||mode_30",
+        "mode_08||mode_36",
+        "mode_08||mode_39",
+        "mode_10||mode_27",
+        "mode_10||mode_40",
+        "mode_10||mode_43",
+        "mode_10||mode_49",
+        "mode_10||mode_51",
+        "mode_10||mode_52",
+        "mode_12||mode_32"
+      ],
+      "tone": [
+        "mode_01||mode_03",
+        "mode_01||mode_08",
+        "mode_01||mode_53",
+        "mode_02||mode_06",
+        "mode_02||mode_09",
+        "mode_02||mode_11",
+        "mode_02||mode_16",
+        "mode_02||mode_36",
+        "mode_02||mode_49",
+        "mode_02||mode_52",
+        "mode_03||mode_07",
+        "mode_03||mode_18",
+        "mode_03||mode_42",
+        "mode_03||mode_44",
+        "mode_03||mode_47",
+        "mode_04||mode_10",
+        "mode_04||mode_18",
+        "mode_04||mode_21",
+        "mode_04||mode_27",
+        "mode_04||mode_29"
+      ]
+    }
+  }
+}

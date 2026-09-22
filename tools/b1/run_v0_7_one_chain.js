@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+'use strict';const {spawnSync}=require('child_process'),fs=require('fs'),path=require('path');const B=__dirname;function run(f,args=[],allowCodes=[]){console.log(`>>> ${f}${args.length?' '+args.join(' '):''}`);const r=spawnSync(process.execPath,[path.join(B,f),...args],{stdio:'inherit'});if(r.status!==0&&!allowCodes.includes(r.status))process.exit(r.status||1);return r.status}
+console.log('=== YOYO v0.7 — Resumable One Chain ===');console.log('No retired-holdout tuning. No AI-as-Gold. Validation labels hidden until candidate freeze.');
+if(!fs.existsSync(path.join(B,'v0_7_train_queue.json')))run('run_v0_7_prepare.js');
+if(!fs.existsSync(path.join(B,'v0_7_train_human.json'))){run('build_project_state_manifest_v0_7.js');console.log('\n⏸ HUMAN_TRAIN_REQUIRED');console.log('Open: v0_7_train_blind_lab.html');console.log('Export: v0_7_train_human.json');console.log('Then rerun exactly: npm run v0.7');process.exit(0)}
+if(!fs.existsSync(path.join(B,'v0_7_candidate_freeze.json'))){run('fit_v0_7_candidate.js');run('materialize_v0_7_validation.js');run('build_v0_7_blind_lab.js',['validation']);run('audit_v0_7_research_discipline.js');run('build_project_state_manifest_v0_7.js');}
+if(!fs.existsSync(path.join(B,'v0_7_validation_human.json'))){console.log('\n⏸ HUMAN_VALIDATION_REQUIRED');console.log('Candidate is frozen. Open: v0_7_validation_blind_lab.html');console.log('Export: v0_7_validation_human.json');console.log('Then rerun exactly: npm run v0.7');process.exit(0)}
+run('validate_v0_7_candidate.js');run('build_project_state_manifest_v0_7.js');console.log('\n✅ v0.7 FIRST INDEPENDENT VALIDATION COMPLETE.');console.log('No automatic production promotion is permitted, even on pilot PASS.');

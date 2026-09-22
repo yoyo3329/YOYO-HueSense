@@ -1,0 +1,7 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./shadow-audit-middleware-v0_1.js'));else root.YOYORuntimeShadowAdapter=factory(root.YOYOShadowAuditMiddleware);})(typeof self!=='undefined'?self:this,function(M){
+'use strict';const CONTRACT=Object.freeze({name:'YOYO Runtime Shadow Adapter',version:'0.1.0',integration_default:'OFF',mode:'SHADOW_ONLY',production_decision_authority:false,can_block_search:false,can_change_palette:false});
+function clone(x){return x==null?x:JSON.parse(JSON.stringify(x))}function safeMeta(m={}){return{run_id:m.run_id||null,stage:m.stage||'runtime_shadow_adapter',source_profile_id:m.source_profile_id||null,source_profile_version:m.source_profile_version||null,concept_fingerprint:m.concept_fingerprint||null}}
+function create(opts={}){const enabled=opts.enabled===true;const middleware=opts.middleware||M.createShadowAuditMiddleware(opts.middlewareOptions||{});const engine=typeof opts.shadowEngine==='function'?opts.shadowEngine:async()=>({audit_summary:{status:'NO_ENGINE'}});
+ function observeProduction(productionResult,shadowInput={},meta={}){if(!enabled)return{production:productionResult,shadow:{enabled:false,accepted:false,reason:'integration_off'}};const input=clone(shadowInput);const receipt=middleware.observe(safeMeta(meta),()=>engine(input));return{production:productionResult,shadow:{enabled:true,...receipt}}}
+ return{contract:CONTRACT,observeProduction,drain:()=>middleware.drain(),close:()=>middleware.close(),stats:()=>middleware.stats()};}
+return {CONTRACT,create};});

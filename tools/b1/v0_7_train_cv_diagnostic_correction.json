@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Train CV Diagnostic Correction",
+    "version": "0.7.0b",
+    "status": "DIAGNOSTIC_REPORTING_BUG_CONFIRMED",
+    "candidate_parameters_changed": false,
+    "candidate_freeze_changed": false,
+    "validation_predictions_changed": false
+  },
+  "stored_cv": {
+    "correct": 14,
+    "total": 24,
+    "exactRate": 0.5833333333333334,
+    "macroRecall": 0.6666666666666666
+  },
+  "corrected_reliable_only_loo": {
+    "correct": 14,
+    "total": 14,
+    "exactRate": 1,
+    "macroRecall": 1
+  },
+  "explanation": "The original LOO diagnostic counted low_chroma/not_applicable rows in the reliable Hue CV denominator. The fitted Hue threshold itself used reliableRows only, so candidate parameters and validation predictions are unchanged.",
+  "candidate_config_sha256": "be14b6a28210b5f391bd2d059ff21a2a9bca1484aea8dacffa365794d142a2a5"
+}

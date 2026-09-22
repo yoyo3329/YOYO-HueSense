@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8.1 Controlled Presentation Manifest",
+    "version": "0.8.1-stage-a-controlled-train16",
+    "committed_before_human_labels": true
+  },
+  "queue_sha256": "13fc3e8c698e1cf42d66d0e4efeb4770555a36f2435151485e75fc114d72149a",
+  "source_graph_sha256": "71a424bdec3e1b2fc6515175c5c376d71b69c4a4b840e554fe7f03237aa780c8",
+  "historical_exclusion_pairset_sha256": "92c137eb808acf8fb8762ebcc4365a4a7e36066ef3dac0ec1af03004ce9fbbd8",
+  "presentation_order": [
+    {
+      "position": 1,
+      "case_id": "V081_CTRL_TRAIN_001",
+      "pair_key": "mode_20||mode_36",
+      "left_mode_id": "mode_20",
+      "right_mode_id": "mode_36"
+    },
+    {
+      "position": 2,
+      "case_id": "V081_CTRL_TRAIN_002",
+      "pair_key": "mode_32||mode_42",
+      "left_mode_id": "mode_32",
+      "right_mode_id": "mode_42"
+    },
+    {
+      "position": 3,
+      "case_id": "V081_CTRL_TRAIN_003",
+      "pair_key": "mode_10||mode_29",
+      "left_mode_id": "mode_29",
+      "right_mode_id": "mode_10"
+    },
+    {
+      "position": 4,
+      "case_id": "V081_CTRL_TRAIN_004",
+      "pair_key": "mode_09||mode_12",
+      "left_mode_id": "mode_09",
+      "right_mode_id": "mode_12"
+    },
+    {
+      "position": 5,
+      "case_id": "V081_CTRL_TRAIN_005",
+      "pair_key": "mode_17||mode_22",
+      "left_mode_id": "mode_22",
+      "right_mode_id": "mode_17"
+    },
+    {
+      "position": 6,
+      "case_id": "V081_CTRL_TRAIN_006",
+      "pair_key": "mode_30||mode_53",
+      "left_mode_id": "mode_30",
+      "right_mode_id": "mode_53"
+    },
+    {
+      "position": 7,
+      "case_id": "V081_CTRL_TRAIN_007",
+      "pair_key": "mode_18||mode_20",
+      "left_mode_id": "mode_18",
+      "right_mode_id": "mode_20"
+    },
+    {
+      "position": 8,
+      "case_id": "V081_CTRL_TRAIN_008",
+      "pair_key": "mode_09||mode_29",
+      "left_mode_id": "mode_09",
+      "right_mode_id": "mode_29"
+    },
+    {
+      "position": 9,
+      "case_id": "V081_CTRL_TRAIN_009",
+      "pair_key": "mode_44||mode_53",
+      "left_mode_id": "mode_44",
+      "right_mode_id": "mode_53"
+    },
+    {
+      "position": 10,
+      "case_id": "V081_CTRL_TRAIN_010",
+      "pair_key": "mode_03||mode_43",
+      "left_mode_id": "mode_43",
+      "right_mode_id": "mode_03"
+    },
+    {
+      "position": 11,
+      "case_id": "V081_CTRL_TRAIN_011",
+      "pair_key": "mode_03||mode_40",
+      "left_mode_id": "mode_03",
+      "right_mode_id": "mode_40"
+    },
+    {
+      "position": 12,
+      "case_id": "V081_CTRL_TRAIN_012",
+      "pair_key": "mode_28||mode_42",
+      "left_mode_id": "mode_28",
+      "right_mode_id": "mode_42"
+    },
+    {
+      "position": 13,
+      "case_id": "V081_CTRL_TRAIN_013",
+      "pair_key": "mode_45||mode_46",
+      "left_mode_id": "mode_46",
+      "right_mode_id": "mode_45"
+    },
+    {
+      "position": 14,
+      "case_id": "V081_CTRL_TRAIN_014",
+      "pair_key": "mode_13||mode_30",
+      "left_mode_id": "mode_13",
+      "right_mode_id": "mode_30"
+    },
+    {
+      "position": 15,
+      "case_id": "V081_CTRL_TRAIN_015",
+      "pair_key": "mode_06||mode_23",
+      "left_mode_id": "mode_06",
+      "right_mode_id": "mode_23"
+    },
+    {
+      "position": 16,
+      "case_id": "V081_CTRL_TRAIN_016",
+      "pair_key": "mode_09||mode_32",
+      "left_mode_id": "mode_32",
+      "right_mode_id": "mode_09"
+    }
+  ],
+  "sequence_guard": {
+    "max_same_stratum_run_allowed": 2,
+    "observed_max_same_stratum_run": 2
+  },
+  "presentation_contract": {
+    "stimulus_color_space": "sRGB",
+    "require_srgb_safe_original_oklch": true,
+    "neutral_surround_hex": "#777777",
+    "neutral_surround_basis": "approximately CIELAB L*=50 neutral gray in sRGB",
+    "initial_adaptation_ms": 5000,
+    "inter_stimulus_ms": 600,
+    "swatch_gap_px": 64,
+    "system_theme_override": true,
+    "no_shadow": true,
+    "no_gradient": true,
+    "no_colored_border": true,
+    "sequence_guard_max_same_stratum_run": 2,
+    "side_assignment_randomized_and_committed": true,
+    "optional_lightness_interference_flag": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "YOYO Calibration Schema Guard Policy",
+  "version": "0.6C.1",
+  "legacy_raw_policy": "IMMUTABLE_HISTORICAL_ONLY",
+  "active_train_required_contract": "YOYO Perceptual Label Contract v0.2.0",
+  "holdout_required_contract": "YOYO Perceptual Label Contract v0.2.0",
+  "cross_style_structural_registry_may_contain_subjective_labels": false,
+  "future_cross_style_calibration_must_use_perceptual_label_contract": true,
+  "numeric_chroma_may_auto_relabel_human_answer": false,
+  "diagnostic_low_chroma_review_ceiling": 0.01,
+  "diagnostic_threshold_note": "This is only a review-queue heuristic for legacy data. It is not a production hue-applicability threshold and never changes a label automatically."
+}

@@ -1,0 +1,10 @@
+torch==2.13.0
+torchvision==0.28.0
+open-clip-torch==3.3.0
+transformers==5.15.1
+accelerate==1.15.0
+huggingface-hub==1.31.0
+safetensors==0.8.0
+numpy==2.4.6
+Pillow==12.3.0
+packaging==26.3

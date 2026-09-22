@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="以自然語言、多圖庫 API 與 OKLab 色彩感知分析探索視覺方向。">
+  <title>AI 感受詞轉譯與色彩探索</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AI × IMAGE APIS × OKLAB</p>
+        <h1>把抽象感受<br>轉成可比較的視覺方向</h1>
+      </div>
+      <p class="hero-note">維持單一自由文字輸入；語言模型只拆解語意，固定規則轉成色彩目標，再由圖片像素分析驗證。</p>
+      <p><a class="text-button" href="./reference-test.html">Reference Discovery 開發測試 →</a></p>
+    </header>
+
+    <section class="search-panel" aria-labelledby="search-title">
+      <div class="search-copy">
+        <p class="step-label">01　描述你的想法</p>
+        <h2 id="search-title">直接輸入完整情境</h2>
+        <p>可包含主題、季節、氣氛、明暗、彩度與不希望出現的方向。系統會先顯示理解結果，讓你在原地確認，不必拆成多個欄位重填。</p>
+      </div>
+
+      <form id="search-form" class="search-form" novalidate>
+        <label for="project-description">專案、場景或視覺感受</label>
+        <div class="composer">
+          <textarea id="project-description" placeholder="例如：夏季悶熱黑暗，希望有壓迫感，但不要復古，也不要太鮮豔。"></textarea>
+          <div class="composer-footer">
+            <span>Ctrl / Cmd + Enter 送出</span>
+            <span id="character-count">0</span>
+          </div>
+        </div>
+        <button id="search-button" class="primary-button" type="submit">
+          <span>解析描述</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </form>
+    </section>
+
+    <section id="interpretation-section" class="interpretation-section" hidden aria-labelledby="interpretation-title">
+      <div class="interpretation-header">
+        <div>
+          <p class="step-label">02　確認系統理解</p>
+          <h2 id="interpretation-title">語意拆解與權重</h2>
+          <p id="interpretation-summary" class="interpretation-summary"></p>
+        </div>
+        <button id="reparse-button" class="text-button" type="button">重新解析目前文字</button>
+      </div>
+
+      <div id="interpretation-notice" class="interpretation-notice" hidden></div>
+      <div id="concept-groups" class="concept-groups"></div>
+
+      <details class="analysis-preview">
+        <summary>查看固定色彩目標與搜尋計畫</summary>
+        <div class="analysis-preview-grid">
+          <div>
+            <h3>色彩目標</h3>
+            <dl id="target-preview" class="target-preview"></dl>
+          </div>
+          <div>
+            <h3>平衡短查詢</h3>
+            <ol id="search-plan-preview" class="search-plan-preview"></ol>
+          </div>
+        </div>
+      </details>
+
+      <div class="interpretation-actions">
+        <p>分類或重要程度有誤時，可直接在標籤內修改；不需要回到多個欄位重新輸入。</p>
+        <button id="confirm-search-button" class="primary-button" type="button">
+          <span>確認並搜尋圖片</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="result-section" class="result-section" hidden aria-live="polite">
+      <section id="direction-section" class="direction-section" hidden aria-labelledby="direction-title">
+        <div class="direction-heading">
+          <div>
+            <p class="step-label">03　三種候選方向</p>
+            <h2 id="direction-title">都符合描述，但色彩表現不同</h2>
+          </div>
+          <p id="direction-note" class="direction-note"></p>
+        </div>
+        <div id="direction-grid" class="direction-grid"></div>
+      </section>
+
+      <div class="result-header">
+        <div>
+          <p class="step-label">04　重新排序後的多圖庫結果</p>
+          <h2 id="result-title">找到的視覺方向</h2>
+          <p id="search-summary" class="search-summary"></p>
+        </div>
+        <button id="clear-button" class="text-button" type="button">清除結果</button>
+      </div>
+
+      <div id="status-message" class="status-message" role="status"></div>
+      <div id="photo-grid" class="photo-grid"></div>
+
+      <div class="load-more-wrap">
+        <button id="load-more-button" class="secondary-button" type="button" hidden>載入更多候選圖片</button>
+      </div>
+    </section>
+  </main>
+
+  <template id="concept-chip-template">
+    <article class="concept-chip">
+      <div class="concept-chip-copy">
+        <strong class="concept-original"></strong>
+        <span class="concept-search-term"></span>
+      </div>
+      <label>
+        <span class="sr-only">分類</span>
+        <select class="concept-category">
+          <option value="subject">主題</option>
+          <option value="context">情境</option>
+          <option value="atmosphere">氣氛</option>
+          <option value="color">色彩感受</option>
+          <option value="exclusion">排除</option>
+        </select>
+      </label>
+      <label>
+        <span class="sr-only">重要程度</span>
+        <select class="concept-priority">
+          <option value="main">主要</option>
+          <option value="secondary">次要</option>
+          <option value="slight">輕微</option>
+          <option value="exclude">排除</option>
+        </select>
+      </label>
+      <button class="concept-remove" type="button" aria-label="移除此概念">×</button>
+    </article>
+  </template>
+
+  <template id="photo-card-template">
+    <article class="photo-card">
+      <a class="photo-link" target="_blank" rel="noopener noreferrer">
+        <img class="photo-image" loading="lazy" decoding="async" alt="">
+        <span class="photo-score"></span>
+      </a>
+      <div class="photo-meta">
+        <p class="photo-description"></p>
+        <p class="credit">
+          Photo by <a class="photographer-link" target="_blank" rel="noopener noreferrer"></a>
+          on <a class="provider-link" href="#" target="_blank" rel="noopener noreferrer">圖片來源</a>
+        </p>
+      </div>
+    </article>
+  </template>
+
+  <template id="direction-card-template">
+    <article class="direction-card">
+      <div class="direction-card-header">
+        <span class="direction-code"></span>
+        <span class="direction-score"></span>
+      </div>
+      <h3 class="direction-name"></h3>
+      <p class="direction-description"></p>
+      <div class="direction-palette" aria-label="候選色票"></div>
+      <div class="direction-tags"></div>
+      <p class="direction-accessibility"></p>
+      <details class="direction-details">
+        <summary>查看完整色彩分析</summary>
+        <dl class="direction-metrics"></dl>
+      </details>
+      <button class="direction-button" type="button">查看此方向圖片</button>
+    </article>
+  </template>
+
+  <script src="./js/contrast-checker.js" defer></script>
+  <script src="./js/tone-core.js" defer></script>
+  <script src="./js/tone-analyzer.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Independent Validation Retirement Record",
+    "version": "0.7.0b",
+    "status": "RETIRED_AFTER_FIRST_EVALUATION",
+    "scientific_role": "DIAGNOSTIC_ONLY_FOR_FUTURE_FAILURE_TAXONOMY",
+    "training_eligible": false,
+    "threshold_tuning_eligible": false,
+    "formula_selection_eligible": false,
+    "future_independent_validation_eligible": false
+  },
+  "validation_file_sha256": "1287577c5fc05e3f6daa973674e3376313fc1283efa1b5561ee00e0b7903ca98",
+  "validation_pair_digest": "4f792d11ec8c6f54650b597d9b376f00fa7e3733ed8dcfa27508b6f686fa6721",
+  "result_status": "PILOT_FAIL_REDESIGN_REQUIRED",
+  "no_retuning_from_this_validation": true,
+  "note": "This validation set has now been observed. Future redesign may use it only for failure taxonomy, never to claim independent validation again."
+}

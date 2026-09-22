@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOYO Shadow Browser Harness v0.4</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{margin:0;background:#f6f6f7;color:#1d1d1f}
+main{width:min(1120px,calc(100% - 32px));margin:32px auto 64px}
+.hero,.card{background:white;border:1px solid #dddfe3;border-radius:16px;padding:20px;margin-bottom:16px}
+h1{margin:0 0 8px;font-size:28px} h2{font-size:18px;margin-top:0} p{line-height:1.65}
+code{background:#f1f2f4;padding:2px 6px;border-radius:6px}
+button{border:0;border-radius:10px;padding:11px 16px;cursor:pointer;font-weight:650;margin-right:8px}
+button.primary{background:#1d1d1f;color:white} button.secondary{background:#e9eaed;color:#1d1d1f}
+button:disabled{opacity:.55;cursor:default}
+#source-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.metric{background:#f7f7f8;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.metric b{font-size:22px}.metric span{color:#65676b;font-size:13px}
+.ready{color:#315f35;font-weight:700}.pass{color:#176b2c;font-weight:700}.fail{color:#a32222;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;border-bottom:1px solid #ececef;padding:10px 8px;vertical-align:top}
+th{color:#555;font-size:12px}
+pre{overflow:auto;white-space:pre-wrap;word-break:break-word;background:#111318;color:#e8e8ea;border-radius:12px;padding:16px;max-height:460px}
+.warning{border-left:4px solid #b98516;padding-left:12px}
+@media(max-width:760px){#source-summary{grid-template-columns:repeat(2,1fr)}main{width:min(100% - 20px,1120px);margin-top:10px}.card,.hero{border-radius:12px;padding:15px}table{font-size:12px}}
+</style>
+</head>
+<body>
+<main>
+<section class="hero">
+  <h1>YOYO / HueSense — Shadow Browser Harness v0.4</h1>
+  <p>使用專案現有 Y2K B1 decoded-pixel 色彩資料，在真實瀏覽器測試 30 / 60 / 120 個 palette nodes。</p>
+  <p class="warning"><b>Production 保護：</b>本測試頁與正式搜尋頁完全分離；Shadow authority 固定為 <code>NONE</code>。</p>
+  <button id="run-all" class="primary">Run Browser Harness</button>
+  <button id="download-report" class="secondary">Download Latest JSON</button>
+  <p id="run-status">Initializing…</p>
+</section>
+
+<section class="card">
+  <h2>Real B1 fixture</h2>
+  <div id="source-summary"></div>
+</section>
+
+<section class="card">
+  <h2>Browser benchmark</h2>
+  <p>Shadow Total 是 Projection + Candidate compute；Scheduled Wall 另包含 double-rAF / idle 等待。</p>
+  <table>
+    <thead><tr>
+      <th>Items</th>
+      <th>Projection p50 / p95</th>
+      <th>Compute p50 / p95</th>
+      <th>Shadow total p50 / p95</th>
+      <th>Scheduled wall p50 / p95</th>
+      <th>Long Tasks</th>
+    </tr></thead>
+    <tbody id="bench-body"></tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Runtime diagnostics</h2>
+  <p id="longtask-status">Long Task API checking…</p>
+  <pre id="environment"></pre>
+</section>
+
+<section class="card">
+  <h2>Full report</h2>
+  <pre id="diagnostics">尚未執行。</pre>
+</section>
+</main>
+
+<script src="./shadow-result-contract.js"></script>
+<script src="./shadow-job-lifecycle.js"></script>
+<script src="./shadow-projection.js"></script>
+<script src="./shadow-scheduler.js"></script>
+<script src="./shadow-fake-candidate.js"></script>
+<script src="./shadow-runner.js"></script>
+<script src="./shadow-adapter.js"></script>
+<script src="./shadow-b1-real-mapper.js"></script>
+<script src="./yoyo-b1-real-observations.fixture.js"></script>
+<script src="./shadow-browser-harness-v0.4.js"></script>
+</body>
+</html>

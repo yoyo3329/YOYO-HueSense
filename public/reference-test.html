@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reference Discovery 測試｜HueSense</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .rd-shell{max-width:1280px;margin:0 auto;padding:32px 20px 80px}
+    .rd-top{display:flex;gap:24px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;margin-bottom:28px}
+    .rd-top h1{margin:.2rem 0;font-size:clamp(2rem,5vw,4rem)}
+    .rd-sub{max-width:760px;line-height:1.7;color:#52636c}
+    .rd-form{display:grid;grid-template-columns:minmax(200px,1fr) 140px auto;gap:12px;align-items:end;margin:28px 0}
+    .rd-form label{display:grid;gap:6px;font-weight:700}
+    .rd-form input,.rd-form select{border:1px solid #ccd7dc;border-radius:14px;padding:13px 14px;background:white;font:inherit}
+    .rd-panel{background:white;border:1px solid #e1e7ea;border-radius:22px;padding:22px;margin:18px 0}
+    .rd-warning{background:#fff7da;border:1px solid #ead590;border-radius:16px;padding:14px 16px;line-height:1.6}
+    .rd-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:14px}
+    .rd-metric{background:#f6f8f8;border-radius:16px;padding:15px}
+    .rd-metric strong{display:block;font-size:1.55rem;margin-top:4px}
+    .rd-dist{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    .rd-dist table{width:100%;border-collapse:collapse}
+    .rd-dist th,.rd-dist td{text-align:left;padding:8px 4px;border-bottom:1px solid #edf1f2}
+    .rd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+    .rd-card{background:white;border:1px solid #e1e7ea;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-height:100%}
+    .rd-card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#eef1f1}
+    .rd-card.is-broken img{display:none}
+    .rd-card.is-broken::before{content:"圖片 URL 載入失敗";display:grid;place-items:center;aspect-ratio:4/3;background:#f6eaea;color:#8a3232;font-weight:700}
+    .rd-body{padding:13px;display:grid;gap:8px}
+    .rd-badges{display:flex;gap:6px;flex-wrap:wrap}
+    .rd-badge{font-size:.78rem;background:#edf3f4;border-radius:999px;padding:4px 8px}
+    .rd-alt{font-size:.9rem;line-height:1.45;color:#33474f;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .rd-labels{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:auto}
+    .rd-labels button{border:1px solid #d6e0e3;background:white;border-radius:10px;padding:8px 4px;cursor:pointer}
+    .rd-labels button.active{background:#173743;color:white;border-color:#173743}
+    .rd-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .rd-status{padding:14px 0;font-weight:700}
+    @media(max-width:720px){.rd-form{grid-template-columns:1fr}.rd-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+</head>
+<body>
+<main class="rd-shell">
+  <div class="rd-top">
+    <div>
+      <p class="step-label">REFERENCE DISCOVERY｜DEV TEST</p>
+      <h1>先看教材，不先篩圖</h1>
+      <p class="rd-sub">
+        這個頁面只測 Reference Discovery。它不跑 Content Gate、CLIP、Vision、Ranking、ToneAnalyzer，也不分 A/B/C。
+        目標是先拿到 50～100 張原始 Reference，檢查來源、query family 與人工教材品質。
+      </p>
+    </div>
+    <a class="text-button" href="./index.html">回正式搜尋頁</a>
+  </div>
+
+  <form id="rd-form" class="rd-form">
+    <label>測試概念
+      <input id="rd-query" value="Y2K" autocomplete="off">
+    </label>
+    <label>Reference 數量
+      <select id="rd-target">
+        <option value="50">50</option>
+        <option value="80" selected>80</option>
+        <option value="100">100</option>
+      </select>
+    </label>
+    <button class="primary-button" type="submit">開始 Reference Discovery</button>
+  </form>
+
+  <div id="rd-status" class="rd-status"></div>
+
+  <section id="rd-summary" class="rd-panel" hidden>
+    <div id="rd-warning" class="rd-warning"></div>
+    <div class="rd-metrics">
+      <div class="rd-metric">reference_count<strong id="m-count">0</strong></div>
+      <div class="rd-metric">可正常載入<strong id="m-loaded">0</strong></div>
+      <div class="rd-metric">失效 URL<strong id="m-broken">0</strong></div>
+      <div class="rd-metric">失效 URL 比例<strong id="m-broken-rate">0%</strong></div>
+      <div class="rd-metric">人工：合理<strong id="m-good">0</strong></div>
+      <div class="rd-metric">人工：灰區<strong id="m-gray">0</strong></div>
+      <div class="rd-metric">人工：錯圖<strong id="m-wrong">0</strong></div>
+    </div>
+  </section>
+
+  <section id="rd-distributions" class="rd-panel" hidden>
+    <h2>分布紀錄</h2>
+    <div class="rd-dist">
+      <div>
+        <h3>Source distribution</h3>
+        <table><tbody id="source-body"></tbody></table>
+      </div>
+      <div>
+        <h3>Query family distribution</h3>
+        <table><tbody id="family-body"></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section id="rd-manual" class="rd-panel" hidden>
+    <div class="rd-top">
+      <div>
+        <h2>人工教材標記</h2>
+        <p class="rd-sub">這一步只判斷「能不能合理拿來當這個概念的教材」；先不要判斷最終排名。</p>
+      </div>
+      <div class="rd-actions">
+        <button id="export-json" class="secondary-button" type="button">匯出本次測試 JSON</button>
+        <button id="clear-labels" class="text-button" type="button">清除人工標記</button>
+      </div>
+    </div>
+    <div id="rd-grid" class="rd-grid"></div>
+  </section>
+</main>
+<script src="./js/reference-test.js" defer></script>
+</body>
+</html>

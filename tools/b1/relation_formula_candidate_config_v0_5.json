@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "name": "YOYO Relation Formula Candidate Config",
+    "version": "0.5.0-candidate",
+    "status": "TRAIN_FIT_ONLY",
+    "calibration_source": "gold_train_candidate_v0_4.json",
+    "calibration_case_count": 20,
+    "independent_holdout_count": 0,
+    "production_gate_eligible": false,
+    "warning": "Do not claim validated human-perception accuracy until independent GOLD_HOLDOUT and cross-style checks exist."
+  },
+  "hue": {
+    "min_chroma_reliable": 0.03,
+    "same_or_adjacent_max_delta_h_degrees": 40
+  },
+  "tone": {
+    "similar_max_delta_l": 0.06,
+    "similar_max_delta_c": 0.033,
+    "interaction_weight": 4,
+    "different_threshold": 0.54,
+    "formula": "deltaL + interactionWeight * sqrt(deltaL * deltaC)"
+  }
+}

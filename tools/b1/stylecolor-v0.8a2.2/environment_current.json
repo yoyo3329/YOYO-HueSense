@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.8a2.2",
+  "role": "ENVIRONMENT_AUDIT_ONLY_NO_MODEL_INFERENCE",
+  "python": "3.11.6",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.13.0",
+    "torchvision": "0.28.0",
+    "open-clip-torch": "3.3.0",
+    "transformers": null,
+    "numpy": "2.4.6",
+    "Pillow": "12.3.0"
+  },
+  "torchvision_torch_requirement": "torch (==2.13.0)",
+  "torch_torchvision_compatibility": "PASS",
+  "openclip_model_config": {
+    "model": "ViT-B-32",
+    "pretrained": "openai",
+    "model_config": {
+      "embed_dim": 512,
+      "vision_cfg": {
+        "image_size": 224,
+        "layers": 12,
+        "width": 768,
+        "patch_size": 32
+      },
+      "text_cfg": {
+        "context_length": 77,
+        "vocab_size": 49408,
+        "width": 512,
+        "heads": 8,
+        "layers": 12
+      }
+    },
+    "pretrained_config": {
+      "url": "https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt",
+      "hf_hub": "timm/vit_base_patch32_clip_224.openai/",
+      "mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ],
+      "interpolation": "bicubic",
+      "resize_mode": "shortest",
+      "quick_gelu": true
+    }
+  },
+  "quickgelu_fingerprint": {
+    "model_config_quick_gelu": null,
+    "pretrained_config_quick_gelu": true,
+    "status": "RECORDED_BUT_PRETRAINED_EXPECTATION_UNAVAILABLE"
+  },
+  "warnings": []
+}

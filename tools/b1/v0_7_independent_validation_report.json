@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 First Independent Validation",
+    "version": "0.7.0b",
+    "candidate_version": "0.7.0",
+    "status": "PILOT_FAIL_REDESIGN_REQUIRED",
+    "validation_scope": "Y2K_INDEPENDENT_VALIDATION_PILOT",
+    "candidate_frozen_before_labels": true,
+    "validation_labels_used_for_retuning": false,
+    "validation_commitment_verified": true,
+    "validation_queue_exact_match": true,
+    "candidate_code_hash_verified": true,
+    "candidate_config_hash_verified": true,
+    "train_labels_hash_verified": true,
+    "production_gate_eligible": false,
+    "universality_status": "UNVALIDATED"
+  },
+  "candidate_freeze": {
+    "metadata": {
+      "name": "YOYO v0.7 Candidate Freeze",
+      "version": "0.7.0",
+      "status": "FROZEN_BEFORE_VALIDATION_LABELS"
+    },
+    "candidate_config_sha256": "be14b6a28210b5f391bd2d059ff21a2a9bca1484aea8dacffa365794d142a2a5",
+    "candidate_code_sha256": "02f87b059d901aedf6a79cd334ca66d2e59de3ba1340fbfc817288c1c83946f7",
+    "train_labels_sha256": "477130fd18d19cfc62831f2fac5ebc2f728ab7b2714d3114b9b59116a34c3dae",
+    "frozen_at": "2026-09-10T15:18:32.558Z",
+    "forbidden_after_freeze": [
+      "RETUNE_FROM_VALIDATION",
+      "READ_RETIRED_HOLDOUT_FOR_FORMULA_SELECTION",
+      "MODE_SPECIFIC_OVERRIDES"
+    ]
+  },
+  "validation_commitment": {
+    "validation_pair_digest": "4f792d11ec8c6f54650b597d9b376f00fa7e3733ed8dcfa27508b6f686fa6721",
+    "verified": true
+  },
+  "score": {
+    "lightness_relation": {
+      "correct": 9,
+      "total": 12,
+      "rate": 0.75
+    },
+    "chroma_relation": {
+      "correct": 7,
+      "total": 12,
+      "rate": 0.5833333333333334
+    },
+    "hue_applicability": {
+      "correct": 12,
+      "total": 12,
+      "rate": 1
+    },
+    "tone_relation": {
+      "correct": 9,
+      "total": 12,
+      "rate": 0.75
+    },
+    "hue_relation_reliable": {
+      "correct": 7,
+      "total": 7,
+      "rate": 1
+    },
+    "all_relevant": {
+      "correct": 5,
+      "total": 12,
+      "rate": 0.4166666666666667
+    }
+  },
+  "high_confidence_all_relation_contradictions": 7,
+  "preregistered_gate": {
+    "validation_scope": "Y2K_INDEPENDENT_VALIDATION_PILOT",
+    "min_complete_cases": 12,
+    "min_lightness_exact_rate": 0.75,
+    "min_chroma_exact_rate": 0.75,
+    "min_tone_exact_rate": 0.75,
+    "min_hue_applicability_exact_rate": 0.75,
+    "min_reliable_hue_cases": 4,
+    "min_reliable_hue_exact_rate": 0.8,
+    "min_all_relevant_exact_rate": 0.6,
+    "max_high_confidence_all_relation_contradictions": 2,
+    "automatic_production_promotion": false,
+    "note": "Pilot gate is pre-registered before new human labels. Passing it is not production readiness or universality validation."
+  },
+  "gate_checks": {
+    "complete": true,
+    "lightness": true,
+    "chroma": false,
+    "tone": true,
+    "hue_applicability": true,
+    "reliable_hue_count": true,
+    "reliable_hue_rate": true,
+    "all_relevant": false,
+    "high_conf_contradictions": false
+  },
+  "rows": [
+    {
+      "case_id": "V07_VALID_001",
+      "pair_key": "mode_21||mode_28",
+      "human": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "similar",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": false
+    },
+    {
+      "case_id": "V07_VALID_002",
+      "pair_key": "mode_09||mode_50",
+      "human": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": true
+    },
+    {
+      "case_id": "V07_VALID_003",
+      "pair_key": "mode_01||mode_05",
+      "human": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": false
+    },
+    {
+      "case_id": "V07_VALID_004",
+      "pair_key": "mode_18||mode_45",
+      "human": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "similar",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": false
+    },
+    {
+      "case_id": "V07_VALID_005",
+      "pair_key": "mode_02||mode_20",
+      "human": {
+        "lightness_relation": "similar",
+        "chroma_relation": "similar",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "similar",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": false
+    },
+    {
+      "case_id": "V07_VALID_006",
+      "pair_key": "mode_26||mode_53",
+      "human": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": false
+    },
+    {
+      "case_id": "V07_VALID_007",
+      "pair_key": "mode_52||mode_53",
+      "human": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": true
+    },
+    {
+      "case_id": "V07_VALID_008",
+      "pair_key": "mode_34||mode_50",
+      "human": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "similar",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": false
+    },
+    {
+      "case_id": "V07_VALID_009",
+      "pair_key": "mode_02||mode_33",
+      "human": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": true
+    },
+    {
+      "case_id": "V07_VALID_010",
+      "pair_key": "mode_22||mode_24",
+      "human": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": true
+    },
+    {
+      "case_id": "V07_VALID_011",
+      "pair_key": "mode_32||mode_41",
+      "human": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": false
+    },
+    {
+      "case_id": "V07_VALID_012",
+      "pair_key": "mode_26||mode_41",
+      "human": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      },
+      "predicted": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "candidate_authority": "FROZEN_UNVALIDATED",
+        "production_authority": false
+      },
+      "all_relevant_pass": true
+    }
+  ]
+}

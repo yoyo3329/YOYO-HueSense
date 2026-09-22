@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "name": "YOYO Independent Human Gold Holdout v0.5",
+    "version": "0.5.2",
+    "status": "independent_human_holdout_structurally_cleaned",
+    "case_count": 9,
+    "exported_at": "2026-09-09T13:02:14.789Z",
+    "blind_contract": {
+      "candidate_prediction_hidden": true,
+      "training_labels_hidden": true,
+      "ai_labels_hidden": true,
+      "numeric_features_hidden": true
+    },
+    "cleanup_note": "HOLDOUT_Y2K_003, 005, 007 were manually rechecked by the user. No candidate predictions, training labels, AI labels, or numeric features were used for the recheck."
+  },
+  "cases": [
+    {
+      "case_id": "HOLDOUT_Y2K_001",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_03",
+        "hex": "#BA9A93",
+        "lch": {
+          "L": 0.71278114,
+          "C": 0.03961294,
+          "H": 31.04912193
+        }
+      },
+      "b": {
+        "mode_id": "mode_07",
+        "hex": "#594841",
+        "lch": {
+          "L": 0.41696711,
+          "C": 0.02604738,
+          "H": 42.94945861
+        }
+      },
+      "human_label": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_002",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_03",
+        "hex": "#BA9A93",
+        "lch": {
+          "L": 0.71278114,
+          "C": 0.03961294,
+          "H": 31.04912193
+        }
+      },
+      "b": {
+        "mode_id": "mode_08",
+        "hex": "#A29181",
+        "lch": {
+          "L": 0.66860756,
+          "C": 0.03135937,
+          "H": 66.63448686
+        }
+      },
+      "human_label": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_003",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_06",
+        "hex": "#886D60",
+        "lch": {
+          "L": 0.55844039,
+          "C": 0.03972391,
+          "H": 46.70059602
+        }
+      },
+      "b": {
+        "mode_id": "mode_08",
+        "hex": "#A29181",
+        "lch": {
+          "L": 0.66860756,
+          "C": 0.03135937,
+          "H": 66.63448686
+        }
+      },
+      "human_label": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5 — structural cleanup v0.5.2"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_004",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_32",
+        "hex": "#DDA3B9",
+        "lch": {
+          "L": 0.77554052,
+          "C": 0.07367622,
+          "H": 354.34088047
+        }
+      },
+      "b": {
+        "mode_id": "mode_39",
+        "hex": "#C17F6F",
+        "lch": {
+          "L": 0.66014302,
+          "C": 0.08544315,
+          "H": 34.0674933
+        }
+      },
+      "human_label": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_005",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_35",
+        "hex": "#68526E",
+        "lch": {
+          "L": 0.47060123,
+          "C": 0.05246763,
+          "H": 318.04177617
+        }
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B",
+        "lch": {
+          "L": 0.6438147,
+          "C": 0.16970499,
+          "H": 358.92075987
+        }
+      },
+      "human_label": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5 — structural cleanup v0.5.2"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_006",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_14",
+        "hex": "#7495D7",
+        "lch": {
+          "L": 0.67137278,
+          "C": 0.10569508,
+          "H": 263.90378183
+        }
+      },
+      "b": {
+        "mode_id": "mode_21",
+        "hex": "#4EB7DB",
+        "lch": {
+          "L": 0.7323825,
+          "C": 0.10901325,
+          "H": 224.30055132
+        }
+      },
+      "human_label": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_007",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_22",
+        "hex": "#4B3F64",
+        "lch": {
+          "L": 0.39650274,
+          "C": 0.06252916,
+          "H": 298.43603756
+        }
+      },
+      "b": {
+        "mode_id": "mode_25",
+        "hex": "#A6ABD3",
+        "lch": {
+          "L": 0.75136841,
+          "C": 0.05659027,
+          "H": 278.60608542
+        }
+      },
+      "human_label": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5 — structural cleanup v0.5.2"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_008",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_26",
+        "hex": "#B67CDB",
+        "lch": {
+          "L": 0.68159158,
+          "C": 0.14663868,
+          "H": 310.98761345
+        }
+      },
+      "b": {
+        "mode_id": "mode_28",
+        "hex": "#D9C78A",
+        "lch": {
+          "L": 0.82971953,
+          "C": 0.08158735,
+          "H": 93.53638952
+        }
+      },
+      "human_label": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5"
+      }
+    },
+    {
+      "case_id": "HOLDOUT_Y2K_009",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_14",
+        "hex": "#7495D7",
+        "lch": {
+          "L": 0.67137278,
+          "C": 0.10569508,
+          "H": 263.90378183
+        }
+      },
+      "b": {
+        "mode_id": "mode_51",
+        "hex": "#ACD6F6",
+        "lch": {
+          "L": 0.8559587,
+          "C": 0.06353882,
+          "H": 241.85784198
+        }
+      },
+      "human_label": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Independent human holdout v0.5"
+      }
+    }
+  ]
+}

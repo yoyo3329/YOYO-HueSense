@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "name": "YOYO Perceptual Relation Candidate v0.7",
+    "version": "0.7.0",
+    "status": "FROZEN_UNVALIDATED",
+    "fit_source": "v0_7_train_human.json",
+    "fit_authority": "DIRECT_HUMAN_BLIND",
+    "retired_holdout_used_for_fit": false,
+    "validation_labels_used_for_fit": false,
+    "production_gate_eligible": false,
+    "universality_status": "UNVALIDATED",
+    "candidate_frozen_at": "2026-09-10T15:18:32.558Z"
+  },
+  "lightness": {
+    "similarMax": 0.131227725,
+    "differentMin": 0.153199645
+  },
+  "chroma": {
+    "similarMax": 0,
+    "differentMin": 0.006102565
+  },
+  "hue": {
+    "minChromaReliable": 0.018431835,
+    "sameOrAdjacentMaxDeltaH": 28.1614013
+  },
+  "tone": {
+    "rule": "CONSERVATIVE_DIFFERENT"
+  },
+  "train_cross_validation": {
+    "lightness": {
+      "correct": 15,
+      "total": 24,
+      "exactRate": 0.625,
+      "macroRecall": 0.5847222222222221
+    },
+    "chroma": {
+      "correct": 18,
+      "total": 24,
+      "exactRate": 0.75,
+      "macroRecall": 0.6470588235294118
+    },
+    "hue_applicability": {
+      "correct": 23,
+      "total": 24,
+      "exactRate": 0.9583333333333334,
+      "macroRecall": 0.9642857142857143
+    },
+    "hue_relation_reliable": {
+      "correct": 14,
+      "total": 24,
+      "exactRate": 0.5833333333333334,
+      "macroRecall": 0.6666666666666666
+    },
+    "tone_rule": {
+      "rule": "CONSERVATIVE_DIFFERENT",
+      "looExactRate": 0.8333333333333334,
+      "looMacroRecall": 0.5,
+      "n": 24
+    }
+  },
+  "train_fit_summary": {
+    "lightness": {
+      "macroRecall": 0.7166666666666667,
+      "exactRate": 0.7083333333333334,
+      "n": 24
+    },
+    "chroma": {
+      "macroRecall": 0.6666666666666666,
+      "exactRate": 0.7916666666666666,
+      "n": 24
+    },
+    "hue_applicability": {
+      "macroRecall": 1,
+      "exactRate": 1,
+      "n": 24
+    },
+    "hue_relation_reliable": {
+      "macroRecall": 1,
+      "exactRate": 1,
+      "n": 14
+    }
+  },
+  "warning": "All figures here are TRAIN/CROSS-VALIDATION diagnostics only. They are not independent validation accuracy.",
+  "pilot_gate": {
+    "validation_scope": "Y2K_INDEPENDENT_VALIDATION_PILOT",
+    "min_complete_cases": 12,
+    "min_lightness_exact_rate": 0.75,
+    "min_chroma_exact_rate": 0.75,
+    "min_tone_exact_rate": 0.75,
+    "min_hue_applicability_exact_rate": 0.75,
+    "min_reliable_hue_cases": 4,
+    "min_reliable_hue_exact_rate": 0.8,
+    "min_all_relevant_exact_rate": 0.6,
+    "max_high_confidence_all_relation_contradictions": 2,
+    "automatic_production_promotion": false,
+    "note": "Pilot gate is pre-registered before new human labels. Passing it is not production readiness or universality validation."
+  }
+}

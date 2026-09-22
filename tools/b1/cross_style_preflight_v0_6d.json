@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "name": "YOYO Cross-Style Ingestion Preflight",
+    "version": "0.6D",
+    "status": "PASS",
+    "validation_scope": "INFRASTRUCTURE_ONLY",
+    "cross_style_accuracy_claim": false
+  },
+  "styles": {
+    "y2k": {
+      "readiness": "DATA_READY",
+      "role": "STRUCTURAL_BASELINE"
+    },
+    "quiet_luxury": {
+      "readiness": "DATA_PENDING",
+      "role": "DRY_RUN_ONLY"
+    }
+  },
+  "checks": [
+    {
+      "id": "Y2K ingestion gate DATA_READY",
+      "pass": true
+    },
+    {
+      "id": "Y2K workspace not silently mutated",
+      "pass": true
+    },
+    {
+      "id": "Quiet Luxury remains DATA_PENDING",
+      "pass": true
+    },
+    {
+      "id": "Quiet Luxury generated no fake references",
+      "pass": true
+    },
+    {
+      "id": "Quiet Luxury color pipeline not run",
+      "pass": true
+    },
+    {
+      "id": "Structural registry still has no cross-style validation claim",
+      "pass": true
+    },
+    {
+      "id": "Live integration remains outside ingestion",
+      "pass": true
+    }
+  ]
+}

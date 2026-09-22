@@ -1,0 +1,635 @@
+{
+  "metadata": {
+    "name": "YOYO Calibration Set v0 Human Export",
+    "version": "0.1.0",
+    "status": "human_labeled_export",
+    "source_style": "Y2K",
+    "human_gold_count": 20,
+    "unlabeled_candidate_count": 17,
+    "coverage_note": "Only HUMAN_GOLD cases are coverage anchors. Unlabeled diversity candidates are displayed in Calibration Lab but cannot increase coverage.",
+    "gold_policy": "Only direct human judgments are HUMAN_GOLD. Algorithm/AI agreement is not Gold.",
+    "exported_at": "2026-09-09T06:18:33.922Z"
+  },
+  "cases": [
+    {
+      "case_id": "CAL_Y2K_001",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_07",
+        "hex": "#594841",
+        "lch": {
+          "L": 0.41696711,
+          "C": 0.02604738,
+          "H": 42.94945861
+        }
+      },
+      "b": {
+        "mode_id": "mode_17",
+        "hex": "#714D40",
+        "lch": {
+          "L": 0.4564307,
+          "C": 0.05247239,
+          "H": 40.98423266
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": "Prior physical audit: deep warm-brown pair was visually coherent."
+      },
+      "selection_reason": "known_physical_audit_case"
+    },
+    {
+      "case_id": "CAL_Y2K_002",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_07",
+        "hex": "#594841",
+        "lch": {
+          "L": 0.41696711,
+          "C": 0.02604738,
+          "H": 42.94945861
+        }
+      },
+      "b": {
+        "mode_id": "mode_22",
+        "hex": "#4B3F64",
+        "lch": {
+          "L": 0.39650274,
+          "C": 0.06252916,
+          "H": 298.43603756
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "Prior human audit explicitly treated warm brown vs deep muted purple as hue-different but tone-similar."
+      },
+      "selection_reason": "known_physical_audit_case"
+    },
+    {
+      "case_id": "CAL_Y2K_003",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_04",
+        "hex": "#C4C8C9",
+        "lch": {
+          "L": 0.83007246,
+          "C": 0.00532758,
+          "H": 206.98739284
+        }
+      },
+      "b": {
+        "mode_id": "mode_12",
+        "hex": "#DFC2BB",
+        "lch": {
+          "L": 0.83749818,
+          "C": 0.03486307,
+          "H": 33.3948196
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "unreliable_low_chroma",
+        "tone_relation": "similar_or_partial",
+        "confidence": "medium",
+        "rationale": "Prior audit: very large ΔH is not meaningful because one color is near-neutral; both sit in a pale/muted region."
+      },
+      "selection_reason": "known_physical_audit_case"
+    },
+    {
+      "case_id": "CAL_Y2K_004",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B",
+        "lch": {
+          "L": 0.6438147,
+          "C": 0.16970499,
+          "H": 358.92075987
+        }
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "lch": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "similar",
+        "confidence": "medium",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_005",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_09",
+        "hex": "#000000",
+        "lch": {
+          "L": 0.02486905,
+          "C": 0.00155141,
+          "H": 257.50208688
+        }
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "lch": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_006",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_01",
+        "hex": "#E1DCDA",
+        "lch": {
+          "L": 0.89714476,
+          "C": 0.00584066,
+          "H": 45.20023122
+        }
+      },
+      "b": {
+        "mode_id": "mode_09",
+        "hex": "#000000",
+        "lch": {
+          "L": 0.02486905,
+          "C": 0.00155141,
+          "H": 257.50208688
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_007",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_41",
+        "hex": "#AD3D51",
+        "lch": {
+          "L": 0.52177535,
+          "C": 0.14605096,
+          "H": 13.07712257
+        }
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B",
+        "lch": {
+          "L": 0.6438147,
+          "C": 0.16970499,
+          "H": 358.92075987
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_008",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_22",
+        "hex": "#4B3F64",
+        "lch": {
+          "L": 0.39650274,
+          "C": 0.06252916,
+          "H": 298.43603756
+        }
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "lch": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_009",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_04",
+        "hex": "#C4C8C9",
+        "lch": {
+          "L": 0.83007246,
+          "C": 0.00532758,
+          "H": 206.98739284
+        }
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "lch": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_010",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_28",
+        "hex": "#D9C78A",
+        "lch": {
+          "L": 0.82971953,
+          "C": 0.08158735,
+          "H": 93.53638952
+        }
+      },
+      "b": {
+        "mode_id": "mode_49",
+        "hex": "#1E547C",
+        "lch": {
+          "L": 0.43043676,
+          "C": 0.0863903,
+          "H": 243.89450811
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_011",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_42",
+        "hex": "#482F42",
+        "lch": {
+          "L": 0.34205648,
+          "C": 0.04757347,
+          "H": 336.78619853
+        }
+      },
+      "b": {
+        "mode_id": "mode_44",
+        "hex": "#F9A2E9",
+        "lch": {
+          "L": 0.82094085,
+          "C": 0.13548832,
+          "H": 333.60458849
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_012",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_14",
+        "hex": "#7495D7",
+        "lch": {
+          "L": 0.67137278,
+          "C": 0.10569508,
+          "H": 263.90378183
+        }
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B",
+        "lch": {
+          "L": 0.6438147,
+          "C": 0.16970499,
+          "H": 358.92075987
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "similar",
+        "confidence": "medium",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_013",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_12",
+        "hex": "#DFC2BB",
+        "lch": {
+          "L": 0.83749818,
+          "C": 0.03486307,
+          "H": 33.3948196
+        }
+      },
+      "b": {
+        "mode_id": "mode_42",
+        "hex": "#482F42",
+        "lch": {
+          "L": 0.34205648,
+          "C": 0.04757347,
+          "H": 336.78619853
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_014",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_33",
+        "hex": "#ACCF93",
+        "lch": {
+          "L": 0.81274214,
+          "C": 0.08842107,
+          "H": 132.93661459
+        }
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "lch": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_015",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_09",
+        "hex": "#000000",
+        "lch": {
+          "L": 0.02486905,
+          "C": 0.00155141,
+          "H": 257.50208688
+        }
+      },
+      "b": {
+        "mode_id": "mode_33",
+        "hex": "#ACCF93",
+        "lch": {
+          "L": 0.81274214,
+          "C": 0.08842107,
+          "H": 132.93661459
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_016",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_06",
+        "hex": "#886D60",
+        "lch": {
+          "L": 0.55844039,
+          "C": 0.03972391,
+          "H": 46.70059602
+        }
+      },
+      "b": {
+        "mode_id": "mode_26",
+        "hex": "#B67CDB",
+        "lch": {
+          "L": 0.68159158,
+          "C": 0.14663868,
+          "H": 310.98761345
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_017",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_14",
+        "hex": "#7495D7",
+        "lch": {
+          "L": 0.67137278,
+          "C": 0.10569508,
+          "H": 263.90378183
+        }
+      },
+      "b": {
+        "mode_id": "mode_49",
+        "hex": "#1E547C",
+        "lch": {
+          "L": 0.43043676,
+          "C": 0.0863903,
+          "H": 243.89450811
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_018",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_38",
+        "hex": "#3E4148",
+        "lch": {
+          "L": 0.37425786,
+          "C": 0.01387525,
+          "H": 270.61531754
+        }
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "lch": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_019",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_04",
+        "hex": "#C4C8C9",
+        "lch": {
+          "L": 0.83007246,
+          "C": 0.00532758,
+          "H": 206.98739284
+        }
+      },
+      "b": {
+        "mode_id": "mode_21",
+        "hex": "#4EB7DB",
+        "lch": {
+          "L": 0.7323825,
+          "C": 0.10901325,
+          "H": 224.30055132
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    },
+    {
+      "case_id": "CAL_Y2K_020",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_45",
+        "hex": "#74458C",
+        "lch": {
+          "L": 0.47518119,
+          "C": 0.1211533,
+          "H": 313.4387128
+        }
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "lch": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        }
+      },
+      "label_status": "HUMAN_GOLD",
+      "coverage_anchor": true,
+      "human_label": {
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "Labeled in YOYO Calibration Lab v0"
+      },
+      "selection_reason": "diversity_seed_farthest_point_sampling"
+    }
+  ]
+}

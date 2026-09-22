@@ -1,0 +1,80 @@
+{
+  "contract": {
+    "name": "YOYO Project State Manifest Contract",
+    "version": "0.1.0"
+  },
+  "project": "YOYO/HueSense",
+  "manifest_version": "0.6C",
+  "current_phase": "SAFE_FOUNDATION_v0.6C_CLOSED",
+  "updated_at": "2026-09-10T04:18:56.763Z",
+  "summary": "Structural/runtime infrastructure can progress without human calibration. Perceptual calibration remains paused.",
+  "safety": {
+    "live_runtime_integration": false,
+    "candidate_v0_5_production_eligible": false,
+    "holdout_auto_retuning": false,
+    "formal_color_relation_core_modified": false,
+    "irreversible_semantic_merge": false
+  },
+  "calibration": {
+    "human_calibration_status": "PAUSED",
+    "v0_5_holdout_status": "BOUNDARY_CONTRADICTION_FOUND",
+    "v0_5_tone_score": {
+      "correct": 2,
+      "total": 9
+    },
+    "v0_5_hue_reliable_score": {
+      "correct": 6,
+      "total": 6
+    },
+    "v0_6_human_tasks": "DEFERRED"
+  },
+  "components": [
+    {
+      "id": "safe_foundation_v0_6b_1",
+      "status": "PASS"
+    },
+    {
+      "id": "project_state_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "generic_style_workspace",
+      "status": "PASS"
+    },
+    {
+      "id": "style_agnostic_offline_pipeline",
+      "status": "PASS"
+    },
+    {
+      "id": "cross_style_dataset_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "b3d_multiview_structural_skeleton",
+      "status": "PASS"
+    },
+    {
+      "id": "runtime_shadow_adapter",
+      "status": "PASS"
+    }
+  ],
+  "styles": [
+    {
+      "id": "y2k",
+      "data_status": "STRUCTURAL_BASELINE",
+      "pipeline_status": "PASS",
+      "validation_scope": "Y2K_ONLY_CURRENT_DATASET"
+    },
+    {
+      "id": "quiet-luxury",
+      "data_status": "DATA_PENDING",
+      "pipeline_status": "NOT_RUN",
+      "validation_scope": "UNVALIDATED_NEW_STYLE"
+    }
+  ],
+  "next_actions": {
+    "automatic_engineering": "v0.6C complete; next safe work may prepare Reference Discovery → workspace ingestion and B3-D view consumers without enabling live integration.",
+    "human": "Tone/Hue v0.6 calibration remains paused until user chooses to resume.",
+    "cross_style": "Quiet Luxury workspace exists but requires real discovered reference data before execution."
+  }
+}

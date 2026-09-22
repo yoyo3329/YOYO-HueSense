@@ -1,0 +1,20 @@
+{
+  "version": "0.8a2.0",
+  "build_time": {
+    "static_contract": "PASS",
+    "python_syntax": "PASS",
+    "node_syntax": "PASS"
+  },
+  "real_model_runtime_test": "NOT_RUN_IN_BUILD_ENVIRONMENT_NO_NETWORK",
+  "reason": "Container cannot download Transformers/SAM2 weights; installer performs dependency and real-model checks on user machine.",
+  "upstream_baseline": "v0.8-A.1.1 user run 20260912_042216",
+  "hard_contracts": [
+    "A1 actions ignored",
+    "Atomic immutable",
+    "0 destructive merge",
+    "SAM masks prior not truth",
+    "CLIP semantic scores not probability",
+    "No Style Graph",
+    "Production authority NONE"
+  ]
+}

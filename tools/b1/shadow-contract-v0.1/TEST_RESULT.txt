@@ -1,0 +1,12 @@
+PASS  valid DELTA input accepted
+PASS  DELTA after index 0 requires base shadow snapshot
+PASS  FULL batch cannot begin at non-zero index
+PASS  duplicate result_id rejected
+PASS  Shadow authority cannot become ranking authority
+PASS  ABSTAIN cannot assign a shadow rank
+PASS  STALE result cannot retain shadow rank
+PASS  valid OK result accepted
+PASS  DISABLED terminal result stays non-authoritative
+PASS  route/view identity is mandatory
+
+10/10 Shadow Result Contract checks PASS.

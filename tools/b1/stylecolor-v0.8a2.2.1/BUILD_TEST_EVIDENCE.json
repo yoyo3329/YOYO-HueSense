@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.8a2.2.1",
+  "package": "YOYO_STYLECOLOR_v0.8A2_2_1_EVIDENCE_PROVENANCE_AUTHORITY_HOTFIX_ONE_CHAIN_SELF_INSTALL",
+  "build_time_static_contract": "16/16 PASS",
+  "build_time_real_replay": {
+    "source_a21": "20260912_055542_y2k_v0_8a2_1",
+    "source_a22": "20260912_154510_y2k_v0_8a2_2",
+    "images": 24,
+    "masks_preserved": 440,
+    "masks_deleted": 0,
+    "scene_or_background_blocked_from_local_recovery": 3,
+    "background_plane_newly_blocked_from_local_recovery": 1,
+    "ambiguous_newly_blocked_from_local_recovery": 19,
+    "y2k_pack_raw_coverage": 0.991338305898491,
+    "y2k_pack_local_authority_coverage": 0.0711085390946502,
+    "sticker_local_split_retained": true,
+    "fashion_mixed_inconclusive_retained": true,
+    "output_gates": "23/23 PASS"
+  },
+  "go_no_go": {
+    "passed": 5,
+    "total": 6,
+    "decision": "HOLD_EVIDENCE_LAYER_VALIDATION",
+    "hold_reason": "UPSTREAM_INFERENCE_ENVIRONMENT_CLEANLY_CERTIFIED"
+  },
+  "important_interpretation": "The hotfix itself passes. Evidence-layer validation remains on HOLD because the historical A.2.1 inference run did not record torchvision and QuickGELU architecture sufficiently to certify the upstream inference environment clean. This warning is intentionally preserved rather than retroactively washed clean."
+}

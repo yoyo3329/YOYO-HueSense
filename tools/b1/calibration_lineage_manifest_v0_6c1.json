@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "name": "YOYO Calibration Lineage Audit",
+    "version": "0.6C.1",
+    "status": "PASS_WITH_LEGACY_QUARANTINE",
+    "active_schema_contract": "YOYO Perceptual Label Contract v0.2.0"
+  },
+  "sources": [
+    {
+      "file": "calibration_set_v0_human.json",
+      "role": "LEGACY_FIRST_PASS_RAW",
+      "authority": "HISTORICAL_ONLY",
+      "immutable": true,
+      "training_authority": false,
+      "cross_style_calibration_eligible": false,
+      "case_count": 20,
+      "legacy_schema": true,
+      "diagnostic_review_candidates": 5
+    },
+    {
+      "file": "gold_train_candidate_v0_4.json",
+      "role": "ACTIVE_CALIBRATION_TRAIN_CANDIDATE",
+      "authority": "HUMAN_APPROVED_AI_ASSISTED",
+      "immutable": true,
+      "independent_holdout": false,
+      "cross_style_schema_eligible": true,
+      "case_count": 20,
+      "schema_errors": 0
+    },
+    {
+      "file": "gold_holdout_human_v0_5_2.json",
+      "role": "RETIRED_BOUNDARY_STRESS_HOLDOUT",
+      "authority": "INDEPENDENT_AT_COLLECTION_TIME",
+      "immutable": true,
+      "training_eligible": false,
+      "cross_style_training_eligible": false,
+      "case_count": 9,
+      "schema_errors": 0,
+      "gate_status": "BOUNDARY_CONTRADICTION_FOUND"
+    }
+  ],
+  "invariants": {
+    "legacy_raw_modified": false,
+    "active_train_schema_pass": true,
+    "holdout_schema_pass": true,
+    "holdout_reused_as_train": false,
+    "numeric_auto_relabel": false
+  },
+  "legacy_review_candidates": [
+    {
+      "case_id": "CAL_Y2K_005",
+      "a_mode": "mode_09",
+      "b_mode": "mode_53",
+      "min_chroma": 0.00155141,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_006",
+      "a_mode": "mode_01",
+      "b_mode": "mode_09",
+      "min_chroma": 0.00155141,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_009",
+      "a_mode": "mode_04",
+      "b_mode": "mode_53",
+      "min_chroma": 0.00532758,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_015",
+      "a_mode": "mode_09",
+      "b_mode": "mode_33",
+      "min_chroma": 0.00155141,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    },
+    {
+      "case_id": "CAL_Y2K_019",
+      "a_mode": "mode_04",
+      "b_mode": "mode_21",
+      "min_chroma": 0.00532758,
+      "legacy_hue_relation": "different",
+      "confidence": "high",
+      "action": "HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT"
+    }
+  ],
+  "errors": {
+    "active_train": [],
+    "holdout": []
+  }
+}

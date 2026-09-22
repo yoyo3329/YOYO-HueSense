@@ -1,0 +1,5 @@
+YOYO B1 ORGANIZATION CHECK v0.4
+Active manifest missing files: 0
+
+Current stage: HUMAN_BLIND_RETEST_V0_4
+Start: npm run status

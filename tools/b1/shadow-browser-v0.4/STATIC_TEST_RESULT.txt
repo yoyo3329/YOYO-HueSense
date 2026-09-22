@@ -1,0 +1,10 @@
+PASS  real B1 source has 24 images
+PASS  real B1 fixture yields exactly 120 palette nodes
+PASS  all B1 source images use decoded-pixel analysis
+PASS  real B1 source has no observation errors
+PASS  all mapped palette nodes satisfy projected-item contract
+PASS  30/60/120 benchmark slices are available without duplication
+PASS  browser harness does not load production app.js
+PASS  browser fixture JS is present and self-contained
+
+8/8 Shadow Browser v0.4 static checks PASS.

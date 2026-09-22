@@ -1,0 +1,136 @@
+#!/usr/bin/env node
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+const INPUT = path.join(__dirname, 'gold_holdout_queue_v0_5.json');
+const OUTPUT = path.join(__dirname, 'gold_holdout_blind_lab_v0_5.html');
+if (!fs.existsSync(INPUT)) throw new Error(`Missing ${INPUT}`);
+
+const q = JSON.parse(fs.readFileSync(INPUT, 'utf8'));
+const embedded = JSON.stringify(q.cases).replace(/</g, '\\u003c');
+
+const html = `<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOYO Gold Holdout Blind Lab v0.5</title>
+<style>
+body{font-family:Arial,"Noto Sans TC",sans-serif;background:#efefef;margin:0;color:#111}
+.wrap{max-width:900px;margin:28px auto;padding:0 18px}
+.card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:20px;margin-bottom:18px}
+.notice{background:#fff6cf;border:1px solid #e4d271;padding:12px;border-radius:10px;line-height:1.6}
+.swatches{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:28px 0}
+.swatch{height:240px;border:1px solid #aaa;border-radius:12px}
+.cap{text-align:center;font-weight:700;margin-top:8px}
+.group{border-top:1px solid #eee;padding-top:16px;margin-top:16px}
+.opt{display:inline-block;border:1px solid #bbb;border-radius:999px;padding:9px 12px;margin:6px 6px 0 0;cursor:pointer}
+button{padding:10px 14px;border:1px solid #aaa;border-radius:10px;background:#fff;cursor:pointer}
+.primary{background:#111;color:#fff;border-color:#111}.progress{font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <h1>YOYO Gold Holdout Blind Lab v0.5</h1>
+    <div class="notice">這 9 題是正式獨立 Holdout。只看色塊，不看數值、不回查舊答案，也不要讓 AI 代答。不確定可以選 REVIEW / Low。</div>
+    <div class="progress" id="progress"></div>
+  </div>
+  <div class="card" id="case"></div>
+  <div class="card">
+    <button id="prev">上一題</button>
+    <button id="next">下一題</button>
+    <button class="primary" id="export">匯出 Holdout JSON</button>
+  </div>
+</div>
+<script>
+const CASES = ${embedded};
+const KEY = 'yoyo_gold_holdout_v0_5';
+let ans = JSON.parse(localStorage.getItem(KEY) || '{}');
+let i = 0;
+
+function opt(n,v,t,c){
+  return '<label class="opt"><input type="radio" name="'+n+'" value="'+v+'" '+(c?'checked':'')+'> '+t+'</label>';
+}
+function get(n){
+  const el = document.querySelector('input[name="'+n+'"]:checked');
+  return el ? el.value : null;
+}
+function save(){
+  const c = CASES[i];
+  ans[c.case_id] = {
+    case_id:c.case_id, source_style:c.source_style, a:c.a, b:c.b,
+    human_label:{
+      hue_applicability:get('ha'),
+      hue_relation:get('hr'),
+      tone_relation:get('tr'),
+      confidence:get('cf'),
+      rationale:'Independent human holdout v0.5'
+    }
+  };
+  localStorage.setItem(KEY, JSON.stringify(ans));
+}
+function render(){
+  const c = CASES[i];
+  const a = (ans[c.case_id] && ans[c.case_id].human_label) || {};
+  document.getElementById('progress').textContent = (i+1)+' / '+CASES.length;
+  let s = '';
+  s += '<h2>Case '+(i+1)+'</h2>';
+  s += '<div class="swatches">';
+  s += '<div><div class="swatch" style="background:'+c.a.hex+'"></div><div class="cap">A</div></div>';
+  s += '<div><div class="swatch" style="background:'+c.b.hex+'"></div><div class="cap">B</div></div>';
+  s += '</div>';
+  s += '<div class="group"><b>① Hue 是否適合比較？</b><br>';
+  s += opt('ha','reliable','兩色都有可辨識 Hue',a.hue_applicability==='reliable');
+  s += opt('ha','low_chroma','一色或兩色近中性／低彩度',a.hue_applicability==='low_chroma');
+  s += opt('ha','review','不確定',a.hue_applicability==='review');
+  s += '</div>';
+  s += '<div class="group"><b>② Hue 關係</b><br>';
+  s += opt('hr','same_or_adjacent','同族／相鄰',a.hue_relation==='same_or_adjacent');
+  s += opt('hr','different','不同族',a.hue_relation==='different');
+  s += opt('hr','not_applicable','不適用',a.hue_relation==='not_applicable');
+  s += opt('hr','review','REVIEW',a.hue_relation==='review');
+  s += '</div>';
+  s += '<div class="group"><b>③ Tone 關係</b><br>';
+  s += opt('tr','similar','相似',a.tone_relation==='similar');
+  s += opt('tr','similar_or_partial','部分相似',a.tone_relation==='similar_or_partial');
+  s += opt('tr','different','不相似',a.tone_relation==='different');
+  s += opt('tr','review','REVIEW',a.tone_relation==='review');
+  s += '</div>';
+  s += '<div class="group"><b>④ 信心</b><br>';
+  s += opt('cf','high','High',a.confidence==='high');
+  s += opt('cf','medium','Medium',a.confidence==='medium');
+  s += opt('cf','low','Low',a.confidence==='low');
+  s += '</div>';
+  document.getElementById('case').innerHTML = s;
+  document.querySelectorAll('input[type=radio]').forEach(x => x.addEventListener('change', save));
+}
+function go(n){ save(); i=Math.max(0,Math.min(CASES.length-1,n)); render(); window.scrollTo({top:0,behavior:'smooth'}); }
+document.getElementById('prev').onclick = () => go(i-1);
+document.getElementById('next').onclick = () => go(i+1);
+document.getElementById('export').onclick = () => {
+  save();
+  const rows = CASES.map(c => ans[c.case_id] || {case_id:c.case_id,source_style:c.source_style,a:c.a,b:c.b,human_label:null});
+  const payload = {
+    metadata:{
+      name:'YOYO Independent Human Gold Holdout v0.5', version:'0.5.0', status:'independent_human_holdout',
+      case_count:rows.length, exported_at:new Date().toISOString(),
+      blind_contract:{candidate_prediction_hidden:true,training_labels_hidden:true,ai_labels_hidden:true,numeric_features_hidden:true}
+    },
+    cases:rows
+  };
+  const blob = new Blob([JSON.stringify(payload,null,2)], {type:'application/json'});
+  const u = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href=u; a.download='gold_holdout_human_v0_5.json'; a.click(); URL.revokeObjectURL(u);
+};
+render();
+</script>
+</body>
+</html>`;
+
+fs.writeFileSync(OUTPUT, html, 'utf8');
+console.log('✅ Built:', OUTPUT);
+console.log('Cases:', q.cases.length);

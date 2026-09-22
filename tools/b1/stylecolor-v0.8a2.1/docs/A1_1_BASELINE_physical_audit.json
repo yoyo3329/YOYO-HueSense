@@ -1,0 +1,302 @@
+{
+  "schema_version": "0.8a1.1",
+  "role": "PHYSICAL_AUDIT_DIAGNOSTIC_NOT_ACCURACY_CLAIM",
+  "objective": "STABLE_TRACEABLE_UNCERTAINTY_AWARE_STYLE_USEFUL_REGION_REPRESENTATION",
+  "atomic_regions_total": 317,
+  "destructive_merges_executed": 0,
+  "relationship_edges_total": 632,
+  "flags": {
+    "REGION_BIMODAL_COLOR": 131,
+    "REGION_HIGH_INTERNAL_LIGHTNESS_SPREAD": 152,
+    "REGION_LOW_COLOR_HOMOGENEITY": 235,
+    "REGION_SCALE_SENSITIVE": 89,
+    "REGION_PERTURBATION_SENSITIVE": 8,
+    "REGION_BACKGROUND_DOMINATED_HIGH_CONTRAST_MIXTURE": 58
+  },
+  "clip_status_counts": {
+    "OK": 250,
+    "NOT_SELECTED_FOR_CLIP_BUDGET": 67
+  },
+  "counts": {
+    "stability_extreme_low": 1,
+    "high_bimodal_regions": 131,
+    "foreground_dilution_regions": 58,
+    "clip_scored_low_input_coherence": 144,
+    "relationship_edges_with_contradictions": 543,
+    "high_palette_impact_relationships": 47
+  },
+  "per_image": [
+    {
+      "image_id": "serpapi_google_images_2d8421f3ad2632a18a14",
+      "atomic_regions": 8,
+      "relationship_edges": 14,
+      "scale_sensitive": 2,
+      "perturbation_sensitive": 1,
+      "bimodal": 7,
+      "foreground_dilution": 0,
+      "clip_scored": 8,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_1ff2e0224fd5725bad54",
+      "atomic_regions": 17,
+      "relationship_edges": 35,
+      "scale_sensitive": 1,
+      "perturbation_sensitive": 1,
+      "bimodal": 9,
+      "foreground_dilution": 13,
+      "clip_scored": 12,
+      "clip_not_selected": 5
+    },
+    {
+      "image_id": "serpapi_google_images_038098b1bbc5f6b146fd",
+      "atomic_regions": 20,
+      "relationship_edges": 41,
+      "scale_sensitive": 3,
+      "perturbation_sensitive": 0,
+      "bimodal": 4,
+      "foreground_dilution": 0,
+      "clip_scored": 12,
+      "clip_not_selected": 8
+    },
+    {
+      "image_id": "serpapi_google_images_83ee05bfcf2bef13cafd",
+      "atomic_regions": 23,
+      "relationship_edges": 48,
+      "scale_sensitive": 5,
+      "perturbation_sensitive": 0,
+      "bimodal": 3,
+      "foreground_dilution": 1,
+      "clip_scored": 12,
+      "clip_not_selected": 11
+    },
+    {
+      "image_id": "serpapi_google_images_9aada71d2d1db6471dcb",
+      "atomic_regions": 12,
+      "relationship_edges": 20,
+      "scale_sensitive": 5,
+      "perturbation_sensitive": 1,
+      "bimodal": 7,
+      "foreground_dilution": 2,
+      "clip_scored": 12,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_722d54cf81ab15c4f556",
+      "atomic_regions": 3,
+      "relationship_edges": 3,
+      "scale_sensitive": 1,
+      "perturbation_sensitive": 0,
+      "bimodal": 3,
+      "foreground_dilution": 0,
+      "clip_scored": 3,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_9ec1ff183dccf3d83ae8",
+      "atomic_regions": 16,
+      "relationship_edges": 34,
+      "scale_sensitive": 7,
+      "perturbation_sensitive": 2,
+      "bimodal": 10,
+      "foreground_dilution": 5,
+      "clip_scored": 12,
+      "clip_not_selected": 4
+    },
+    {
+      "image_id": "serpapi_google_images_c17fe1c381287485df0e",
+      "atomic_regions": 9,
+      "relationship_edges": 20,
+      "scale_sensitive": 7,
+      "perturbation_sensitive": 0,
+      "bimodal": 5,
+      "foreground_dilution": 1,
+      "clip_scored": 9,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_96f83a2ab9731b6c6fe8",
+      "atomic_regions": 18,
+      "relationship_edges": 39,
+      "scale_sensitive": 1,
+      "perturbation_sensitive": 0,
+      "bimodal": 10,
+      "foreground_dilution": 2,
+      "clip_scored": 12,
+      "clip_not_selected": 6
+    },
+    {
+      "image_id": "serpapi_google_images_684c47b09dba8e542528",
+      "atomic_regions": 10,
+      "relationship_edges": 18,
+      "scale_sensitive": 4,
+      "perturbation_sensitive": 0,
+      "bimodal": 7,
+      "foreground_dilution": 3,
+      "clip_scored": 10,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_e8e9dab72c6b88d4fe33",
+      "atomic_regions": 14,
+      "relationship_edges": 25,
+      "scale_sensitive": 3,
+      "perturbation_sensitive": 0,
+      "bimodal": 5,
+      "foreground_dilution": 2,
+      "clip_scored": 12,
+      "clip_not_selected": 2
+    },
+    {
+      "image_id": "serpapi_google_images_4db7767bb8ed7c3ad502",
+      "atomic_regions": 19,
+      "relationship_edges": 39,
+      "scale_sensitive": 2,
+      "perturbation_sensitive": 0,
+      "bimodal": 0,
+      "foreground_dilution": 0,
+      "clip_scored": 12,
+      "clip_not_selected": 7
+    },
+    {
+      "image_id": "serpapi_google_images_a225e2e1c6036e7ac323",
+      "atomic_regions": 18,
+      "relationship_edges": 41,
+      "scale_sensitive": 5,
+      "perturbation_sensitive": 0,
+      "bimodal": 7,
+      "foreground_dilution": 6,
+      "clip_scored": 12,
+      "clip_not_selected": 6
+    },
+    {
+      "image_id": "serpapi_google_images_ae57e9165868f5104cb0",
+      "atomic_regions": 1,
+      "relationship_edges": 0,
+      "scale_sensitive": 0,
+      "perturbation_sensitive": 0,
+      "bimodal": 1,
+      "foreground_dilution": 1,
+      "clip_scored": 1,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_5b5216b7f4ef04ba27a3",
+      "atomic_regions": 8,
+      "relationship_edges": 15,
+      "scale_sensitive": 2,
+      "perturbation_sensitive": 0,
+      "bimodal": 6,
+      "foreground_dilution": 1,
+      "clip_scored": 8,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_af6e192e74a947847f38",
+      "atomic_regions": 11,
+      "relationship_edges": 21,
+      "scale_sensitive": 5,
+      "perturbation_sensitive": 0,
+      "bimodal": 8,
+      "foreground_dilution": 2,
+      "clip_scored": 11,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_a5091b3d3a147c1b217a",
+      "atomic_regions": 11,
+      "relationship_edges": 23,
+      "scale_sensitive": 4,
+      "perturbation_sensitive": 0,
+      "bimodal": 5,
+      "foreground_dilution": 2,
+      "clip_scored": 11,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_977adf7551b90669bec3",
+      "atomic_regions": 9,
+      "relationship_edges": 17,
+      "scale_sensitive": 7,
+      "perturbation_sensitive": 2,
+      "bimodal": 6,
+      "foreground_dilution": 1,
+      "clip_scored": 9,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_0e38c60bc72619724a3f",
+      "atomic_regions": 12,
+      "relationship_edges": 25,
+      "scale_sensitive": 5,
+      "perturbation_sensitive": 0,
+      "bimodal": 6,
+      "foreground_dilution": 2,
+      "clip_scored": 12,
+      "clip_not_selected": 0
+    },
+    {
+      "image_id": "serpapi_google_images_3af46f275d27bd0d8229",
+      "atomic_regions": 14,
+      "relationship_edges": 28,
+      "scale_sensitive": 1,
+      "perturbation_sensitive": 0,
+      "bimodal": 7,
+      "foreground_dilution": 3,
+      "clip_scored": 12,
+      "clip_not_selected": 2
+    },
+    {
+      "image_id": "serpapi_google_images_a8976d52d0fb90cc1a7e",
+      "atomic_regions": 13,
+      "relationship_edges": 24,
+      "scale_sensitive": 6,
+      "perturbation_sensitive": 0,
+      "bimodal": 6,
+      "foreground_dilution": 0,
+      "clip_scored": 12,
+      "clip_not_selected": 1
+    },
+    {
+      "image_id": "serpapi_google_images_38c22bf980043651df9b",
+      "atomic_regions": 17,
+      "relationship_edges": 36,
+      "scale_sensitive": 3,
+      "perturbation_sensitive": 0,
+      "bimodal": 3,
+      "foreground_dilution": 6,
+      "clip_scored": 12,
+      "clip_not_selected": 5
+    },
+    {
+      "image_id": "serpapi_google_images_c3b811982bafd4aae718",
+      "atomic_regions": 14,
+      "relationship_edges": 25,
+      "scale_sensitive": 2,
+      "perturbation_sensitive": 1,
+      "bimodal": 3,
+      "foreground_dilution": 1,
+      "clip_scored": 12,
+      "clip_not_selected": 2
+    },
+    {
+      "image_id": "serpapi_google_images_1f1aa076794f54ee49c6",
+      "atomic_regions": 20,
+      "relationship_edges": 41,
+      "scale_sensitive": 8,
+      "perturbation_sensitive": 0,
+      "bimodal": 3,
+      "foreground_dilution": 4,
+      "clip_scored": 12,
+      "clip_not_selected": 8
+    }
+  ],
+  "interpretation_limits": [
+    "Does not prove real-world object identity.",
+    "Atomic regions are immutable observations, not semantic/style entities.",
+    "All 0-1 evidence scores are heuristic scores, not calibrated probabilities.",
+    "No destructive region merge is executed.",
+    "No Style Graph is built in v0.8-A.1.",
+    "Semantic-mask and embedding agreement are deferred to v0.8-A.2."
+  ]
+}

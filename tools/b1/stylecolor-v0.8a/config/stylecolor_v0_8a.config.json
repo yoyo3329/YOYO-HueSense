@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.8a.0",
+  "style_id": "y2k",
+  "concept": "Y2K aesthetic",
+  "scope": "OFFLINE_STYLECOLOR_EXTRACTOR_POC",
+  "region_proposal": {
+    "engine": "SLIC_REGION_PROPOSAL_BASELINE",
+    "segments": 28,
+    "compactness": 10.0,
+    "max_dim": 512,
+    "semantic_segmentation_claim": false
+  },
+  "region_palette": {
+    "working_color_space": "OKLab",
+    "derived_color_space": "OKLCH",
+    "k": 2,
+    "lightness_trim_percent": [5, 95],
+    "hard_delete_extremes": false
+  },
+  "saliency": {
+    "engine": "DETERMINISTIC_PROXY",
+    "components": ["OKLab global contrast", "Sobel edge density", "center prior"],
+    "hard_threshold": false
+  },
+  "clip": {
+    "service_base": "http://127.0.0.1:8765",
+    "batch_size": 8,
+    "max_regions_per_image": 8,
+    "timeout_ms": 120000,
+    "asset_server_port": 8791,
+    "role": "REGION_STYLE_EVIDENCE_ONLY",
+    "hard_threshold": false
+  },
+  "policy": {
+    "no_generic_corpus": true,
+    "no_style_lift": true,
+    "no_npmi": true,
+    "no_style_graph": true,
+    "no_hard_style_filter": true,
+    "low_reliability_not_delete": true,
+    "production_integration": false
+  }
+}

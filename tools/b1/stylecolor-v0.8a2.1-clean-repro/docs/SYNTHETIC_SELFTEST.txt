@@ -1,0 +1,11 @@
+[1/1] FOUNDATION img
+{"ok": true, "processed": 1, "total": 1}
+
+
+{"atomic_with_foundation_overlap": 2, "atomic_without_foundation_overlap": 0, "atomic_split_hypothesis_capable": 2, "mask_group_hypothesis_capable": 2}
+
+
+A2.1 assembly complete
+
+
+PASS synthetic SPLIT/GROUP/KEEP/UNKNOWN + A1 authority isolation + topology

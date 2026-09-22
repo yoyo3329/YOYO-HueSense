@@ -1,0 +1,752 @@
+{
+  "metadata": {
+    "name": "YOYO Relation Train Regression v0.5",
+    "version": "0.5.0",
+    "status": "TRAIN_FIT_ONLY",
+    "train_source": "gold_train_candidate_v0_4.json",
+    "graph_source": "y2k_color_relation_graph_v0_5_candidate.json",
+    "independent_holdout_count": 0,
+    "warning": "100% train fit, if observed, is not validation. Do not use this report as a production accuracy claim."
+  },
+  "summary": {
+    "total_train_cases": 20,
+    "hue_applicability": {
+      "correct": 20,
+      "total": 20
+    },
+    "hue_relation_reliable_only": {
+      "correct": 11,
+      "total": 11
+    },
+    "tone_relation": {
+      "correct": 20,
+      "total": 20
+    },
+    "all_relations": {
+      "correct": 20,
+      "total": 20
+    }
+  },
+  "cases": [
+    {
+      "case_id": "CAL_Y2K_013",
+      "pair_key": "mode_12||mode_42",
+      "confidence": "medium",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "medium",
+        "rationale": "兩色可辨識為不同色相，且明度差距非常大，Tone 不相似。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "hue_applicability_margin_chroma": 0.00486307,
+        "hue_relation_margin_degrees": 16.60862107,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 0.81286286,
+        "tone_different_margin": 0.27286286,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_009",
+      "pair_key": "mode_04||mode_53",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "A 接近中性灰，Hue 不宜作主判斷；兩者明度接近但彩度差距很大。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.02467242,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.14843841,
+        "tone_different_margin": 0.39156159,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_010",
+      "pair_key": "mode_28||mode_49",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "米黃色與深藍色屬不同色相，且明度差距明顯。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "hue_applicability_margin_chroma": 0.05158735,
+        "hue_relation_margin_degrees": 110.35811859,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 0.57445058,
+        "tone_different_margin": 0.03445058,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_014",
+      "pair_key": "mode_33||mode_53",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "兩者同為綠色系且相鄰；明度接近，但 B 的鮮豔程度明顯更高。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "hue_applicability_margin_chroma": 0.05842107,
+        "hue_relation_margin_degrees": 36.01033193,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.13226216,
+        "tone_different_margin": 0.40773784,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_017",
+      "pair_key": "mode_14||mode_49",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "兩者同屬藍色系且相近；主要差異在深淺。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "hue_applicability_margin_chroma": 0.0563903,
+        "hue_relation_margin_degrees": 19.99072628,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.51373534,
+        "tone_different_margin": 0.02626466,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_016",
+      "pair_key": "mode_06||mode_26",
+      "confidence": "medium",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "medium",
+        "rationale": "棕色與紫色屬不同色相，整體明度與彩度表現也有明顯差異。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "hue_applicability_margin_chroma": 0.00972391,
+        "hue_relation_margin_degrees": 55.71298257,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 0.58213583,
+        "tone_different_margin": 0.04213583,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_011",
+      "pair_key": "mode_42||mode_44",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "兩者都偏紫紅色系，但一深一亮，Tone 差異很大。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "hue_applicability_margin_chroma": 0.01757347,
+        "hue_relation_margin_degrees": 36.81838996,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 1.29962596,
+        "tone_different_margin": 0.75962596,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_015",
+      "pair_key": "mode_09||mode_33",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "黑色缺乏可靠 Hue，與亮綠色在明度與彩度上差異都很大。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.02844859,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 1.83433201,
+        "tone_different_margin": 1.29433201,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_018",
+      "pair_key": "mode_38||mode_53",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "A 接近低彩度深灰，Hue 不適合作主判斷；與亮綠色 Tone 明顯不同。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.01612475,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 1.54036015,
+        "tone_different_margin": 1.00036015,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_006",
+      "pair_key": "mode_01||mode_09",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "兩色都近中性，但一個近白、一個近黑，Tone 完全不同。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.02844859,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 1.11694393,
+        "tone_different_margin": 0.57694393,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_001",
+      "pair_key": "mode_07||mode_17",
+      "confidence": "medium",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "medium",
+        "rationale": "A 偏低彩度，Hue 判斷可靠度有限；兩者整體深淺與柔和程度接近。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.00395262,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "similar",
+        "tone_near_match": true,
+        "tone_separation_score": 0.16863484,
+        "tone_different_margin": 0.37136516,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_003",
+      "pair_key": "mode_04||mode_12",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": "A 近中性灰，Hue 不宜硬判；兩者都偏淺且柔和，Tone 整體相似。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.02467242,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "similar",
+        "tone_near_match": true,
+        "tone_separation_score": 0.06666385,
+        "tone_different_margin": 0.47333615,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_020",
+      "pair_key": "mode_45||mode_53",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "紫色與黃綠色明顯不同族，且明度、彩度關係也不接近。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "hue_applicability_margin_chroma": 0.0911533,
+        "hue_relation_margin_degrees": 135.50823372,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 0.91943136,
+        "tone_different_margin": 0.37943136,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_019",
+      "pair_key": "mode_04||mode_21",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "A 接近灰色，Hue 不可靠；兩者都偏亮，但 B 彩度高很多。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.02467242,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.50026267,
+        "tone_different_margin": 0.03973733,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_012",
+      "pair_key": "mode_14||mode_50",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "藍色與粉紅色 Hue 不同；明度接近，因此 Tone 有部分相似。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "hue_applicability_margin_chroma": 0.07569508,
+        "hue_relation_margin_degrees": 55.01697804,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.19555761,
+        "tone_different_margin": 0.34444239,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_007",
+      "pair_key": "mode_41||mode_50",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "紅與粉紅屬相鄰色相；整體彩度接近，但明度有差。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "hue_applicability_margin_chroma": 0.11605096,
+        "hue_relation_margin_degrees": 25.8436373,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.33695226,
+        "tone_different_margin": 0.20304774,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_005",
+      "pair_key": "mode_09||mode_53",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "黑色缺乏 Hue 資訊，與亮黃綠在明度及彩度上差異都很大。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.02844859,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 2.30710734,
+        "tone_different_margin": 1.76710734,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_004",
+      "pair_key": "mode_50||mode_53",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "粉紅與黃綠屬不同色相；彩度都偏高，但明度存在差異。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "hue_applicability_margin_chroma": 0.13970499,
+        "hue_relation_margin_degrees": 90.02618665,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.34998708,
+        "tone_different_margin": 0.19001292,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_002",
+      "pair_key": "mode_07||mode_22",
+      "confidence": "medium",
+      "expected": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial",
+        "confidence": "medium",
+        "rationale": "A 偏低彩度，Hue 判斷不穩；兩者明度接近，Tone 有部分相似。"
+      },
+      "predicted": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "hue_applicability_margin_chroma": 0.00395262,
+        "hue_relation_margin_degrees": null,
+        "tone_relation": "similar_or_partial",
+        "tone_near_match": false,
+        "tone_separation_score": 0.12975859,
+        "tone_different_margin": 0.41024141,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_008",
+      "pair_key": "mode_22||mode_53",
+      "confidence": "high",
+      "expected": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "深紫與亮黃綠屬不同色相，且明度與彩度差距都明顯。"
+      },
+      "predicted": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "hue_applicability_margin_chroma": 0.03252916,
+        "hue_relation_margin_degrees": 129.48909104,
+        "tone_relation": "different",
+        "tone_near_match": false,
+        "tone_separation_score": 1.32126905,
+        "tone_different_margin": 0.78126905,
+        "parameters": {
+          "hue_min_chroma_reliable": 0.03,
+          "hue_same_or_adjacent_max_delta_h_degrees": 40,
+          "tone_similar_max_delta_l": 0.06,
+          "tone_similar_max_delta_c": 0.033,
+          "tone_interaction_weight": 4,
+          "tone_different_threshold": 0.54
+        }
+      },
+      "pass": {
+        "hue_applicability": true,
+        "hue_relation": true,
+        "tone_relation": true,
+        "all": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+const queuePath = process.argv[2] || path.join(__dirname, 'v0_8_1_controlled_train_queue.json');
+const outPath = process.argv[3] || path.join(__dirname, 'v0_8_1_controlled_chroma_blind_lab.html');
+
+const q = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+const pc = q.presentation_contract;
+
+const publicCases = q.cases.map(c => ({
+  case_id: c.case_id,
+  left_hex: c.left.hex,
+  right_hex: c.right.hex
+}));
+
+const auditCases = q.cases.map(c => ({
+  case_id: c.case_id,
+  pair_key: c.pair_key,
+  left: { mode_id: c.left.mode_id, hex: c.left.hex },
+  right: { mode_id: c.right.mode_id, hex: c.right.hex }
+}));
+
+const html = `<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>YOYO v0.8.1 Controlled Chroma Blind Train</title>
+<style>
+:root{color-scheme:light;forced-color-adjust:none;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+html,body{margin:0;min-height:100%;background:${pc.neutral_surround_hex};color:#111}
+body{forced-color-adjust:none}
+button,input{font:inherit}
+#app{min-height:100vh;background:${pc.neutral_surround_hex}}
+#adaptation,#interstitial{
+ position:fixed;inset:0;background:${pc.neutral_surround_hex};z-index:20;
+ display:flex;align-items:center;justify-content:center;color:#111
+}
+.hidden{display:none!important}
+.stage{
+ min-height:64vh;background:${pc.neutral_surround_hex};
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+ padding:28px 24px 24px
+}
+.progress{font-size:14px;margin-bottom:18px}
+.swatch-row{
+ display:flex;align-items:center;justify-content:center;
+ gap:${pc.swatch_gap_px}px;width:100%
+}
+.swatch{
+ width:min(29vw,270px);height:min(29vw,270px);
+ min-width:190px;min-height:190px;
+ border:0;border-radius:0;box-shadow:none;outline:none;
+ background-clip:border-box
+}
+.controls{
+ background:${pc.neutral_surround_hex};
+ max-width:760px;margin:0 auto;padding:18px 24px 36px
+}
+fieldset{border:0;margin:0 0 20px;padding:0}
+legend{font-weight:750;margin-bottom:10px}
+.options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.option{
+ display:flex;gap:8px;align-items:center;justify-content:center;
+ min-height:48px;padding:8px;background:rgba(255,255,255,.10);
+ border:1px solid rgba(0,0,0,.28)
+}
+.distraction{
+ display:flex;align-items:flex-start;gap:9px;margin:20px 0;padding:12px;
+ border:1px solid rgba(0,0,0,.28);background:rgba(255,255,255,.08)
+}
+.actions{display:flex;justify-content:space-between;gap:12px;margin-top:20px}
+button{border:1px solid #222;background:#777;color:#111;padding:12px 18px;font-weight:750;cursor:pointer}
+button.primary{background:#686868}
+button:disabled{opacity:.45;cursor:default}
+.note{font-size:13px;line-height:1.55;margin-top:14px}
+#env-warning{font-weight:700;margin:8px 0 0}
+@media(max-width:700px){
+ .swatch-row{gap:32px}
+ .swatch{min-width:135px;min-height:135px;width:38vw;height:38vw}
+ .options{grid-template-columns:1fr}
+}
+@media(forced-colors:active){
+ #env-warning::after{content:"偵測到 Forced Colors / High Contrast 模式；本次結果不應作正式實驗資料。"}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="adaptation">
+    <div style="text-align:center">
+      <div style="font-weight:800">中性灰適應</div>
+      <div id="adapt-count" style="margin-top:8px">5</div>
+    </div>
+  </div>
+  <div id="interstitial" class="hidden"></div>
+
+  <section class="stage">
+    <div id="progress" class="progress"></div>
+    <div class="swatch-row">
+      <div id="left" class="swatch"></div>
+      <div id="right" class="swatch"></div>
+    </div>
+  </section>
+
+  <section class="controls">
+    <fieldset>
+      <legend>Chroma Relation（只判斷彩度／鮮豔程度）</legend>
+      <div class="options">
+        <label class="option"><input type="radio" name="chroma" value="similar"> Similar</label>
+        <label class="option"><input type="radio" name="chroma" value="similar_or_partial"> Similar or Partial</label>
+        <label class="option"><input type="radio" name="chroma" value="different"> Different</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Confidence</legend>
+      <div class="options">
+        <label class="option"><input type="radio" name="confidence" value="high"> High</label>
+        <label class="option"><input type="radio" name="confidence" value="medium"> Medium</label>
+        <label class="option"><input type="radio" name="confidence" value="low"> Low</label>
+      </div>
+    </fieldset>
+
+    <label class="distraction">
+      <input id="lightness-interference" type="checkbox">
+      <span>亮度差異大到會干擾我判斷彩度（非必填；不直接參與 Chroma 計分）</span>
+    </label>
+
+    <div class="actions">
+      <button id="prev">上一題</button>
+      <button id="next" class="primary">下一題</button>
+    </div>
+
+    <p class="note">
+      請不要使用 AI、色碼工具、取色器或其他外部分析。
+      系統已固定中性灰刺激環境，題目順序與左右位置在標註前已承諾。
+    </p>
+    <p id="env-warning"></p>
+    <p id="status" class="note"></p>
+    <button id="export" class="primary">全部完成後下載 JSON</button>
+  </section>
+</div>
+
+<script>
+const CASES=${JSON.stringify(publicCases)};
+const AUDIT=${JSON.stringify(auditCases)};
+const CONTRACT=${JSON.stringify(pc)};
+let index=0;
+const answers={};
+let ready=false;
+
+function mm(q){try{return matchMedia(q).matches}catch(_){return false}}
+function displayEnvironment(){
+  return {
+    css_media_color_gamut:{
+      srgb:mm('(color-gamut: srgb)'),
+      p3:mm('(color-gamut: p3)'),
+      rec2020:mm('(color-gamut: rec2020)')
+    },
+    forced_colors_active:mm('(forced-colors: active)'),
+    prefers_contrast_more:mm('(prefers-contrast: more)'),
+    color_depth:screen.colorDepth ?? null,
+    pixel_depth:screen.pixelDepth ?? null,
+    device_pixel_ratio:window.devicePixelRatio ?? null,
+    screen_width:screen.width ?? null,
+    screen_height:screen.height ?? null,
+    viewport_width:window.innerWidth,
+    viewport_height:window.innerHeight,
+    user_agent:navigator.userAgent
+  };
+}
+const ENV=displayEnvironment();
+
+function current(){return CASES[index]}
+function save(){
+  if(!ready)return;
+  const c=current();
+  const chroma=document.querySelector('input[name="chroma"]:checked');
+  const conf=document.querySelector('input[name="confidence"]:checked');
+  answers[c.case_id]={
+    chroma_relation:chroma?chroma.value:null,
+    confidence:conf?conf.value:null,
+    distraction_flags:{
+      lightness_interference:document.getElementById('lightness-interference').checked
+    }
+  };
+}
+function restore(){
+  document.querySelectorAll('input[type="radio"]').forEach(x=>x.checked=false);
+  document.getElementById('lightness-interference').checked=false;
+  const a=answers[current().case_id];
+  if(!a)return;
+  if(a.chroma_relation){
+    const e=document.querySelector('input[name="chroma"][value="'+a.chroma_relation+'"]');
+    if(e)e.checked=true;
+  }
+  if(a.confidence){
+    const e=document.querySelector('input[name="confidence"][value="'+a.confidence+'"]');
+    if(e)e.checked=true;
+  }
+  document.getElementById('lightness-interference').checked=!!a.distraction_flags?.lightness_interference;
+}
+function render(){
+  const c=current();
+  document.getElementById('left').style.background=c.left_hex;
+  document.getElementById('right').style.background=c.right_hex;
+  document.getElementById('progress').textContent='題目 '+(index+1)+' / '+CASES.length;
+  document.getElementById('prev').disabled=index===0;
+  document.getElementById('next').textContent=index===CASES.length-1?'完成':'下一題';
+  restore();
+  updateStatus();
+}
+function updateStatus(){
+  const complete=CASES.filter(c=>answers[c.case_id]?.chroma_relation&&answers[c.case_id]?.confidence).length;
+  document.getElementById('status').textContent='已完整作答 '+complete+' / '+CASES.length;
+}
+function validateCurrent(){
+  save();
+  const a=answers[current().case_id];
+  return !!(a?.chroma_relation&&a?.confidence);
+}
+function neutralTransition(cb){
+  ready=false;
+  const inter=document.getElementById('interstitial');
+  inter.classList.remove('hidden');
+  setTimeout(()=>{
+    cb();
+    inter.classList.add('hidden');
+    ready=true;
+  },CONTRACT.inter_stimulus_ms);
+}
+document.getElementById('prev').onclick=()=>{
+  save();
+  if(index===0)return;
+  neutralTransition(()=>{index--;render()});
+};
+document.getElementById('next').onclick=()=>{
+  if(!validateCurrent()){
+    alert('請先選 Chroma Relation 與 Confidence。');
+    return;
+  }
+  if(index<CASES.length-1){
+    neutralTransition(()=>{index++;render()});
+  }else{
+    updateStatus();
+  }
+};
+document.querySelectorAll('input[type="radio"],#lightness-interference').forEach(
+  x=>x.addEventListener('change',()=>{save();updateStatus()})
+);
+
+document.getElementById('export').onclick=()=>{
+  save();
+  const missing=CASES.filter(c=>!answers[c.case_id]?.chroma_relation||!answers[c.case_id]?.confidence);
+  if(missing.length){
+    alert('還有 '+missing.length+' 題尚未完整作答。');
+    return;
+  }
+  if(ENV.forced_colors_active){
+    alert('偵測到 Forced Colors / High Contrast 模式；請關閉後重做，避免污染色彩呈現。');
+    return;
+  }
+
+  const auditMap=Object.fromEntries(AUDIT.map(x=>[x.case_id,x]));
+  const out={
+    metadata:{
+      name:'YOYO v0.8.1 Stage A Controlled Chroma Human Labels',
+      version:'0.8.1-stage-a-controlled',
+      role:'TRAIN_CALIBRATION',
+      authority:'DIRECT_HUMAN_BLIND_CONTROLLED_PRESENTATION',
+      ai_assistance:false,
+      algorithm_outputs_hidden:true,
+      physical_numeric_features_hidden:true,
+      case_count:CASES.length,
+      exported_at:new Date().toISOString(),
+      stimulus_color_space:CONTRACT.stimulus_color_space,
+      stimulus_surround:{
+        background:CONTRACT.neutral_surround_hex,
+        theme_locked:true,
+        swatch_gap_px:CONTRACT.swatch_gap_px,
+        initial_adaptation_ms:CONTRACT.initial_adaptation_ms,
+        inter_stimulus_ms:CONTRACT.inter_stimulus_ms
+      },
+      display_environment:ENV
+    },
+    presentation:{
+      sequence_precommitted:true,
+      side_assignment_precommitted:true,
+      shuffle_method:'SEEDED_FISHER_YATES_WITH_SEQUENCE_GUARD'
+    },
+    cases:CASES.map((c,pos)=>{
+      const audit=auditMap[c.case_id];
+      return {
+        case_id:c.case_id,
+        pair_key:audit.pair_key,
+        presentation:{
+          position:pos+1,
+          left_item:audit.left,
+          right_item:audit.right
+        },
+        human_label:answers[c.case_id]
+      };
+    })
+  };
+
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download='v0_8_1_controlled_train_human.json';
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+
+if(ENV.forced_colors_active){
+  document.getElementById('env-warning').textContent='偵測到 Forced Colors / High Contrast；請關閉後重新載入。';
+}
+
+let remaining=Math.ceil(CONTRACT.initial_adaptation_ms/1000);
+document.getElementById('adapt-count').textContent=remaining;
+const timer=setInterval(()=>{
+  remaining--;
+  document.getElementById('adapt-count').textContent=Math.max(remaining,0);
+  if(remaining<=0){
+    clearInterval(timer);
+    document.getElementById('adaptation').classList.add('hidden');
+    ready=true;
+    render();
+  }
+},1000);
+</script>
+</body>
+</html>`;
+
+fs.writeFileSync(outPath, html);
+console.log(`Built controlled blind lab: ${outPath}`);

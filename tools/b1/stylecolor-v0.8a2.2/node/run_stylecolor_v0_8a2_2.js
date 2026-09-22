@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('fs'),path=require('path'),crypto=require('crypto'),{spawnSync}=require('child_process');
+function arg(n,d=null){const i=process.argv.indexOf(n);return i>=0?process.argv[i+1]:d}function read(p){return JSON.parse(fs.readFileSync(p,'utf8'))}function write(p,x){fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n')}function sha(p){return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')}function stamp(){return new Date().toISOString().replace(/[-:]/g,'').replace(/\..+/,'').replace('T','_')}
+function main(){
+ const root=path.resolve(arg('--root','C:/xampp/htdocs/color-search-test/tools/b1')),up=path.resolve(arg('--a21-run')),py=arg('--python'),envAudit=path.resolve(arg('--env-audit')),target=path.resolve(__dirname,'..'),cfg=path.join(target,'config','stylecolor_v0_8a2_2.config.json');
+ if(!fs.existsSync(path.join(up,'run_manifest.json')))throw new Error('A2.1 run_manifest missing'); const um=read(path.join(up,'run_manifest.json')); if(um.version!=='0.8a2.1')throw new Error('Upstream must be v0.8-A.2.1');
+ const outBase=path.join(root,'stylecolor-v0.8a2.2','runs');fs.mkdirSync(outBase,{recursive:true});const run=path.join(outBase,`${stamp()}_y2k_v0_8a2_2`);fs.mkdirSync(run,{recursive:true});
+ const cp=spawnSync(py,[path.join(target,'python','quality_control_a22.py'),'--a21-run',up,'--out-dir',run,'--config',cfg,'--env-audit',envAudit],{stdio:'inherit',encoding:'utf8',timeout:1800000});if(cp.status!==0)process.exit(cp.status||2);
+ const qc=read(path.join(run,'hypothesis_quality_control.json'));const manifest={schema_version:'0.8a2.2',name:'YOYO v0.8-A.2.2 Perceptual Hypothesis Quality Control',version:'0.8a2.2',created_at:new Date().toISOString(),upstream_a21_run:up,upstream_a21_manifest_sha256:sha(path.join(up,'run_manifest.json')),model_inference:'NONE_POSTPROCESS_ONLY',foundation_masks_preserved:true,foundation_masks_deleted:0,global_masks_preserved_but_removed_from_local_recovery_authority:true,semantic_top_label_authority:'NONE',embedding_neighbor_grouping_authority:'NONE',proposal_information_final_score:null,style_graph_built:false,production_authority:'NONE',environment_warning_count:(qc.environment_audit.warnings||[]).length,summary:{images:qc.images.length,masks:qc.images.reduce((s,x)=>s+x.mask_count,0),global_or_umbrella_routed_mask_count:qc.global_or_umbrella_routed_mask_count,critical_cases:qc.critical_case_recovery.length}};write(path.join(run,'run_manifest.json'),manifest);
+ const b=spawnSync(process.execPath,[path.join(target,'node','build_a22_audit.js'),run,up],{stdio:'inherit',encoding:'utf8'});if(b.status!==0)process.exit(b.status||3);
+ fs.writeFileSync(path.join(outBase,'LATEST_RUN.txt'),run+'\n');console.log('RUN_DIR='+run);
+}
+main();

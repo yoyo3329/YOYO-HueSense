@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Sealed Independent Validation Queue",
+    "version": "0.7.0",
+    "role": "INDEPENDENT_VALIDATION",
+    "case_count": 12,
+    "selected_before_train_labels": true,
+    "materialized_after_candidate_freeze": true,
+    "candidate_config_sha256": "be14b6a28210b5f391bd2d059ff21a2a9bca1484aea8dacffa365794d142a2a5",
+    "materialized_at": "2026-09-10T15:18:32.704Z"
+  },
+  "cases": [
+    {
+      "case_id": "V07_VALID_001",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_21",
+        "hex": "#4EB7DB"
+      },
+      "b": {
+        "mode_id": "mode_28",
+        "hex": "#D9C78A"
+      },
+      "pair_key": "mode_21||mode_28"
+    },
+    {
+      "case_id": "V07_VALID_002",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_09",
+        "hex": "#000000"
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B"
+      },
+      "pair_key": "mode_09||mode_50"
+    },
+    {
+      "case_id": "V07_VALID_003",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_01",
+        "hex": "#E1DCDA"
+      },
+      "b": {
+        "mode_id": "mode_05",
+        "hex": "#130E11"
+      },
+      "pair_key": "mode_01||mode_05"
+    },
+    {
+      "case_id": "V07_VALID_004",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_18",
+        "hex": "#615A5B"
+      },
+      "b": {
+        "mode_id": "mode_45",
+        "hex": "#74458C"
+      },
+      "pair_key": "mode_18||mode_45"
+    },
+    {
+      "case_id": "V07_VALID_005",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_02",
+        "hex": "#362B2C"
+      },
+      "b": {
+        "mode_id": "mode_20",
+        "hex": "#2D1E1B"
+      },
+      "pair_key": "mode_02||mode_20"
+    },
+    {
+      "case_id": "V07_VALID_006",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_26",
+        "hex": "#B67CDB"
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E"
+      },
+      "pair_key": "mode_26||mode_53"
+    },
+    {
+      "case_id": "V07_VALID_007",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_52",
+        "hex": "#4C6382"
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E"
+      },
+      "pair_key": "mode_52||mode_53"
+    },
+    {
+      "case_id": "V07_VALID_008",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_34",
+        "hex": "#DE77A2"
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B"
+      },
+      "pair_key": "mode_34||mode_50"
+    },
+    {
+      "case_id": "V07_VALID_009",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_02",
+        "hex": "#362B2C"
+      },
+      "b": {
+        "mode_id": "mode_33",
+        "hex": "#ACCF93"
+      },
+      "pair_key": "mode_02||mode_33"
+    },
+    {
+      "case_id": "V07_VALID_010",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_22",
+        "hex": "#4B3F64"
+      },
+      "b": {
+        "mode_id": "mode_24",
+        "hex": "#ABD8BB"
+      },
+      "pair_key": "mode_22||mode_24"
+    },
+    {
+      "case_id": "V07_VALID_011",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_32",
+        "hex": "#DDA3B9"
+      },
+      "b": {
+        "mode_id": "mode_41",
+        "hex": "#AD3D51"
+      },
+      "pair_key": "mode_32||mode_41"
+    },
+    {
+      "case_id": "V07_VALID_012",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_26",
+        "hex": "#B67CDB"
+      },
+      "b": {
+        "mode_id": "mode_41",
+        "hex": "#AD3D51"
+      },
+      "pair_key": "mode_26||mode_41"
+    }
+  ]
+}

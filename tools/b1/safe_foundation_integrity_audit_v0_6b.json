@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "name": "YOYO Safe Foundation Integrity Audit",
+    "version": "0.6B.1",
+    "status": "PASS"
+  },
+  "summary": {
+    "checks": 48,
+    "passed": 48,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "file exists: pipeline_integrity_audit_v0_6a.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: offline_pipeline_report_v0_6b.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: y2k_dynamic_profile_packet_v0_6b.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: runtime_profile_provenance_v0_6b.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: shadow_runtime_simulation_v0_6b.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: shadow_runtime_policy_v0_6b.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: relation_formula_candidate_config_v0_5.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v0.6A integrity still PASS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "offline pipeline PASS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "offline reproduction gate PASS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B1 physical-semantic reproduction exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "derived B2/B3/Relation byte exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "offline pipeline network fetch disabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "offline pipeline core rollback enabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "dynamic profile contract validates",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "dynamic profile has 53 atomic nodes",
+      "pass": true,
+      "detail": "got 53"
+    },
+    {
+      "name": "dynamic profile has 1378 relations",
+      "pass": true,
+      "detail": "got 1378"
+    },
+    {
+      "name": "dynamic profile is SHADOW_ONLY",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "dynamic profile cannot block search",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "dynamic profile cannot change palette",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3-D views remain reserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate v0.5 semantics excluded from profile packet",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "provisional perceptual relation fields excluded from profile packet",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "provenance stores no raw user input",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "provenance has no missing tracked files",
+      "pass": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "provenance manifest fingerprint is SHA-256 length",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "shadow simulation PASS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "simulation did not mutate production",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "simulation had zero synchronous shadow starts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "simulation had zero search block events",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "simulation had zero palette change events",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "synthetic shadow failures contained",
+      "pass": true,
+      "detail": "got 3"
+    },
+    {
+      "name": "synthetic shadow timeouts contained",
+      "pass": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "audit log has no raw request/palette leak",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "simulation queue stayed bounded",
+      "pass": true,
+      "detail": "max=200"
+    },
+    {
+      "name": "live shadow integration remains disabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "planned live sample rate is bounded",
+      "pass": true,
+      "detail": "rate=0.1"
+    },
+    {
+      "name": "planned live queue is bounded",
+      "pass": true,
+      "detail": "limit=64"
+    },
+    {
+      "name": "planned live concurrency is bounded",
+      "pass": true,
+      "detail": "concurrency=2"
+    },
+    {
+      "name": "planned live timeout is bounded",
+      "pass": true,
+      "detail": "ms=1200"
+    },
+    {
+      "name": "audit privacy disables raw user input",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit privacy disables image URLs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit privacy disables palette payload",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fallback contract is fail-open",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fallback cannot block search",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "audit log privacy contract forbids raw input",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v0.5 candidate remains TRAIN_FIT_ONLY",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v0.5 candidate remains production-ineligible",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

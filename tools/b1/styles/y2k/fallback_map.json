@@ -1,0 +1,14 @@
+{
+  "serpapi_google_images_5b5216b7f4ef04ba27a3": {
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC02dipEUCVRywtyu2ZsdUOCMOJV-LImpfefUD78C-pg&s=10",
+    "analysisSource": "google_image_thumbnail_fallback",
+    "featureReliability": 0.85,
+    "skipPrimary": false
+  },
+  "serpapi_google_images_af6e192e74a947847f38": {
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMUFOLm7LAeM27vT4oHLgHEtLfZOEexfvzazoiPRz-QQ&s=10",
+    "analysisSource": "google_image_thumbnail_fallback",
+    "featureReliability": 0.85,
+    "skipPrimary": true
+  }
+}

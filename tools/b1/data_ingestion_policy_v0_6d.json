@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "name": "YOYO Generic Data Ingestion Policy",
+    "version": "0.6D",
+    "status": "FOUNDATION_ONLY"
+  },
+  "profiles": {
+    "NEW_STYLE_REFERENCE_POOL": {
+      "min_references": 50,
+      "max_references": 100,
+      "min_query_families": 3,
+      "max_single_source_ratio": 0.5,
+      "max_url_failure_ratio": 0.2,
+      "require_selected_cache_ratio": 1.0,
+      "evaluation_target": 24
+    },
+    "LEGACY_Y2K_MIGRATION": {
+      "min_references": 24,
+      "max_references": 24,
+      "min_query_families": 3,
+      "max_single_source_ratio": 0.5,
+      "max_url_failure_ratio": 0.2,
+      "require_selected_cache_ratio": 1.0,
+      "evaluation_target": 24,
+      "exception_reason": "Existing Y2K fixed evaluation set contains 24 already-selected images; this profile is migration-only and MUST NOT be used for a new style."
+    }
+  },
+  "selection_gate": {
+    "raw_reference_discovery_may_become_evaluation_set": false,
+    "accepted_selection_provenance": [
+      "CLIP_RANKED_FIXED_SET",
+      "LEGACY_FIXED_EVALUATION_SET"
+    ]
+  },
+  "safety": {
+    "fake_data_allowed": false,
+    "live_runtime_mutation": false,
+    "human_calibration_required": false
+  }
+}

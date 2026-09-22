@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Independent Validation Human Labels",
+    "version": "0.7.0",
+    "role": "INDEPENDENT_VALIDATION",
+    "authority": "DIRECT_HUMAN_BLIND",
+    "ai_assistance": false,
+    "algorithm_outputs_hidden": true,
+    "exported_at": "2026-09-10T15:33:27.012Z",
+    "case_count": 12
+  },
+  "cases": [
+    {
+      "case_id": "V07_VALID_001",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_21",
+        "hex": "#4EB7DB"
+      },
+      "b": {
+        "mode_id": "mode_28",
+        "hex": "#D9C78A"
+      },
+      "pair_key": "mode_21||mode_28",
+      "human_label": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_002",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_09",
+        "hex": "#000000"
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B"
+      },
+      "pair_key": "mode_09||mode_50",
+      "human_label": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_003",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_01",
+        "hex": "#E1DCDA"
+      },
+      "b": {
+        "mode_id": "mode_05",
+        "hex": "#130E11"
+      },
+      "pair_key": "mode_01||mode_05",
+      "human_label": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_004",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_18",
+        "hex": "#615A5B"
+      },
+      "b": {
+        "mode_id": "mode_45",
+        "hex": "#74458C"
+      },
+      "pair_key": "mode_18||mode_45",
+      "human_label": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_005",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_02",
+        "hex": "#362B2C"
+      },
+      "b": {
+        "mode_id": "mode_20",
+        "hex": "#2D1E1B"
+      },
+      "pair_key": "mode_02||mode_20",
+      "human_label": {
+        "lightness_relation": "similar",
+        "chroma_relation": "similar",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_006",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_26",
+        "hex": "#B67CDB"
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E"
+      },
+      "pair_key": "mode_26||mode_53",
+      "human_label": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_007",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_52",
+        "hex": "#4C6382"
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E"
+      },
+      "pair_key": "mode_52||mode_53",
+      "human_label": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_008",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_34",
+        "hex": "#DE77A2"
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B"
+      },
+      "pair_key": "mode_34||mode_50",
+      "human_label": {
+        "lightness_relation": "similar_or_partial",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_009",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_02",
+        "hex": "#362B2C"
+      },
+      "b": {
+        "mode_id": "mode_33",
+        "hex": "#ACCF93"
+      },
+      "pair_key": "mode_02||mode_33",
+      "human_label": {
+        "lightness_relation": "different",
+        "chroma_relation": "different",
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_010",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_22",
+        "hex": "#4B3F64"
+      },
+      "b": {
+        "mode_id": "mode_24",
+        "hex": "#ABD8BB"
+      },
+      "pair_key": "mode_22||mode_24",
+      "human_label": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_011",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_32",
+        "hex": "#DDA3B9"
+      },
+      "b": {
+        "mode_id": "mode_41",
+        "hex": "#AD3D51"
+      },
+      "pair_key": "mode_32||mode_41",
+      "human_label": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    },
+    {
+      "case_id": "V07_VALID_012",
+      "source_style": "Y2K",
+      "a": {
+        "mode_id": "mode_26",
+        "hex": "#B67CDB"
+      },
+      "b": {
+        "mode_id": "mode_41",
+        "hex": "#AD3D51"
+      },
+      "pair_key": "mode_26||mode_41",
+      "human_label": {
+        "lightness_relation": "different",
+        "chroma_relation": "similar_or_partial",
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": ""
+      }
+    }
+  ]
+}

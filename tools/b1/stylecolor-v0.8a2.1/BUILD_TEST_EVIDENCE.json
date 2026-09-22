@@ -1,0 +1,19 @@
+{
+  "name": "YOYO StyleColor v0.8-A.2.1 Build Test Evidence",
+  "version": "0.8a2.1",
+  "tests": {
+    "static_contract": "12/12 PASS",
+    "synthetic_topology": "PASS",
+    "full_mock_one_chain_output_gates": "19/19 PASS",
+    "resume_per_image_fingerprint_mismatch": "PASS (RESUME_ENV_MISMATCH)",
+    "python_syntax": "PASS",
+    "node_syntax": "PASS",
+    "real_sam2_inference_in_build_environment": "NOT RUN - requires network/model download; installer performs pinned real smoke test before 24-image run"
+  },
+  "non_claims": [
+    "No claim of Foundation mask perceptual validity before user-machine real run.",
+    "No claim of Perceptual Recovery PASS from engineering gates.",
+    "No production authority.",
+    "No Style Graph."
+  ]
+}

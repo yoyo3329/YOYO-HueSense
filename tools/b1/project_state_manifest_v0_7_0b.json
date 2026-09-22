@@ -1,0 +1,66 @@
+{
+  "manifest_version": "0.7.0b",
+  "current_phase": "PILOT_FAIL_REDESIGN_REQUIRED",
+  "updated_at": "2026-09-11T13:04:59.754Z",
+  "foundation": {
+    "v0_6d1": "PASS_REQUIRED_PREREQUISITE"
+  },
+  "perceptual_relation": {
+    "v0_5": {
+      "status": "BOUNDARY_CONTRADICTION_FOUND",
+      "production_eligible": false,
+      "interpretation": "FAILED_BOUNDARY_STRESS_REDESIGN_REQUIRED"
+    },
+    "v0_7": {
+      "validation_status": "PILOT_FAIL_REDESIGN_REQUIRED",
+      "score": {
+        "lightness_relation": {
+          "correct": 9,
+          "total": 12,
+          "rate": 0.75
+        },
+        "chroma_relation": {
+          "correct": 7,
+          "total": 12,
+          "rate": 0.5833333333333334
+        },
+        "hue_applicability": {
+          "correct": 12,
+          "total": 12,
+          "rate": 1
+        },
+        "tone_relation": {
+          "correct": 9,
+          "total": 12,
+          "rate": 0.75
+        },
+        "hue_relation_reliable": {
+          "correct": 7,
+          "total": 7,
+          "rate": 1
+        },
+        "all_relevant": {
+          "correct": 5,
+          "total": 12,
+          "rate": 0.4166666666666667
+        }
+      },
+      "high_confidence_all_relation_contradictions": 7,
+      "commitment_verified": true,
+      "final_integrity_audit": "PASS",
+      "validation_retirement": "RETIRED_AFTER_FIRST_EVALUATION",
+      "production_eligible": false,
+      "universality_status": "UNVALIDATED"
+    }
+  },
+  "research_discipline": {
+    "validation_retuning_forbidden": true,
+    "validation_set_reuse_as_independent_validation": false,
+    "future_use_of_this_validation": "FAILURE_TAXONOMY_ONLY",
+    "direct_human_validation": true,
+    "auto_production_promotion": false
+  },
+  "live_runtime": {
+    "integrated": false
+  }
+}

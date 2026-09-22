@@ -1,0 +1,12 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8 Stage A Prep State",
+    "version": "0.8-stage-a-prep-1"
+  },
+  "research_policy": "RETired v0.7 validation = FAILURE TAXONOMY ONLY",
+  "likely_frozen_prediction_sources": [
+    "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\v0_7_independent_validation_report.json"
+  ],
+  "status": "FAILURE_TAXONOMY_BUILT",
+  "next_action": "REVIEW_TAXONOMY_THEN_PREPARE_FRESH_12_16_CASE_STAGE_A_TRAIN"
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Research Discipline Audit",
+    "version": "0.7.0",
+    "status": "PASS"
+  },
+  "summary": {
+    "pass": 16,
+    "total": 16,
+    "fail": 0
+  },
+  "checks": [
+    {
+      "name": "retired holdout taxonomy is diagnostic only",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "taxonomy forbids threshold tuning",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "hypotheses pre-registered before new human labels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mode-specific rules forbidden",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fresh selection excludes prior labeled pairs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "train has 24 fresh cases",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "validation has 12 sealed cases",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "train/validation pair overlap is zero",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "validation sealed before train labels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fitter source does not import retired holdout",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "fitter source does not access sealed validation material",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate source has no case_id special logic",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate source has no mode_id special logic",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "validation cannot retune candidate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "new gold requires direct human",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "pilot gate cannot auto-promote production",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

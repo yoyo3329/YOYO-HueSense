@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.8a1.1",
+  "status": "PASS_POC",
+  "images_total": 24,
+  "images_processed": 24,
+  "images_failed": 0,
+  "atomic_regions_total": 317,
+  "relationship_edges_total": 632,
+  "destructive_merges_executed": 0,
+  "clip_regions_scored": 250,
+  "style_graph_built": false,
+  "semantic_truth_claim": false,
+  "probability_claims_from_scores": false,
+  "production_eligible": false,
+  "next_gate": "v0.8-A.1 PHYSICAL_AUDIT THEN OPTIONAL v0.8-A.2 SEMANTIC_PRIORS"
+}

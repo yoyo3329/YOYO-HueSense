@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.8a2.0",
+  "style_id": "y2k",
+  "concept": "Y2K aesthetic",
+  "scope": "OFFLINE_FOUNDATION_MASK_SEMANTIC_PRIOR_PERCEPTUAL_GROUPING_EVALUATION",
+  "input_contract": {
+    "required_upstream": "v0.8-A.1.1",
+    "require_byte_identical_source_when_available": true,
+    "a1_relationship_action_authority": "NONE",
+    "consume_a1_observations_only": true
+  },
+  "foundation_mask": {
+    "engine": "SAM2_MASK_GENERATION",
+    "model": "facebook/sam2.1-hiera-tiny",
+    "device": "cpu",
+    "points_per_crop": 12,
+    "points_per_batch": 16,
+    "pred_iou_thresh": 0.8,
+    "stability_score_thresh": 0.9,
+    "crops_n_layers": 0,
+    "min_area_ratio": 0.002,
+    "max_area_ratio": 0.97,
+    "max_masks_per_image": 64,
+    "truth_claim": false,
+    "role": "FOUNDATION_MASK_PRIOR_ONLY"
+  },
+  "visual_embedding": {
+    "engine": "OpenCLIP",
+    "model": "ViT-B-32",
+    "pretrained": "openai",
+    "device": "cpu",
+    "store_full_embedding": true,
+    "embedding_semantics": "VISUAL_REPRESENTATION_NOT_TRUTH"
+  },
+  "semantic_prior": {
+    "score_semantics": "CLIP_COSINE_NOT_PROBABILITY",
+    "prompts": {
+      "typography_graphic": "text typography letters logo poster graphic design",
+      "sticker_icon_illustration": "sticker icon badge illustration graphic symbol",
+      "person_skin": "person human face skin body",
+      "clothing_fabric": "clothing fashion garment fabric outfit",
+      "accessory": "fashion accessory bag jewelry shoes glasses",
+      "metallic_chrome": "metallic chrome glossy reflective material",
+      "technology_object": "technology electronic device retro tech object",
+      "background_surface": "background wall floor sky surface scenery",
+      "generic_object": "physical object product item"
+    }
+  },
+  "grouping": {
+    "destructive_merge": false,
+    "foundation_masks_are_group_hypotheses": true,
+    "primary_membership_rule": "ARGMAX_ATOMIC_COVERAGE_NO_THRESHOLD",
+    "all_overlap_evidence_preserved": true,
+    "cross_group_link": "MUTUAL_NEAREST_VISUAL_EMBEDDING",
+    "style_graph_built": false
+  },
+  "schema_repairs": {
+    "palette_impact_location": "decision_risk.palette_impact_score",
+    "rename_clip_input_coherence": "low_level_input_coherence_score"
+  },
+  "policy": {
+    "atomic_regions_immutable": true,
+    "no_destructive_merge": true,
+    "no_style_graph": true,
+    "no_production_integration": true,
+    "foundation_mask_not_truth": true,
+    "semantic_prior_not_truth": true,
+    "a1_actions_ignored": true,
+    "a2_may_contradict_a1_hypotheses": true,
+    "no_probability_claim_from_heuristic_or_clip_scores": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "name": "YOYO Shadow Runtime Policy",
+    "version": "0.6B",
+    "status": "NOT_LIVE_INTEGRATED",
+    "mode": "SHADOW_ONLY"
+  },
+  "middleware": {
+    "enabled_in_live_runtime": false,
+    "sample_rate": 0.1,
+    "queue_limit": 64,
+    "concurrency": 2,
+    "task_timeout_ms": 1200,
+    "failure_mode": "FAIL_OPEN"
+  },
+  "audit_log": {
+    "write_mode": "ASYNC_BUFFERED_NDJSON",
+    "batch_size": 20,
+    "flush_interval_ms": 500,
+    "max_queue": 1000,
+    "max_file_bytes": 2097152,
+    "max_files": 5,
+    "raw_user_input_stored": false,
+    "image_urls_stored": false,
+    "palette_payload_stored": false
+  },
+  "authority": {
+    "can_block_search": false,
+    "can_change_palette": false,
+    "can_reorder_results": false,
+    "can_promote_candidate": false,
+    "can_tune_from_holdout": false
+  }
+}

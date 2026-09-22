@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.8a2.1-clean-repro",
+  "style_id": "y2k",
+  "concept": "Y2K aesthetic",
+  "scope": "CLEAN_CERTIFIED_INFERENCE_REPRODUCTION",
+  "input_contract": {
+    "required_upstream": "v0.8-A.1.1",
+    "require_byte_identical_source_when_available": true,
+    "a1_relationship_action_authority": "NONE",
+    "consume_a1_observations_only": true,
+    "derived_components_must_trace_to_atomic_or_pixels": true
+  },
+  "foundation_mask": {
+    "engine": "SAM2_MASK_GENERATION",
+    "model": "facebook/sam2.1-hiera-tiny",
+    "revision_policy": "RESOLVE_ON_FIRST_RUN_THEN_PIN",
+    "device": "cpu",
+    "dtype": "float32",
+    "points_per_crop": 12,
+    "points_per_batch": 16,
+    "pred_iou_thresh": 0.8,
+    "stability_score_thresh": 0.9,
+    "crops_n_layers": 0,
+    "min_area_ratio_hygiene": 0.0005,
+    "max_area_ratio_hygiene": 0.995,
+    "near_duplicate_iou_hygiene": 0.985,
+    "near_duplicate_mutual_containment_hygiene": 0.995,
+    "nesting_child_coverage": 0.95,
+    "max_masks_per_image_hygiene": 96,
+    "truth_claim": false,
+    "role": "FOUNDATION_MASK_HYPOTHESIS_ONLY",
+    "hygiene_thresholds_are_semantic_decisions": false
+  },
+  "visual_embedding": {
+    "engine": "OpenCLIP",
+    "model": "ViT-B-32-quickgelu",
+    "pretrained": "openai",
+    "device": "cpu",
+    "store_full_embedding": true,
+    "embedding_semantics": "VISUAL_REPRESENTATION_NOT_TRUTH",
+    "intended_family": "ViT-B-32/OpenAI",
+    "quick_gelu_required": true,
+    "certification_note": "OpenAI pretrained CLIP weights require QuickGELU; clean reproduction uses explicit -quickgelu model definition and drift-compares against the prior uncertified run.",
+    "expected_state_dict_sha256": "a3ce3c4a2245ed2a572d2eb864a62f0a4ca62b3123b83f8a52a523c3b1dd32a4"
+  },
+  "semantic_prior": {
+    "score_semantics": "CLIP_COSINE_NOT_PROBABILITY",
+    "axes": {
+      "content_type": {
+        "person": "a person or human subject",
+        "clothing": "clothing garment fashion outfit",
+        "accessory": "fashion accessory bag jewelry shoes glasses",
+        "technology": "technology electronic device retro tech object",
+        "graphic": "graphic design poster logo visual graphic",
+        "background": "background wall floor sky scenery surface",
+        "other": "other visual content"
+      },
+      "visual_form": {
+        "typography": "text typography letters wordmark lettering",
+        "icon_sticker": "sticker icon badge symbol small graphic",
+        "illustration": "illustration drawing vector art graphic",
+        "photographic_object": "photographic physical object",
+        "surface": "plain surface material background plane",
+        "other": "other visual form"
+      },
+      "material_appearance": {
+        "fabric": "fabric textile cloth material",
+        "metallic_chrome": "metallic chrome reflective silver material",
+        "glossy": "glossy shiny specular material",
+        "matte": "matte non reflective material",
+        "skin": "human skin material appearance",
+        "transparent_translucent": "transparent translucent glass plastic",
+        "unknown": "unknown material appearance"
+      }
+    }
+  },
+  "hypothesis_contract": {
+    "foundation_masks_are_truth": false,
+    "foundation_mask_equals_perceptual_component": false,
+    "allowed_resolution_states": [
+      "SPLIT",
+      "GROUP",
+      "KEEP",
+      "UNKNOWN",
+      "AMBIGUOUS_BUT_HIGH_IMPACT"
+    ],
+    "default_resolution_state": "UNKNOWN",
+    "destructive_merge": false,
+    "split_authority": "HYPOTHESIS_ONLY",
+    "group_authority": "HYPOTHESIS_ONLY",
+    "keep_authority": "HYPOTHESIS_ONLY",
+    "unknown_allowed": true,
+    "all_overlap_evidence_preserved": true
+  },
+  "relationship_graph": {
+    "edge_types": [
+      "SPATIAL_ADJACENCY",
+      "COLOR_SIMILARITY",
+      "MASK_OVERLAP",
+      "MASK_CONTAINMENT",
+      "VISUAL_EMBEDDING_NEIGHBOR",
+      "SEMANTIC_AXIS_SIMILARITY",
+      "STYLE_SIMILARITY",
+      "POSSIBLE_SHARED_COMPONENT"
+    ],
+    "visual_neighbor_rule": "MUTUAL_NEAREST_WITH_ABSOLUTE_SIMILARITY_AND_MARGIN_RECORDED",
+    "no_generic_grouping_edge": true
+  },
+  "stability": {
+    "critical_case_only": true,
+    "probes": [
+      "brightness_plus_3pct",
+      "resize_97pct"
+    ],
+    "metric": "BEST_IOU_TO_PERTURBED_MASK_SET"
+  },
+  "critical_case_registry": [
+    {
+      "case_name": "Y2K_PACK",
+      "image_id": "serpapi_google_images_1ff2e0224fd5725bad54",
+      "a1_failure_modes": [
+        "FOREGROUND_DILUTION",
+        "FRAGMENTATION"
+      ]
+    },
+    {
+      "case_name": "STICKER_COLLAGE",
+      "image_id": "serpapi_google_images_ae57e9165868f5104cb0",
+      "a1_failure_modes": [
+        "CATASTROPHIC_UNDERSEGMENTATION"
+      ]
+    },
+    {
+      "case_name": "FASHION_COLLAGE",
+      "image_id": "serpapi_google_images_9ec1ff183dccf3d83ae8",
+      "a1_failure_modes": [
+        "SEMANTIC_MIXTURE",
+        "FRAGMENTATION"
+      ]
+    }
+  ],
+  "resume_guard": {
+    "enabled": true,
+    "require_exact_fingerprint_match": true,
+    "fingerprint_fields": [
+      "a1_run_manifest_sha256",
+      "config_sha256",
+      "model_lock_sha256",
+      "code_bundle_sha256",
+      "dependency_fingerprint_sha256"
+    ]
+  },
+  "schema_repairs": {
+    "palette_impact_location": "decision_risk.palette_impact_score",
+    "rename_clip_input_coherence": "low_level_input_coherence_score",
+    "remove_primary_group_forced_ownership": true,
+    "store_overlap_rank_margin_entropy": true
+  },
+  "gates": {
+    "layers": [
+      "EXECUTION",
+      "REPRODUCIBILITY",
+      "FOUNDATION_INTEGRITY",
+      "HYPOTHESIS_INTEGRITY",
+      "PERCEPTUAL_RECOVERY"
+    ],
+    "perceptual_recovery_is_not_implied_by_first_four": true
+  },
+  "policy": {
+    "atomic_regions_immutable": true,
+    "no_destructive_merge": true,
+    "no_style_graph": true,
+    "no_production_integration": true,
+    "foundation_mask_not_truth": true,
+    "semantic_prior_not_truth": true,
+    "a1_actions_ignored": true,
+    "a2_may_contradict_a1_hypotheses": true,
+    "no_probability_claim_from_heuristic_or_clip_scores": true,
+    "sam_mask_not_final_stylecolor_region": true,
+    "stylecolor_centric_not_object_centric": true,
+    "clean_reproduction_only": true,
+    "no_algorithm_tuning": true,
+    "drift_comparison_required_before_evidence_validation": true
+  }
+}

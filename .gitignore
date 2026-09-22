@@ -1,0 +1,132 @@
+﻿
+# ===== FINAL YOYO / HueSense Git exclusions =====
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+/config/config.php
+config/local.*
+config/*secret*
+config/*credential*
+config/*token*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Node
+node_modules/
+**/node_modules/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+vendor_py/
+**/vendor_py/
+
+# Cache / logs
+cache/*
+!cache/.gitkeep
+logs/*
+!logs/.gitkeep
+tmp/
+temp/
+*.tmp
+*.log
+
+# Archives
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# Models
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+models/**/*.bin
+**/models/**/*.bin
+**/checkpoints/**/*.bin
+
+# YOYO generated outputs
+**/runs/
+**/outputs/
+**/results/
+**/visual_audit/
+**/visual_audit_v*/
+**/context_crops/
+**/crops/
+**/masks/
+**/previews/
+**/preview_assets/
+
+# Research images / datasets
+tools/b1/**/source_images/
+tools/b1/**/images/
+tools/b1/**/reference_pool/
+tools/b1/**/y2k_full_reference_pool/
+
+# B1 cache / generated previews
+tools/b1/b1_cache/
+tools/b1/b1_preview_assets/
+tools/b1/b1_preview.html
+tools/b1/b2_preview.html
+*.img
+
+# Timestamped research runs
+tools/b1/20*/
+
+# Temporary test outputs
+**/tests/_tmp*/
+**/_tmp*/
+
+# Generated reports
+**/one_chain_reports/
+**/preview.html
+**/audit.html
+
+# Local shortcuts
+*.lnk
+
+# Old / backup trees
+tools/b1/_pipeline_backups/
+tools/b1/_backup_before_*/
+tools/b1/YOYO_A2_1_STRUCTURE_*/
+tools/b1/_archive/
+
+# Sealed validation material
+tools/b1/_v0_7_sealed/
+
+# Runtime audit logs
+tools/b1/shadow_runtime_audit_*/
+
+# Generated style artifacts
+tools/b1/styles/*/artifacts/
+tools/b1/styles/*/ingestion/
+
+# Physical audit generated data
+tools/physical_audit_lab/data/*
+!tools/physical_audit_lab/data/.gitkeep
+
+# Local-only
+.local/
+.local-data/
+.local-models/
+.local-cache/
+

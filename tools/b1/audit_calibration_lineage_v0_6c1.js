@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('fs'),path=require('path');const C=require('./perceptual-label-contract-v0_2.js');const B=__dirname;
+function read(f){const p=path.join(B,f);return fs.existsSync(p)?JSON.parse(fs.readFileSync(p,'utf8')):null}
+function write(f,x){fs.writeFileSync(path.join(B,f),JSON.stringify(x,null,2)+'\n')}
+function minC(c){return Math.min(Number(c?.a?.lch?.C??Infinity),Number(c?.b?.lch?.C??Infinity))}
+const legacy=read('calibration_set_v0_human.json');const train=read('gold_train_candidate_v0_4.json');const hold=read('gold_holdout_human_v0_5_2.json');const gate=read('gold_holdout_regression_v0_5_1.json');
+if(!train)throw new Error('gold_train_candidate_v0_4.json missing');if(!hold)throw new Error('gold_holdout_human_v0_5_2.json missing');
+let trainErrors=[];for(const c of train.cases||[]){try{C.validateCase(c)}catch(e){trainErrors.push({case_id:c.case_id,error:e.message})}}
+let holdErrors=[];for(const c of hold.cases||[]){try{C.validateCase(c)}catch(e){holdErrors.push({case_id:c.case_id,error:e.message})}}
+const legacyReview=[];for(const c of legacy?.cases||[]){const y=C.getLabel(c)||{};if(C.isLegacyCase(c)&&minC(c)<=0.01&&!['unreliable_low_chroma','not_applicable','review'].includes(y.hue_relation))legacyReview.push({case_id:c.case_id,a_mode:c.a?.mode_id,b_mode:c.b?.mode_id,min_chroma:minC(c),legacy_hue_relation:y.hue_relation,confidence:y.confidence,action:'HISTORICAL_REVIEW_CANDIDATE_ONLY_NO_AUTO_EDIT'})}
+const status=trainErrors.length===0&&holdErrors.length===0?'PASS_WITH_LEGACY_QUARANTINE':'FAIL';
+const lineage={metadata:{name:'YOYO Calibration Lineage Audit',version:'0.6C.1',status,active_schema_contract:C.CONTRACT.name+' v'+C.CONTRACT.version},sources:[
+ {file:'calibration_set_v0_human.json',role:'LEGACY_FIRST_PASS_RAW',authority:'HISTORICAL_ONLY',immutable:true,training_authority:false,cross_style_calibration_eligible:false,case_count:legacy?.cases?.length||0,legacy_schema:true,diagnostic_review_candidates:legacyReview.length},
+ {file:'gold_train_candidate_v0_4.json',role:'ACTIVE_CALIBRATION_TRAIN_CANDIDATE',authority:'HUMAN_APPROVED_AI_ASSISTED',immutable:true,independent_holdout:false,cross_style_schema_eligible:trainErrors.length===0,case_count:train.cases?.length||0,schema_errors:trainErrors.length},
+ {file:'gold_holdout_human_v0_5_2.json',role:'RETIRED_BOUNDARY_STRESS_HOLDOUT',authority:'INDEPENDENT_AT_COLLECTION_TIME',immutable:true,training_eligible:false,cross_style_training_eligible:false,case_count:hold.cases?.length||0,schema_errors:holdErrors.length,gate_status:gate?.summary?.sanity_status||'BOUNDARY_CONTRADICTION_FOUND'}
+],invariants:{legacy_raw_modified:false,active_train_schema_pass:trainErrors.length===0,holdout_schema_pass:holdErrors.length===0,holdout_reused_as_train:false,numeric_auto_relabel:false},legacy_review_candidates:legacyReview,errors:{active_train:trainErrors,holdout:holdErrors}};
+write('calibration_lineage_manifest_v0_6c1.json',lineage);write('legacy_low_chroma_review_candidates_v0_6c1.json',{metadata:{name:'YOYO Legacy Low-Chroma Review Candidates',version:'0.6C.1',status:'DIAGNOSTIC_ONLY',auto_edit:false,threshold:0.01,threshold_role:'REVIEW_HEURISTIC_NOT_PRODUCTION'},cases:legacyReview});
+console.log('=== YOYO Calibration Lineage Audit v0.6C.1 ===');console.log(`Legacy raw cases             : ${legacy?.cases?.length||0} (HISTORICAL_ONLY)`);console.log(`Legacy review candidates     : ${legacyReview.length} (diagnostic only)`);console.log(`Active train schema errors   : ${trainErrors.length}`);console.log(`Holdout schema errors        : ${holdErrors.length}`);console.log(`Status                       : ${status}`);console.log('Legacy raw modified          : false');console.log('Numeric auto-relabel         : false');if(status!=='PASS_WITH_LEGACY_QUARANTINE')process.exit(1);

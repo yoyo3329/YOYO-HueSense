@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "name": "YOYO Shadow Runtime Simulation",
+    "version": "0.6B",
+    "status": "PASS",
+    "mode": "SHADOW_ONLY",
+    "production_integration_performed": false
+  },
+  "workload": {
+    "requests": 200,
+    "sample_rate": 1,
+    "queue_limit": 256,
+    "concurrency": 4,
+    "task_timeout_ms": 25,
+    "synthetic_failures_expected": 3,
+    "synthetic_timeouts_expected": 2
+  },
+  "production_safety": {
+    "production_mutations": 0,
+    "synchronous_shadow_starts": 0,
+    "search_block_events": 0,
+    "palette_change_events": 0
+  },
+  "performance": {
+    "enqueue_ms_median": 0.0005,
+    "enqueue_ms_p95": 0.0035,
+    "enqueue_ms_max": 0.1393,
+    "note": "Informational local simulation timings; safety gate is deferred execution + bounded queue, not a fixed millisecond threshold."
+  },
+  "middleware_stats": {
+    "observed": 200,
+    "sampled": 200,
+    "not_sampled": 0,
+    "accepted": 200,
+    "dropped_queue_full": 0,
+    "completed": 195,
+    "failed": 3,
+    "timed_out": 2,
+    "log_failures": 0,
+    "max_queue_depth": 200,
+    "queue_depth": 0,
+    "active": 0,
+    "closed": true,
+    "config": {
+      "sampleRate": 1,
+      "queueLimit": 256,
+      "concurrency": 4,
+      "taskTimeoutMs": 25
+    }
+  },
+  "audit_log": {
+    "files": 1,
+    "events": 200,
+    "raw_request_or_palette_token_leak": false,
+    "privacy_contract": {
+      "raw_user_input_stored": false,
+      "image_bytes_stored": false,
+      "image_urls_stored": false,
+      "palette_payload_stored": false,
+      "allowlisted_fields_only": true
+    }
+  },
+  "assertions": {
+    "all_requests_accepted": true,
+    "no_synchronous_shadow_execution": true,
+    "production_unchanged": true,
+    "no_raw_payload_leak": true,
+    "failures_contained": true,
+    "timeouts_contained": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "name": "YOYO GOLD_HOLDOUT v0.4",
+    "version": "0.4.0",
+    "status": "empty_requires_independent_human_retest",
+    "case_count": 0,
+    "reason": "Current 20 labels were AI-proposed then human-approved, so they are not independent blind holdout evidence."
+  },
+  "cases": []
+}

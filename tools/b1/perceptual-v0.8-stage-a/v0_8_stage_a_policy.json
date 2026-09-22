@@ -1,0 +1,41 @@
+{
+  "name": "YOYO v0.8 Stage A Research Discipline Policy",
+  "version": "0.8-stage-a-prep-1",
+  "status": "PREP_ONLY",
+  "retired_v0_7_validation": {
+    "role": "FAILURE_TAXONOMY_ONLY",
+    "may_generate": [
+      "OBSERVATIONS",
+      "FAILURE_CLASSES",
+      "FAILURE_QUESTIONS"
+    ],
+    "must_not_generate": [
+      "THRESHOLDS",
+      "FORMULA_PARAMETERS",
+      "MODEL_SELECTION_SCORE",
+      "TRAINING_LABELS"
+    ],
+    "cannot_prove_v0_8": true
+  },
+  "frozen_axes_for_stage_a_round_1": {
+    "hue_relation": "FROZEN",
+    "hue_applicability": "FROZEN",
+    "lightness_relation": "FROZEN_BASELINE",
+    "chroma_relation": "PRIMARY_REDESIGN_AXIS",
+    "tone_relation": "DEFER_COUPLING_UNTIL_CHROMA_STAGE_A_EVIDENCE"
+  },
+  "complexity_budget": {
+    "chroma_max_primary_thresholds": 2,
+    "low_chroma_max_reliability_gates": 1,
+    "tone_max_continuous_interaction_terms": 1,
+    "forbidden": [
+      "case_id_specific_rules",
+      "mode_id_specific_rules",
+      "style_specific_rules",
+      "Y2K_specific_rules",
+      "nested_exception_tree"
+    ]
+  },
+  "fresh_stage_a_train_target": "12-16 DIRECT_HUMAN_BLIND cases",
+  "independent_validation": "MATERIALIZE_ONLY_AFTER_CANDIDATE_FREEZE"
+}

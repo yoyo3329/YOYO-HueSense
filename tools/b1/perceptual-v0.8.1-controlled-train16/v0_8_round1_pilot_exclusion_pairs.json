@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8 Round 1 Pilot Pair Exclusion Registry",
+    "source_human_labels_sha256": "4fd1859d2b6f0cb056d5c49202751a93736d5b33da97e4515229b931add53fb0",
+    "source_role": "DIRECT_HUMAN_BLIND",
+    "presentation_status": "LEGACY_UNCONTROLLED_PRESENTATION",
+    "allowed_use": "PAIR_EXCLUSION_AND_PILOT_OBSERVATION_ONLY",
+    "forbidden_use": [
+      "FORMAL_CANDIDATE_FREEZE",
+      "INDEPENDENT_VALIDATION",
+      "PRESENTATION_CONTROL_CLAIM"
+    ]
+  },
+  "pair_keys": [
+    "mode_05||mode_07",
+    "mode_11||mode_50",
+    "mode_42||mode_53",
+    "mode_03||mode_53",
+    "mode_29||mode_42",
+    "mode_41||mode_53",
+    "mode_26||mode_48",
+    "mode_06||mode_10",
+    "mode_24||mode_27",
+    "mode_22||mode_51",
+    "mode_16||mode_49",
+    "mode_17||mode_37",
+    "mode_32||mode_40",
+    "mode_09||mode_11",
+    "mode_03||mode_12",
+    "mode_06||mode_43"
+  ]
+}

@@ -1,0 +1,3631 @@
+{
+  "metadata": {
+    "name": "YOYO B1 Image Color Observations",
+    "step": "B1_Observation",
+    "source_set": "Y2K Color MVP Evaluation Set v1",
+    "source_run": "2026-09-03_230904_Y2K-aesthetic",
+    "source_file": "y2k_color_mvp_evaluation_set_v1.json",
+    "total_items": 24,
+    "success_count": 24,
+    "failure_count": 0,
+    "no_cross_image_aggregation": true,
+    "tone_feature_contract": {
+      "name": "YOYO Tone Feature Contract",
+      "version": "1.0.0",
+      "analysisSize": 64,
+      "pixelStep": 2,
+      "pixelMargin": 2,
+      "alphaThreshold": 0.85,
+      "paletteSize": 5,
+      "kmeansIterations": 10,
+      "colorMergeDistance": 0.045,
+      "clusterChromaWeight": 1.18,
+      "workingColorSpace": "OKLab",
+      "derivedColorSpace": "OKLCH"
+    },
+    "offline_decoder": {
+      "library": "sharp/libvips",
+      "exif_autorotate": true,
+      "resize_fit": "fill",
+      "note": "B1 uses decoded pixels and ToneCore; browser-vs-sharp decode/resampling equivalence is a separate cross-runtime concern."
+    }
+  },
+  "selection_rule": {
+    "quality_floor": [
+      "manual_label == good",
+      "clip_rank <= 40"
+    ],
+    "included_families": [
+      "graphic",
+      "fashion",
+      "lifestyle",
+      "core"
+    ],
+    "diversity_note": "For this fixed evaluation set only, Graphic is softly capped at 8 during greedy rank selection to avoid graphic-mode dominance. This is not a production hard quota.",
+    "target_count": 24
+  },
+  "family_counts": {
+    "lifestyle": 4,
+    "graphic": 8,
+    "core": 7,
+    "fashion": 5
+  },
+  "items": [
+    {
+      "clip_rank": 1,
+      "clip_score": 0.3077372908592224,
+      "clip_percentile": 100,
+      "manual_label": "good",
+      "query_family": "lifestyle",
+      "source_domain": "balaganvintage.com",
+      "id": "serpapi_google_images_2d8421f3ad2632a18a14",
+      "image_url": "https://balaganvintage.com/cdn/shop/articles/y2k-fashion-comeback-slay-the-2000s-vibe-balagan-vintage_95ade3f5-4a86-4cbf-9e52-dc9dd34e6e3d.jpg?v=1782458034&width=1200",
+      "alt": "Y2K Fashion Comeback: Slay the 2000s Vibe",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#9F7C6E",
+          "ratio": 0.26,
+          "analysisWeight": 234.17999999999995,
+          "lab": {
+            "L": 0.616245478305652,
+            "a": 0.03522760142966267,
+            "b": 0.033472452055668046
+          },
+          "lch": {
+            "L": 0.616245478305652,
+            "C": 0.04859412463566112,
+            "H": 43.536525433281376
+          }
+        },
+        {
+          "hex": "#DDA3B9",
+          "ratio": 0.25,
+          "analysisWeight": 225.42000000000002,
+          "lab": {
+            "L": 0.7755405178693244,
+            "a": 0.07331713845940825,
+            "b": -0.0072651941915112955
+          },
+          "lch": {
+            "L": 0.7755405178693244,
+            "C": 0.07367622302016039,
+            "H": 354.3408804733041
+          }
+        },
+        {
+          "hex": "#734B45",
+          "ratio": 0.18222222222222223,
+          "analysisWeight": 168.07999999999998,
+          "lab": {
+            "L": 0.4551644122890995,
+            "a": 0.04994721816741364,
+            "b": 0.02578104916335197
+          },
+          "lch": {
+            "L": 0.4551644122890995,
+            "C": 0.05620842551278577,
+            "H": 27.301238710395186
+          }
+        },
+        {
+          "hex": "#2F252A",
+          "ratio": 0.16444444444444445,
+          "analysisWeight": 135.87999999999977,
+          "lab": {
+            "L": 0.27879324405602346,
+            "a": 0.016302635131852195,
+            "b": -0.004271116948846251
+          },
+          "lch": {
+            "L": 0.27879324405602346,
+            "C": 0.016852844039894965,
+            "H": 345.3190709695196
+          }
+        },
+        {
+          "hex": "#EBD1D4",
+          "ratio": 0.14333333333333334,
+          "analysisWeight": 119.38599999999991,
+          "lab": {
+            "L": 0.8822599460376396,
+            "a": 0.029264051581645526,
+            "b": 0.005128976784271499
+          },
+          "lch": {
+            "L": 0.8822599460376396,
+            "C": 0.029710118105231522,
+            "H": 9.94100133452433
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6102872157360166,
+        "meanChroma": 0.06142946346144581,
+        "temperature": 0.5407331714158838,
+        "contrast": 0.5554950469911499,
+        "neutralRatio": 0.37666666666666665,
+        "darkRatio": 0.11222222222222222,
+        "highChromaRatio": 0.023333333333333334,
+        "hueConcentration": 0.7538497877493185,
+        "accentRatio": 0.3077777777777778,
+        "hueX": 0.7252543244580205,
+        "hueY": 0.2056591046966628,
+        "dominantColorRatio": 0.26,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9831632892570021,
+        "paletteSpread": 0.29800087527809316
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.27768792111405327,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://balaganvintage.com/cdn/shop/articles/y2k-fashion-comeback-slay-the-2000s-vibe-balagan-vintage_95ade3f5-4a86-4cbf-9e52-dc9dd34e6e3d.jpg?v=1782458034&width=1200",
+        "cache_file": "b1_cache/serpapi_google_images_2d8421f3ad2632a18a14_primary_e9419254a75e.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_2d8421f3ad2632a18a14.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 2,
+      "clip_score": 0.28927168250083923,
+      "clip_percentile": 98.7,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "studio2am.co",
+      "id": "serpapi_google_images_1ff2e0224fd5725bad54",
+      "image_url": "https://studio2am.co/cdn/shop/files/y2k-240-shapes-badges-graphic-styles-vanzyst.jpg?v=1743614015&width=1080",
+      "alt": "Y2K 240 Shapes Badges Graphic Styles",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#E6E6E6",
+          "ratio": 0.5577777777777778,
+          "analysisWeight": 370.39399999999773,
+          "lab": {
+            "L": 0.9245059521562174,
+            "a": 7.484142860707963e-11,
+            "b": 3.445994964778784e-8
+          },
+          "lch": {
+            "L": 0.9245059521562174,
+            "C": 3.446003091942184e-8,
+            "H": null
+          }
+        },
+        {
+          "hex": "#C3C3C3",
+          "ratio": 0.22555555555555556,
+          "analysisWeight": 166.45999999999918,
+          "lab": {
+            "L": 0.8159628946645896,
+            "a": 6.605458954852514e-11,
+            "b": 3.0414125713266097e-8
+          },
+          "lch": {
+            "L": 0.8159628946645896,
+            "C": 3.041419744315398e-8,
+            "H": null
+          }
+        },
+        {
+          "hex": "#949494",
+          "ratio": 0.14555555555555555,
+          "analysisWeight": 107.41999999999966,
+          "lab": {
+            "L": 0.66613960552378,
+            "a": 5.39258930130937e-11,
+            "b": 2.4829626258357124e-8
+          },
+          "lch": {
+            "L": 0.66613960552378,
+            "C": 2.4829684817404244e-8,
+            "H": null
+          }
+        },
+        {
+          "hex": "#5E5E5E",
+          "ratio": 0.05333333333333334,
+          "analysisWeight": 39.36000000000001,
+          "lab": {
+            "L": 0.48355800680644073,
+            "a": 3.914539872806876e-11,
+            "b": 1.8024096570580975e-8
+          },
+          "lch": {
+            "L": 0.48355800680644073,
+            "C": 1.8024139079242326e-8,
+            "H": null
+          }
+        },
+        {
+          "hex": "#282828",
+          "ratio": 0.017777777777777778,
+          "analysisWeight": 13.120000000000003,
+          "lab": {
+            "L": 0.2760331738180963,
+            "a": 2.2345711218896277e-11,
+            "b": 1.028883508252809e-8
+          },
+          "lch": {
+            "L": 0.2760331738180963,
+            "C": 1.028885934816249e-8,
+            "H": null
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.8216210540629373,
+        "meanChroma": 3.0625099663077336e-8,
+        "temperature": 0,
+        "contrast": 0.32905893322633006,
+        "neutralRatio": 1,
+        "darkRatio": 0.011111111111111112,
+        "highChromaRatio": 0,
+        "hueConcentration": 0,
+        "accentRatio": 0.07111111111111111,
+        "hueX": 0,
+        "hueY": 0,
+        "dominantColorRatio": 0.5577777777777778,
+        "significantColorCount": 3,
+        "paletteEntropy": 0.7269669102120969,
+        "paletteSpread": 0.2736467784649661
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.0929672730191089,
+        "paletteReferenceScore": 0.8000144848268089,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://studio2am.co/cdn/shop/files/y2k-240-shapes-badges-graphic-styles-vanzyst.jpg?v=1743614015&width=1080",
+        "cache_file": "b1_cache/serpapi_google_images_1ff2e0224fd5725bad54_primary_44bfedf0d6bf.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_1ff2e0224fd5725bad54.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 3,
+      "clip_score": 0.2834905982017517,
+      "clip_percentile": 97.5,
+      "manual_label": "good",
+      "query_family": "core",
+      "source_domain": "theguardian.com",
+      "id": "serpapi_google_images_038098b1bbc5f6b146fd",
+      "image_url": "https://i.guim.co.uk/img/media/42748ced289bc0e4ebe29ef22b8e7d88971c0848/0_221_1280_768/master/1280.jpg?width=700&quality=85&auto=format&fit=max&s=1ade7ce4d764ba05df65816268cc8604",
+      "alt": "The Y2K aesthetic: who knew the look of the year 2000 would endure? |  Internet | The Guardian",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#6F9798",
+          "ratio": 0.4422222222222221,
+          "analysisWeight": 392.0599999999998,
+          "lab": {
+            "L": 0.6464091468771055,
+            "a": -0.041398197849099726,
+            "b": -0.013317439008145028
+          },
+          "lch": {
+            "L": 0.6464091468771055,
+            "C": 0.04348752656669345,
+            "H": 197.83253014972772
+          }
+        },
+        {
+          "hex": "#EBD9D3",
+          "ratio": 0.26999999999999996,
+          "analysisWeight": 203.7171999999999,
+          "lab": {
+            "L": 0.8979350590003659,
+            "a": 0.017732386507415324,
+            "b": 0.013053265929174399
+          },
+          "lch": {
+            "L": 0.8979350590003659,
+            "C": 0.02201874843550628,
+            "H": 36.357740587095925
+          }
+        },
+        {
+          "hex": "#C3AEA9",
+          "ratio": 0.14666666666666664,
+          "analysisWeight": 121.37999999999985,
+          "lab": {
+            "L": 0.7666390337285466,
+            "a": 0.022023984047063058,
+            "b": 0.01389970306652345
+          },
+          "lch": {
+            "L": 0.7666390337285466,
+            "C": 0.02604337955494274,
+            "H": 32.25670566448093
+          }
+        },
+        {
+          "hex": "#6F6866",
+          "ratio": 0.11111111111111108,
+          "analysisWeight": 90.4599999999999,
+          "lab": {
+            "L": 0.5244487968441764,
+            "a": 0.0073550235644276,
+            "b": 0.006370186334838118
+          },
+          "lch": {
+            "L": 0.5244487968441764,
+            "C": 0.009730141087047174,
+            "H": 40.89583876708054
+          }
+        },
+        {
+          "hex": "#353433",
+          "ratio": 0.029999999999999992,
+          "analysisWeight": 21.980000000000004,
+          "lab": {
+            "L": 0.32552200380492735,
+            "a": 0.00029657802467639345,
+            "b": 0.001715916193358601
+          },
+          "lch": {
+            "L": 0.32552200380492735,
+            "C": 0.0017413577769520034,
+            "H": 80.19390992523573
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.7039648203322678,
+        "meanChroma": 0.03388855181265842,
+        "temperature": -0.3244970816468574,
+        "contrast": 0.3805845079431017,
+        "neutralRatio": 0.5833333333333334,
+        "darkRatio": 0.014444444444444444,
+        "highChromaRatio": 0,
+        "hueConcentration": 0.4746474807772117,
+        "accentRatio": 0.029999999999999992,
+        "hueX": -0.4622383844150408,
+        "hueY": -0.10782349920831975,
+        "dominantColorRatio": 0.4422222222222221,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.8358328644091252,
+        "paletteSpread": 0.24592011800135422
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.17757492044509243,
+        "paletteReferenceScore": 0.9362790786091,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://i.guim.co.uk/img/media/42748ced289bc0e4ebe29ef22b8e7d88971c0848/0_221_1280_768/master/1280.jpg?width=700&quality=85&auto=format&fit=max&s=1ade7ce4d764ba05df65816268cc8604",
+        "cache_file": "b1_cache/serpapi_google_images_038098b1bbc5f6b146fd_primary_b68fa6c47216.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_038098b1bbc5f6b146fd.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 4,
+      "clip_score": 0.2765793800354004,
+      "clip_percentile": 96.2,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "grapheine.com",
+      "id": "serpapi_google_images_83ee05bfcf2bef13cafd",
+      "image_url": "https://grapheine.com/wp-content/uploads/2023/10/y2k-tendance-design.gif",
+      "alt": "Y2K trend, the 2000's style is back - Graphéine branding, brand strategy  and brand design",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#000000",
+          "ratio": 0.87,
+          "analysisWeight": 95.90759999999926,
+          "lab": {
+            "L": 0.024869049104045284,
+            "a": -0.00033573189956091976,
+            "b": -0.0015146498097704031
+          },
+          "lch": {
+            "L": 0.024869049104045284,
+            "C": 0.001551412245220561,
+            "H": 257.5020868836533
+          }
+        },
+        {
+          "hex": "#ACD6F6",
+          "ratio": 0.04,
+          "analysisWeight": 35.42,
+          "lab": {
+            "L": 0.8559587044794074,
+            "a": -0.029968771207304037,
+            "b": -0.05602726313024272
+          },
+          "lch": {
+            "L": 0.8559587044794074,
+            "C": 0.0635388185406464,
+            "H": 241.8578419832187
+          }
+        },
+        {
+          "hex": "#80A1E4",
+          "ratio": 0.03666666666666667,
+          "analysisWeight": 36.60000000000001,
+          "lab": {
+            "L": 0.7113581535078108,
+            "a": -0.01108829800646251,
+            "b": -0.10408398562126847
+          },
+          "lch": {
+            "L": 0.7113581535078108,
+            "C": 0.10467294977924593,
+            "H": 263.91908854697067
+          }
+        },
+        {
+          "hex": "#242B3B",
+          "ratio": 0.027777777777777776,
+          "analysisWeight": 25,
+          "lab": {
+            "L": 0.2909127482904904,
+            "a": -0.002201947933949402,
+            "b": -0.03133800569736003
+          },
+          "lch": {
+            "L": 0.2909127482904904,
+            "C": 0.03141526978702545,
+            "H": 265.98074898762434
+          }
+        },
+        {
+          "hex": "#4C6382",
+          "ratio": 0.025555555555555557,
+          "analysisWeight": 23.3,
+          "lab": {
+            "L": 0.49302983934176753,
+            "a": -0.013016377132551873,
+            "b": -0.055906523298427664
+          },
+          "lch": {
+            "L": 0.49302983934176753,
+            "C": 0.057401789353420454,
+            "H": 256.8936598224067
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.358415440530364,
+        "meanChroma": 0.042500434114598216,
+        "temperature": -0.8608608393917747,
+        "contrast": 0.407218549305503,
+        "neutralRatio": 0.8933333333333333,
+        "darkRatio": 0.8866666666666667,
+        "highChromaRatio": 0.005555555555555556,
+        "hueConcentration": 0.9019819990109597,
+        "accentRatio": 0.07666666666666666,
+        "hueX": -0.19726179765140736,
+        "hueY": -0.8801473227404274,
+        "dominantColorRatio": 0.87,
+        "significantColorCount": 1,
+        "paletteEntropy": 0.3506694881941618,
+        "paletteSpread": 0.5259718502805972
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.6531683530302834,
+        "paletteReferenceScore": 0.39900916201508374,
+        "paletteUsabilityPenalty": 0.611544960891704,
+        "closeupPenalty": 0,
+        "monotonePenalty": 1
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://grapheine.com/wp-content/uploads/2023/10/y2k-tendance-design.gif",
+        "cache_file": "b1_cache/serpapi_google_images_83ee05bfcf2bef13cafd_primary_8a787ff86608.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_83ee05bfcf2bef13cafd.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 5,
+      "clip_score": 0.2726602256298065,
+      "clip_percentile": 94.9,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "linkedin.com",
+      "id": "serpapi_google_images_9aada71d2d1db6471dcb",
+      "image_url": "https://media.licdn.com/dms/image/v2/D4D22AQHtrjcsdbPY2w/feedshare-shrink_800/feedshare-shrink_800/0/1685950745749?e=2147483647&v=beta&t=txHVT6jS_DDmsn341jAZGCvPZjWz2Syheq5iwIuetSE",
+      "alt": "Graphic design with Y2K aesthetics. | Vital Kulesh | 44 comments",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#B3E0EA",
+          "ratio": 0.3244444444444445,
+          "analysisWeight": 253.72799999999972,
+          "lab": {
+            "L": 0.8775645428364947,
+            "a": -0.04129000126508328,
+            "b": -0.02615750121606097
+          },
+          "lch": {
+            "L": 0.8775645428364947,
+            "C": 0.048878206537666766,
+            "H": 212.35454113059444
+          }
+        },
+        {
+          "hex": "#64B0F0",
+          "ratio": 0.2888888888888889,
+          "analysisWeight": 302.90000000000043,
+          "lab": {
+            "L": 0.7346619889032789,
+            "a": -0.04923104142255816,
+            "b": -0.1094250591922517
+          },
+          "lch": {
+            "L": 0.7346619889032789,
+            "C": 0.11998974547342547,
+            "H": 245.77671158198285
+          }
+        },
+        {
+          "hex": "#A3A99B",
+          "ratio": 0.1677777777777778,
+          "analysisWeight": 150.81999999999988,
+          "lab": {
+            "L": 0.7249951820685032,
+            "a": -0.011735387313440933,
+            "b": 0.016042490638020244
+          },
+          "lch": {
+            "L": 0.7249951820685032,
+            "C": 0.019876640090001067,
+            "H": 126.18618072372264
+          }
+        },
+        {
+          "hex": "#727F88",
+          "ratio": 0.16444444444444448,
+          "analysisWeight": 148.96,
+          "lab": {
+            "L": 0.5878199580512761,
+            "a": -0.010479462889728203,
+            "b": -0.01788415020406242
+          },
+          "lch": {
+            "L": 0.5878199580512761,
+            "C": 0.020728289147410515,
+            "H": 239.63124538432174
+          }
+        },
+        {
+          "hex": "#424455",
+          "ratio": 0.05444444444444445,
+          "analysisWeight": 49.35999999999999,
+          "lab": {
+            "L": 0.39246260667071275,
+            "a": 0.0036368765843805767,
+            "b": -0.02748726428879186
+          },
+          "lch": {
+            "L": 0.39246260667071275,
+            "C": 0.0277268203978009,
+            "H": 277.53710220765083
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.730285460890403,
+        "meanChroma": 0.08136213604353945,
+        "temperature": -0.6867404180969032,
+        "contrast": 0.35691014420730127,
+        "neutralRatio": 0.30333333333333334,
+        "darkRatio": 0.008888888888888889,
+        "highChromaRatio": 0.12333333333333334,
+        "hueConcentration": 0.6891722405027303,
+        "accentRatio": 0.05444444444444445,
+        "hueX": -0.3934649335584674,
+        "hueY": -0.565812445196625,
+        "dominantColorRatio": 0.3244444444444445,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.9187956421168902,
+        "paletteSpread": 0.22303946612214173
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.1970519543541403,
+        "paletteReferenceScore": 0.9766404576969886,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://media.licdn.com/dms/image/v2/D4D22AQHtrjcsdbPY2w/feedshare-shrink_800/feedshare-shrink_800/0/1685950745749?e=2147483647&v=beta&t=txHVT6jS_DDmsn341jAZGCvPZjWz2Syheq5iwIuetSE",
+        "cache_file": "b1_cache/serpapi_google_images_9aada71d2d1db6471dcb_primary_97f1a94a9c6f.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_9aada71d2d1db6471dcb.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 6,
+      "clip_score": 0.26513826847076416,
+      "clip_percentile": 93.7,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "grapheine.com",
+      "id": "serpapi_google_images_722d54cf81ab15c4f556",
+      "image_url": "https://grapheine.com/wp-content/uploads/2023/10/garagisme_illustration-y2k-golgotha-1-2560x1724.webp",
+      "alt": "Y2K trend, the 2000's style is back - Graphéine branding, brand strategy  and brand design",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#ACCF93",
+          "ratio": 0.2388888888888889,
+          "analysisWeight": 230.30240000000035,
+          "lab": {
+            "L": 0.8127421391047257,
+            "a": -0.06023144912439826,
+            "b": 0.06473375108814419
+          },
+          "lch": {
+            "L": 0.8127421391047257,
+            "C": 0.08842107211274236,
+            "H": 132.93661458652315
+          }
+        },
+        {
+          "hex": "#4B4162",
+          "ratio": 0.2288888888888889,
+          "analysisWeight": 212.69999999999996,
+          "lab": {
+            "L": 0.3996995512775699,
+            "a": 0.02507442812371529,
+            "b": -0.04903003413214936
+          },
+          "lch": {
+            "L": 0.3996995512775699,
+            "C": 0.05506969395893802,
+            "H": 297.085636578341
+          }
+        },
+        {
+          "hex": "#B97CDB",
+          "ratio": 0.21555555555555556,
+          "analysisWeight": 227.90000000000035,
+          "lab": {
+            "L": 0.6840435356339497,
+            "a": 0.10081240319043903,
+            "b": -0.11055179529775676
+          },
+          "lch": {
+            "L": 0.6840435356339497,
+            "C": 0.14961564116291037,
+            "H": 312.36174987793873
+          }
+        },
+        {
+          "hex": "#77875E",
+          "ratio": 0.20555555555555555,
+          "analysisWeight": 196.40000000000003,
+          "lab": {
+            "L": 0.5980872237331682,
+            "a": -0.035887809950256686,
+            "b": 0.050042597972900345
+          },
+          "lch": {
+            "L": 0.5980872237331682,
+            "C": 0.061580812879525,
+            "H": 125.64601821432196
+          }
+        },
+        {
+          "hex": "#AD3D51",
+          "ratio": 0.1111111111111111,
+          "analysisWeight": 123.69999999999985,
+          "lab": {
+            "L": 0.5217753504963241,
+            "a": 0.14226333355410778,
+            "b": 0.03304584041119338
+          },
+          "lch": {
+            "L": 0.5217753504963241,
+            "C": 0.1460509624836803,
+            "H": 13.077122570600595
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6156332448259065,
+        "meanChroma": 0.11918023128964299,
+        "temperature": 0.05660466702546365,
+        "contrast": 0.4494164682416481,
+        "neutralRatio": 0.1411111111111111,
+        "darkRatio": 0.04777777777777778,
+        "highChromaRatio": 0.31,
+        "hueConcentration": 0.21993223463499112,
+        "accentRatio": 0,
+        "hueX": 0.21235280112109697,
+        "hueY": -0.05724050740135542,
+        "dominantColorRatio": 0.2388888888888889,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9814870977236321,
+        "paletteSpread": 0.2691882247588313
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.29510435387850426,
+        "paletteReferenceScore": 0.9755569034536716,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://grapheine.com/wp-content/uploads/2023/10/garagisme_illustration-y2k-golgotha-1-2560x1724.webp",
+        "cache_file": "b1_cache/serpapi_google_images_722d54cf81ab15c4f556_primary_6c4d6de02e1d.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_722d54cf81ab15c4f556.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 7,
+      "clip_score": 0.2632177472114563,
+      "clip_percentile": 92.4,
+      "manual_label": "good",
+      "query_family": "fashion",
+      "source_domain": "reddit.com",
+      "id": "serpapi_google_images_9ec1ff183dccf3d83ae8",
+      "image_url": "https://preview.redd.it/really-early-2000s-fashion-v0-n2b65klkxuf61.jpg?width=640&crop=smart&auto=webp&s=4efcb899d9b7d60e768977a6e8527faf8945dc0a",
+      "alt": "Very early 2000s fashion : r/nostalgia",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#A3968B",
+          "ratio": 0.31,
+          "analysisWeight": 264.4199999999995,
+          "lab": {
+            "L": 0.6811455742467438,
+            "a": 0.011165004645169806,
+            "b": 0.0188996845575147
+          },
+          "lch": {
+            "L": 0.6811455742467438,
+            "C": 0.02195120509448679,
+            "H": 59.427493821541134
+          }
+        },
+        {
+          "hex": "#C9C9BD",
+          "ratio": 0.2911111111111111,
+          "analysisWeight": 236.90879999999947,
+          "lab": {
+            "L": 0.832510705238667,
+            "a": -0.0043401407465631725,
+            "b": 0.01547409136706498
+          },
+          "lch": {
+            "L": 0.832510705238667,
+            "C": 0.016071226628240076,
+            "H": 105.66763463194388
+          }
+        },
+        {
+          "hex": "#2D2F2A",
+          "ratio": 0.19777777777777777,
+          "analysisWeight": 157.65999999999948,
+          "lab": {
+            "L": 0.30248343335099737,
+            "a": -0.005421062520952551,
+            "b": 0.008378278023595266
+          },
+          "lch": {
+            "L": 0.30248343335099737,
+            "C": 0.009979151341508747,
+            "H": 122.90439356180967
+          }
+        },
+        {
+          "hex": "#60605F",
+          "ratio": 0.11444444444444445,
+          "analysisWeight": 97.23999999999987,
+          "lab": {
+            "L": 0.4886201879068023,
+            "a": -0.0000653819518014308,
+            "b": 0.0007267903742281401
+          },
+          "lch": {
+            "L": 0.4886201879068023,
+            "C": 0.0007297253234553701,
+            "H": 95.14048251048169
+          }
+        },
+        {
+          "hex": "#9F545A",
+          "ratio": 0.08666666666666667,
+          "analysisWeight": 85.79999999999995,
+          "lab": {
+            "L": 0.5369222977570742,
+            "a": 0.09425705591399539,
+            "b": 0.02709281211459709
+          },
+          "lch": {
+            "L": 0.5369222977570742,
+            "C": 0.0980735084406126,
+            "H": 16.036523140941316
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6159035453767113,
+        "meanChroma": 0.03378581956419207,
+        "temperature": 0.5960383696122887,
+        "contrast": 0.5516955615496549,
+        "neutralRatio": 0.7444444444444445,
+        "darkRatio": 0.13666666666666666,
+        "highChromaRatio": 0.006666666666666667,
+        "hueConcentration": 0.6251769092538756,
+        "accentRatio": 0.19777777777777777,
+        "hueX": 0.4613847942856636,
+        "hueY": 0.4218651911051733,
+        "dominantColorRatio": 0.31,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9337856977597051,
+        "paletteSpread": 0.2766712771630012
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.26308639911590526,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://preview.redd.it/really-early-2000s-fashion-v0-n2b65klkxuf61.jpg?width=640&crop=smart&auto=webp&s=4efcb899d9b7d60e768977a6e8527faf8945dc0a",
+        "cache_file": "b1_cache/serpapi_google_images_9ec1ff183dccf3d83ae8_primary_75e56ebe8208.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_9ec1ff183dccf3d83ae8.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 8,
+      "clip_score": 0.26143717765808105,
+      "clip_percentile": 91.1,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "pageflows.com",
+      "id": "serpapi_google_images_c17fe1c381287485df0e",
+      "image_url": "https://pageflows.com/resources/wp-content/uploads/2024/07/3D-Effects-Example-692x1024.jpeg",
+      "alt": "Y2K Graphic Design | 2024 Trend | Page Flows",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#8D7D98",
+          "ratio": 0.2744444444444444,
+          "analysisWeight": 244.4799999999999,
+          "lab": {
+            "L": 0.6125737981446505,
+            "a": 0.029592646565564564,
+            "b": -0.03282167850743595
+          },
+          "lch": {
+            "L": 0.6125737981446505,
+            "C": 0.04419261602123033,
+            "H": 312.0384186082498
+          }
+        },
+        {
+          "hex": "#BC98A6",
+          "ratio": 0.24777777777777774,
+          "analysisWeight": 222.09999999999997,
+          "lab": {
+            "L": 0.7176992325985985,
+            "a": 0.04591755542322298,
+            "b": -0.004483592687477182
+          },
+          "lch": {
+            "L": 0.7176992325985985,
+            "C": 0.046135935012005046,
+            "H": 354.4230667693966
+          }
+        },
+        {
+          "hex": "#68526E",
+          "ratio": 0.2255555555555555,
+          "analysisWeight": 202.64,
+          "lab": {
+            "L": 0.47060123456542563,
+            "a": 0.03901663552334997,
+            "b": -0.03507925815177476
+          },
+          "lch": {
+            "L": 0.47060123456542563,
+            "C": 0.05246763002119298,
+            "H": 318.04177616896845
+          }
+        },
+        {
+          "hex": "#E3C4BC",
+          "ratio": 0.14666666666666664,
+          "analysisWeight": 129.18279999999993,
+          "lab": {
+            "L": 0.8437362662528359,
+            "a": 0.030583556970762853,
+            "b": 0.020385509514093732
+          },
+          "lch": {
+            "L": 0.8437362662528359,
+            "C": 0.03675490382429402,
+            "H": 33.685490926480085
+          }
+        },
+        {
+          "hex": "#482F42",
+          "ratio": 0.10555555555555553,
+          "analysisWeight": 94.82,
+          "lab": {
+            "L": 0.3420564769277072,
+            "a": 0.0437219416949164,
+            "b": -0.018751715895797393
+          },
+          "lch": {
+            "L": 0.3420564769277072,
+            "C": 0.04757346986094634,
+            "H": 336.7861985301574
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6112200498926614,
+        "meanChroma": 0.050150967900903606,
+        "temperature": 0.07483431128331446,
+        "contrast": 0.41765927831959515,
+        "neutralRatio": 0.23,
+        "darkRatio": 0.022222222222222223,
+        "highChromaRatio": 0,
+        "hueConcentration": 0.8233430992623914,
+        "accentRatio": 0.10555555555555553,
+        "hueX": 0.7475018433503233,
+        "hueY": -0.345159170949967,
+        "dominantColorRatio": 0.2744444444444444,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9663885203963122,
+        "paletteSpread": 0.23499412201015707
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.238418961809882,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://pageflows.com/resources/wp-content/uploads/2024/07/3D-Effects-Example-692x1024.jpeg",
+        "cache_file": "b1_cache/serpapi_google_images_c17fe1c381287485df0e_primary_afb4b7524afb.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_c17fe1c381287485df0e.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 10,
+      "clip_score": 0.2563416063785553,
+      "clip_percentile": 88.6,
+      "manual_label": "good",
+      "query_family": "lifestyle",
+      "source_domain": "wwd.com",
+      "id": "serpapi_google_images_96f83a2ab9731b6c6fe8",
+      "image_url": "https://wwd.com/wp-content/uploads/2023/11/Y2KTrends.jpg",
+      "alt": "2000s Fashion Trends That Revived Popular Y2K Styles",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#553F3D",
+          "ratio": 0.25888888888888895,
+          "analysisWeight": 237.68000000000018,
+          "lab": {
+            "L": 0.3900659333556202,
+            "a": 0.02801764597417758,
+            "b": 0.013082642230799036
+          },
+          "lch": {
+            "L": 0.3900659333556202,
+            "C": 0.03092157844731468,
+            "H": 25.029891027270065
+          }
+        },
+        {
+          "hex": "#C5978B",
+          "ratio": 0.2366666666666667,
+          "analysisWeight": 219.48000000000013,
+          "lab": {
+            "L": 0.7151985167343196,
+            "a": 0.04818683227426848,
+            "b": 0.03300961846737049
+          },
+          "lch": {
+            "L": 0.7151985167343196,
+            "C": 0.058408952361687236,
+            "H": 34.41246927628542
+          }
+        },
+        {
+          "hex": "#817061",
+          "ratio": 0.2255555555555556,
+          "analysisWeight": 198.67999999999992,
+          "lab": {
+            "L": 0.5573878349082796,
+            "a": 0.013932532028572175,
+            "b": 0.027442821075052252
+          },
+          "lch": {
+            "L": 0.5573878349082796,
+            "C": 0.030777002409015104,
+            "H": 63.083407423981754
+          }
+        },
+        {
+          "hex": "#1A1712",
+          "ratio": 0.18444444444444447,
+          "analysisWeight": 151.27479999999974,
+          "lab": {
+            "L": 0.20710732990271746,
+            "a": 0.0001146283321638913,
+            "b": 0.011203452478166362
+          },
+          "lch": {
+            "L": 0.20710732990271746,
+            "C": 0.011204038873775237,
+            "H": 89.41379762225262
+          }
+        },
+        {
+          "hex": "#D6D3C9",
+          "ratio": 0.09444444444444446,
+          "analysisWeight": 73.87039999999996,
+          "lab": {
+            "L": 0.8662148414116169,
+            "a": -0.00023593153405431584,
+            "b": 0.013188408497246928
+          },
+          "lch": {
+            "L": 0.8662148414116169,
+            "C": 0.013190518654663138,
+            "H": 91.02487266785037
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.5173097269545145,
+        "meanChroma": 0.05261681956707313,
+        "temperature": 0.5835246668501323,
+        "contrast": 0.5811657761941816,
+        "neutralRatio": 0.5355555555555556,
+        "darkRatio": 0.20222222222222222,
+        "highChromaRatio": 0.04,
+        "hueConcentration": 0.6154854119917921,
+        "accentRatio": 0.2788888888888889,
+        "hueX": 0.4612938693235868,
+        "hueY": 0.4074681073399238,
+        "dominantColorRatio": 0.25888888888888895,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9701882334499391,
+        "paletteSpread": 0.3142591486399711
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.3483674699452606,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://wwd.com/wp-content/uploads/2023/11/Y2KTrends.jpg",
+        "cache_file": "b1_cache/serpapi_google_images_96f83a2ab9731b6c6fe8_primary_48d49f1509ba.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_96f83a2ab9731b6c6fe8.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 11,
+      "clip_score": 0.25259295105934143,
+      "clip_percentile": 87.3,
+      "manual_label": "good",
+      "query_family": "lifestyle",
+      "source_domain": "michigandaily.com",
+      "id": "serpapi_google_images_684c47b09dba8e542528",
+      "image_url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2022/04/Jameel-Graphic-4_11.jpg?fit=2550%2C1700&ssl=1",
+      "alt": "The nostalgification of pop culture: our inevitable return to the 2000s",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#A58F6D",
+          "ratio": 0.23333333333333334,
+          "analysisWeight": 219.72000000000025,
+          "lab": {
+            "L": 0.6610629640222402,
+            "a": 0.010288506334824681,
+            "b": 0.05272974305430011
+          },
+          "lch": {
+            "L": 0.6610629640222402,
+            "C": 0.05372410227425152,
+            "H": 78.95929430789988
+          }
+        },
+        {
+          "hex": "#C5CFD3",
+          "ratio": 0.21222222222222223,
+          "analysisWeight": 169.76039999999978,
+          "lab": {
+            "L": 0.8489782976281298,
+            "a": -0.009295633488041317,
+            "b": -0.007816211600149755
+          },
+          "lch": {
+            "L": 0.8489782976281298,
+            "C": 0.01214503872872832,
+            "H": 220.05872236999141
+          }
+        },
+        {
+          "hex": "#5E613D",
+          "ratio": 0.21,
+          "analysisWeight": 190.9799999999999,
+          "lab": {
+            "L": 0.4814767764748082,
+            "a": -0.020515353332521948,
+            "b": 0.04980280105566484
+          },
+          "lch": {
+            "L": 0.4814767764748082,
+            "C": 0.053862776714056905,
+            "H": 112.38831635900364
+          }
+        },
+        {
+          "hex": "#413233",
+          "ratio": 0.18444444444444444,
+          "analysisWeight": 159.2199999999998,
+          "lab": {
+            "L": 0.33466557016794907,
+            "a": 0.021220508440347827,
+            "b": 0.005011880890758039
+          },
+          "lch": {
+            "L": 0.33466557016794907,
+            "C": 0.021804332792590076,
+            "H": 13.288659282449895
+          }
+        },
+        {
+          "hex": "#6294DE",
+          "ratio": 0.16,
+          "analysisWeight": 163.79999999999995,
+          "lab": {
+            "L": 0.6628622630670803,
+            "a": -0.025755991477020866,
+            "b": -0.12012804022326627
+          },
+          "lch": {
+            "L": 0.6628622630670803,
+            "C": 0.12285811794442827,
+            "H": 257.8987363786657
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6012154501584367,
+        "meanChroma": 0.07543977026051153,
+        "temperature": -0.01721151785940887,
+        "contrast": 0.5117423163579095,
+        "neutralRatio": 0.36666666666666664,
+        "darkRatio": 0.06555555555555556,
+        "highChromaRatio": 0.12333333333333334,
+        "hueConcentration": 0.06755571046974382,
+        "accentRatio": 0.5566666666666666,
+        "hueX": -0.06518007512120004,
+        "hueY": 0.017757584978441546,
+        "dominantColorRatio": 0.23333333333333334,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9949265142665908,
+        "paletteSpread": 0.27418022445946033
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.2765464512718607,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2022/04/Jameel-Graphic-4_11.jpg?fit=2550%2C1700&ssl=1",
+        "cache_file": "b1_cache/serpapi_google_images_684c47b09dba8e542528_primary_473b6c3900f1.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_684c47b09dba8e542528.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 12,
+      "clip_score": 0.2524033486843109,
+      "clip_percentile": 86.1,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "pageflows.com",
+      "id": "serpapi_google_images_e8e9dab72c6b88d4fe33",
+      "image_url": "https://pageflows.com/resources/wp-content/uploads/2024/07/Y2K-Design-Header-1024x341.png",
+      "alt": "Y2K Graphic Design | 2024 Trend | Page Flows",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#ABD8BB",
+          "ratio": 0.31555555555555553,
+          "analysisWeight": 289.04,
+          "lab": {
+            "L": 0.8431561971659399,
+            "a": -0.05696755293829565,
+            "b": 0.02509027693256918
+          },
+          "lch": {
+            "L": 0.8431561971659399,
+            "C": 0.062248084985246976,
+            "H": 156.2298191927524
+          }
+        },
+        {
+          "hex": "#618D9C",
+          "ratio": 0.29,
+          "analysisWeight": 276.8400000000002,
+          "lab": {
+            "L": 0.6167213421314016,
+            "a": -0.03988890914792229,
+            "b": -0.03465850770539747
+          },
+          "lch": {
+            "L": 0.6167213421314016,
+            "C": 0.052842570238173445,
+            "H": 220.9865862382963
+          }
+        },
+        {
+          "hex": "#DE7BA6",
+          "ratio": 0.15,
+          "analysisWeight": 157.50000000000009,
+          "lab": {
+            "L": 0.7044038877784496,
+            "a": 0.13149235198152492,
+            "b": -0.014895296471309502
+          },
+          "lch": {
+            "L": 0.7044038877784496,
+            "C": 0.13233332341704962,
+            "H": 353.537152554931
+          }
+        },
+        {
+          "hex": "#0C0910",
+          "ratio": 0.12555555555555556,
+          "analysisWeight": 52.283199999999994,
+          "lab": {
+            "L": 0.147887926455016,
+            "a": 0.008460681332334942,
+            "b": -0.012520963087203227
+          },
+          "lch": {
+            "L": 0.147887926455016,
+            "C": 0.015111507047228172,
+            "H": 304.0477316574806
+          }
+        },
+        {
+          "hex": "#4C3B68",
+          "ratio": 0.11888888888888889,
+          "analysisWeight": 114.31999999999991,
+          "lab": {
+            "L": 0.39034813994347134,
+            "a": 0.03882462402625844,
+            "b": -0.06644962263139763
+          },
+          "lch": {
+            "L": 0.39034813994347134,
+            "C": 0.07696040396616612,
+            "H": 300.2965287908111
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6491575001689678,
+        "meanChroma": 0.08777469917875898,
+        "temperature": -0.15567819612451766,
+        "contrast": 0.7100374332479844,
+        "neutralRatio": 0.2866666666666667,
+        "darkRatio": 0.14888888888888888,
+        "highChromaRatio": 0.10888888888888888,
+        "hueConcentration": 0.16706720484539592,
+        "accentRatio": 0.39444444444444443,
+        "hueX": -0.025333739862335523,
+        "hueY": -0.16513525534979195,
+        "dominantColorRatio": 0.31555555555555553,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9451934620392763,
+        "paletteSpread": 0.36048593973316045
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.28987961699501763,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://pageflows.com/resources/wp-content/uploads/2024/07/Y2K-Design-Header-1024x341.png",
+        "cache_file": "b1_cache/serpapi_google_images_e8e9dab72c6b88d4fe33_primary_ded0db1bdccd.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_e8e9dab72c6b88d4fe33.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 13,
+      "clip_score": 0.2513485252857208,
+      "clip_percentile": 84.8,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "dribbble.com",
+      "id": "serpapi_google_images_4db7767bb8ed7c3ad502",
+      "image_url": "https://cdn.dribbble.com/userupload/33207026/file/original-cecebe4f812bf4eef1250564547cf322.png",
+      "alt": "Design by the Decades: Get inspired by Y2K graphic design trends | Dribbble  Design Blog",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#7C93D2",
+          "ratio": 0.30444444444444446,
+          "analysisWeight": 275.80000000000007,
+          "lab": {
+            "L": 0.6710297003680914,
+            "a": -0.003604166302283549,
+            "b": -0.09732008477181231
+          },
+          "lch": {
+            "L": 0.6710297003680914,
+            "C": 0.09738680051591823,
+            "H": 267.87906897709445
+          }
+        },
+        {
+          "hex": "#A6ABD3",
+          "ratio": 0.30333333333333334,
+          "analysisWeight": 273,
+          "lab": {
+            "L": 0.7513684058229988,
+            "a": 0.008468187652571754,
+            "b": -0.05595308706232975
+          },
+          "lch": {
+            "L": 0.7513684058229988,
+            "C": 0.05659026554031905,
+            "H": 278.6060854198654
+          }
+        },
+        {
+          "hex": "#C5C2D3",
+          "ratio": 0.21777777777777776,
+          "analysisWeight": 186.09999999999997,
+          "lab": {
+            "L": 0.8217590812094833,
+            "a": 0.008981173051906795,
+            "b": -0.022065387075987656
+          },
+          "lch": {
+            "L": 0.8217590812094833,
+            "C": 0.023823156302250546,
+            "H": 292.147571756066
+          }
+        },
+        {
+          "hex": "#F9A2E9",
+          "ratio": 0.09111111111111111,
+          "analysisWeight": 99.6999999999999,
+          "lab": {
+            "L": 0.8209408493206016,
+            "a": 0.12136330267041921,
+            "b": -0.06023315283322133
+          },
+          "lch": {
+            "L": 0.8209408493206016,
+            "C": 0.13548831660073862,
+            "H": 333.6045884895791
+          }
+        },
+        {
+          "hex": "#AE7ED9",
+          "ratio": 0.08333333333333333,
+          "analysisWeight": 89.09999999999991,
+          "lab": {
+            "L": 0.6752491922099892,
+            "a": 0.08419645996523265,
+            "b": -0.11104897822246432
+          },
+          "lch": {
+            "L": 0.6752491922099892,
+            "C": 0.13935895893314637,
+            "H": 307.16911752944833
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.741729389268657,
+        "meanChroma": 0.08002083920853909,
+        "temperature": -0.5766397402835116,
+        "contrast": 0.17524549742605944,
+        "neutralRatio": 0.23222222222222222,
+        "darkRatio": 0,
+        "highChromaRatio": 0.09,
+        "hueConcentration": 0.8945083570998679,
+        "accentRatio": 0.17444444444444446,
+        "hueX": 0.30389956396645745,
+        "hueY": -0.8413027136188863,
+        "dominantColorRatio": 0.30444444444444446,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9203346470333946,
+        "paletteSpread": 0.12856438356134475
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.18733227933551813,
+        "paletteReferenceScore": 0.9952223440661558,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://cdn.dribbble.com/userupload/33207026/file/original-cecebe4f812bf4eef1250564547cf322.png",
+        "cache_file": "b1_cache/serpapi_google_images_4db7767bb8ed7c3ad502_primary_f509c10c381f.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_4db7767bb8ed7c3ad502.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 14,
+      "clip_score": 0.24886512756347656,
+      "clip_percentile": 83.5,
+      "manual_label": "good",
+      "query_family": "fashion",
+      "source_domain": "pinterest.com",
+      "id": "serpapi_google_images_a225e2e1c6036e7ac323",
+      "image_url": "https://i.pinimg.com/736x/dc/ba/c9/dcbac991b71d407c95095294d4cc819b.jpg",
+      "alt": "Image result for early 2000s fashion editorial",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#E8E3E4",
+          "ratio": 0.44666666666666666,
+          "analysisWeight": 275.59159999999923,
+          "lab": {
+            "L": 0.919174456227481,
+            "a": 0.006314327674650426,
+            "b": 0.00002073025648357029
+          },
+          "lch": {
+            "L": 0.919174456227481,
+            "C": 0.006314361703797948,
+            "H": 0.18810426043451406
+          }
+        },
+        {
+          "hex": "#CDAFAC",
+          "ratio": 0.2011111111111111,
+          "analysisWeight": 171.99999999999991,
+          "lab": {
+            "L": 0.7782400919670329,
+            "a": 0.0323328398639071,
+            "b": 0.014735831751046684
+          },
+          "lch": {
+            "L": 0.7782400919670329,
+            "C": 0.03553248191528725,
+            "H": 24.50133188492332
+          }
+        },
+        {
+          "hex": "#A4735D",
+          "ratio": 0.12777777777777777,
+          "analysisWeight": 116.0199999999999,
+          "lab": {
+            "L": 0.600771926338017,
+            "a": 0.04989927021521136,
+            "b": 0.049414272042640345
+          },
+          "lch": {
+            "L": 0.600771926338017,
+            "C": 0.07022611657720186,
+            "H": 44.720198002944045
+          }
+        },
+        {
+          "hex": "#2A201D",
+          "ratio": 0.12333333333333334,
+          "analysisWeight": 95.21159999999983,
+          "lab": {
+            "L": 0.2540151656174519,
+            "a": 0.013363192626936393,
+            "b": 0.009840460756161778
+          },
+          "lch": {
+            "L": 0.2540151656174519,
+            "C": 0.016595468811641544,
+            "H": 36.36739095701082
+          }
+        },
+        {
+          "hex": "#6C4B42",
+          "ratio": 0.10111111111111111,
+          "analysisWeight": 86.79999999999994,
+          "lab": {
+            "L": 0.44797800708943647,
+            "a": 0.03833687104169635,
+            "b": 0.028646919405519406
+          },
+          "lch": {
+            "L": 0.44797800708943647,
+            "C": 0.04785772322931776,
+            "H": 36.76862900909958
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6973298244220284,
+        "meanChroma": 0.0324895220722384,
+        "temperature": 0.8265601052693465,
+        "contrast": 0.6490920512810481,
+        "neutralRatio": 0.7144444444444444,
+        "darkRatio": 0.10555555555555556,
+        "highChromaRatio": 0,
+        "hueConcentration": 0.9302395004747915,
+        "accentRatio": 0.22444444444444445,
+        "hueX": 0.782885166865438,
+        "hueY": 0.5024304367230006,
+        "dominantColorRatio": 0.44666666666666666,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.891781543059082,
+        "paletteSpread": 0.34500377809823457
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.21085272000313898,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://i.pinimg.com/736x/dc/ba/c9/dcbac991b71d407c95095294d4cc819b.jpg",
+        "cache_file": "b1_cache/serpapi_google_images_a225e2e1c6036e7ac323_primary_52850bc9ad4c.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_a225e2e1c6036e7ac323.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 16,
+      "clip_score": 0.2467278242111206,
+      "clip_percentile": 81,
+      "manual_label": "good",
+      "query_family": "core",
+      "source_domain": "etsy.com",
+      "id": "serpapi_google_images_ae57e9165868f5104cb0",
+      "image_url": "https://i.etsystatic.com/16387852/r/il/5b9b6b/3806603970/il_fullxfull.3806603970_gdzp.jpg",
+      "alt": "Y2K Aesthetic Retro 90s 00s Seamless Pattern / Fabric Design / Surface  Pattern / Digital Paper / Digital Pattern",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#CBDBDD",
+          "ratio": 0.3211111111111112,
+          "analysisWeight": 258.52999999999986,
+          "lab": {
+            "L": 0.8800950956321626,
+            "a": -0.01553321279931433,
+            "b": -0.007264090585623602
+          },
+          "lch": {
+            "L": 0.8800950956321626,
+            "C": 0.017147819450441155,
+            "H": 205.0630917602438
+          }
+        },
+        {
+          "hex": "#9FABAA",
+          "ratio": 0.3122222222222223,
+          "analysisWeight": 275.53999999999985,
+          "lab": {
+            "L": 0.7313408210601666,
+            "a": -0.013531344898833291,
+            "b": -0.002032393483518813
+          },
+          "lch": {
+            "L": 0.7313408210601666,
+            "C": 0.013683125302467689,
+            "H": 188.54191215264123
+          }
+        },
+        {
+          "hex": "#747174",
+          "ratio": 0.2255555555555556,
+          "analysisWeight": 192.85999999999967,
+          "lab": {
+            "L": 0.5528400459595216,
+            "a": 0.004161218070117882,
+            "b": -0.0036736085100146335
+          },
+          "lch": {
+            "L": 0.5528400459595216,
+            "C": 0.005550777901513222,
+            "H": 318.56127631789946
+          }
+        },
+        {
+          "hex": "#CB73C2",
+          "ratio": 0.08666666666666668,
+          "analysisWeight": 91.49999999999993,
+          "lab": {
+            "L": 0.6790085306709716,
+            "a": 0.13046514546093063,
+            "b": -0.0732213775274842
+          },
+          "lch": {
+            "L": 0.6790085306709716,
+            "C": 0.14960790188744766,
+            "H": 330.6974108449521
+          }
+        },
+        {
+          "hex": "#26272C",
+          "ratio": 0.05444444444444445,
+          "analysisWeight": 37.46360000000001,
+          "lab": {
+            "L": 0.2747804126601493,
+            "a": 0.0004792862463995247,
+            "b": -0.00790461770398182
+          },
+          "lch": {
+            "L": 0.2747804126601493,
+            "C": 0.007919134823457076,
+            "H": 273.4698072830489
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.7104725519580738,
+        "meanChroma": 0.06206587168377095,
+        "temperature": -0.11197644418599483,
+        "contrast": 0.41213386846892586,
+        "neutralRatio": 0.48333333333333334,
+        "darkRatio": 0.035555555555555556,
+        "highChromaRatio": 0.07888888888888888,
+        "hueConcentration": 0.21261907952604991,
+        "accentRatio": 0.14111111111111113,
+        "hueX": 0.10054008746943957,
+        "hueY": -0.18734610695219203,
+        "dominantColorRatio": 0.3211111111111112,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.8913236141743001,
+        "paletteSpread": 0.27227547370968735
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.20199142867986725,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://i.etsystatic.com/16387852/r/il/5b9b6b/3806603970/il_fullxfull.3806603970_gdzp.jpg",
+        "cache_file": "b1_cache/serpapi_google_images_ae57e9165868f5104cb0_primary_baa7b8bd7fda.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_ae57e9165868f5104cb0.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 17,
+      "clip_score": 0.24544140696525574,
+      "clip_percentile": 79.7,
+      "manual_label": "good",
+      "query_family": "graphic",
+      "source_domain": "instagram.com",
+      "id": "serpapi_google_images_5b5216b7f4ef04ba27a3",
+      "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3809308351231118276",
+      "alt": "Some Y2K inspired design work for a recent one _ #motiondesign #styleframes  #graphic #design #QUILT",
+      "used_url": "fallback",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#857879",
+          "ratio": 0.31777777777777777,
+          "analysisWeight": 283.7799999999999,
+          "lab": {
+            "L": 0.586073051492972,
+            "a": 0.01524922147530688,
+            "b": 0.0035570027716144556
+          },
+          "lch": {
+            "L": 0.586073051492972,
+            "C": 0.015658576701610957,
+            "H": 13.129928352207765
+          }
+        },
+        {
+          "hex": "#332531",
+          "ratio": 0.27444444444444444,
+          "analysisWeight": 230.25839999999968,
+          "lab": {
+            "L": 0.2864000279399182,
+            "a": 0.02481069778348743,
+            "b": -0.013687473858847493
+          },
+          "lch": {
+            "L": 0.2864000279399182,
+            "C": 0.02833580182631474,
+            "H": 331.115519725622
+          }
+        },
+        {
+          "hex": "#B5CDCE",
+          "ratio": 0.27444444444444444,
+          "analysisWeight": 231.88879999999972,
+          "lab": {
+            "L": 0.8308990026911088,
+            "a": -0.02437014612604426,
+            "b": -0.008372744774232983
+          },
+          "lch": {
+            "L": 0.8308990026911088,
+            "C": 0.02576833089781323,
+            "H": 198.96096033234934
+          }
+        },
+        {
+          "hex": "#74458C",
+          "ratio": 0.10666666666666667,
+          "analysisWeight": 110.99999999999991,
+          "lab": {
+            "L": 0.47518119295333244,
+            "a": 0.08330237576402927,
+            "b": -0.08797065318755096
+          },
+          "lch": {
+            "L": 0.47518119295333244,
+            "C": 0.12115329805736161,
+            "H": 313.43871280132623
+          }
+        },
+        {
+          "hex": "#A0DB4E",
+          "ratio": 0.02666666666666667,
+          "analysisWeight": 30.60000000000001,
+          "lab": {
+            "L": 0.8229250505328349,
+            "a": -0.11308135889078588,
+            "b": 0.13990853742457646
+          },
+          "lch": {
+            "L": 0.8229250505328349,
+            "C": 0.17989383695077169,
+            "H": 128.9469465172904
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.566590651379968,
+        "meanChroma": 0.06224949539851633,
+        "temperature": -0.05629556280955776,
+        "contrast": 0.6239306479812876,
+        "neutralRatio": 0.47888888888888886,
+        "darkRatio": 0.16777777777777778,
+        "highChromaRatio": 0.06555555555555556,
+        "hueConcentration": 0.27005618916097174,
+        "accentRatio": 0.6822222222222222,
+        "hueX": 0.20058976729257916,
+        "hueY": -0.1808150728276144,
+        "dominantColorRatio": 0.31777777777777777,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.8757046742110524,
+        "paletteSpread": 0.3271934596247773
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.3190214790442905,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "google_image_thumbnail_fallback",
+        "feature_reliability": 0.85,
+        "fallback_used": true,
+        "primary_error": "Input buffer contains unsupported image format",
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC02dipEUCVRywtyu2ZsdUOCMOJV-LImpfefUD78C-pg&s=10",
+        "cache_file": "b1_cache/serpapi_google_images_5b5216b7f4ef04ba27a3_google-fallback_88f8e34a1093.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_5b5216b7f4ef04ba27a3.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 18,
+      "clip_score": 0.2452200949192047,
+      "clip_percentile": 78.5,
+      "manual_label": "good",
+      "query_family": "core",
+      "source_domain": "tiktok.com",
+      "id": "serpapi_google_images_af6e192e74a947847f38",
+      "image_url": "https://www.tiktok.com/api/img/?itemId=7539136950213561622&location=0&aid=1988",
+      "alt": "2000s Aesthetic: Embrace the Y2K Nerd Style",
+      "used_url": "fallback",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#372D32",
+          "ratio": 0.2966666666666667,
+          "analysisWeight": 242.87999999999926,
+          "lab": {
+            "L": 0.3103680098667657,
+            "a": 0.016698453870457684,
+            "b": -0.002869924320221034
+          },
+          "lch": {
+            "L": 0.3103680098667657,
+            "C": 0.016943282659142512,
+            "H": 350.2479831166183
+          }
+        },
+        {
+          "hex": "#625558",
+          "ratio": 0.27666666666666667,
+          "analysisWeight": 232.55999999999958,
+          "lab": {
+            "L": 0.463871068070932,
+            "a": 0.01725318180611855,
+            "b": 0.00027756149939490293
+          },
+          "lch": {
+            "L": 0.463871068070932,
+            "C": 0.01725541430452849,
+            "H": 0.9216694581244046
+          }
+        },
+        {
+          "hex": "#888382",
+          "ratio": 0.22444444444444445,
+          "analysisWeight": 192.27999999999975,
+          "lab": {
+            "L": 0.614968230394226,
+            "a": 0.005239650731205512,
+            "b": 0.003252232145638285
+          },
+          "lch": {
+            "L": 0.614968230394226,
+            "C": 0.006166924169644496,
+            "H": 31.827723967176286
+          }
+        },
+        {
+          "hex": "#84C2B3",
+          "ratio": 0.14666666666666667,
+          "analysisWeight": 135.4799999999999,
+          "lab": {
+            "L": 0.7666840908420866,
+            "a": -0.06662447704012475,
+            "b": 0.003098808022874497
+          },
+          "lch": {
+            "L": 0.7666840908420866,
+            "C": 0.06669650329689512,
+            "H": 177.33700340674585
+          }
+        },
+        {
+          "hex": "#DB598B",
+          "ratio": 0.05555555555555555,
+          "analysisWeight": 64.09999999999994,
+          "lab": {
+            "L": 0.6438147033794281,
+            "a": 0.1696748806561927,
+            "b": -0.003196423940250974
+          },
+          "lch": {
+            "L": 0.6438147033794281,
+            "C": 0.1697049859364746,
+            "H": 358.9207598662824
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.51498329560835,
+        "meanChroma": 0.048167518477516186,
+        "temperature": 0.11158903419112601,
+        "contrast": 0.4429360957566037,
+        "neutralRatio": 0.6611111111111111,
+        "darkRatio": 0.14888888888888888,
+        "highChromaRatio": 0.05555555555555555,
+        "hueConcentration": 0.24632700403299976,
+        "accentRatio": 0.20222222222222222,
+        "hueX": 0.24597511619316784,
+        "hueY": -0.013161881690361041,
+        "dominantColorRatio": 0.2966666666666667,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.9279382120975141,
+        "paletteSpread": 0.2555069075494378
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.3281614969471499,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "google_image_thumbnail_fallback",
+        "feature_reliability": 0.85,
+        "fallback_used": true,
+        "primary_error": "Primary URL intentionally skipped by source policy",
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMUFOLm7LAeM27vT4oHLgHEtLfZOEexfvzazoiPRz-QQ&s=10",
+        "cache_file": "b1_cache/serpapi_google_images_af6e192e74a947847f38_google-fallback_0ff2c9076e11.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_af6e192e74a947847f38.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 19,
+      "clip_score": 0.23968584835529327,
+      "clip_percentile": 77.2,
+      "manual_label": "good",
+      "query_family": "fashion",
+      "source_domain": "pinterest.com",
+      "id": "serpapi_google_images_a5091b3d3a147c1b217a",
+      "image_url": "https://i.pinimg.com/736x/77/a5/15/77a515c0dbbab1f23270ddfc50b9e8ba.jpg",
+      "alt": "Versace - Early 2000s",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#37282C",
+          "ratio": 0.37555555555555553,
+          "analysisWeight": 325.2199999999995,
+          "lab": {
+            "L": 0.2950662603816319,
+            "a": 0.023950359046957255,
+            "b": 0.000763591754223635
+          },
+          "lch": {
+            "L": 0.2950662603816319,
+            "C": 0.023962528473541467,
+            "H": 1.8261008065313493
+          }
+        },
+        {
+          "hex": "#544C43",
+          "ratio": 0.3211111111111111,
+          "analysisWeight": 283.2399999999998,
+          "lab": {
+            "L": 0.4204508129499947,
+            "a": 0.005678779851824928,
+            "b": 0.017018054258679423
+          },
+          "lch": {
+            "L": 0.4204508129499947,
+            "C": 0.017940532638604952,
+            "H": 71.54658447592143
+          }
+        },
+        {
+          "hex": "#7D6C56",
+          "ratio": 0.15555555555555556,
+          "analysisWeight": 136.93999999999988,
+          "lab": {
+            "L": 0.5415525083555529,
+            "a": 0.010396284276018436,
+            "b": 0.03784392072142248
+          },
+          "lch": {
+            "L": 0.5415525083555529,
+            "C": 0.03924595599953067,
+            "H": 74.63894290683858
+          }
+        },
+        {
+          "hex": "#428399",
+          "ratio": 0.09,
+          "analysisWeight": 81,
+          "lab": {
+            "L": 0.576963890277797,
+            "a": -0.05446593386224228,
+            "b": -0.050604926216571096
+          },
+          "lch": {
+            "L": 0.576963890277797,
+            "C": 0.07434646265203715,
+            "H": 222.89551593242183
+          }
+        },
+        {
+          "hex": "#A4997F",
+          "ratio": 0.057777777777777775,
+          "analysisWeight": 51.220000000000006,
+          "lab": {
+            "L": 0.6859192497864551,
+            "a": 0.0006894183273991085,
+            "b": 0.03893798262491958
+          },
+          "lch": {
+            "L": 0.6859192497864551,
+            "C": 0.038944085411377845,
+            "H": 88.985652801155
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.4228219469041742,
+        "meanChroma": 0.04427048402816547,
+        "temperature": 0.25209549118146135,
+        "contrast": 0.3360140443813389,
+        "neutralRatio": 0.43444444444444447,
+        "darkRatio": 0.23666666666666666,
+        "highChromaRatio": 0,
+        "hueConcentration": 0.2546792868463984,
+        "accentRatio": 0.057777777777777775,
+        "hueX": 0.15738545220633843,
+        "hueY": 0.2002282661923547,
+        "dominantColorRatio": 0.37555555555555553,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.8720252632822632,
+        "paletteSpread": 0.20174864478497198
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.4012524088714272,
+        "paletteReferenceScore": 0.9627514983266371,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://i.pinimg.com/736x/77/a5/15/77a515c0dbbab1f23270ddfc50b9e8ba.jpg",
+        "cache_file": "b1_cache/serpapi_google_images_a5091b3d3a147c1b217a_primary_e3f9210c6a1e.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_a5091b3d3a147c1b217a.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 20,
+      "clip_score": 0.2389896810054779,
+      "clip_percentile": 75.9,
+      "manual_label": "good",
+      "query_family": "core",
+      "source_domain": "everlastingfabric.com",
+      "id": "serpapi_google_images_977adf7551b90669bec3",
+      "image_url": "https://cdn.shopify.com/s/files/1/0525/8756/1126/files/1dcf59997cba8d1c82d96b87c73dfe9c.jpg?v=1749156739",
+      "alt": "Y2K Room Makeover: 2000s Aesthetic Decor Ideas for Summer",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#8A6C60",
+          "ratio": 0.27111111111111114,
+          "analysisWeight": 244.29999999999998,
+          "lab": {
+            "L": 0.5567562644920463,
+            "a": 0.03143217159991539,
+            "b": 0.02827492737744681
+          },
+          "lch": {
+            "L": 0.5567562644920463,
+            "C": 0.04227827964435661,
+            "H": 41.97308280126107
+          }
+        },
+        {
+          "hex": "#B69082",
+          "ratio": 0.27,
+          "analysisWeight": 243.96000000000004,
+          "lab": {
+            "L": 0.6851572362235041,
+            "a": 0.03850991109562807,
+            "b": 0.03288910152480687
+          },
+          "lch": {
+            "L": 0.6851572362235041,
+            "C": 0.050642928940793225,
+            "H": 40.498735583635856
+          }
+        },
+        {
+          "hex": "#DAC8B5",
+          "ratio": 0.2111111111111111,
+          "analysisWeight": 187.49999999999997,
+          "lab": {
+            "L": 0.842678303196085,
+            "a": 0.012601490996250892,
+            "b": 0.03069261229541035
+          },
+          "lch": {
+            "L": 0.842678303196085,
+            "C": 0.03317881891877659,
+            "H": 67.6783775011981
+          }
+        },
+        {
+          "hex": "#634B41",
+          "ratio": 0.19333333333333333,
+          "analysisWeight": 172.55999999999986,
+          "lab": {
+            "L": 0.4364840878606731,
+            "a": 0.02669473965812099,
+            "b": 0.02550506181352241
+          },
+          "lch": {
+            "L": 0.4364840878606731,
+            "C": 0.036920418517758666,
+            "H": 43.69440650472353
+          }
+        },
+        {
+          "hex": "#392A23",
+          "ratio": 0.05444444444444444,
+          "analysisWeight": 46.300000000000004,
+          "lab": {
+            "L": 0.3001473173926507,
+            "a": 0.01656942918686194,
+            "b": 0.018659095313322504
+          },
+          "lch": {
+            "L": 0.3001473173926507,
+            "C": 0.024954114319888938,
+            "H": 48.39466164002243
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6152167530462932,
+        "meanChroma": 0.04343245610462188,
+        "temperature": 0.8980042652342705,
+        "contrast": 0.440126115793446,
+        "neutralRatio": 0.6355555555555555,
+        "darkRatio": 0.03,
+        "highChromaRatio": 0.006666666666666667,
+        "hueConcentration": 0.925514511839873,
+        "accentRatio": 0.05444444444444444,
+        "hueX": 0.6429714302790169,
+        "hueY": 0.6657062801800456,
+        "dominantColorRatio": 0.27111111111111114,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.9394052064145096,
+        "paletteSpread": 0.24634640148600387
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.23417886428021475,
+        "paletteReferenceScore": 0.990204724286957,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://cdn.shopify.com/s/files/1/0525/8756/1126/files/1dcf59997cba8d1c82d96b87c73dfe9c.jpg?v=1749156739",
+        "cache_file": "b1_cache/serpapi_google_images_977adf7551b90669bec3_primary_a0b7e503122a.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_977adf7551b90669bec3.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 21,
+      "clip_score": 0.23772549629211426,
+      "clip_percentile": 74.7,
+      "manual_label": "good",
+      "query_family": "lifestyle",
+      "source_domain": "cosmopolitan.com",
+      "id": "serpapi_google_images_0e38c60bc72619724a3f",
+      "image_url": "https://hips.hearstapps.com/hmg-prod/images/trucker-hat-1661875540.jpg?crop=1.00xw:0.924xh;0,0.0450xh",
+      "alt": "39 unforgettable Y2K fashion trends from the 2000s that are making a  comeback",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#130D12",
+          "ratio": 0.3055555555555556,
+          "analysisWeight": 222.2211999999994,
+          "lab": {
+            "L": 0.169423495085271,
+            "a": 0.011611492221199301,
+            "b": -0.0061531461451121445
+          },
+          "lch": {
+            "L": 0.169423495085271,
+            "C": 0.01314107906855751,
+            "H": 332.0800497928276
+          }
+        },
+        {
+          "hex": "#4E2B26",
+          "ratio": 0.25333333333333335,
+          "analysisWeight": 230.7000000000001,
+          "lab": {
+            "L": 0.332892381581997,
+            "a": 0.047541348467757163,
+            "b": 0.025225332718408707
+          },
+          "lch": {
+            "L": 0.332892381581997,
+            "C": 0.053819115794363784,
+            "H": 27.95032116120117
+          }
+        },
+        {
+          "hex": "#A88979",
+          "ratio": 0.2111111111111111,
+          "analysisWeight": 189.93999999999994,
+          "lab": {
+            "L": 0.655498884168262,
+            "a": 0.028469508180613626,
+            "b": 0.033915577550648696
+          },
+          "lch": {
+            "L": 0.655498884168262,
+            "C": 0.04428068762609827,
+            "H": 49.98913685367784
+          }
+        },
+        {
+          "hex": "#6D6466",
+          "ratio": 0.16111111111111112,
+          "analysisWeight": 144.1,
+          "lab": {
+            "L": 0.513019256097206,
+            "a": 0.011671537509722028,
+            "b": 0.00032183679622613
+          },
+          "lch": {
+            "L": 0.513019256097206,
+            "C": 0.011675973910738813,
+            "H": 1.5795021541029564
+          }
+        },
+        {
+          "hex": "#D4C4BE",
+          "ratio": 0.06888888888888889,
+          "analysisWeight": 57.3796,
+          "lab": {
+            "L": 0.8312061841163543,
+            "a": 0.015046748196427288,
+            "b": 0.01296871913804623
+          },
+          "lch": {
+            "L": 0.8312061841163543,
+            "C": 0.019864347645171095,
+            "H": 40.75789125147248
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.42704743871391576,
+        "meanChroma": 0.04730559331923062,
+        "temperature": 0.5596601120814669,
+        "contrast": 0.5692911216304548,
+        "neutralRatio": 0.5755555555555556,
+        "darkRatio": 0.41444444444444445,
+        "highChromaRatio": 0.0044444444444444444,
+        "hueConcentration": 0.6375122229257291,
+        "accentRatio": 0.06888888888888889,
+        "hueX": 0.5442195319914577,
+        "hueY": 0.3320345394363411,
+        "dominantColorRatio": 0.3055555555555556,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.9425023640244119,
+        "paletteSpread": 0.32211998253217977
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.46179145962268453,
+        "paletteReferenceScore": 0.9975136986789901,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://hips.hearstapps.com/hmg-prod/images/trucker-hat-1661875540.jpg?crop=1.00xw:0.924xh;0,0.0450xh",
+        "cache_file": "b1_cache/serpapi_google_images_0e38c60bc72619724a3f_primary_9becd1441da4.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_0e38c60bc72619724a3f.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 24,
+      "clip_score": 0.23551739752292633,
+      "clip_percentile": 70.9,
+      "manual_label": "good",
+      "query_family": "fashion",
+      "source_domain": "glamourmagazine.co.uk",
+      "id": "serpapi_google_images_3af46f275d27bd0d8229",
+      "image_url": "https://media.glamourmagazine.co.uk/photos/673cb662639dce1d2952996f/1:1/w_1080,h_1080,c_limit/2000s%20FASHION%20191124%20MAIN.jpg",
+      "alt": "These 2000s fashion items have stood the test of time | Glamour UK",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#D9C78A",
+          "ratio": 0.2788888888888889,
+          "analysisWeight": 254.74599999999998,
+          "lab": {
+            "L": 0.8297195286351058,
+            "a": -0.005032508268384432,
+            "b": 0.08143199090389124
+          },
+          "lch": {
+            "L": 0.8297195286351058,
+            "C": 0.08158734756102066,
+            "H": 93.5363895249908
+          }
+        },
+        {
+          "hex": "#E2BBC0",
+          "ratio": 0.21555555555555556,
+          "analysisWeight": 180.34119999999982,
+          "lab": {
+            "L": 0.8281803801831422,
+            "a": 0.044267769385752484,
+            "b": 0.007107966313450489
+          },
+          "lch": {
+            "L": 0.8281803801831422,
+            "C": 0.04483479219873012,
+            "H": 9.121979430639927
+          }
+        },
+        {
+          "hex": "#C17F6F",
+          "ratio": 0.17777777777777778,
+          "analysisWeight": 172.00000000000017,
+          "lab": {
+            "L": 0.6601430196205935,
+            "a": 0.07077925282945065,
+            "b": 0.047862615075101755
+          },
+          "lch": {
+            "L": 0.6601430196205935,
+            "C": 0.08544315392658826,
+            "H": 34.067493295509706
+          }
+        },
+        {
+          "hex": "#3E2D1D",
+          "ratio": 0.16555555555555557,
+          "analysisWeight": 138.62639999999996,
+          "lab": {
+            "L": 0.31177871325809153,
+            "a": 0.015999854021636173,
+            "b": 0.03188045817824146
+          },
+          "lch": {
+            "L": 0.31177871325809153,
+            "C": 0.03567014076742998,
+            "H": 63.34928629922183
+          }
+        },
+        {
+          "hex": "#705139",
+          "ratio": 0.1622222222222222,
+          "analysisWeight": 148.51999999999998,
+          "lab": {
+            "L": 0.46312157551747757,
+            "a": 0.028794286287124854,
+            "b": 0.04770606749128878
+          },
+          "lch": {
+            "L": 0.46312157551747757,
+            "C": 0.05572234559194638,
+            "H": 58.88578387857103
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6556127515299838,
+        "meanChroma": 0.07052342296695521,
+        "temperature": 0.7773567109317,
+        "contrast": 0.5323013030585555,
+        "neutralRatio": 0.2222222222222222,
+        "darkRatio": 0.07777777777777778,
+        "highChromaRatio": 0.03777777777777778,
+        "hueConcentration": 0.7775058448254581,
+        "accentRatio": 0.16555555555555557,
+        "hueX": 0.4018659265234438,
+        "hueY": 0.6655968117691096,
+        "dominantColorRatio": 0.2788888888888889,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9859064795132921,
+        "paletteSpread": 0.2915434936857771
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.24992783083723816,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://media.glamourmagazine.co.uk/photos/673cb662639dce1d2952996f/1:1/w_1080,h_1080,c_limit/2000s%20FASHION%20191124%20MAIN.jpg",
+        "cache_file": "b1_cache/serpapi_google_images_3af46f275d27bd0d8229_primary_359e5820f2f7.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_3af46f275d27bd0d8229.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 26,
+      "clip_score": 0.23473170399665833,
+      "clip_percentile": 68.4,
+      "manual_label": "good",
+      "query_family": "core",
+      "source_domain": "fashionmagazine.com",
+      "id": "serpapi_google_images_a8976d52d0fb90cc1a7e",
+      "image_url": "https://fashionmagazine.mblycdn.com/uploads/fm/2022/09/FEATURE_Y2KBody_1022.jpg",
+      "alt": "Y2K Aesthetic: Gen Z Is Reviving the 2000s Thin Obsession - FASHION Magazine",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#DCD3C5",
+          "ratio": 0.3788888888888888,
+          "analysisWeight": 311.9775999999994,
+          "lab": {
+            "L": 0.8705342505040327,
+            "a": 0.004390543637329507,
+            "b": 0.021577555684540978
+          },
+          "lch": {
+            "L": 0.8705342505040327,
+            "C": 0.022019713502921902,
+            "H": 78.49862230652417
+          }
+        },
+        {
+          "hex": "#AFA096",
+          "ratio": 0.2622222222222222,
+          "analysisWeight": 230.23999999999984,
+          "lab": {
+            "L": 0.7158363831274989,
+            "a": 0.013571027765291703,
+            "b": 0.01848851696926397
+          },
+          "lch": {
+            "L": 0.7158363831274989,
+            "C": 0.022934647464678416,
+            "H": 53.720411968809856
+          }
+        },
+        {
+          "hex": "#8B6F61",
+          "ratio": 0.16999999999999998,
+          "analysisWeight": 152.64,
+          "lab": {
+            "L": 0.5664844960598526,
+            "a": 0.027709618620312373,
+            "b": 0.03072862819446759
+          },
+          "lch": {
+            "L": 0.5664844960598526,
+            "C": 0.041377186405034724,
+            "H": 47.95735884966341
+          }
+        },
+        {
+          "hex": "#59473E",
+          "ratio": 0.10666666666666665,
+          "analysisWeight": 95.46,
+          "lab": {
+            "L": 0.41523931769810063,
+            "a": 0.01881043334105188,
+            "b": 0.02138796974620034
+          },
+          "lch": {
+            "L": 0.41523931769810063,
+            "C": 0.028482936160840883,
+            "H": 48.668803976803055
+          }
+        },
+        {
+          "hex": "#DD719B",
+          "ratio": 0.08222222222222221,
+          "analysisWeight": 89.59999999999991,
+          "lab": {
+            "L": 0.6834773754103821,
+            "a": 0.1418982747151603,
+            "b": -0.007645052644967598
+          },
+          "lch": {
+            "L": 0.6834773754103821,
+            "C": 0.14210407171183884,
+            "H": 356.91605721600666
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.70887076997224,
+        "meanChroma": 0.050638092208463006,
+        "temperature": 0.5882030873632519,
+        "contrast": 0.4388635550354916,
+        "neutralRatio": 0.5111111111111111,
+        "darkRatio": 0.006666666666666667,
+        "highChromaRatio": 0.04666666666666667,
+        "hueConcentration": 0.6469183211493825,
+        "accentRatio": 0.18888888888888886,
+        "hueX": 0.5273188922886833,
+        "hueY": 0.37475071724303827,
+        "dominantColorRatio": 0.3788888888888888,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9096922049762489,
+        "paletteSpread": 0.23599013987365058
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.1846589851048834,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://fashionmagazine.mblycdn.com/uploads/fm/2022/09/FEATURE_Y2KBody_1022.jpg",
+        "cache_file": "b1_cache/serpapi_google_images_a8976d52d0fb90cc1a7e_primary_06c3d2baf373.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_a8976d52d0fb90cc1a7e.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 30,
+      "clip_score": 0.23139739036560059,
+      "clip_percentile": 63.3,
+      "manual_label": "good",
+      "query_family": "core",
+      "source_domain": "vocal.media",
+      "id": "serpapi_google_images_38c22bf980043651df9b",
+      "image_url": "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/62e097b48ce8d0001d428d4d.jpg",
+      "alt": "Aesthetic Y2k Outfits and clothing 2000 Ideas | Styled",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#DBD6DA",
+          "ratio": 0.3022222222222222,
+          "analysisWeight": 231.13999999999902,
+          "lab": {
+            "L": 0.8815837915450401,
+            "a": 0.006260988720904144,
+            "b": -0.0030986911843559916
+          },
+          "lch": {
+            "L": 0.8815837915450401,
+            "C": 0.0069858332945536596,
+            "H": 333.6682522413738
+          }
+        },
+        {
+          "hex": "#B7A19C",
+          "ratio": 0.21333333333333335,
+          "analysisWeight": 178.31999999999965,
+          "lab": {
+            "L": 0.7278966888489267,
+            "a": 0.02265763350121415,
+            "b": 0.015160716213688917
+          },
+          "lch": {
+            "L": 0.7278966888489267,
+            "C": 0.02726198217275024,
+            "H": 33.78734276149121
+          }
+        },
+        {
+          "hex": "#996A60",
+          "ratio": 0.18333333333333332,
+          "analysisWeight": 168.29999999999984,
+          "lab": {
+            "L": 0.5697035421134485,
+            "a": 0.053521290054455176,
+            "b": 0.03310887391675078
+          },
+          "lch": {
+            "L": 0.5697035421134485,
+            "C": 0.06293429924237198,
+            "H": 31.7414026365554
+          }
+        },
+        {
+          "hex": "#161313",
+          "ratio": 0.15444444444444444,
+          "analysisWeight": 110.7475999999999,
+          "lab": {
+            "L": 0.1904781063020103,
+            "a": 0.005487252751781333,
+            "b": 0.0018737379111269082
+          },
+          "lch": {
+            "L": 0.1904781063020103,
+            "C": 0.0057983477406521634,
+            "H": 18.85355011034376
+          }
+        },
+        {
+          "hex": "#3D3F44",
+          "ratio": 0.14666666666666667,
+          "analysisWeight": 125.87999999999994,
+          "lab": {
+            "L": 0.36750003995194613,
+            "a": -0.0011457312501398798,
+            "b": -0.008821213710125087
+          },
+          "lch": {
+            "L": 0.36750003995194613,
+            "C": 0.008895308393599735,
+            "H": 262.59964471876634
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6100348524776089,
+        "meanChroma": 0.032848313980099325,
+        "temperature": 0.6202908514893284,
+        "contrast": 0.7086003740176012,
+        "neutralRatio": 0.7166666666666667,
+        "darkRatio": 0.1811111111111111,
+        "highChromaRatio": 0.025555555555555557,
+        "hueConcentration": 0.7617637669004734,
+        "accentRatio": 0.3011111111111111,
+        "hueX": 0.6930846795314523,
+        "hueY": 0.3160975538677626,
+        "dominantColorRatio": 0.3022222222222222,
+        "significantColorCount": 5,
+        "paletteEntropy": 0.9769009477834022,
+        "paletteSpread": 0.35391129966225615
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.280450034433591,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/62e097b48ce8d0001d428d4d.jpg",
+        "cache_file": "b1_cache/serpapi_google_images_38c22bf980043651df9b_primary_94ccb30ffd00.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_38c22bf980043651df9b.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 31,
+      "clip_score": 0.23041222989559174,
+      "clip_percentile": 62,
+      "manual_label": "good",
+      "query_family": "fashion",
+      "source_domain": "cosmopolitan.com",
+      "id": "serpapi_google_images_c3b811982bafd4aae718",
+      "image_url": "https://hips.hearstapps.com/cos.h-cdn.co/assets/16/25/croppedpiratepants1.jpg?crop=1.0xw:1xh;center,top",
+      "alt": "38 Unforgettable 2000s Fashion Trends That Are Back in 2024",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#120A0F",
+          "ratio": 0.4388888888888889,
+          "analysisWeight": 358.84319999999946,
+          "lab": {
+            "L": 0.15748967811649928,
+            "a": 0.016231226663493567,
+            "b": -0.005443644596135686
+          },
+          "lch": {
+            "L": 0.15748967811649928,
+            "C": 0.017119754247381644,
+            "H": 341.4595271041902
+          }
+        },
+        {
+          "hex": "#2E1D19",
+          "ratio": 0.2588888888888889,
+          "analysisWeight": 231.38,
+          "lab": {
+            "L": 0.25193464782853464,
+            "a": 0.022111475468290637,
+            "b": 0.015314997476711814
+          },
+          "lch": {
+            "L": 0.25193464782853464,
+            "C": 0.026897332490351304,
+            "H": 34.70750605895534
+          }
+        },
+        {
+          "hex": "#846E69",
+          "ratio": 0.1411111111111111,
+          "analysisWeight": 118.11999999999978,
+          "lab": {
+            "L": 0.5576508275479224,
+            "a": 0.024338972131694284,
+            "b": 0.014982885539067518
+          },
+          "lch": {
+            "L": 0.5576508275479224,
+            "C": 0.02858098010048273,
+            "H": 31.616135289594748
+          }
+        },
+        {
+          "hex": "#614D4A",
+          "ratio": 0.09777777777777778,
+          "analysisWeight": 83.86000000000001,
+          "lab": {
+            "L": 0.44004773081472254,
+            "a": 0.024519153624347093,
+            "b": 0.013183710128652732
+          },
+          "lch": {
+            "L": 0.44004773081472254,
+            "C": 0.027838805779175836,
+            "H": 28.266486650898283
+          }
+        },
+        {
+          "hex": "#C9A18B",
+          "ratio": 0.06333333333333334,
+          "analysisWeight": 56.28,
+          "lab": {
+            "L": 0.7387064906384382,
+            "a": 0.03664571407416743,
+            "b": 0.043589483891578684
+          },
+          "lch": {
+            "L": 0.7387064906384382,
+            "C": 0.05694691796699652,
+            "H": 49.94620698566987
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.3054312196471008,
+        "meanChroma": 0.026164153703802595,
+        "temperature": 0.7712799814565472,
+        "contrast": 0.44110080187292317,
+        "neutralRatio": 0.8766666666666667,
+        "darkRatio": 0.6877777777777778,
+        "highChromaRatio": 0.0011111111111111111,
+        "hueConcentration": 0.8926710663252302,
+        "accentRatio": 0.20444444444444443,
+        "hueX": 0.7748592311878889,
+        "hueY": 0.44323222411861857,
+        "dominantColorRatio": 0.4388888888888889,
+        "significantColorCount": 4,
+        "paletteEntropy": 0.863470627844944,
+        "paletteSpread": 0.28577046366256403
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.6001573100418414,
+        "paletteReferenceScore": 1,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://hips.hearstapps.com/cos.h-cdn.co/assets/16/25/croppedpiratepants1.jpg?crop=1.0xw:1xh;center,top",
+        "cache_file": "b1_cache/serpapi_google_images_c3b811982bafd4aae718_primary_3be679a873c2.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_c3b811982bafd4aae718.png"
+      },
+      "observation_error": null
+    },
+    {
+      "clip_rank": 32,
+      "clip_score": 0.230037122964859,
+      "clip_percentile": 60.8,
+      "manual_label": "good",
+      "query_family": "core",
+      "source_domain": "reddit.com",
+      "id": "serpapi_google_images_1f1aa076794f54ee49c6",
+      "image_url": "https://preview.redd.it/im-trying-to-nail-down-this-sub-aesthetic-whats-it-called-v0-v5juscjhidic1.jpg?width=640&crop=smart&auto=webp&s=81cc11b708ee5ff135bb5cc349afd39507276bf5",
+      "alt": "I'm trying to nail down this sub aesthetic. What's it called? : r/ y2kaesthetic",
+      "used_url": "primary",
+      "error_reason": null,
+      "selection_basis": "manual_label=good; clip_rank<=40; diversity-aware MVP evaluation selection",
+      "palette": [
+        {
+          "hex": "#4EB7DB",
+          "ratio": 0.37555555555555553,
+          "analysisWeight": 370.1000000000009,
+          "lab": {
+            "L": 0.7323824983462446,
+            "a": -0.07801926166797273,
+            "b": -0.07613727414143497
+          },
+          "lch": {
+            "L": 0.7323824983462446,
+            "C": 0.10901325472117425,
+            "H": 224.30055131814626
+          }
+        },
+        {
+          "hex": "#328FBF",
+          "ratio": 0.2511111111111111,
+          "analysisWeight": 247.60000000000045,
+          "lab": {
+            "L": 0.6174946561913465,
+            "a": -0.06351100603226945,
+            "b": -0.09242585355561819
+          },
+          "lch": {
+            "L": 0.6174946561913465,
+            "C": 0.11214359675307166,
+            "H": 235.50485193450004
+          }
+        },
+        {
+          "hex": "#94E4F0",
+          "ratio": 0.23444444444444446,
+          "analysisWeight": 223.10439999999988,
+          "lab": {
+            "L": 0.8721878489044976,
+            "a": -0.07050008693041918,
+            "b": -0.037235240537993944
+          },
+          "lch": {
+            "L": 0.8721878489044976,
+            "C": 0.07972907496715943,
+            "H": 207.84116799842784
+          }
+        },
+        {
+          "hex": "#1E547C",
+          "ratio": 0.07111111111111111,
+          "analysisWeight": 64.6,
+          "lab": {
+            "L": 0.4304367617226394,
+            "a": -0.038013911600467444,
+            "b": -0.07757722562650093
+          },
+          "lch": {
+            "L": 0.4304367617226394,
+            "C": 0.08639029697294243,
+            "H": 243.89450811467725
+          }
+        },
+        {
+          "hex": "#1A2A38",
+          "ratio": 0.06777777777777778,
+          "analysisWeight": 60.28,
+          "lab": {
+            "L": 0.27611427318406573,
+            "a": -0.013459395182765064,
+            "b": -0.032417724345611736
+          },
+          "lch": {
+            "L": 0.27611427318406573,
+            "C": 0.03510077165012056,
+            "H": 247.45244438846558
+          }
+        }
+      ],
+      "observed_features": {
+        "meanLightness": 0.6865449720663112,
+        "meanChroma": 0.09755882443079752,
+        "temperature": -0.947385079032421,
+        "contrast": 0.46482117173316917,
+        "neutralRatio": 0.14777777777777779,
+        "darkRatio": 0.06,
+        "highChromaRatio": 0.024444444444444446,
+        "hueConcentration": 0.975568838352328,
+        "accentRatio": 0.1388888888888889,
+        "hueX": -0.6753036820483965,
+        "hueY": -0.7040592981958187,
+        "dominantColorRatio": 0.37555555555555553,
+        "significantColorCount": 3,
+        "paletteEntropy": 0.8855755480840998,
+        "paletteSpread": 0.27365185538368303
+      },
+      "derived_quality_features": {
+        "visualWeight": 0.24807938628015172,
+        "paletteReferenceScore": 0.9356694446714969,
+        "paletteUsabilityPenalty": 0,
+        "closeupPenalty": 0,
+        "monotonePenalty": 0
+      },
+      "analysis_provenance": {
+        "analysis_mode": "decoded_pixels",
+        "analysis_source": "primary_image_url",
+        "feature_reliability": 1,
+        "fallback_used": false,
+        "primary_error": null,
+        "tone_feature_contract": {
+          "name": "YOYO Tone Feature Contract",
+          "version": "1.0.0",
+          "analysisSize": 64,
+          "pixelStep": 2,
+          "pixelMargin": 2,
+          "alphaThreshold": 0.85,
+          "paletteSize": 5,
+          "kmeansIterations": 10,
+          "colorMergeDistance": 0.045,
+          "clusterChromaWeight": 1.18,
+          "workingColorSpace": "OKLab",
+          "derivedColorSpace": "OKLCH"
+        },
+        "image_normalization": {
+          "decoder": "sharp/libvips",
+          "exif_autorotate": true,
+          "resize_width": 64,
+          "resize_height": 64,
+          "resize_fit": "fill",
+          "channels": 4
+        },
+        "image_fetch_mode": "cache",
+        "requested_image_url": "https://preview.redd.it/im-trying-to-nail-down-this-sub-aesthetic-whats-it-called-v0-v5juscjhidic1.jpg?width=640&crop=smart&auto=webp&s=81cc11b708ee5ff135bb5cc349afd39507276bf5",
+        "cache_file": "b1_cache/serpapi_google_images_1f1aa076794f54ee49c6_primary_73569a2847e3.img",
+        "preview_asset": "b1_preview_assets/serpapi_google_images_1f1aa076794f54ee49c6.png"
+      },
+      "observation_error": null
+    }
+  ]
+}

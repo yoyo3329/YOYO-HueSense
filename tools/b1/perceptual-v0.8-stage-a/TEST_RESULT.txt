@@ -1,0 +1,12 @@
+PASS  retired validation has exactly 12 cases
+PASS  retired validation authority is preserved as direct-human blind historical evidence
+PASS  retired validation is explicitly failure-taxonomy-only
+PASS  retired validation is forbidden for training/tuning/model selection
+PASS  Stage A freezes hue/hue applicability/lightness baseline
+PASS  Chroma is the only primary redesign axis in Stage A round 1
+PASS  complexity budget forbids case/mode/style-specific rules
+PASS  taxonomy builder contains no numeric tuning threshold generation
+PASS  taxonomy builder only classifies prediction vs retired human label
+PASS  fresh Stage A train target remains 12-16 direct-human blind
+
+10/10 v0.8 Stage A Prep checks PASS.

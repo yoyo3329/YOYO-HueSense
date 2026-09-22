@@ -1,0 +1,6 @@
+=== Shadow Pipeline v0.3 Node Microbenchmark ===
+ 30 items  p50=0.0941ms  p95=0.2942ms  max=0.4535ms
+ 60 items  p50=0.0917ms  p95=0.2818ms  max=0.3839ms
+120 items  p50=0.1441ms  p95=0.4082ms  max=0.5126ms
+
+Development microbenchmark only; not a browser/Safari/mobile performance claim.

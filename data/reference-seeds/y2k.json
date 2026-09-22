@@ -1,0 +1,27 @@
+{
+  "concept": "Y2K",
+  "mode": "reference_discovery_debug_seed",
+  "note": "Reference-only query families. Not a validated Visual Profile.",
+  "query_families": [
+    {
+      "family": "core",
+      "query": "Y2K aesthetic"
+    },
+    {
+      "family": "era_culture",
+      "query": "millennium digital culture"
+    },
+    {
+      "family": "fashion",
+      "query": "early 2000s fashion editorial"
+    },
+    {
+      "family": "graphic",
+      "query": "Y2K graphic design"
+    },
+    {
+      "family": "lifestyle",
+      "query": "early 2000s lifestyle"
+    }
+  ]
+}

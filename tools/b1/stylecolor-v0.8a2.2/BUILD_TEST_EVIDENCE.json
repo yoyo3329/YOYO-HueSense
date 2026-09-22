@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.8a2.2-build",
+  "tested_against_user_run": "20260912_055542_y2k_v0_8a2_1",
+  "static_contract": "12/12 PASS",
+  "output_gates": "15/15 PASS",
+  "actual_run_summary": {
+    "images": 24,
+    "foundation_masks_preserved": 440,
+    "global_or_umbrella_routed_masks": 2,
+    "role_counts": {
+      "LOCAL_COMPONENT_CANDIDATE": 325,
+      "NESTED_COMPONENT_CANDIDATE": 93,
+      "AMBIGUOUS": 21,
+      "GLOBAL_CONTEXT_CANDIDATE": 2,
+      "BACKGROUND_PLANE_CANDIDATE": 3
+    }
+  },
+  "critical_case_check": {
+    "Y2K_PACK": {
+      "coverage_with_global": 0.991338305898491,
+      "coverage_without_global": 0.0711085390946502,
+      "split_capable_raw": 13,
+      "split_capable_local": 10,
+      "group_capable_raw": 10,
+      "group_capable_local": 9,
+      "interpretation": "GLOBAL_UMBRELLA_MASK_CONTAMINATION_EXPOSED"
+    },
+    "FASHION_COLLAGE": {
+      "coverage_with_global": 0.25177578604294476,
+      "coverage_without_global": 0.25177578604294476,
+      "interpretation": "NO_GLOBAL_MASK_CONTAMINATION_IN_THIS_CASE"
+    },
+    "STICKER_COLLAGE": {
+      "coverage_with_global": 0.43441677751912205,
+      "coverage_without_global": 0.43441677751912205,
+      "interpretation": "FOUNDATION_SPLIT_EVIDENCE_RETAINED"
+    }
+  },
+  "claims_not_made": [
+    "PERCEPTUAL_VALIDITY_PASS",
+    "STYLE_GRAPH_READY",
+    "PRODUCTION_READY"
+  ]
+}

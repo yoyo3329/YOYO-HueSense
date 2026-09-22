@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "name": "YOYO Safe Foundation Sprint",
+    "version": "0.6C.1",
+    "status": "PASS",
+    "human_calibration_required": false,
+    "live_runtime_modified": false,
+    "legacy_calibration_modified": false
+  },
+  "summary": {
+    "stages": 13,
+    "stages_passed": 13,
+    "protected_files_unchanged": true
+  },
+  "protected_files": [
+    {
+      "file": "tone-core.js",
+      "sha256_before": "e2af9434a31f4097828d7fc88945aa5b145d06e843ad1d1527e628b6f6d81e89",
+      "sha256_after": "e2af9434a31f4097828d7fc88945aa5b145d06e843ad1d1527e628b6f6d81e89",
+      "unchanged": true
+    },
+    {
+      "file": "color-relation-core.js",
+      "sha256_before": "06ddfcbb05b1d703c913a25f2a554357e0f6158683dd1b3440953ecccece171f",
+      "sha256_after": "06ddfcbb05b1d703c913a25f2a554357e0f6158683dd1b3440953ecccece171f",
+      "unchanged": true
+    },
+    {
+      "file": "color-relation-candidate-v0_5.js",
+      "sha256_before": "998a33bed2b40661b95b03acf82d30c1044b2eaa021514f0b2b052ea43762fc3",
+      "sha256_after": "998a33bed2b40661b95b03acf82d30c1044b2eaa021514f0b2b052ea43762fc3",
+      "unchanged": true
+    },
+    {
+      "file": "y2k_color_relation_graph_v0_5_candidate.json",
+      "sha256_before": "6b52aa72ae57a69d95db7ec03e8b563a9ebc275f0af1315fd1fa4025e50231d3",
+      "sha256_after": "6b52aa72ae57a69d95db7ec03e8b563a9ebc275f0af1315fd1fa4025e50231d3",
+      "unchanged": true
+    },
+    {
+      "file": "calibration_set_v0_human.json",
+      "sha256_before": "003c9408a969291a9f265313d43632bae19ef5849f56c4124c1e51138d14fac9",
+      "sha256_after": "003c9408a969291a9f265313d43632bae19ef5849f56c4124c1e51138d14fac9",
+      "unchanged": true
+    },
+    {
+      "file": "gold_train_candidate_v0_4.json",
+      "sha256_before": "811b32442e82f5e8a3970f7e5dc48407ca08bea665f22dff2b01d873e42d1d45",
+      "sha256_after": "811b32442e82f5e8a3970f7e5dc48407ca08bea665f22dff2b01d873e42d1d45",
+      "unchanged": true
+    },
+    {
+      "file": "gold_holdout_human_v0_5_2.json",
+      "sha256_before": "bcd5078ef671485b87fc794e20f44106c4bc04142540d9ffcc83f10261bbd95b",
+      "sha256_after": "bcd5078ef671485b87fc794e20f44106c4bc04142540d9ffcc83f10261bbd95b",
+      "unchanged": true
+    }
+  ],
+  "stages": [
+    {
+      "script": "project-state-contract.contract.test.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 92
+    },
+    {
+      "script": "style-workspace-contract.contract.test.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 97
+    },
+    {
+      "script": "perceptual-label-contract.contract.test.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 87
+    },
+    {
+      "script": "audit_calibration_lineage_v0_6c1.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 82
+    },
+    {
+      "script": "cross-style-dataset-contract.contract.test.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 83
+    },
+    {
+      "script": "b3d-multiview-contract.contract.test.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 77
+    },
+    {
+      "script": "runtime-shadow-adapter.contract.test.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 107
+    },
+    {
+      "script": "generic-reproduction-policy.contract.test.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 67
+    },
+    {
+      "script": "run_style_pipeline_v0_6c.js",
+      "args": [
+        "--workspace",
+        "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\styles\\y2k\\style.workspace.json",
+        "--reuse-b1"
+      ],
+      "status": 0,
+      "elapsed_ms": 768
+    },
+    {
+      "script": "build_y2k_v0_6c_structural_outputs.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 283
+    },
+    {
+      "script": "build_cross_style_registry_v0_6c1.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 82
+    },
+    {
+      "script": "run_safe_foundation_integrity_audit_v0_6c.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 92
+    },
+    {
+      "script": "run_safe_foundation_integrity_audit_v0_6c1.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 83
+    }
+  ]
+}

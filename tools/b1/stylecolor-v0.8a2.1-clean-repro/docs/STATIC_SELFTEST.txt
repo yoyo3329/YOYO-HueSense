@@ -1,0 +1,14 @@
+PASS  explicit QuickGELU model definition
+PASS  OpenAI pretrained identifier preserved
+PASS  QuickGELU required
+PASS  torch/torchvision exact pins
+PASS  OpenCLIP exact pin
+PASS  uncertified baseline lineage recorded
+PASS  QuickGELU correction disclosed
+PASS  worker fails if QuickGELU absent
+PASS  worker fails if OpenCLIP weight hash differs
+PASS  no algorithm tuning contract
+PASS  no Style Graph / production
+PASS  byte-identical A1 source requirement
+
+12/12 clean repro static checks PASS

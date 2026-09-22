@@ -1,0 +1,144 @@
+{
+  "profile_name": "Y2K — 9 Backbone Physical Audit",
+  "groups": [
+    {
+      "id": "G1",
+      "label": "Group 1",
+      "members": [
+        {
+          "id": "mode_01",
+          "hex": "#E1DCDA",
+          "role": "Core / Stab A"
+        },
+        {
+          "id": "mode_04",
+          "hex": "#C4C8C9",
+          "role": "Core / Stab A"
+        },
+        {
+          "id": "mode_12",
+          "hex": "#DFC2BB",
+          "role": "Secondary / Stab C"
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "label": "Group 2",
+      "members": [
+        {
+          "id": "mode_06",
+          "hex": "#886D60",
+          "role": "Core / Stab A"
+        },
+        {
+          "id": "mode_11",
+          "hex": "#817D80",
+          "role": "Secondary / Stab B"
+        },
+        {
+          "id": "mode_15",
+          "hex": "#716B6D",
+          "role": "Secondary / Stab C"
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "label": "Group 3",
+      "members": [
+        {
+          "id": "mode_07",
+          "hex": "#594841",
+          "role": "Core / Stab A"
+        },
+        {
+          "id": "mode_17",
+          "hex": "#714D40",
+          "role": "Secondary / Stab C"
+        },
+        {
+          "id": "mode_18",
+          "hex": "#615A5B",
+          "role": "Secondary / Stab B"
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "label": "Group 4",
+      "members": [
+        {
+          "id": "mode_02",
+          "hex": "#362B2C",
+          "role": "Core / Stab A"
+        },
+        {
+          "id": "mode_20",
+          "hex": "#2D1E1B",
+          "role": "Secondary / Stab C"
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "label": "Group 5",
+      "members": [
+        {
+          "id": "mode_03",
+          "hex": "#BA9A93",
+          "role": "Core / Stab A"
+        },
+        {
+          "id": "mode_08",
+          "hex": "#A29181",
+          "role": "Core / Stab A"
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "label": "Group 6",
+      "members": [
+        {
+          "id": "mode_05",
+          "hex": "#130E11",
+          "role": "Core / Stab A"
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "label": "Group 7",
+      "members": [
+        {
+          "id": "mode_14",
+          "hex": "#7495D7",
+          "role": "Secondary / Stab A"
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "label": "Group 8",
+      "members": [
+        {
+          "id": "mode_22",
+          "hex": "#4B3F64",
+          "role": "Secondary / Stab B"
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "label": "Group 9",
+      "members": [
+        {
+          "id": "mode_26",
+          "hex": "#B67CDB",
+          "role": "Secondary / Stab C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "name": "YOYO B1 Offline Cache Preflight",
+    "version": "0.6B",
+    "status": "PASS",
+    "network_required": false
+  },
+  "summary": {
+    "items": 24,
+    "ready": 24,
+    "missing": 0
+  },
+  "rows": [
+    {
+      "id": "serpapi_google_images_2d8421f3ad2632a18a14",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_2d8421f3ad2632a18a14_primary_e9419254a75e.img"
+    },
+    {
+      "id": "serpapi_google_images_1ff2e0224fd5725bad54",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_1ff2e0224fd5725bad54_primary_44bfedf0d6bf.img"
+    },
+    {
+      "id": "serpapi_google_images_038098b1bbc5f6b146fd",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_038098b1bbc5f6b146fd_primary_b68fa6c47216.img"
+    },
+    {
+      "id": "serpapi_google_images_83ee05bfcf2bef13cafd",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_83ee05bfcf2bef13cafd_primary_8a787ff86608.img"
+    },
+    {
+      "id": "serpapi_google_images_9aada71d2d1db6471dcb",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_9aada71d2d1db6471dcb_primary_97f1a94a9c6f.img"
+    },
+    {
+      "id": "serpapi_google_images_722d54cf81ab15c4f556",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_722d54cf81ab15c4f556_primary_6c4d6de02e1d.img"
+    },
+    {
+      "id": "serpapi_google_images_9ec1ff183dccf3d83ae8",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_9ec1ff183dccf3d83ae8_primary_75e56ebe8208.img"
+    },
+    {
+      "id": "serpapi_google_images_c17fe1c381287485df0e",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_c17fe1c381287485df0e_primary_afb4b7524afb.img"
+    },
+    {
+      "id": "serpapi_google_images_96f83a2ab9731b6c6fe8",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_96f83a2ab9731b6c6fe8_primary_48d49f1509ba.img"
+    },
+    {
+      "id": "serpapi_google_images_684c47b09dba8e542528",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_684c47b09dba8e542528_primary_473b6c3900f1.img"
+    },
+    {
+      "id": "serpapi_google_images_e8e9dab72c6b88d4fe33",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_e8e9dab72c6b88d4fe33_primary_ded0db1bdccd.img"
+    },
+    {
+      "id": "serpapi_google_images_4db7767bb8ed7c3ad502",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_4db7767bb8ed7c3ad502_primary_f509c10c381f.img"
+    },
+    {
+      "id": "serpapi_google_images_a225e2e1c6036e7ac323",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_a225e2e1c6036e7ac323_primary_52850bc9ad4c.img"
+    },
+    {
+      "id": "serpapi_google_images_ae57e9165868f5104cb0",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_ae57e9165868f5104cb0_primary_baa7b8bd7fda.img"
+    },
+    {
+      "id": "serpapi_google_images_5b5216b7f4ef04ba27a3",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_5b5216b7f4ef04ba27a3_primary_6842f70a6146.img"
+    },
+    {
+      "id": "serpapi_google_images_af6e192e74a947847f38",
+      "cache_ready": true,
+      "source": "fallback_cache",
+      "file": "serpapi_google_images_af6e192e74a947847f38_google-fallback_0ff2c9076e11.img"
+    },
+    {
+      "id": "serpapi_google_images_a5091b3d3a147c1b217a",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_a5091b3d3a147c1b217a_primary_e3f9210c6a1e.img"
+    },
+    {
+      "id": "serpapi_google_images_977adf7551b90669bec3",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_977adf7551b90669bec3_primary_a0b7e503122a.img"
+    },
+    {
+      "id": "serpapi_google_images_0e38c60bc72619724a3f",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_0e38c60bc72619724a3f_primary_9becd1441da4.img"
+    },
+    {
+      "id": "serpapi_google_images_3af46f275d27bd0d8229",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_3af46f275d27bd0d8229_primary_359e5820f2f7.img"
+    },
+    {
+      "id": "serpapi_google_images_a8976d52d0fb90cc1a7e",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_a8976d52d0fb90cc1a7e_primary_06c3d2baf373.img"
+    },
+    {
+      "id": "serpapi_google_images_38c22bf980043651df9b",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_38c22bf980043651df9b_primary_94ccb30ffd00.img"
+    },
+    {
+      "id": "serpapi_google_images_c3b811982bafd4aae718",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_c3b811982bafd4aae718_primary_3be679a873c2.img"
+    },
+    {
+      "id": "serpapi_google_images_1f1aa076794f54ee49c6",
+      "cache_ready": true,
+      "source": "primary_cache",
+      "file": "serpapi_google_images_1f1aa076794f54ee49c6_primary_73569a2847e3.img"
+    }
+  ]
+}

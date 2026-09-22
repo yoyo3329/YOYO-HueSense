@@ -1,0 +1,28 @@
+{
+  "version": "0.8a1.1",
+  "fixes": [
+    "region-local mean_lab rebinding",
+    "CLIP starter imports ./clip_bridge_a1",
+    "regression gates for non-collapsed relationship color metrics"
+  ],
+  "tests": {
+    "static_contract": "14/14 PASS",
+    "synthetic_worker": "PASS including region-local color regression",
+    "reconstructed_24_image_integration": {
+      "images_processed": 24,
+      "atomic_regions_total": 324,
+      "relationship_edges_total": 644,
+      "destructive_merges_executed": 0,
+      "clip_mode": "OFF in build environment",
+      "physical_audit_counts": {
+        "stability_extreme_low": 1,
+        "high_bimodal_regions": 134,
+        "foreground_dilution_regions": 56,
+        "clip_scored_low_input_coherence": 0,
+        "relationship_edges_with_contradictions": 545,
+        "high_palette_impact_relationships": 64
+      }
+    },
+    "output_gates": "14/14 PASS"
+  }
+}

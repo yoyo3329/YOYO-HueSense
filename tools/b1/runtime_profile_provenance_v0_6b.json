@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "name": "YOYO Provenance Trace",
+    "version": "0.1.0",
+    "created_at": "2026-09-09T15:50:15.106Z",
+    "hash_algorithm": "SHA-256"
+  },
+  "run": {
+    "run_id": "v0.6b-1788969015095",
+    "stage": "SAFE_FOUNDATION_V0_6B",
+    "concept_fingerprint": "e958e9dab1ee747268d54a9f3f297fd801caaa1dc808680ed591aac305d33d68",
+    "raw_user_input_stored": false,
+    "node_version": "v24.18.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "lineage": {
+    "pipeline_version": "0.6B",
+    "profile_contract_version": "0.1.0",
+    "validation_scope": "Y2K_ONLY_CURRENT_DATASET",
+    "universality_status": "unvalidated"
+  },
+  "files": [
+    {
+      "file": "b3_threshold_sensitivity.json",
+      "bytes": 564380,
+      "sha256": "9450bb3a7086d653ccd148d08315b2558fd89c9b5b6ad07767da557d0ab8706c"
+    },
+    {
+      "file": "color-relation-core.js",
+      "bytes": 82,
+      "sha256": "06ddfcbb05b1d703c913a25f2a554357e0f6158683dd1b3440953ecccece171f"
+    },
+    {
+      "file": "dynamic-profile-contract-v0_1.js",
+      "bytes": 5521,
+      "sha256": "3cf89d4f0bddeb6112055a37341b37f2da061d2f4506f6b11cfa84ef539175a1"
+    },
+    {
+      "file": "failure-fallback-contract-v0_1.js",
+      "bytes": 3832,
+      "sha256": "08ad4e7f37dfde7db47d6fd4caa89bf065143895237eb5459ecac642fb4de0ae"
+    },
+    {
+      "file": "runtime-audit-log-v0_1.js",
+      "bytes": 4180,
+      "sha256": "fa1ac5c19dea53aff67bf380c3fb2c45674bd91e31aa4dc4f34230bf8273b7f8"
+    },
+    {
+      "file": "shadow-audit-middleware-v0_1.js",
+      "bytes": 6632,
+      "sha256": "d205d0db217ef2431e8c1fd9eaf374229d99c730d8d6e6fa77df0775f329fa6e"
+    },
+    {
+      "file": "tone-core.js",
+      "bytes": 19175,
+      "sha256": "e2af9434a31f4097828d7fc88945aa5b145d06e843ad1d1527e628b6f6d81e89"
+    },
+    {
+      "file": "y2k_color_mvp_b1_observations.json",
+      "bytes": 121867,
+      "sha256": "cab25c3558081b402791cb486143b526b12c478fad68c1084743f7bd947f84cf"
+    },
+    {
+      "file": "y2k_color_mvp_b2_aggregation.json",
+      "bytes": 158500,
+      "sha256": "d3df5c6bea34df2d809f725e51608fbe23d7ed89bad341b0196d2da79b555e88"
+    },
+    {
+      "file": "y2k_color_mvp_b3_hierarchy.json",
+      "bytes": 579283,
+      "sha256": "71a424bdec3e1b2fc6515175c5c376d71b69c4a4b840e554fe7f03237aa780c8"
+    },
+    {
+      "file": "y2k_color_mvp_evaluation_set_v1.json",
+      "bytes": 16069,
+      "sha256": "83b8a16212029da525f45458acdd3711b2572c01ac689bcdaa2905de0eaafc57"
+    },
+    {
+      "file": "y2k_color_relation_graph.json",
+      "bytes": 2183581,
+      "sha256": "92f0127222c726f0ade0a67223de4bb90f046126d1c0da57941326ccc457128e"
+    },
+    {
+      "file": "y2k_dynamic_profile_packet_v0_6b.json",
+      "bytes": 654780,
+      "sha256": "0ced17d97871ca6562ad90f83aeb8994d692076a1bde00fc6f6fc7d99f47e502"
+    }
+  ],
+  "manifest_fingerprint": "553e7a8373f97f744f55328b35237470e7b19f65223c6e992a453df952939781"
+}

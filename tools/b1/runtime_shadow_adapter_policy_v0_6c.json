@@ -1,0 +1,11 @@
+{
+  "name": "YOYO Runtime Shadow Adapter Policy",
+  "version": "0.6C",
+  "live_integration_enabled": false,
+  "mode": "SHADOW_ONLY",
+  "sample_rate_when_eventually_enabled": 0.1,
+  "can_block_search": false,
+  "can_change_palette": false,
+  "production_decision_authority": false,
+  "note": "Adapter is implemented/tested but public/js/app.js remains untouched. Enabling live integration requires a separate explicit sprint."
+}

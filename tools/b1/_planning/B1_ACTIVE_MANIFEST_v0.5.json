@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "name": "YOYO B1 Active Manifest",
+    "version": "0.5.0",
+    "current_stage": "INDEPENDENT_GOLD_HOLDOUT",
+    "missing_active_files": 0
+  },
+  "active": {
+    "physical_core": [
+      "tone-core.js",
+      "color-relation-core.js",
+      "color-relation-candidate-v0_5.js"
+    ],
+    "physical_outputs": [
+      "y2k_color_mvp_b1_observations.json",
+      "y2k_color_mvp_b2_aggregation.json",
+      "y2k_color_mvp_b3_hierarchy.json",
+      "y2k_color_relation_graph.json",
+      "y2k_color_relation_graph_v0_5_candidate.json"
+    ],
+    "human_train": [
+      "human_approved_calibration_v0_4.json",
+      "gold_train_candidate_v0_4.json"
+    ],
+    "v0_5_scripts": [
+      "run_relation_formula_calibration_v0_5.js",
+      "run_b3_color_relation_graph_v0_5_candidate.js",
+      "run_relation_train_regression_v0_5.js",
+      "run_relation_baseline_comparison_v0_5.js",
+      "run_relation_graph_audit_v0_5.js",
+      "build_gold_holdout_queue_v0_5.js",
+      "build_gold_holdout_blind_lab_v0_5.js",
+      "run_gold_holdout_regression_v0_5.js",
+      "run_relation_formula_sprint_v0_5.js"
+    ],
+    "v0_5_outputs": [
+      "relation_formula_calibration_v0_5.json",
+      "relation_formula_candidate_config_v0_5.json",
+      "relation_train_regression_v0_5.json",
+      "relation_baseline_vs_candidate_v0_5.json",
+      "relation_graph_audit_v0_5.json",
+      "gold_holdout_queue_v0_5.json",
+      "gold_holdout_blind_lab_v0_5.html"
+    ]
+  },
+  "missing": []
+}

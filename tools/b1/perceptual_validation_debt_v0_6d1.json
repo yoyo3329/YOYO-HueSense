@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "name": "YOYO Perceptual Validation Debt Register",
+    "version": "0.6D.1",
+    "status": "KNOWN_BLOCKER_RECORDED",
+    "source": "gold_holdout_regression_v0_5_1.json",
+    "validation_scope": "Y2K_BOUNDARY_STRESS_ONLY"
+  },
+  "v0_5_candidate": {
+    "holdout_status": "BOUNDARY_CONTRADICTION_FOUND",
+    "tone": {
+      "correct": 2,
+      "total": 9
+    },
+    "hue_relation_reliable": {
+      "correct": 6,
+      "total": 6
+    },
+    "all_relevant_relations": {
+      "correct": 2,
+      "total": 9
+    },
+    "high_confidence_contradictions": {
+      "count": 7,
+      "total": 9
+    },
+    "production_eligible": false,
+    "interpretation": "FAILED_BOUNDARY_STRESS_REDESIGN_REQUIRED",
+    "blocks": {
+      "perceptual_candidate_promotion": true,
+      "live_perceptual_decision_authority": true,
+      "v0_6d_ingestion_infrastructure_closure": false,
+      "network_sandbox_engineering": false
+    }
+  },
+  "governance": {
+    "human_tone_hue_status": "PAUSED_PENDING_REDESIGN",
+    "holdout_may_be_reused_for_tuning": false,
+    "candidate_may_be_promoted": false,
+    "status_may_not_be_hidden_by_foundation_pass": true
+  }
+}

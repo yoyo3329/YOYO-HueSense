@@ -1,0 +1,95 @@
+{
+  "contract": {
+    "name": "YOYO Project State Manifest Contract",
+    "version": "0.1.0"
+  },
+  "project": "YOYO/HueSense",
+  "manifest_version": "0.6C.1",
+  "current_phase": "SAFE_FOUNDATION_v0.6C.1_CLOSED",
+  "updated_at": "2026-09-10T13:39:32.138Z",
+  "summary": "Style-agnostic infrastructure is complete. Calibration schema guard prevents legacy low-chroma labeling inconsistencies from propagating cross-style while preserving raw history.",
+  "safety": {
+    "live_runtime_integration": false,
+    "candidate_v0_5_production_eligible": false,
+    "holdout_auto_retuning": false,
+    "formal_color_relation_core_modified": false,
+    "irreversible_semantic_merge": false,
+    "legacy_calibration_auto_edit": false,
+    "numeric_auto_relabel": false
+  },
+  "calibration": {
+    "human_calibration_status": "PAUSED",
+    "active_training_source": "gold_train_candidate_v0_4.json",
+    "active_training_schema_status": "PASS",
+    "legacy_first_pass_source": "calibration_set_v0_human.json",
+    "legacy_first_pass_authority": "HISTORICAL_ONLY",
+    "legacy_review_candidates": 5,
+    "v0_5_holdout_status": "BOUNDARY_CONTRADICTION_FOUND",
+    "v0_5_tone_score": {
+      "correct": 2,
+      "total": 9
+    },
+    "v0_5_hue_reliable_score": {
+      "correct": 6,
+      "total": 6
+    },
+    "v0_6_human_tasks": "DEFERRED"
+  },
+  "components": [
+    {
+      "id": "safe_foundation_v0_6b_1",
+      "status": "PASS"
+    },
+    {
+      "id": "safe_foundation_v0_6c",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration_schema_guard",
+      "status": "PASS"
+    },
+    {
+      "id": "project_state_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "generic_style_workspace",
+      "status": "PASS"
+    },
+    {
+      "id": "style_agnostic_offline_pipeline",
+      "status": "PASS"
+    },
+    {
+      "id": "cross_style_dataset_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "b3d_multiview_structural_skeleton",
+      "status": "PASS"
+    },
+    {
+      "id": "runtime_shadow_adapter",
+      "status": "PASS"
+    }
+  ],
+  "styles": [
+    {
+      "id": "y2k",
+      "data_status": "STRUCTURAL_BASELINE",
+      "pipeline_status": "PASS",
+      "validation_scope": "Y2K_ONLY_CURRENT_DATASET"
+    },
+    {
+      "id": "quiet-luxury",
+      "data_status": "DATA_PENDING",
+      "pipeline_status": "NOT_RUN",
+      "validation_scope": "UNVALIDATED_NEW_STYLE"
+    }
+  ],
+  "next_actions": {
+    "automatic_engineering": "v0.6C.1 complete; safe next work may automate Reference Discovery → generic workspace ingestion while keeping live integration OFF.",
+    "human": "Tone/Hue v0.6 calibration remains paused. Legacy first-pass review candidates are quarantined and do not block engineering.",
+    "cross_style": "Quiet Luxury workspace requires real reference data before any cross-style execution or validation claim."
+  }
+}

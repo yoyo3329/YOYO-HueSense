@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7 Frozen Prediction Source Discovery",
+    "role": "DISCOVERY_ONLY",
+    "does_not_modify_source_files": true,
+    "does_not_generate_thresholds": true
+  },
+  "root_scanned": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1",
+  "retired_validation_case_count": 12,
+  "candidate_files": [
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\v0_7_independent_validation_report.json",
+      "case_id_hits": 12,
+      "pair_key_hits": 12,
+      "prediction_terms": [
+        "predicted",
+        "chroma_relation",
+        "candidate_version",
+        "candidate_config"
+      ],
+      "likely_frozen_prediction_source": true
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\v0_7_validation_human.json",
+      "case_id_hits": 12,
+      "pair_key_hits": 12,
+      "prediction_terms": [
+        "chroma_relation"
+      ],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\v0_7_validation_queue.json",
+      "case_id_hits": 12,
+      "pair_key_hits": 12,
+      "prediction_terms": [
+        "candidate_config"
+      ],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\styles\\y2k\\artifacts\\color_relation_graph.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\styles\\y2k\\artifacts\\dynamic_profile_packet_v0_6c.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\y2k_color_relation_graph.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\y2k_color_relation_graph_v0_5_candidate.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\y2k_dynamic_profile_packet_v0_6b.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\_archive\\02_old_calibration\\y2k_color_relation_coverage_v0_2.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\_pipeline_backups\\v0_6b1_20260909155009\\y2k_color_relation_graph.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\_pipeline_backups\\v0_6b_20260909140456\\y2k_color_relation_graph.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    },
+    {
+      "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\_pipeline_backups\\v0_6b_20260909153511\\y2k_color_relation_graph.json",
+      "case_id_hits": 0,
+      "pair_key_hits": 12,
+      "prediction_terms": [],
+      "likely_frozen_prediction_source": false
+    }
+  ],
+  "likely_source_count": 1,
+  "next_action": "RUN_TAXONOMY_BUILDER_WITH_THE_SINGLE_LIKELY_SOURCE"
+}

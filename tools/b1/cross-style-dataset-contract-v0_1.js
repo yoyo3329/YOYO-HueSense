@@ -1,0 +1,6 @@
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.YOYOCrossStyleDatasetContract=factory();})(typeof self!=='undefined'?self:this,function(){
+'use strict';const CONTRACT=Object.freeze({name:'YOYO Cross-Style Dataset Contract',version:'0.1.0',purpose:'STRUCTURAL_REGISTRY_ONLY',human_labels_required:false,semantic_merge_allowed:false});
+function assert(c,m){if(!c)throw new Error(m)}
+function forbidden(x){const s=JSON.stringify(x);for(const k of ['human_label','gold_label','ai_label','perceptual_ground_truth'])if(s.includes('"'+k+'"'))throw new Error(`subjective label field forbidden in structural registry: ${k}`)}
+function validate(d){assert(d?.contract?.name===CONTRACT.name&&d?.contract?.version===CONTRACT.version,'contract mismatch');assert(Array.isArray(d.styles)&&d.styles.length>0,'styles required');const ids=d.styles.map(s=>s.style_id);assert(new Set(ids).size===ids.length,'duplicate style_id');for(const s of d.styles){assert(typeof s.style_id==='string'&&s.style_id,'missing style_id');assert(['READY','DATA_PENDING','STRUCTURAL_BASELINE'].includes(s.data_status),'invalid data_status');assert(typeof s.workspace_manifest==='string'&&s.workspace_manifest,'missing workspace manifest')}forbidden(d);return true}
+return {CONTRACT,validate};});

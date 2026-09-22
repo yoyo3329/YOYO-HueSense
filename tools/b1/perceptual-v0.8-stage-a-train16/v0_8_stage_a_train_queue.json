@@ -1,0 +1,666 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8 Stage A Round 1 Fresh Chroma Train Queue",
+    "version": "0.8-stage-a-round1-train16",
+    "role": "TRAIN_CALIBRATION",
+    "authority_target": "DIRECT_HUMAN_BLIND",
+    "case_count": 16,
+    "selection_seed": "YOYO-v0.8-stage-a-round1-chroma-train16-fixed-seed-v1",
+    "source_graph": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\y2k_color_mvp_b3_hierarchy.json",
+    "source_graph_sha256": "71a424bdec3e1b2fc6515175c5c376d71b69c4a4b840e554fe7f03237aa780c8",
+    "historical_labels_used_for_selection": false,
+    "historical_pairs_used_only_as_exclusion_keys": true,
+    "retired_v0_7_validation_labels_used_for_selection": false,
+    "candidate_predictions_used_for_selection": false,
+    "algorithm_outputs_hidden_in_human_ui": true,
+    "physical_numeric_features_hidden_in_human_ui": true,
+    "independent_validation_materialized": false,
+    "note": "Selection is based only on fresh-pair exclusion plus physical feature diversity. No retired labels or candidate predictions influence selection."
+  },
+  "chroma_bins": {
+    "method": "mode-level empirical terciles from all usable B3 physical modes",
+    "q33": 0.04121348,
+    "q67": 0.07412304666666666
+  },
+  "historical_exclusion": {
+    "unique_pair_count": 65,
+    "source_files": [
+      {
+        "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\calibration_retest_v0_3_ai_completed.json",
+        "sha256": "9dba121766dc27e1111f95197e526122174a8f92e003090e9da547135e53ecef",
+        "pairs_added": 20
+      },
+      {
+        "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\gold_holdout_human_v0_5_2.json",
+        "sha256": "bcd5078ef671485b87fc794e20f44106c4bc04142540d9ffcc83f10261bbd95b",
+        "pairs_added": 9
+      },
+      {
+        "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\perceptual-v0.8-stage-a\\retired_v0_7_validation_human.json",
+        "sha256": "5c5adbf63eb2748bf84b0bac3026ce61ca5f91a6ef01e16b41edba73cc620350",
+        "pairs_added": 12
+      },
+      {
+        "path": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\v0_7_train_human.json",
+        "sha256": "477130fd18d19cfc62831f2fac5ebc2f728ab7b2714d3114b9b59116a34c3dae",
+        "pairs_added": 24
+      }
+    ]
+  },
+  "selection_audit": {
+    "LOW_LOW": {
+      "fresh_pool_count": 143,
+      "selected_pair_keys": [
+        "mode_05||mode_07",
+        "mode_06||mode_43",
+        "mode_03||mode_12",
+        "mode_09||mode_11"
+      ]
+    },
+    "LOW_MIDHIGH": {
+      "fresh_pool_count": 610,
+      "selected_pair_keys": [
+        "mode_16||mode_49",
+        "mode_03||mode_53",
+        "mode_11||mode_50",
+        "mode_06||mode_10"
+      ]
+    },
+    "MEDIUM_MEDIUM": {
+      "fresh_pool_count": 132,
+      "selected_pair_keys": [
+        "mode_17||mode_37",
+        "mode_32||mode_40",
+        "mode_29||mode_42",
+        "mode_22||mode_51"
+      ]
+    },
+    "MIDHIGH_HIGH": {
+      "fresh_pool_count": 428,
+      "selected_pair_keys": [
+        "mode_24||mode_27",
+        "mode_41||mode_53",
+        "mode_26||mode_48",
+        "mode_42||mode_53"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V08_STAGEA_TRAIN_001",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_05||mode_07",
+      "stratum": "LOW_LOW",
+      "a": {
+        "mode_id": "mode_05",
+        "hex": "#130E11",
+        "physical": {
+          "L": 0.17129365,
+          "C": 0.01081629,
+          "H": 344.53987685
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_07",
+        "hex": "#594841",
+        "physical": {
+          "L": 0.41696711,
+          "C": 0.02604738,
+          "H": 42.94945861
+        },
+        "chroma_bin": "LOW"
+      },
+      "selection_features": {
+        "dC": 0.01523109,
+        "dL": 0.24567345999999998,
+        "meanC": 0.018431835,
+        "minC": 0.01081629,
+        "maxC": 0.02604738,
+        "hueChord": 0.016379892920501064,
+        "hueDistance": 58.40958176000004
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_002",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_11||mode_50",
+      "stratum": "LOW_MIDHIGH",
+      "a": {
+        "mode_id": "mode_11",
+        "hex": "#817D80",
+        "physical": {
+          "L": 0.59534783,
+          "C": 0.00584879,
+          "H": 338.17549145
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_50",
+        "hex": "#DB598B",
+        "physical": {
+          "L": 0.6438147,
+          "C": 0.16970499,
+          "H": 358.92075987
+        },
+        "chroma_bin": "HIGH"
+      },
+      "selection_features": {
+        "dC": 0.1638562,
+        "dL": 0.04846686999999994,
+        "meanC": 0.08777689,
+        "minC": 0.00584879,
+        "maxC": 0.16970499,
+        "hueChord": 0.011344931280043262,
+        "hueDistance": 20.745268420000002
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_003",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_42||mode_53",
+      "stratum": "MIDHIGH_HIGH",
+      "a": {
+        "mode_id": "mode_42",
+        "hex": "#482F42",
+        "physical": {
+          "L": 0.34205648,
+          "C": 0.04757347,
+          "H": 336.78619853
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "physical": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        },
+        "chroma_bin": "HIGH"
+      },
+      "selection_features": {
+        "dC": 0.13232037,
+        "dL": 0.48086857000000005,
+        "meanC": 0.113733655,
+        "minC": 0.04757347,
+        "maxC": 0.17989384,
+        "hueChord": 0.17958750555873632,
+        "hueDistance": 152.16074799000003
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_004",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_03||mode_53",
+      "stratum": "LOW_MIDHIGH",
+      "a": {
+        "mode_id": "mode_03",
+        "hex": "#BA9A93",
+        "physical": {
+          "L": 0.71278114,
+          "C": 0.03961294,
+          "H": 31.04912193
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "physical": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        },
+        "chroma_bin": "HIGH"
+      },
+      "selection_features": {
+        "dC": 0.1402809,
+        "dL": 0.11014391000000001,
+        "meanC": 0.10975339,
+        "minC": 0.03961294,
+        "maxC": 0.17989384,
+        "hueChord": 0.12732087617784935,
+        "hueDistance": 97.89782459000001
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_005",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_29||mode_42",
+      "stratum": "MEDIUM_MEDIUM",
+      "a": {
+        "mode_id": "mode_29",
+        "hex": "#8D7D98",
+        "physical": {
+          "L": 0.6125738,
+          "C": 0.04419262,
+          "H": 312.03841861
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "b": {
+        "mode_id": "mode_42",
+        "hex": "#482F42",
+        "physical": {
+          "L": 0.34205648,
+          "C": 0.04757347,
+          "H": 336.78619853
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "selection_features": {
+        "dC": 0.0033808499999999977,
+        "dL": 0.27051731999999995,
+        "meanC": 0.045883045,
+        "minC": 0.04419262,
+        "maxC": 0.04757347,
+        "hueChord": 0.019651226218680238,
+        "hueDistance": 24.74777991999997
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_006",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_41||mode_53",
+      "stratum": "MIDHIGH_HIGH",
+      "a": {
+        "mode_id": "mode_41",
+        "hex": "#AD3D51",
+        "physical": {
+          "L": 0.52177535,
+          "C": 0.14605096,
+          "H": 13.07712257
+        },
+        "chroma_bin": "HIGH"
+      },
+      "b": {
+        "mode_id": "mode_53",
+        "hex": "#A0DB4E",
+        "physical": {
+          "L": 0.82292505,
+          "C": 0.17989384,
+          "H": 128.94694652
+        },
+        "chroma_bin": "HIGH"
+      },
+      "selection_features": {
+        "dC": 0.03384287999999999,
+        "dL": 0.3011497000000001,
+        "meanC": 0.16297240000000002,
+        "minC": 0.14605096,
+        "maxC": 0.17989384,
+        "hueChord": 0.2747275155842695,
+        "hueDistance": 115.86982395000001
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_007",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_26||mode_48",
+      "stratum": "MIDHIGH_HIGH",
+      "a": {
+        "mode_id": "mode_26",
+        "hex": "#B67CDB",
+        "physical": {
+          "L": 0.68159158,
+          "C": 0.14663868,
+          "H": 310.98761345
+        },
+        "chroma_bin": "HIGH"
+      },
+      "b": {
+        "mode_id": "mode_48",
+        "hex": "#CB73C2",
+        "physical": {
+          "L": 0.67900853,
+          "C": 0.1496079,
+          "H": 330.69741084
+        },
+        "chroma_bin": "HIGH"
+      },
+      "selection_features": {
+        "dC": 0.0029692199999999946,
+        "dL": 0.00258304999999992,
+        "meanC": 0.14812329,
+        "minC": 0.14663868,
+        "maxC": 0.1496079,
+        "hueChord": 0.050701122503599816,
+        "hueDistance": 19.70979738999995
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_008",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_06||mode_10",
+      "stratum": "LOW_MIDHIGH",
+      "a": {
+        "mode_id": "mode_06",
+        "hex": "#886D60",
+        "physical": {
+          "L": 0.55844039,
+          "C": 0.03972391,
+          "H": 46.70059602
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_10",
+        "hex": "#699399",
+        "physical": {
+          "L": 0.63465115,
+          "C": 0.04624494,
+          "H": 208.08280123
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "selection_features": {
+        "dC": 0.006521029999999997,
+        "dL": 0.07621076000000004,
+        "meanC": 0.042984425,
+        "minC": 0.03972391,
+        "maxC": 0.04624494,
+        "hueChord": 0.08459227644125315,
+        "hueDistance": 161.38220521
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_009",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_24||mode_27",
+      "stratum": "MIDHIGH_HIGH",
+      "a": {
+        "mode_id": "mode_24",
+        "hex": "#ABD8BB",
+        "physical": {
+          "L": 0.8431562,
+          "C": 0.06224808,
+          "H": 156.22981919
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "b": {
+        "mode_id": "mode_27",
+        "hex": "#64B0F0",
+        "physical": {
+          "L": 0.73466199,
+          "C": 0.11998975,
+          "H": 245.77671158
+        },
+        "chroma_bin": "HIGH"
+      },
+      "selection_features": {
+        "dC": 0.05774167000000001,
+        "dL": 0.10849421000000004,
+        "meanC": 0.091118915,
+        "minC": 0.06224808,
+        "maxC": 0.11998975,
+        "hueChord": 0.12173795332460521,
+        "hueDistance": 89.54689239000001
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_010",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_22||mode_51",
+      "stratum": "MEDIUM_MEDIUM",
+      "a": {
+        "mode_id": "mode_22",
+        "hex": "#4B3F64",
+        "physical": {
+          "L": 0.39650274,
+          "C": 0.06252916,
+          "H": 298.43603756
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "b": {
+        "mode_id": "mode_51",
+        "hex": "#ACD6F6",
+        "physical": {
+          "L": 0.8559587,
+          "C": 0.06353882,
+          "H": 241.85784198
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "selection_features": {
+        "dC": 0.0010096599999999956,
+        "dL": 0.45945595999999994,
+        "meanC": 0.06303399,
+        "minC": 0.06252916,
+        "maxC": 0.06353882,
+        "hueChord": 0.05974430461028391,
+        "hueDistance": 56.57819558
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_011",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_16||mode_49",
+      "stratum": "LOW_MIDHIGH",
+      "a": {
+        "mode_id": "mode_16",
+        "hex": "#A0AAA5",
+        "physical": {
+          "L": 0.72912279,
+          "C": 0.01359661,
+          "H": 161.62801187
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_49",
+        "hex": "#1E547C",
+        "physical": {
+          "L": 0.43043676,
+          "C": 0.0863903,
+          "H": 243.89450811
+        },
+        "chroma_bin": "HIGH"
+      },
+      "selection_features": {
+        "dC": 0.07279369000000001,
+        "dL": 0.29868603000000005,
+        "meanC": 0.049993455,
+        "minC": 0.01359661,
+        "maxC": 0.0863903,
+        "hueChord": 0.04508996268587304,
+        "hueDistance": 82.26649624000001
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_012",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_17||mode_37",
+      "stratum": "MEDIUM_MEDIUM",
+      "a": {
+        "mode_id": "mode_17",
+        "hex": "#714D40",
+        "physical": {
+          "L": 0.4564307,
+          "C": 0.05247239,
+          "H": 40.98423266
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "b": {
+        "mode_id": "mode_37",
+        "hex": "#77875E",
+        "physical": {
+          "L": 0.59808722,
+          "C": 0.06158081,
+          "H": 125.64601821
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "selection_features": {
+        "dC": 0.009108419999999999,
+        "dL": 0.14165652,
+        "meanC": 0.0570266,
+        "minC": 0.05247239,
+        "maxC": 0.06158081,
+        "hueChord": 0.07655938903760116,
+        "hueDistance": 84.66178554999999
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_013",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_32||mode_40",
+      "stratum": "MEDIUM_MEDIUM",
+      "a": {
+        "mode_id": "mode_32",
+        "hex": "#DDA3B9",
+        "physical": {
+          "L": 0.77554052,
+          "C": 0.07367622,
+          "H": 354.34088047
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "b": {
+        "mode_id": "mode_40",
+        "hex": "#84C2B3",
+        "physical": {
+          "L": 0.76668409,
+          "C": 0.0666965,
+          "H": 177.33700341
+        },
+        "chroma_bin": "MEDIUM"
+      },
+      "selection_features": {
+        "dC": 0.006979719999999995,
+        "dL": 0.008856429999999915,
+        "meanC": 0.07018636,
+        "minC": 0.0666965,
+        "maxC": 0.07367622,
+        "hueChord": 0.1401511684821497,
+        "hueDistance": 177.00387706
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_014",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_09||mode_11",
+      "stratum": "LOW_LOW",
+      "a": {
+        "mode_id": "mode_09",
+        "hex": "#000000",
+        "physical": {
+          "L": 0.02486905,
+          "C": 0.00155141,
+          "H": 257.50208688
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_11",
+        "hex": "#817D80",
+        "physical": {
+          "L": 0.59534783,
+          "C": 0.00584879,
+          "H": 338.17549145
+        },
+        "chroma_bin": "LOW"
+      },
+      "selection_features": {
+        "dC": 0.00429738,
+        "dL": 0.5704787800000001,
+        "meanC": 0.0037001000000000004,
+        "minC": 0.00155141,
+        "maxC": 0.00584879,
+        "hueChord": 0.003899575015616542,
+        "hueDistance": 80.67340457
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_015",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_03||mode_12",
+      "stratum": "LOW_LOW",
+      "a": {
+        "mode_id": "mode_03",
+        "hex": "#BA9A93",
+        "physical": {
+          "L": 0.71278114,
+          "C": 0.03961294,
+          "H": 31.04912193
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_12",
+        "hex": "#DFC2BB",
+        "physical": {
+          "L": 0.83749818,
+          "C": 0.03486307,
+          "H": 33.3948196
+        },
+        "chroma_bin": "LOW"
+      },
+      "selection_features": {
+        "dC": 0.004749869999999996,
+        "dL": 0.12471703999999995,
+        "meanC": 0.037238005000000005,
+        "minC": 0.03486307,
+        "maxC": 0.03961294,
+        "hueChord": 0.0015213194778592352,
+        "hueDistance": 2.34569767
+      }
+    },
+    {
+      "case_id": "V08_STAGEA_TRAIN_016",
+      "role": "TRAIN_CALIBRATION",
+      "source_style": "Y2K",
+      "pair_key": "mode_06||mode_43",
+      "stratum": "LOW_LOW",
+      "a": {
+        "mode_id": "mode_06",
+        "hex": "#886D60",
+        "physical": {
+          "L": 0.55844039,
+          "C": 0.03972391,
+          "H": 46.70059602
+        },
+        "chroma_bin": "LOW"
+      },
+      "b": {
+        "mode_id": "mode_43",
+        "hex": "#1D2A39",
+        "physical": {
+          "L": 0.28041616,
+          "C": 0.0336813,
+          "H": 252.39523362
+        },
+        "chroma_bin": "LOW"
+      },
+      "selection_features": {
+        "dC": 0.006042610000000004,
+        "dL": 0.27802423,
+        "meanC": 0.036702605,
+        "minC": 0.0336813,
+        "maxC": 0.03972391,
+        "hueChord": 0.0713246923384224,
+        "hueDistance": 154.3053624
+      }
+    }
+  ]
+}

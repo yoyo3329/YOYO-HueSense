@@ -1,0 +1,130 @@
+{
+  "contract": {
+    "name": "YOYO Project State Manifest Contract",
+    "version": "0.1.0"
+  },
+  "project": "YOYO/HueSense",
+  "manifest_version": "0.6D",
+  "current_phase": "SAFE_FOUNDATION_v0.6D_CLOSED",
+  "updated_at": "2026-09-10T13:39:33.736Z",
+  "summary": "Generic reference/data ingestion foundation is complete. Y2K migration preflight is DATA_READY; Quiet Luxury remains DATA_PENDING until real Reference Discovery + selection + cache exist.",
+  "safety": {
+    "live_runtime_integration": false,
+    "candidate_v0_5_production_eligible": false,
+    "holdout_auto_retuning": false,
+    "formal_color_relation_core_modified": false,
+    "irreversible_semantic_merge": false,
+    "legacy_calibration_auto_edit": false,
+    "numeric_auto_relabel": false
+  },
+  "calibration": {
+    "human_calibration_status": "PAUSED",
+    "active_training_source": "gold_train_candidate_v0_4.json",
+    "active_training_schema_status": "PASS",
+    "legacy_first_pass_source": "calibration_set_v0_human.json",
+    "legacy_first_pass_authority": "HISTORICAL_ONLY",
+    "legacy_review_candidates": 5,
+    "v0_5_holdout_status": "BOUNDARY_CONTRADICTION_FOUND",
+    "v0_5_tone_score": {
+      "correct": 2,
+      "total": 9
+    },
+    "v0_5_hue_reliable_score": {
+      "correct": 6,
+      "total": 6
+    },
+    "v0_6_human_tasks": "DEFERRED"
+  },
+  "components": [
+    {
+      "id": "safe_foundation_v0_6b_1",
+      "status": "PASS"
+    },
+    {
+      "id": "safe_foundation_v0_6c",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration_schema_guard",
+      "status": "PASS"
+    },
+    {
+      "id": "project_state_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "generic_style_workspace",
+      "status": "PASS"
+    },
+    {
+      "id": "style_agnostic_offline_pipeline",
+      "status": "PASS"
+    },
+    {
+      "id": "cross_style_dataset_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "b3d_multiview_structural_skeleton",
+      "status": "PASS"
+    },
+    {
+      "id": "runtime_shadow_adapter",
+      "status": "PASS"
+    },
+    {
+      "id": "reference_discovery_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "reference_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "cache_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "generic_evaluation_set_builder",
+      "status": "PASS"
+    },
+    {
+      "id": "reference_quality_audit",
+      "status": "PASS"
+    },
+    {
+      "id": "workspace_auto_ingestion_sidecar",
+      "status": "PASS"
+    },
+    {
+      "id": "data_readiness_gate",
+      "status": "PASS"
+    },
+    {
+      "id": "cross_style_ingestion_preflight",
+      "status": "PASS"
+    }
+  ],
+  "styles": [
+    {
+      "id": "y2k",
+      "data_status": "STRUCTURAL_BASELINE",
+      "pipeline_status": "PASS",
+      "validation_scope": "Y2K_ONLY_CURRENT_DATASET",
+      "data_ingestion_status": "DATA_READY"
+    },
+    {
+      "id": "quiet-luxury",
+      "data_status": "DATA_PENDING",
+      "pipeline_status": "NOT_RUN",
+      "validation_scope": "UNVALIDATED_NEW_STYLE",
+      "data_ingestion_status": "DATA_PENDING",
+      "dry_run_status": "PASS_EXPECTED_DATA_PENDING"
+    }
+  ],
+  "next_actions": {
+    "automatic_engineering": "v0.6D closed. Safe future engineering can add a Reference Discovery capture/CLIP-selection adapter or prepare live shadow hookup, while live integration remains OFF.",
+    "human": "Tone/Hue v0.6 calibration remains paused.",
+    "cross_style": "Quiet Luxury requires real Reference Discovery data, visual selection/CLIP eligibility, and cached images before DATA_READY."
+  }
+}

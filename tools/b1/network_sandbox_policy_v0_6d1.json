@@ -1,0 +1,43 @@
+{
+  "contract": {
+    "name": "YOYO Network Sandbox / Capture-Replay Contract",
+    "version": "0.1.0"
+  },
+  "metadata": {
+    "name": "YOYO v0.6E Network Sandbox Policy",
+    "version": "0.6D.1",
+    "status": "PRECONDITION_FOR_REAL_FETCH"
+  },
+  "deterministic_tests": {
+    "network_access": false,
+    "transport": "REPLAY_ONLY",
+    "allow_unrecorded_request": false
+  },
+  "live_capture": {
+    "isolated_from_deterministic_pipeline": true,
+    "writes_frozen_fixture": true,
+    "may_mutate_existing_fixture": false,
+    "capture_command_only": true
+  },
+  "fixture": {
+    "hash_algorithm": "SHA-256",
+    "content_hash_required": true,
+    "request_fingerprint_required": true,
+    "provider_metadata_required": true
+  },
+  "cache": {
+    "content_hash_required": true,
+    "decode_validation_required": true
+  },
+  "failure_fixtures": [
+    "HTTP_404",
+    "HTTP_429",
+    "TIMEOUT",
+    "MALFORMED_PAYLOAD"
+  ],
+  "safety": {
+    "live_runtime_integration": false,
+    "ci_live_network": false,
+    "production_search_mutation": false
+  }
+}

@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>YOYO Physical Audit Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">YOYO / HueSense · Developer Calibration Tool</div>
+      <h1>Physical / Perceptual Audit Lab</h1>
+      <p class="lede">
+        用可解釋的 OKLab / OKLCH 感知規則，模擬「人類會把哪些顏色視為同族、相關、不同或需要複核」。
+        每次分析預設會自動寫入本機 <code>data/results</code>。
+      </p>
+    </div>
+    <div class="status-card">
+      <div><span>Engine</span><strong id="engineVersion">—</strong></div>
+      <div><span>Profile</span><strong id="profileName">尚未分析</strong></div>
+      <div><span>Generated</span><strong id="generatedAt">—</strong></div>
+    </div>
+  </header>
+
+  <section class="notice">
+    <strong>重要：</strong>
+    這不是「真正的人類視覺 AI」，而是可重現、可測試的 human-like perception heuristic。
+    它的用途是幫你找出數學分群可能忽略的 Hue / Tone 衝突，不應被當成絕對美學真理。
+  </section>
+
+  <main class="layout">
+    <aside class="panel editor-panel">
+      <div class="panel-head">
+        <div>
+          <h2>Profile Input</h2>
+          <p>可直接改 HEX、群組、mode ID。</p>
+        </div>
+        <div class="button-row wrap">
+          <button id="sampleBtn" class="secondary">載入 Y2K 範例</button>
+          <button id="addGroupBtn" class="secondary">新增 Group</button>
+          <button id="formatBtn" class="secondary">格式化 JSON</button>
+        </div>
+      </div>
+
+      <textarea id="jsonEditor" spellcheck="false"></textarea>
+
+      <div class="run-bar">
+        <label class="toggle">
+          <input id="autoSave" type="checkbox" checked>
+          <span>每次分析自動儲存</span>
+        </label>
+        <button id="runBtn" class="primary">執行 Physical Audit</button>
+      </div>
+      <div id="saveState" class="save-state">Auto-save 已開啟</div>
+
+      <div class="panel-head mini">
+        <h2>快速操作</h2>
+        <div class="button-row">
+          <button id="saveBtn" class="secondary">再存一次</button>
+          <button id="downloadBtn" class="secondary">下載目前 JSON</button>
+        </div>
+      </div>
+
+      <h3>最近儲存</h3>
+      <div id="history" class="history"></div>
+    </aside>
+
+    <section class="content">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Audit Summary</h2>
+            <p>STABLE / REVIEW / UNSTABLE 是群內一致性的檢核，不是最終風格真理。</p>
+          </div>
+        </div>
+        <div id="summaryCards" class="metrics"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Y2K Spotlight：G3 ↔ G8</h2>
+            <p>這個位置專門看「暖棕 vs 深紫」是否被誤當成同一 Hue Family。</p>
+          </div>
+        </div>
+        <div id="spotlight" class="spotlight"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Backbone Group Audit</h2>
+            <p>每個群組保留所有原始 Supported Modes，不用 centroid 取代原始資料。</p>
+          </div>
+        </div>
+        <div id="groups"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Danger Pairs</h2>
+            <p>優先列出「Tone 很像，但 Hue identity 明顯衝突」的跨群關係。</p>
+          </div>
+        </div>
+        <div id="dangerPairs"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Pairwise Verdict Matrix</h2>
+            <p>S = SAME、R = RELATED、V = REVIEW、D = DIFFERENT。滑鼠停在格子上可看數值。</p>
+          </div>
+        </div>
+        <div id="pairMatrix" class="matrix-wrap"></div>
+      </section>
+    </section>
+  </main>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

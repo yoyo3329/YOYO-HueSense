@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8 Stage A Round 1 Train Queue Commitment",
+    "version": "0.8-stage-a-round1-train16",
+    "committed_before_human_labels": true
+  },
+  "queue_sha256": "efb1487e6e3ec1b02e7d2cc410f3ac5303ef92ad98b8944adbb5177cd490f97a",
+  "source_graph_sha256": "71a424bdec3e1b2fc6515175c5c376d71b69c4a4b840e554fe7f03237aa780c8",
+  "historical_exclusion_pairset_sha256": "5a115b5f374c3213d2828e2b7b9fe39a5fe218dd59377aec16407ffd887f4344",
+  "case_count": 16,
+  "pair_keys_in_blind_order": [
+    "mode_05||mode_07",
+    "mode_11||mode_50",
+    "mode_42||mode_53",
+    "mode_03||mode_53",
+    "mode_29||mode_42",
+    "mode_41||mode_53",
+    "mode_26||mode_48",
+    "mode_06||mode_10",
+    "mode_24||mode_27",
+    "mode_22||mode_51",
+    "mode_16||mode_49",
+    "mode_17||mode_37",
+    "mode_32||mode_40",
+    "mode_09||mode_11",
+    "mode_03||mode_12",
+    "mode_06||mode_43"
+  ],
+  "policy": {
+    "validation_not_materialized": true,
+    "retired_v0_7_validation_taxonomy_only": true,
+    "hue_frozen": true,
+    "hue_applicability_frozen": true,
+    "lightness_baseline_frozen": true,
+    "chroma_primary_redesign_axis": true
+  }
+}

@@ -1,0 +1,2 @@
+'use strict';
+const {spawnSync}=require('child_process'),path=require('path');const py=process.argv[2]||'python';let r=spawnSync(process.execPath,[path.join(__dirname,'static_contract_clean.js')],{stdio:'inherit'});if(r.status!==0)process.exit(r.status);r=spawnSync(py,[path.join(__dirname,'synthetic_topology_a21.py')],{stdio:'inherit'});if(r.status!==0)process.exit(r.status);console.log('\nPASS - clean reproduction offline self-tests');

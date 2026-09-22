@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "name": "YOYO Safe Foundation Integrity Audit v0.6C.1",
+    "version": "0.6C.1",
+    "status": "PASS"
+  },
+  "summary": {
+    "checks": 19,
+    "passed": 19
+  },
+  "checks": [
+    {
+      "name": "file exists: perceptual-label-contract-v0_2.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: perceptual-label-contract.contract.test.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: audit_calibration_lineage_v0_6c1.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: calibration_guard_policy_v0_6c1.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: build_cross_style_registry_v0_6c1.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "base v0.6C integrity PASS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "calibration lineage audit PASS with legacy quarantine",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy first-pass dataset remains historical-only",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy first-pass dataset is not cross-style eligible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy raw is immutable",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "active v0.4 train satisfies new perceptual label schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v0.5.2 holdout satisfies new perceptual label schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "holdout is not reused as training",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "numeric features cannot auto-relabel humans",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy low-chroma inconsistencies are quarantined, not silently changed",
+      "pass": true,
+      "detail": "candidates=5"
+    },
+    {
+      "name": "cross-style structural registry v0.6C.1 built",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "cross-style registry still makes no validation claim",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "cross-style registry references perceptual label contract",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "legacy calibration source explicitly quarantined in cross-style registry",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

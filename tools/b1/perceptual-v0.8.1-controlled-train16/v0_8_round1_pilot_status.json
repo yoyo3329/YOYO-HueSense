@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8 Round 1 Pilot Human Label Status",
+    "source_sha256": "4fd1859d2b6f0cb056d5c49202751a93736d5b33da97e4515229b931add53fb0"
+  },
+  "case_count": 16,
+  "label_distribution": {
+    "similar": 3,
+    "similar_or_partial": 2,
+    "different": 11
+  },
+  "confidence_distribution": {
+    "high": 16,
+    "medium": 0,
+    "low": 0
+  },
+  "status": "PILOT_ACCEPTED_BUT_NOT_FORMAL_FREEZE_EVIDENCE",
+  "reason": [
+    "Direct-human blind and algorithm outputs were hidden.",
+    "However the previous Blind UI used a light/white surround rather than a controlled neutral surround.",
+    "Display gamut capability and presentation environment were not captured.",
+    "No neutral adaptation interval or lightness-interference flag was recorded."
+  ],
+  "next": "Collect a fresh, disjoint 16-case controlled-presentation Train set before formal candidate fitting/freeze."
+}

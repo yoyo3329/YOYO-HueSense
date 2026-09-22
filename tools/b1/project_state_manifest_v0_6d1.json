@@ -1,0 +1,155 @@
+{
+  "contract": {
+    "name": "YOYO Project State Manifest Contract",
+    "version": "0.1.0"
+  },
+  "project": "YOYO/HueSense",
+  "manifest_version": "0.6D.1",
+  "current_phase": "v0.6D_SCOPED_CLOSED_v0.6E_PRECONDITIONS_READY",
+  "updated_at": "2026-09-10T13:39:35.718Z",
+  "summary": "v0.6D ingestion infrastructure is CLOSED in scope. Perceptual Relation v0.5 failed Y2K boundary-stress holdout and remains a production blocker. v0.6E may proceed only through isolated capture/replay engineering; no DATA_READY promise before an accepted selection gate passes.",
+  "safety": {
+    "live_runtime_integration": false,
+    "candidate_v0_5_production_eligible": false,
+    "holdout_auto_retuning": false,
+    "formal_color_relation_core_modified": false,
+    "irreversible_semantic_merge": false,
+    "legacy_calibration_auto_edit": false,
+    "numeric_auto_relabel": false
+  },
+  "calibration": {
+    "human_calibration_status": "PAUSED_PENDING_REDESIGN",
+    "active_training_source": "gold_train_candidate_v0_4.json",
+    "active_training_schema_status": "PASS",
+    "legacy_first_pass_source": "calibration_set_v0_human.json",
+    "legacy_first_pass_authority": "HISTORICAL_ONLY",
+    "legacy_review_candidates": 5,
+    "v0_5_holdout_status": "BOUNDARY_CONTRADICTION_FOUND",
+    "v0_5_tone_score": {
+      "correct": 2,
+      "total": 9
+    },
+    "v0_5_hue_reliable_score": {
+      "correct": 6,
+      "total": 6
+    },
+    "v0_6_human_tasks": "DEFERRED",
+    "v0_5_high_confidence_contradictions": {
+      "count": 7,
+      "total": 9
+    },
+    "v0_5_perceptual_candidate_status": "FAILED_BOUNDARY_STRESS_REDESIGN_REQUIRED"
+  },
+  "components": [
+    {
+      "id": "safe_foundation_v0_6b_1",
+      "status": "PASS"
+    },
+    {
+      "id": "safe_foundation_v0_6c",
+      "status": "PASS"
+    },
+    {
+      "id": "calibration_schema_guard",
+      "status": "PASS"
+    },
+    {
+      "id": "project_state_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "generic_style_workspace",
+      "status": "PASS"
+    },
+    {
+      "id": "style_agnostic_offline_pipeline",
+      "status": "PASS"
+    },
+    {
+      "id": "cross_style_dataset_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "b3d_multiview_structural_skeleton",
+      "status": "PASS"
+    },
+    {
+      "id": "runtime_shadow_adapter",
+      "status": "PASS"
+    },
+    {
+      "id": "reference_discovery_contract",
+      "status": "PASS"
+    },
+    {
+      "id": "reference_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "cache_manifest",
+      "status": "PASS"
+    },
+    {
+      "id": "generic_evaluation_set_builder",
+      "status": "PASS"
+    },
+    {
+      "id": "reference_quality_audit",
+      "status": "PASS"
+    },
+    {
+      "id": "workspace_auto_ingestion_sidecar",
+      "status": "PASS"
+    },
+    {
+      "id": "data_readiness_gate",
+      "status": "PASS"
+    },
+    {
+      "id": "cross_style_ingestion_preflight",
+      "status": "PASS"
+    }
+  ],
+  "styles": [
+    {
+      "id": "y2k",
+      "data_status": "STRUCTURAL_BASELINE",
+      "pipeline_status": "PASS",
+      "validation_scope": "Y2K_ONLY_CURRENT_DATASET",
+      "data_ingestion_status": "DATA_READY"
+    },
+    {
+      "id": "quiet-luxury",
+      "data_status": "DATA_PENDING",
+      "pipeline_status": "NOT_RUN",
+      "validation_scope": "UNVALIDATED_NEW_STYLE",
+      "data_ingestion_status": "DATA_PENDING",
+      "dry_run_status": "PASS_EXPECTED_DATA_PENDING"
+    }
+  ],
+  "next_actions": {
+    "automatic_engineering": "v0.6E PREP may build an isolated real-capture adapter plus frozen replay fixtures. Do not couple live network to deterministic tests. Do not claim Quiet Luxury DATA_READY until accepted selection provenance + evaluation set + reference audit pass.",
+    "human": "Perceptual Relation v0.5 failed the Y2K boundary-stress holdout (Tone 2/9; 7/9 high-confidence contradictions). v0.6 Tone/Hue work is PAUSED_PENDING_REDESIGN, not merely unstarted.",
+    "cross_style": "Quiet Luxury may move through REFERENCES_CAPTURED/CACHE_READY/PENDING_VISUAL_SELECTION. DATA_READY requires accepted selection provenance."
+  },
+  "product_readiness": {
+    "overall_ready": false,
+    "ingestion_infrastructure": "PASS_SCOPED_CLOSED",
+    "perceptual_relation": "FAILED_BOUNDARY_STRESS_REDESIGN_REQUIRED",
+    "live_runtime": "OFF"
+  },
+  "v0_6e_entry": {
+    "engineering_preparation_allowed": true,
+    "live_network_capture_allowed_only_in_isolated_capture_job": true,
+    "deterministic_tests_live_network": false,
+    "deterministic_transport": "REPLAY_ONLY",
+    "quiet_luxury_after_fetch_max_without_selection": "PENDING_VISUAL_SELECTION",
+    "data_ready_may_be_claimed_only_after_accepted_selection_provenance": true,
+    "accepted_selection_provenance": [
+      "CLIP_RANKED_FIXED_SET",
+      "LEGACY_FIXED_EVALUATION_SET"
+    ],
+    "human_tone_hue_required_for_reference_selection": false,
+    "note": "Visual selection/CLIP selection is a reference-selection gate and is distinct from Tone/Hue human calibration."
+  }
+}

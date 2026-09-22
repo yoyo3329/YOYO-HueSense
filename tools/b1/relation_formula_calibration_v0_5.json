@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "name": "YOYO Relation Formula Calibration Report",
+    "version": "0.5.0",
+    "status": "TRAIN_FIT_ONLY",
+    "source_train": "gold_train_candidate_v0_4.json",
+    "source_graph": "y2k_color_relation_graph.json",
+    "train_case_count": 20,
+    "independent_holdout_count": 0,
+    "production_gate_eligible": false
+  },
+  "hue_applicability": {
+    "best_correct": 20,
+    "total": 20,
+    "best_threshold_plateau": {
+      "min": 0.0265,
+      "max": 0.0345
+    },
+    "selected_threshold": 0.03
+  },
+  "hue_relation_reliable_only": {
+    "best_correct": 11,
+    "total": 11,
+    "best_threshold_plateau_degrees": {
+      "min": 20.5,
+      "max": 56.5
+    },
+    "selected_threshold_degrees": 40
+  },
+  "tone_relation": {
+    "best_correct": 20,
+    "total": 20,
+    "perfect_or_best_candidate_count": 972,
+    "best_parameter_ranges": {
+      "similar_max_delta_l": {
+        "min": 0.04,
+        "max": 0.08
+      },
+      "similar_max_delta_c": {
+        "min": 0.03,
+        "max": 0.035
+      },
+      "interaction_weight": {
+        "min": 2.75,
+        "max": 5
+      },
+      "different_threshold": {
+        "min": 0.43,
+        "max": 0.61
+      }
+    },
+    "plateau_median": {
+      "simL": 0.06,
+      "simC": 0.0325,
+      "k": 4,
+      "diffT": 0.54
+    },
+    "selected": {
+      "simL": 0.06,
+      "simC": 0.033,
+      "k": 4,
+      "diffT": 0.54
+    },
+    "selected_correct": 20,
+    "interpretation": "A broad best-fit plateau is preferred over tuning to a single razor-thin parameter combination."
+  },
+  "selected_config": {
+    "metadata": {
+      "name": "YOYO Relation Formula Candidate Config",
+      "version": "0.5.0-candidate",
+      "status": "TRAIN_FIT_ONLY",
+      "calibration_source": "gold_train_candidate_v0_4.json",
+      "calibration_case_count": 20,
+      "independent_holdout_count": 0,
+      "production_gate_eligible": false,
+      "warning": "Do not claim validated human-perception accuracy until independent GOLD_HOLDOUT and cross-style checks exist."
+    },
+    "hue": {
+      "min_chroma_reliable": 0.03,
+      "same_or_adjacent_max_delta_h_degrees": 40
+    },
+    "tone": {
+      "similar_max_delta_l": 0.06,
+      "similar_max_delta_c": 0.033,
+      "interaction_weight": 4,
+      "different_threshold": 0.54,
+      "formula": "deltaL + interactionWeight * sqrt(deltaL * deltaC)"
+    }
+  },
+  "next_requirement": "Independent GOLD_HOLDOUT before any validation or production claim."
+}

@@ -1,0 +1,1 @@
+'use strict';const {spawnSync}=require('child_process'),path=require('path');const p=spawnSync(process.execPath,[path.join(__dirname,'static_contract_a22.test.js')],{stdio:'inherit'});if(p.status!==0)process.exit(p.status);console.log('\nPASS - v0.8-A.2.2 structural self-tests');

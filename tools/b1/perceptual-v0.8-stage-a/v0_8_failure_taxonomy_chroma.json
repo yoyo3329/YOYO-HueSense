@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "name": "YOYO v0.8 Chroma Failure Taxonomy from Retired v0.7 Validation",
+    "version": "0.8-stage-a-prep-1",
+    "status": "RETROSPECTIVE_FAILURE_TAXONOMY_ONLY",
+    "source_validation_role": "RETIRED_AFTER_FIRST_EVALUATION",
+    "source_prediction_role": "FROZEN_V0_7_CANDIDATE_PREDICTIONS",
+    "tuning_authority": "NONE",
+    "training_authority": "NONE",
+    "independent_validation_authority": "NONE",
+    "thresholds_generated": false,
+    "formula_selected": false,
+    "model_selected": false
+  },
+  "source_files": {
+    "retired_human_validation": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\perceptual-v0.8-stage-a\\retired_v0_7_validation_human.json",
+    "frozen_prediction_artifact": "C:\\xampp\\htdocs\\color-search-test\\tools\\b1\\v0_7_independent_validation_report.json"
+  },
+  "summary": {
+    "cases": 12,
+    "chroma_matches": 7,
+    "chroma_mismatches": 5,
+    "failure_class_counts": {
+      "CHROMA_OVER_SEPARATION": 5
+    }
+  },
+  "cases": [
+    {
+      "case_id": "V07_VALID_001",
+      "pair_key": "mode_21||mode_28",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "different",
+      "frozen_v0_7_prediction": "different",
+      "result": "MATCH",
+      "is_mismatch": false,
+      "audit_pair": {
+        "a_mode_id": "mode_21",
+        "b_mode_id": "mode_28",
+        "a_hex": "#4EB7DB",
+        "b_hex": "#D9C78A"
+      }
+    },
+    {
+      "case_id": "V07_VALID_002",
+      "pair_key": "mode_09||mode_50",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "different",
+      "frozen_v0_7_prediction": "different",
+      "result": "MATCH",
+      "is_mismatch": false,
+      "audit_pair": {
+        "a_mode_id": "mode_09",
+        "b_mode_id": "mode_50",
+        "a_hex": "#000000",
+        "b_hex": "#DB598B"
+      }
+    },
+    {
+      "case_id": "V07_VALID_003",
+      "pair_key": "mode_01||mode_05",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "similar",
+      "frozen_v0_7_prediction": "similar_or_partial",
+      "result": "CHROMA_OVER_SEPARATION",
+      "is_mismatch": true,
+      "audit_pair": {
+        "a_mode_id": "mode_01",
+        "b_mode_id": "mode_05",
+        "a_hex": "#E1DCDA",
+        "b_hex": "#130E11"
+      }
+    },
+    {
+      "case_id": "V07_VALID_004",
+      "pair_key": "mode_18||mode_45",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "different",
+      "frozen_v0_7_prediction": "different",
+      "result": "MATCH",
+      "is_mismatch": false,
+      "audit_pair": {
+        "a_mode_id": "mode_18",
+        "b_mode_id": "mode_45",
+        "a_hex": "#615A5B",
+        "b_hex": "#74458C"
+      }
+    },
+    {
+      "case_id": "V07_VALID_005",
+      "pair_key": "mode_02||mode_20",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "similar",
+      "frozen_v0_7_prediction": "different",
+      "result": "CHROMA_OVER_SEPARATION",
+      "is_mismatch": true,
+      "audit_pair": {
+        "a_mode_id": "mode_02",
+        "b_mode_id": "mode_20",
+        "a_hex": "#362B2C",
+        "b_hex": "#2D1E1B"
+      }
+    },
+    {
+      "case_id": "V07_VALID_006",
+      "pair_key": "mode_26||mode_53",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "similar_or_partial",
+      "frozen_v0_7_prediction": "different",
+      "result": "CHROMA_OVER_SEPARATION",
+      "is_mismatch": true,
+      "audit_pair": {
+        "a_mode_id": "mode_26",
+        "b_mode_id": "mode_53",
+        "a_hex": "#B67CDB",
+        "b_hex": "#A0DB4E"
+      }
+    },
+    {
+      "case_id": "V07_VALID_007",
+      "pair_key": "mode_52||mode_53",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "different",
+      "frozen_v0_7_prediction": "different",
+      "result": "MATCH",
+      "is_mismatch": false,
+      "audit_pair": {
+        "a_mode_id": "mode_52",
+        "b_mode_id": "mode_53",
+        "a_hex": "#4C6382",
+        "b_hex": "#A0DB4E"
+      }
+    },
+    {
+      "case_id": "V07_VALID_008",
+      "pair_key": "mode_34||mode_50",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "similar_or_partial",
+      "frozen_v0_7_prediction": "different",
+      "result": "CHROMA_OVER_SEPARATION",
+      "is_mismatch": true,
+      "audit_pair": {
+        "a_mode_id": "mode_34",
+        "b_mode_id": "mode_50",
+        "a_hex": "#DE77A2",
+        "b_hex": "#DB598B"
+      }
+    },
+    {
+      "case_id": "V07_VALID_009",
+      "pair_key": "mode_02||mode_33",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "different",
+      "frozen_v0_7_prediction": "different",
+      "result": "MATCH",
+      "is_mismatch": false,
+      "audit_pair": {
+        "a_mode_id": "mode_02",
+        "b_mode_id": "mode_33",
+        "a_hex": "#362B2C",
+        "b_hex": "#ACCF93"
+      }
+    },
+    {
+      "case_id": "V07_VALID_010",
+      "pair_key": "mode_22||mode_24",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "similar_or_partial",
+      "frozen_v0_7_prediction": "similar_or_partial",
+      "result": "MATCH",
+      "is_mismatch": false,
+      "audit_pair": {
+        "a_mode_id": "mode_22",
+        "b_mode_id": "mode_24",
+        "a_hex": "#4B3F64",
+        "b_hex": "#ABD8BB"
+      }
+    },
+    {
+      "case_id": "V07_VALID_011",
+      "pair_key": "mode_32||mode_41",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "similar_or_partial",
+      "frozen_v0_7_prediction": "different",
+      "result": "CHROMA_OVER_SEPARATION",
+      "is_mismatch": true,
+      "audit_pair": {
+        "a_mode_id": "mode_32",
+        "b_mode_id": "mode_41",
+        "a_hex": "#DDA3B9",
+        "b_hex": "#AD3D51"
+      }
+    },
+    {
+      "case_id": "V07_VALID_012",
+      "pair_key": "mode_26||mode_41",
+      "retired_source_style": "Y2K",
+      "human_chroma_relation": "similar_or_partial",
+      "frozen_v0_7_prediction": "similar_or_partial",
+      "result": "MATCH",
+      "is_mismatch": false,
+      "audit_pair": {
+        "a_mode_id": "mode_26",
+        "b_mode_id": "mode_41",
+        "a_hex": "#B67CDB",
+        "b_hex": "#AD3D51"
+      }
+    }
+  ],
+  "generalized_failure_questions": [
+    {
+      "id": "CHROMA_Q01_ABSOLUTE_LEVEL",
+      "status": "FAILURE_QUESTION_ONLY",
+      "question": "人類對 perceived chroma 的差異判斷，是否同時受到兩端 absolute chroma level 影響，而不能只由 |C1-C2| 解釋？"
+    },
+    {
+      "id": "CHROMA_Q02_LOW_CHROMA_ASYMMETRY",
+      "status": "FAILURE_QUESTION_ONLY",
+      "question": "當其中一端接近 achromatic 時，相同的物理 chroma difference 是否會產生不同的感知分離程度？"
+    },
+    {
+      "id": "CHROMA_Q03_PARTIAL_BAND",
+      "status": "FAILURE_QUESTION_ONLY",
+      "question": "similar_or_partial 是否需要作為真正的 uncertainty / transition band，而不是由兩端類別硬壓縮而成？"
+    },
+    {
+      "id": "CHROMA_Q04_RELATIVE_TERM",
+      "status": "FAILURE_QUESTION_ONLY",
+      "question": "相對 chroma 比例是否值得在 fresh Stage-A Train 中與 absolute chroma difference 做最小複雜度比較？"
+    },
+    {
+      "id": "CHROMA_Q05_LIMITED_LIGHTNESS_INTERACTION",
+      "status": "FAILURE_QUESTION_ONLY",
+      "question": "只有在 fresh data 顯示穩定 residual pattern 時，是否需要最多一個 Lightness×Chroma interaction term？"
+    }
+  ],
+  "next_stage": {
+    "status": "PREPARE_FRESH_STAGE_A_TRAIN",
+    "target_cases": "12-16",
+    "authority_required": "DIRECT_HUMAN_BLIND",
+    "restriction": "Fresh pairs only; retired v0.7 cases cannot be used for tuning/model selection."
+  }
+}

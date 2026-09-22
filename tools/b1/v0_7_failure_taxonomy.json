@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "name": "YOYO v0.7-A Retired Holdout Failure Taxonomy",
+    "version": "0.7.0",
+    "status": "DIAGNOSTIC_ONLY",
+    "source": "gold_holdout_regression_v0_5_1.json",
+    "source_scope": "Y2K_BOUNDARY_STRESS_ONLY",
+    "allowed_use": "FAILURE_TAXONOMY_ONLY",
+    "forbidden_use": [
+      "THRESHOLD_TUNING",
+      "FORMULA_SELECTION",
+      "V0_7_VALIDATION",
+      "PRODUCTION_SCORE"
+    ]
+  },
+  "holdout_summary": {
+    "total_cases": 9,
+    "complete": 9,
+    "incomplete": 0,
+    "hard_scorable": 9,
+    "high_confidence_scorable": 9,
+    "medium_confidence_scorable": 0,
+    "low_confidence_diagnostic_only": 0,
+    "ambiguous_review_cases": 0,
+    "hard_score": {
+      "hue_applicability": {
+        "correct": 7,
+        "total": 9
+      },
+      "hue_relation_reliable": {
+        "correct": 6,
+        "total": 6
+      },
+      "tone": {
+        "correct": 2,
+        "total": 9
+      },
+      "all_relevant_relations": {
+        "correct": 2,
+        "total": 9
+      }
+    },
+    "contradictions": {
+      "high_confidence": 7,
+      "medium_confidence": 0
+    },
+    "sanity_status": "BOUNDARY_CONTRADICTION_FOUND"
+  },
+  "taxonomy": {
+    "TONE_OVER_SEPARATION": {
+      "count": 2,
+      "cases": [
+        {
+          "case_id": "HOLDOUT_Y2K_001",
+          "pair_key": "mode_03||mode_07",
+          "delta_L": 0.29581403,
+          "delta_C": 0.01356556,
+          "min_chroma": 0.02604738,
+          "human": "similar",
+          "predicted": "different"
+        },
+        {
+          "case_id": "HOLDOUT_Y2K_008",
+          "pair_key": "mode_26||mode_28",
+          "delta_L": 0.14812795,
+          "delta_C": 0.06505133,
+          "min_chroma": 0.08158735,
+          "human": "similar",
+          "predicted": "different"
+        }
+      ]
+    },
+    "TONE_UNDER_SEPARATION": {
+      "count": 4,
+      "cases": [
+        {
+          "case_id": "HOLDOUT_Y2K_002",
+          "pair_key": "mode_03||mode_08",
+          "delta_L": 0.04417358,
+          "delta_C": 0.00825357,
+          "min_chroma": 0.03135937,
+          "human": "different",
+          "predicted": "similar"
+        },
+        {
+          "case_id": "HOLDOUT_Y2K_004",
+          "pair_key": "mode_32||mode_39",
+          "delta_L": 0.1153975,
+          "delta_C": 0.01176693,
+          "min_chroma": 0.07367622,
+          "human": "different",
+          "predicted": "similar_or_partial"
+        },
+        {
+          "case_id": "HOLDOUT_Y2K_007",
+          "pair_key": "mode_22||mode_25",
+          "delta_L": 0.35486567,
+          "delta_C": 0.00593889,
+          "min_chroma": 0.05659027,
+          "human": "different",
+          "predicted": "similar_or_partial"
+        },
+        {
+          "case_id": "HOLDOUT_Y2K_009",
+          "pair_key": "mode_14||mode_51",
+          "delta_L": 0.18458592,
+          "delta_C": 0.04215626,
+          "min_chroma": 0.06353882,
+          "human": "different",
+          "predicted": "similar_or_partial"
+        }
+      ]
+    },
+    "TONE_PARTIAL_MISMATCH": {
+      "count": 1,
+      "cases": [
+        {
+          "case_id": "HOLDOUT_Y2K_003",
+          "pair_key": "mode_06||mode_08",
+          "delta_L": 0.11016717,
+          "delta_C": 0.00836454,
+          "min_chroma": 0.03135937,
+          "human": "similar",
+          "predicted": "similar_or_partial"
+        }
+      ]
+    },
+    "HUE_APPLICABILITY_OVERCLAIM": {
+      "count": 2,
+      "cases": [
+        {
+          "case_id": "HOLDOUT_Y2K_002",
+          "pair_key": "mode_03||mode_08",
+          "min_chroma": 0.03135937,
+          "human": "low_chroma",
+          "predicted": "reliable"
+        },
+        {
+          "case_id": "HOLDOUT_Y2K_003",
+          "pair_key": "mode_06||mode_08",
+          "min_chroma": 0.03135937,
+          "human": "low_chroma",
+          "predicted": "reliable"
+        }
+      ]
+    },
+    "HUE_APPLICABILITY_UNDERCLAIM": {
+      "count": 0,
+      "cases": []
+    },
+    "HUE_RELATION_MISMATCH_RELIABLE": {
+      "count": 0,
+      "cases": []
+    },
+    "COMPOUNDED_ERROR": {
+      "count": 2,
+      "cases": [
+        {
+          "case_id": "HOLDOUT_Y2K_002",
+          "pair_key": "mode_03||mode_08",
+          "error_dimensions": 2
+        },
+        {
+          "case_id": "HOLDOUT_Y2K_003",
+          "pair_key": "mode_06||mode_08",
+          "error_dimensions": 2
+        }
+      ]
+    }
+  },
+  "general_observations": [
+    "Tone errors occur in both over-separation and under-separation directions; a one-direction threshold correction is not justified by this holdout.",
+    "Reliable-hue relation itself had no mismatch in the reliable subset, while hue applicability still produced errors; these should remain separate subproblems.",
+    "High-confidence contradictions show that threshold-margin confidence from v0.5 is not trustworthy enough for production authority."
+  ],
+  "anti_overfit_notice": "Case rows are retained only as diagnostic evidence. v0.7 fitting code is forbidden from importing this file or the retired holdout."
+}

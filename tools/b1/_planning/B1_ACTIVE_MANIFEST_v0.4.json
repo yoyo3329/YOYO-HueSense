@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "name": "YOYO B1 Active File Manifest",
+    "version": "0.4.0",
+    "current_stage": "HUMAN_BLIND_RETEST_V0_4",
+    "note": "Files in _archive are retained for research history but are not part of the active path."
+  },
+  "active": {
+    "physical_core": [
+      "tone-core.js",
+      "tone-core.contract.test.js",
+      "color-relation-core.js",
+      "color-relation-core.contract.test.js"
+    ],
+    "physical_pipeline_scripts": [
+      "run_b1_observation.js",
+      "run_b2_aggregation.js",
+      "run_b3_threshold_sensitivity.js",
+      "run_b3_hierarchy.js",
+      "run_b3_color_relation_graph.js"
+    ],
+    "physical_data": [
+      "y2k_color_mvp_evaluation_set_v1.json",
+      "y2k_color_mvp_b1_observations.json",
+      "y2k_color_mvp_b2_aggregation.json",
+      "b3_threshold_sensitivity.json",
+      "y2k_color_mvp_b3_hierarchy.json",
+      "y2k_color_relation_graph.json"
+    ],
+    "calibration_current": [
+      "calibration_set_v0_human.json",
+      "calibration_set_v0_provisional.json",
+      "calibration_safety_contract_v0.3.json",
+      "calibration_retest_v0_3_ai_completed.json",
+      "ai_vs_human_diagnostic_v0_3.json",
+      "human_priority_retest_queue_v0_3.json",
+      "run_ai_diagnostic_triage_v0_3.js",
+      "build_human_priority_blind_retest_v0_4.js",
+      "compare_human_blind_retest_v0_4.js"
+    ],
+    "runtime_support": [
+      "package.json",
+      "package-lock.json",
+      "node_modules/",
+      "b1_cache/",
+      "b1_preview_assets/",
+      "manual_assets/"
+    ],
+    "reference_contract": [
+      "COLOR_RELATION_CONTRACT_v0.2.md"
+    ]
+  },
+  "archived": {
+    "01_legacy_clustering": [
+      "run_b2_merge_audit.js",
+      "b2_merge_audit.json",
+      "run_b3_profile_builder.js",
+      "y2k_color_mvp_b3_profile.json",
+      "run_b3_selective_consolidation.js",
+      "b3_selective_consolidation.json",
+      "b3_selective_consolidation_policy.json",
+      "b3_semantic_pair_review_v1.1.json",
+      "run_b3_superfamily_distance_audit.js",
+      "b3_superfamily_distance_audit.json",
+      "run_b3_superfamily_threshold_sweep.js",
+      "b3_superfamily_threshold_sweep.json"
+    ],
+    "02_old_calibration": [
+      "build_calibration_lab_v0.js",
+      "calibration_lab_v0.html",
+      "build_calibration_lab_v0_2.js",
+      "calibration_lab_v0_2.html",
+      "build_calibration_blind_retest_v0_3.js",
+      "calibration_blind_retest_v0_3.html",
+      "compare_calibration_retest_v0_3.js",
+      "run_calibration_blind_retest_v0_3.js",
+      "prepare_calibration_retest_v0_3.js",
+      "calibration_retest_queue_v0_3.json",
+      "calibration_retest_v0_3_completed.json",
+      "calibration_set_v0_seed.json",
+      "calibration_relabel_queue_v0_2.json",
+      "human_label_ontology_audit_v0_2.json",
+      "run_human_label_ontology_audit.js",
+      "run_calibration_coverage.js",
+      "y2k_color_relation_coverage.json",
+      "run_calibration_coverage_v0_2.js",
+      "y2k_color_relation_coverage_v0_2.json",
+      "run_relation_regression.js",
+      "relation_regression_v0.json",
+      "run_relation_regression_v0_2.js",
+      "relation_regression_v0_2.json",
+      "run_color_relation_sprint.js",
+      "run_color_relation_sprint_v0_2.js"
+    ],
+    "03_old_docs_reports": [
+      "COLOR_RELATION_CONTRACT_v0.1.md",
+      "COLOR_RELATION_SPRINT_v0.1_TEST_REPORT.md",
+      "COLOR_RELATION_SPRINT_v0.2_TEST_REPORT.md",
+      "README_COLOR_RELATION_SPRINT_v0.1.txt",
+      "README_STEP1D.txt",
+      "README.txt",
+      "y2k_color_mvp_b3_hierarchy_v1.0.0.json"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "model_name": "ViT-B-32-quickgelu",
+  "pretrained": "openai",
+  "model_config_quick_gelu": true,
+  "quickgelu_module_count": 24,
+  "quickgelu_module_sample": [
+    "visual.transformer.resblocks.0.mlp.gelu",
+    "visual.transformer.resblocks.1.mlp.gelu",
+    "visual.transformer.resblocks.2.mlp.gelu",
+    "visual.transformer.resblocks.3.mlp.gelu",
+    "visual.transformer.resblocks.4.mlp.gelu",
+    "visual.transformer.resblocks.5.mlp.gelu",
+    "visual.transformer.resblocks.6.mlp.gelu",
+    "visual.transformer.resblocks.7.mlp.gelu"
+  ],
+  "open_clip_version": "3.3.0",
+  "torch_version": "2.13.0+cpu",
+  "state_dict_sha256": "a3ce3c4a2245ed2a572d2eb864a62f0a4ca62b3123b83f8a52a523c3b1dd32a4",
+  "expected_state_dict_sha256": "a3ce3c4a2245ed2a572d2eb864a62f0a4ca62b3123b83f8a52a523c3b1dd32a4",
+  "certification_errors": [],
+  "cleanly_certified": true
+}

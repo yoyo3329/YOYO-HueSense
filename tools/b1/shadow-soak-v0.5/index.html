@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOYO Shadow Soak Test v0.5</title>
+<style>
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{margin:0;background:#f5f5f7;color:#1d1d1f}
+main{width:min(1120px,calc(100% - 32px));margin:28px auto 64px}
+.card{background:#fff;border:1px solid #dedfe3;border-radius:16px;padding:20px;margin-bottom:16px}
+h1{margin:0 0 8px;font-size:28px}h2{margin-top:0;font-size:18px}
+p{line-height:1.65}code{background:#f0f1f3;padding:2px 6px;border-radius:6px}
+button{border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer;margin-right:8px}
+button:disabled{opacity:.5;cursor:default}.primary{background:#1d1d1f;color:#fff}.secondary{background:#e8e9ec}
+.ready{color:#315f35;font-weight:700}.pass{color:#176b2c;font-weight:800}.fail{color:#a32222;font-weight:800}
+.progress-shell{height:16px;background:#e6e7ea;border-radius:999px;overflow:hidden}
+#progress-bar{height:100%;width:0;background:#1d1d1f;transition:width .15s linear}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.metric{background:#f7f7f8;border-radius:12px;padding:14px}
+.metric b{display:block;font-size:20px;margin-bottom:4px}.metric span{font-size:13px;color:#64666a}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 7px;border-bottom:1px solid #ececef;text-align:left}
+pre{background:#111318;color:#e8e8ea;padding:16px;border-radius:12px;white-space:pre-wrap;word-break:break-word;max-height:520px;overflow:auto}
+.warning{border-left:4px solid #b98516;padding-left:12px}
+@media(max-width:760px){main{width:min(100% - 20px,1120px);margin-top:10px}.grid{grid-template-columns:1fr}.card{padding:15px;border-radius:12px}}
+</style>
+</head>
+<body>
+<main id="soak-root">
+<section class="card">
+  <h1>YOYO / HueSense — Shadow Soak Test v0.5</h1>
+  <p>
+    500 個連續 Shadow Job：50 Warm-up + 450 Formal Soak。
+    使用真實 Y2K B1 OKLCH nodes，Fake Candidate 仍僅供 Pipeline 測試。
+  </p>
+  <p class="warning">
+    <b>請保持這個分頁在前景。</b>
+    若切換分頁，測試會標記為無效，避免背景分頁節流污染結果。
+  </p>
+  <button id="run-btn" class="primary">Run 500-Job Soak Test</button>
+  <button id="stop-btn" class="secondary" disabled>Stop</button>
+  <button id="download-btn" class="secondary" disabled>Download JSON</button>
+  <p id="run-status">Initializing…</p>
+</section>
+
+<section class="card">
+  <h2>Progress</h2>
+  <div class="progress-shell"><div id="progress-bar"></div></div>
+  <p id="progress-label">0 / 500</p>
+  <div class="grid">
+    <div class="metric"><b id="heap-now">—</b><span>Current JS heap</span></div>
+    <div class="metric"><b id="final-status">READY</b><span>Final status</span></div>
+    <div class="metric"><b id="longtask-status">Checking…</b><span>Long Task API</span></div>
+  </div>
+  <p id="checkpoint-now">尚未建立 checkpoint。</p>
+</section>
+
+<section class="card">
+  <h2>Fixture / Environment</h2>
+  <p id="fixture-info"></p>
+  <pre id="environment"></pre>
+</section>
+
+<section class="card">
+  <h2>10 Checkpoints</h2>
+  <table>
+    <thead><tr>
+      <th>Job</th>
+      <th>Heap</th>
+      <th>Harness DOM</th>
+      <th>Long Tasks</th>
+      <th>Release Events</th>
+      <th>Active Job</th>
+    </tr></thead>
+    <tbody id="checkpoint-body"></tbody>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Aggregated Result</h2>
+  <p>
+    執行期間不建立每個 Job 的 DOM Log；只有固定大小的進度 UI。
+    500 次結束後才一次產生彙整報告。
+  </p>
+  <pre id="summary">尚未執行。</pre>
+</section>
+</main>
+
+<script src="./shadow-result-contract.js"></script>
+<script src="./shadow-job-lifecycle.js"></script>
+<script src="./shadow-projection.js"></script>
+<script src="./shadow-scheduler.js"></script>
+<script src="./shadow-fake-candidate.js"></script>
+<script src="./shadow-runner.js"></script>
+<script src="./shadow-adapter.js"></script>
+<script src="./shadow-b1-real-mapper.js"></script>
+<script src="./yoyo-b1-real-observations.fixture.js"></script>
+<script src="./shadow-soak-plan-v0.5.js"></script>
+<script src="./shadow-soak-analysis-v0.5.js"></script>
+<script src="./shadow-soak-harness-v0.5.js"></script>
+</body>
+</html>

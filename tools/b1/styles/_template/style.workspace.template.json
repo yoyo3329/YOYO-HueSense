@@ -1,0 +1,28 @@
+{
+  "contract": {
+    "name": "YOYO Generic Style Workspace Contract",
+    "version": "0.1.0"
+  },
+  "style": {
+    "id": "new-style",
+    "display_name": "New Style",
+    "concept_text": "New Style"
+  },
+  "data_status": "DATA_PENDING",
+  "validation_scope": "UNVALIDATED_NEW_STYLE",
+  "paths": {
+    "evaluation_set": null,
+    "cache_dir": null,
+    "fallback_map": null,
+    "artifact_dir": "artifacts",
+    "b1_observations_seed": null
+  },
+  "baseline_compare": {
+    "enabled": false
+  },
+  "authority": {
+    "mode": "OFFLINE_RND_ONLY",
+    "can_modify_live_runtime": false,
+    "can_promote_candidate_semantics": false
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "name": "YOYO Safe Foundation Integrity Audit v0.6C",
+    "version": "0.6C",
+    "status": "PASS"
+  },
+  "summary": {
+    "checks": 29,
+    "passed": 29
+  },
+  "checks": [
+    {
+      "name": "file exists: project-state-contract-v0_1.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: style-workspace-contract-v0_1.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: run_style_pipeline_v0_6c.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: generic-reproduction-policy-v0_6c.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: run_b3_color_relation_graph_style_v0_6c.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: color-relation-core-standalone-v0_6c.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: cross-style-dataset-contract-v0_1.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: b3d-multiview-contract-v0_1.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: runtime-shadow-adapter-v0_1.js",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K generic workspace exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Quiet Luxury workspace exists without fake data",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K style-agnostic pipeline PASS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K generic pipeline network disabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K generic baseline reproduction PASS",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K B1 physical-semantic exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K downstream B2 structural-semantic exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K downstream B3-A structural-semantic exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Y2K relation graph structural-semantic exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Generic path-only metadata differences explicitly bounded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-style registry built",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cross-style registry makes no validation claim",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3-D has four views",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3-D keeps 53 atomic node records",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3-D semantic inference OFF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B3-D irreversible merge OFF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Runtime adapter live integration OFF",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Runtime adapter cannot block search",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Runtime adapter cannot change palette",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v0.5 Candidate remains production-ineligible",
+      "pass": true,
+      "detail": "protected by sprint hash gate"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.8a2.1-clean-repro",
+  "pre_clean": true,
+  "post_clean": true,
+  "environment_immutable_during_inference": true,
+  "differences": {},
+  "certified": true
+}

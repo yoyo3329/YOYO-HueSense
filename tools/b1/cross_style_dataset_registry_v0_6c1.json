@@ -1,0 +1,35 @@
+{
+  "contract": {
+    "name": "YOYO Cross-Style Dataset Contract",
+    "version": "0.1.0"
+  },
+  "metadata": {
+    "name": "YOYO Cross-Style Structural Registry",
+    "version": "0.6C.1",
+    "validation_claim": "NONE_CROSS_STYLE_YET",
+    "note": "Structural registry contains no subjective labels. Future cross-style calibration labels must satisfy the separate Perceptual Label Contract.",
+    "calibration_label_contract": {
+      "name": "YOYO Perceptual Label Contract",
+      "version": "0.2.0"
+    },
+    "legacy_calibration_source": "QUARANTINED_HISTORICAL_ONLY"
+  },
+  "styles": [
+    {
+      "style_id": "y2k",
+      "display_name": "Y2K",
+      "data_status": "STRUCTURAL_BASELINE",
+      "workspace_manifest": "styles/y2k/style.workspace.json",
+      "pipeline_report": "styles/y2k/artifacts/style_pipeline_report_v0_6c.json",
+      "validation_scope": "Y2K_ONLY_CURRENT_DATASET"
+    },
+    {
+      "style_id": "quiet-luxury",
+      "display_name": "Quiet Luxury",
+      "data_status": "DATA_PENDING",
+      "workspace_manifest": "styles/quiet-luxury/style.workspace.json",
+      "pipeline_report": null,
+      "validation_scope": "UNVALIDATED_NEW_STYLE"
+    }
+  ]
+}

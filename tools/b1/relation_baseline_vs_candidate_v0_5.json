@@ -1,0 +1,475 @@
+{
+  "metadata": {
+    "name": "YOYO Baseline vs Candidate Train Comparison",
+    "version": "0.5.0",
+    "status": "TRAIN_COMPARISON_ONLY",
+    "warning": "Both baseline and candidate are evaluated on the same 20 human-approved training cases. This is not independent validation."
+  },
+  "baseline_decoder": {
+    "hue_reliability_unreliable_below": 0.15,
+    "same_max_delta_h": 60,
+    "different_min_delta_h": 90,
+    "tone_similar_min": 0.65,
+    "tone_partial_min": 0.45
+  },
+  "summary": {
+    "baseline": {
+      "hue_applicability": {
+        "correct": 17,
+        "total": 20
+      },
+      "hue_relation_reliable": {
+        "correct": 10,
+        "total": 11
+      },
+      "tone": {
+        "correct": 5,
+        "total": 20
+      },
+      "all": {
+        "correct": 3,
+        "total": 20
+      }
+    },
+    "candidate": {
+      "hue_applicability": {
+        "correct": 20,
+        "total": 20
+      },
+      "hue_relation_reliable": {
+        "correct": 11,
+        "total": 11
+      },
+      "tone": {
+        "correct": 20,
+        "total": 20
+      },
+      "all": {
+        "correct": 20,
+        "total": 20
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "CAL_Y2K_013",
+      "pair_key": "mode_12||mode_42",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "medium",
+        "rationale": "兩色可辨識為不同色相，且明度差距非常大，Tone 不相似。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_009",
+      "pair_key": "mode_04||mode_53",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "A 接近中性灰，Hue 不宜作主判斷；兩者明度接近但彩度差距很大。"
+      },
+      "baseline": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_010",
+      "pair_key": "mode_28||mode_49",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "米黃色與深藍色屬不同色相，且明度差距明顯。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_014",
+      "pair_key": "mode_33||mode_53",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "兩者同為綠色系且相鄰；明度接近，但 B 的鮮豔程度明顯更高。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_017",
+      "pair_key": "mode_14||mode_49",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "兩者同屬藍色系且相近；主要差異在深淺。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_016",
+      "pair_key": "mode_06||mode_26",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "medium",
+        "rationale": "棕色與紫色屬不同色相，整體明度與彩度表現也有明顯差異。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_011",
+      "pair_key": "mode_42||mode_44",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "兩者都偏紫紅色系，但一深一亮，Tone 差異很大。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_015",
+      "pair_key": "mode_09||mode_33",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "黑色缺乏可靠 Hue，與亮綠色在明度與彩度上差異都很大。"
+      },
+      "baseline": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_018",
+      "pair_key": "mode_38||mode_53",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "A 接近低彩度深灰，Hue 不適合作主判斷；與亮綠色 Tone 明顯不同。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_006",
+      "pair_key": "mode_01||mode_09",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "兩色都近中性，但一個近白、一個近黑，Tone 完全不同。"
+      },
+      "baseline": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_001",
+      "pair_key": "mode_07||mode_17",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "medium",
+        "rationale": "A 偏低彩度，Hue 判斷可靠度有限；兩者整體深淺與柔和程度接近。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_003",
+      "pair_key": "mode_04||mode_12",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar",
+        "confidence": "high",
+        "rationale": "A 近中性灰，Hue 不宜硬判；兩者都偏淺且柔和，Tone 整體相似。"
+      },
+      "baseline": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_020",
+      "pair_key": "mode_45||mode_53",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "紫色與黃綠色明顯不同族，且明度、彩度關係也不接近。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_019",
+      "pair_key": "mode_04||mode_21",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "A 接近灰色，Hue 不可靠；兩者都偏亮，但 B 彩度高很多。"
+      },
+      "baseline": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_012",
+      "pair_key": "mode_14||mode_50",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "藍色與粉紅色 Hue 不同；明度接近，因此 Tone 有部分相似。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_007",
+      "pair_key": "mode_41||mode_50",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "紅與粉紅屬相鄰色相；整體彩度接近，但明度有差。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "same_or_adjacent",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_005",
+      "pair_key": "mode_09||mode_53",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "黑色缺乏 Hue 資訊，與亮黃綠在明度及彩度上差異都很大。"
+      },
+      "baseline": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "different"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_004",
+      "pair_key": "mode_50||mode_53",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial",
+        "confidence": "high",
+        "rationale": "粉紅與黃綠屬不同色相；彩度都偏高，但明度存在差異。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_002",
+      "pair_key": "mode_07||mode_22",
+      "truth": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial",
+        "confidence": "medium",
+        "rationale": "A 偏低彩度，Hue 判斷不穩；兩者明度接近，Tone 有部分相似。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar"
+      },
+      "candidate": {
+        "hue_applicability": "low_chroma",
+        "hue_relation": "not_applicable",
+        "tone_relation": "similar_or_partial"
+      }
+    },
+    {
+      "case_id": "CAL_Y2K_008",
+      "pair_key": "mode_22||mode_53",
+      "truth": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different",
+        "confidence": "high",
+        "rationale": "深紫與亮黃綠屬不同色相，且明度與彩度差距都明顯。"
+      },
+      "baseline": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "similar_or_partial"
+      },
+      "candidate": {
+        "hue_applicability": "reliable",
+        "hue_relation": "different",
+        "tone_relation": "different"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('fs'),path=require('path');
+const run=path.resolve(process.argv[2]||'.');
+const obs=JSON.parse(fs.readFileSync(path.join(run,'region_observations.json'),'utf8'));
+const cand=JSON.parse(fs.readFileSync(path.join(run,'style_color_candidates.json'),'utf8'));
+const regions=obs.images.flatMap(x=>x.regions);
+const reasonCounts={}; for(const r of regions) for(const x of r.low_reliability_reasons||[]) reasonCounts[x]=(reasonCounts[x]||0)+1;
+const perImage=obs.images.map(x=>({image_id:x.image_id,query_family:x.query_family,regions:x.regions.length,raw_palette_nodes:(x.raw_b1_palette||[]).length,region_palette_nodes:x.regions.reduce((s,r)=>s+r.palette.length,0),low_reliability_regions:x.regions.filter(r=>r.status==='LOW_RELIABILITY').length,clip_scored_regions:x.regions.filter(r=>r.clip_style_similarity!=null).length}));
+const counts=perImage.map(x=>x.regions).sort((a,b)=>a-b); const q=p=>counts[Math.max(0,Math.min(counts.length-1,Math.ceil(counts.length*p)-1))];
+const d={schema_version:'0.8a.0',role:'AUTOMATED_DIAGNOSTIC_NOT_ACCURACY_CLAIM',region_count_distribution:{min:counts[0],p25:q(.25),median:q(.5),p75:q(.75),max:counts[counts.length-1],mean:counts.reduce((a,b)=>a+b,0)/counts.length},low_reliability_reason_counts:reasonCounts,per_image:perImage,candidate_status_counts:cand.candidates.reduce((o,c)=>(o[c.status]=(o[c.status]||0)+1,o),{}),interpretation_limits:['Does not prove extracted colors are true style colors.','Does not compare aesthetic quality.','Used only to detect pipeline failures, fragmentation extremes, and evidence availability.']};
+fs.writeFileSync(path.join(run,'automated_diagnostics.json'),JSON.stringify(d,null,2)+'\n'); console.log('Built automated_diagnostics.json');

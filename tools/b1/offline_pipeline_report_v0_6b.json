@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "name": "YOYO One-click Offline Pipeline",
+    "version": "0.6B.1",
+    "status": "PASS",
+    "run_id": "v0_6b1_20260909155009",
+    "mode": "FULL_B1_CACHE_ONLY",
+    "sharp_available": true,
+    "b1_reused": false,
+    "network_fetch_allowed": false,
+    "transactional_core_rollback_on_failure": true,
+    "comparison_policy": "B1_PHYSICAL_SEMANTIC_EXACT + DERIVED_BYTE_EXACT"
+  },
+  "summary": {
+    "stages": 8,
+    "all_stages_pass": true,
+    "reproduction_gate_pass": true,
+    "b1_raw_byte_exact": false,
+    "b1_physical_semantic_exact": true,
+    "derived_byte_exact": true
+  },
+  "reproduction": {
+    "b1": {
+      "pre_raw_sha256": "6b2865a7e5e82834bc34a469fd03602e9e052486285dc1a1f1ca29786eaacf15",
+      "post_raw_sha256": "cab25c3558081b402791cb486143b526b12c478fad68c1084743f7bd947f84cf",
+      "raw_byte_exact": false,
+      "pre_physical_sha256": "8a34dc4756a43d0bcb227d0abdd2142f228a14f7899bf4d42ca172f733be9a8d",
+      "post_physical_sha256": "8a34dc4756a43d0bcb227d0abdd2142f228a14f7899bf4d42ca172f733be9a8d",
+      "physical_semantic_exact": true,
+      "accepted_transport_only_difference": true
+    },
+    "derived": {
+      "y2k_color_mvp_b2_aggregation.json": {
+        "pre_sha256": "d3df5c6bea34df2d809f725e51608fbe23d7ed89bad341b0196d2da79b555e88",
+        "post_sha256": "d3df5c6bea34df2d809f725e51608fbe23d7ed89bad341b0196d2da79b555e88",
+        "byte_exact": true
+      },
+      "b3_threshold_sensitivity.json": {
+        "pre_sha256": "9450bb3a7086d653ccd148d08315b2558fd89c9b5b6ad07767da557d0ab8706c",
+        "post_sha256": "9450bb3a7086d653ccd148d08315b2558fd89c9b5b6ad07767da557d0ab8706c",
+        "byte_exact": true
+      },
+      "y2k_color_mvp_b3_hierarchy.json": {
+        "pre_sha256": "71a424bdec3e1b2fc6515175c5c376d71b69c4a4b840e554fe7f03237aa780c8",
+        "post_sha256": "71a424bdec3e1b2fc6515175c5c376d71b69c4a4b840e554fe7f03237aa780c8",
+        "byte_exact": true
+      },
+      "y2k_color_relation_graph.json": {
+        "pre_sha256": "92f0127222c726f0ade0a67223de4bb90f046126d1c0da57941326ccc457128e",
+        "post_sha256": "92f0127222c726f0ade0a67223de4bb90f046126d1c0da57941326ccc457128e",
+        "byte_exact": true
+      }
+    },
+    "policy": {
+      "name": "B1_PHYSICAL_SEMANTIC_EXACT + DERIVED_BYTE_EXACT",
+      "ignored_b1_transport_fields": [
+        "items[*].analysis_provenance.image_fetch_mode",
+        "items[*].analysis_provenance.primary_error"
+      ],
+      "numeric_tolerance": 0,
+      "gate_pass": true
+    }
+  },
+  "stages": [
+    {
+      "script": "run_b1_observation_offline_v0_6b.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 1511
+    },
+    {
+      "script": "run_b2_aggregation.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 232
+    },
+    {
+      "script": "run_b3_threshold_sensitivity.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 201
+    },
+    {
+      "script": "run_b3_hierarchy.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 178
+    },
+    {
+      "script": "run_b3_color_relation_graph.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 123
+    },
+    {
+      "script": "build_dynamic_profile_packet_v0_6b.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 115
+    },
+    {
+      "script": "create_provenance_trace_v0_6b.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 112
+    },
+    {
+      "script": "run_pipeline_integrity_audit_v0_6a.js",
+      "args": [],
+      "status": 0,
+      "elapsed_ms": 120
+    }
+  ],
+  "outputs": [
+    "y2k_dynamic_profile_packet_v0_6b.json",
+    "runtime_profile_provenance_v0_6b.json"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.8a2.2",
+  "name": "YOYO v0.8-A.2.2 Perceptual Hypothesis Quality Control",
+  "style_id": "y2k",
+  "authority": "NONE",
+  "model_inference": "NONE_POSTPROCESS_ONLY",
+  "upstream_required": "v0.8-A.2.1",
+  "mask_role_policy": {
+    "semantics": "HEURISTIC_ROLE_ROUTING_NOT_TRUTH",
+    "global_area_signal": 0.80,
+    "large_container_area_signal": 0.50,
+    "umbrella_min_child_count": 3,
+    "umbrella_min_border_sides": 3,
+    "local_unique_coverage_reference": 0.10,
+    "do_not_delete_global_masks": true,
+    "global_masks_may_not_create_local_split_group_recovery": true
+  },
+  "semantic_ambiguity_bands": {
+    "very_high": 0.01,
+    "high": 0.02,
+    "moderate": 0.05,
+    "semantics": "HEURISTIC_BANDS_NOT_PROBABILITY"
+  },
+  "embedding_ambiguity_bands": {
+    "very_high": 0.01,
+    "high": 0.02,
+    "moderate": 0.05,
+    "semantics": "HEURISTIC_BANDS_NOT_GROUPING_AUTHORITY"
+  },
+  "stability_tail_thresholds": [0.90, 0.80, 0.50],
+  "forbidden": [
+    "DESTRUCTIVE_MASK_DELETE",
+    "GLOBAL_MASK_AS_LOCAL_RECOVERY_AUTHORITY",
+    "SEMANTIC_TOP_LABEL_AS_TRUTH",
+    "MNN_AS_GROUPING_AUTHORITY",
+    "FINAL_PROPOSAL_INFORMATION_SCORE",
+    "STYLE_GRAPH",
+    "PRODUCTION_INTEGRATION"
+  ]
+}

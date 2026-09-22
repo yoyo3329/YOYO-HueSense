@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "name": "YOYO Calibration Safety Contract",
+    "version": "0.3.0",
+    "status": "candidate",
+    "purpose": "Prevent noisy first-pass human labels from directly becoming Gold, coverage anchors, or production-changing evidence."
+  },
+  "hard_rules": {
+    "first_pass_is_never_gold": true,
+    "first_pass_is_never_coverage_anchor": true,
+    "algorithm_or_ai_agreement_is_never_gold": true,
+    "gold_requires_independent_repeat_confirmation": true,
+    "uncertain_or_review_labels_must_remain_provisional": true,
+    "gold_holdout_must_not_be_used_for_formula_tuning": true,
+    "human_labels_never_directly_modify_production_engine": true,
+    "candidate_engine_changes_require_regression_before_release": true,
+    "production_release_requires_explicit_approval": true
+  },
+  "promotion_policy": {
+    "HUMAN_PROVISIONAL_to_HUMAN_CONFIRMED": {
+      "requirements": [
+        "Second blind pass completed without showing first-pass label or algorithm prediction.",
+        "Hue applicability/relation and tone relation are consistent across passes.",
+        "Second-pass confidence is not low.",
+        "No unresolved REVIEW state remains."
+      ]
+    },
+    "HUMAN_CONFIRMED_to_GOLD_TRAIN": {
+      "requirements": [
+        "Case is intentionally assigned to calibration/tuning split.",
+        "Case is not simultaneously in regression holdout."
+      ]
+    },
+    "HUMAN_CONFIRMED_to_GOLD_HOLDOUT": {
+      "requirements": [
+        "Case is intentionally assigned to holdout split.",
+        "Case is never used to tune thresholds, weights, or formulas."
+      ]
+    }
+  }
+}

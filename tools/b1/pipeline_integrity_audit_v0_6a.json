@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "name": "YOYO Deterministic Integrity Audit",
+    "version": "0.6A",
+    "status": "PASS",
+    "note": "No human semantic judgment is performed by this audit."
+  },
+  "summary": {
+    "checks": 34,
+    "passed": 34,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "file exists: y2k_color_mvp_b1_observations.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: y2k_color_mvp_b2_aggregation.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: y2k_color_mvp_b3_hierarchy.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: y2k_color_relation_graph.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: y2k_color_relation_graph_v0_5_candidate.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: gold_train_candidate_v0_4.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: gold_holdout_queue_v0_5.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "file exists: calibration_retest_v0_3_ai_completed.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "B1 fixed evaluation count = 24",
+      "pass": true,
+      "detail": "got 24"
+    },
+    {
+      "name": "B2 physical modes = 53",
+      "pass": true,
+      "detail": "got 53"
+    },
+    {
+      "name": "B3-A modes = 53",
+      "pass": true,
+      "detail": "got 53"
+    },
+    {
+      "name": "base relation graph: node count self-consistent",
+      "pass": true,
+      "detail": "53/53"
+    },
+    {
+      "name": "base relation graph: edge count self-consistent",
+      "pass": true,
+      "detail": "1378/1378"
+    },
+    {
+      "name": "base relation graph: complete pair count n(n-1)/2",
+      "pass": true,
+      "detail": "got 1378"
+    },
+    {
+      "name": "base relation graph: unique node ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "base relation graph: no duplicate pairs",
+      "pass": true,
+      "detail": "duplicates=0"
+    },
+    {
+      "name": "base relation graph: no self edges",
+      "pass": true,
+      "detail": "self=0"
+    },
+    {
+      "name": "base relation graph: every edge references existing nodes",
+      "pass": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "base relation graph: physical relation numbers finite",
+      "pass": true,
+      "detail": "bad=0"
+    },
+    {
+      "name": "v0.5 candidate graph: node count self-consistent",
+      "pass": true,
+      "detail": "53/53"
+    },
+    {
+      "name": "v0.5 candidate graph: edge count self-consistent",
+      "pass": true,
+      "detail": "1378/1378"
+    },
+    {
+      "name": "v0.5 candidate graph: complete pair count n(n-1)/2",
+      "pass": true,
+      "detail": "got 1378"
+    },
+    {
+      "name": "v0.5 candidate graph: unique node ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "v0.5 candidate graph: no duplicate pairs",
+      "pass": true,
+      "detail": "duplicates=0"
+    },
+    {
+      "name": "v0.5 candidate graph: no self edges",
+      "pass": true,
+      "detail": "self=0"
+    },
+    {
+      "name": "v0.5 candidate graph: every edge references existing nodes",
+      "pass": true,
+      "detail": "missing=0"
+    },
+    {
+      "name": "v0.5 candidate graph: physical relation numbers finite",
+      "pass": true,
+      "detail": "bad=0"
+    },
+    {
+      "name": "candidate graph preserves node count",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate graph preserves edge count",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate graph preserves exact pair universe",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Train / v0.5 holdout pair overlap = 0",
+      "pass": true,
+      "detail": "overlap=0"
+    },
+    {
+      "name": "Train has 20 cases",
+      "pass": true,
+      "detail": "got 20"
+    },
+    {
+      "name": "Holdout queue has 9 cases",
+      "pass": true,
+      "detail": "got 9"
+    },
+    {
+      "name": "AI retest provenance remains explicitly AI",
+      "pass": true,
+      "detail": "status=ai_simulated_second_pass"
+    }
+  ]
+}

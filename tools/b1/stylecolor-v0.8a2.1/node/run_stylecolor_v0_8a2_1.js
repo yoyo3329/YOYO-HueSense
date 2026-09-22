@@ -1,0 +1,32 @@
+'use strict';
+const fs=require('fs'),path=require('path'),os=require('os'),crypto=require('crypto'),{spawnSync}=require('child_process');
+function arg(n,d=null){const i=process.argv.indexOf(n);return i>=0?process.argv[i+1]:d}function read(p){return JSON.parse(fs.readFileSync(p,'utf8'))}function write(p,x){fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n')}function shaFile(p){return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')}function stamp(){return new Date().toISOString().replace(/[-:]/g,'').replace(/\..+/,'').replace('T','_')}
+function shaText(s){return crypto.createHash('sha256').update(s).digest('hex')}
+function codeHash(root,files){const h=crypto.createHash('sha256');for(const f of files){const p=path.join(root,f);h.update(f);h.update(fs.readFileSync(p))}return h.digest('hex')}
+function main(){
+ const root=path.resolve(arg('--root','C:/xampp/htdocs/color-search-test/tools/b1')),a1=path.resolve(arg('--a1-run')),py=arg('--python'),configPath=path.resolve(arg('--config',path.join(__dirname,'..','config','stylecolor_v0_8a2_1.config.json'))),modelLockPath=path.resolve(arg('--model-lock')),mode=arg('--mode','real'),cfg=read(configPath),modelLock=read(modelLockPath);
+ const obs=read(path.join(a1,'atomic_region_observations.json')),a1ManifestPath=path.join(a1,'run_manifest.json');
+ const outBase=path.resolve(arg('--out-base',path.join(root,'stylecolor-v0.8a2.1','runs')));fs.mkdirSync(outBase,{recursive:true});
+ const buildRoot=path.resolve(__dirname,'..');
+ const files=['config/stylecolor_v0_8a2_1.config.json','python/a2_foundation_worker.py','python/map_atomic_foundation.py','node/assemble_a2.js','node/run_stylecolor_v0_8a2_1.js','node/verify_a2_1.js','node/build_a2_audit_1.js'];
+ const fingerprint={schema_version:'0.8a2.1',a1_run_manifest_sha256:shaFile(a1ManifestPath),config_sha256:shaFile(configPath),model_lock_sha256:shaFile(modelLockPath),code_bundle_sha256:codeHash(buildRoot,files),dependency_fingerprint:modelLock.dependencies,node_version:process.version,python_executable:py};
+ fingerprint.dependency_fingerprint_sha256=shaText(JSON.stringify(fingerprint.dependency_fingerprint));fingerprint.fingerprint_sha256=shaText(JSON.stringify(fingerprint));
+ const progress=path.join(outBase,'IN_PROGRESS_RUN.txt');let run=null;
+ if(fs.existsSync(progress)){
+   const cand=fs.readFileSync(progress,'utf8').trim();if(cand&&fs.existsSync(path.join(cand,'run_fingerprint.json'))){const old=read(path.join(cand,'run_fingerprint.json'));if(old.fingerprint_sha256!==fingerprint.fingerprint_sha256){console.error('RESUME_ENV_MISMATCH old='+old.fingerprint_sha256+' new='+fingerprint.fingerprint_sha256);process.exit(20)}run=cand;console.log('RESUME_RUN='+run)}
+ }
+ if(!run){run=path.join(outBase,`${stamp()}_${cfg.style_id}_v0_8a2_1`);fs.mkdirSync(run,{recursive:true});write(path.join(run,'run_fingerprint.json'),fingerprint);fs.writeFileSync(progress,run+'\n')}
+ const items=[];for(const img of obs.images){let src=img.source_path,status='A1_ORIGINAL_SOURCE';if(!src||!fs.existsSync(src)){src=path.join(a1,img.source_image_asset);status='NON_BYTE_IDENTICAL_FALLBACK_A1_JPEG'}items.push({image_id:img.image_id,source_path:src,source_sha256:status==='A1_ORIGINAL_SOURCE'?img.source_sha256:null,input_source_status:status})}
+ write(path.join(run,'source_manifest.json'),{schema_version:'0.8a2.1',a1_run:a1,a1_run_manifest_sha256:fingerprint.a1_run_manifest_sha256,items});
+ const wp=path.resolve(__dirname,'..','python','a2_foundation_worker.py');let cp=spawnSync(py,[wp,'--manifest',path.join(run,'source_manifest.json'),'--config',configPath,'--out-dir',run,'--mode',mode,'--model-lock',modelLockPath,'--run-fingerprint',fingerprint.fingerprint_sha256],{encoding:'utf8',stdio:'inherit',timeout:10800000,env:{...process.env,PYTHONUNBUFFERED:'1'}});if(cp.status!==0)process.exit(cp.status||2);
+ let x=spawnSync(py,[path.resolve(__dirname,'..','python','map_atomic_foundation.py'),'--a1-run',a1,'--a2-run',run],{encoding:'utf8',stdio:'inherit',timeout:600000});if(x.status!==0)process.exit(x.status||3);
+ x=spawnSync(process.execPath,[path.resolve(__dirname,'assemble_a2.js'),a1,run,configPath],{encoding:'utf8',stdio:'inherit'});if(x.status!==0)process.exit(x.status||4);
+ // Copy A1 previews for direct A1 vs A2 visual audit.
+ const a1PrevDir=path.join(run,'a1_previews');fs.mkdirSync(a1PrevDir,{recursive:true});for(const img of obs.images){const src=path.join(a1,img.region_preview_asset||'');if(img.region_preview_asset&&fs.existsSync(src))fs.copyFileSync(src,path.join(a1PrevDir,path.basename(img.region_preview_asset)))}
+ const diag=read(path.join(run,'a2_diagnostics.json')),fw=read(path.join(run,'foundation_worker_summary.json'));
+ const openclipHashes=[...new Set(fw.results.filter(r=>!r.error&&r.openclip_weight_sha256).map(r=>r.openclip_weight_sha256))];
+ const manifest={schema_version:'0.8a2.1',name:'YOYO v0.8-A.2.1 Perceptual Region Inference Hardened',version:'0.8a2.1',created_at:new Date().toISOString(),mode,upstream_a1_run:a1,upstream_status:'A1_ENGINEERING_VALIDATED_READY_FOR_A2_ARCHITECTURE_UPGRADE + A1_REGION_MODEL_INSUFFICIENT',foundation_model:{repo_id:modelLock.sam_repo_id,resolved_revision:modelLock.resolved_revision,weight_files:modelLock.weight_files,preprocessor_config:modelLock.preprocessor_config,device:cfg.foundation_mask.device,dtype:cfg.foundation_mask.dtype},visual_embedding_model:{model:cfg.visual_embedding.model,pretrained:cfg.visual_embedding.pretrained,weight_sha256:openclipHashes},semantic_prior_semantics:'MULTI_AXIS_CLIP_COSINE_NOT_PROBABILITY',a1_relationship_action_authority:'NONE',atomic_regions_immutable:true,foundation_mask_authority:'HYPOTHESIS_ONLY',foundation_mask_equals_perceptual_component:false,allowed_resolution_states:cfg.hypothesis_contract.allowed_resolution_states,destructive_merges_executed:0,style_graph_built:false,production_authority:'NONE',node_version:process.version,python_executable:py,platform:{os:os.platform(),release:os.release(),arch:os.arch()},input_fallback_count:items.filter(x=>x.input_source_status!=='A1_ORIGINAL_SOURCE').length,run_fingerprint:fingerprint,summary:diag};write(path.join(run,'run_manifest.json'),manifest);
+ x=spawnSync(process.execPath,[path.resolve(__dirname,'build_a2_audit_1.js'),run,a1],{encoding:'utf8',stdio:'inherit'});if(x.status!==0)process.exit(x.status||5);
+ fs.writeFileSync(path.join(outBase,'LATEST_RUN.txt'),run+'\n');if(fs.existsSync(progress))fs.unlinkSync(progress);console.log('RUN_DIR='+run)
+}
+main();

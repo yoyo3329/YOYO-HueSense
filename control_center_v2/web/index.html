@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOYO Control Center V2.1</title><link rel="stylesheet" href="styles.css"></head><body>
+<header>
+<div><div class="eyebrow">YOYO / HueSense</div><h1>Development Control Center <span class="version">V2.1</span></h1>
+<div>固定安裝一次；研究 Run、Gate、Progress Journal、HTML / PDF 報告持續自動更新。</div></div>
+<nav><a class="active" href="/">總覽</a><a href="/automation.html">自動執行</a></nav>
+</header>
+<!-- YOYO_SUCCESS_GATE_STATUS_START --><section id="yoyo-success-gate-status" style="margin:16px;padding:14px;border:2px solid #6d8aa0;border-radius:12px;background:#fbfcfd"><div style="font-size:12px;font-weight:800;color:#607080">CURRENT PROJECT STATUS · DISPLAY ONLY</div><div style="font-size:24px;font-weight:900;margin-top:8px">Phase 1 · Rebase DEV</div><div style="margin-top:8px"><b>Authority Guards:</b> HOLD · TOOLING_EXCEPTION</div><div><b>Rebase DEV:</b> NOT EXECUTED</div><div><b>B1 DEV:</b> WAIT</div><div><b>B2:</b> HOLD_COLOR_EVIDENCE_AUTHORITY</div><div style="margin-top:8px"><b>Phase2:</b> CLOSED / FROZEN · <b>Phase3:</b> NOT AUTHORIZED</div><div style="font-size:12px;margin-top:8px"><b>NEXT:</b> FIX_TOOLING_ONLY; DO_NOT_ENQUEUE_REBASE</div><div style="font-size:11px;color:#73818c;margin-top:8px">DISPLAY ONLY：不 enqueue、不執行 Rebase、不修改 Dataset / project_paths / Phase2 authority。</div></section><!-- YOYO_SUCCESS_GATE_STATUS_END --><main>
+<section class="grid4">
+<div class="card hero"><div class="label">Current Phase / Stage（目前階段／步驟）</div><div id="phase" class="phaseNo">—</div><div id="stage" class="stagebig">—</div><div class="dev">DEV · formal_claim_allowed=false</div></div>
+<div class="card"><div class="label">Overall Progress（整體進度）</div><div class="progress"><div id="progbar"></div></div><div id="progress" class="big">—</div><div id="count" class="muted"></div></div>
+<div class="card"><div class="label">Next Allowed Stage（下一個可執行步驟）</div><div id="next" class="stagebig smallbig">—</div><div class="muted">必須先通過目前 Gate，下一步才會解鎖。</div></div>
+<div class="card"><div class="label">Package Automation（套件自動化）</div><div id="autoStatus" class="stagebig smallbig">—</div><div id="cloudSync" class="syncstate">—</div></div>
+</section>
+
+<section class="card progressJournalCard">
+<div class="sectionHeader"><div><div class="label">Plain-language Progress（白話進度）</div><h2>我現在到底做到哪？</h2></div><button class="copybtn" id="copyProgress">Copy（複製）</button></div>
+<div id="plainProgress" class="plainProgress">—</div>
+</section>
+
+<section class="grid2">
+<div class="card"><div class="label">Latest Research Run（最近一次研究 Run）</div><h2 id="latestTitle">—</h2><div id="latestResult"></div><button id="latestBtn" class="primary" disabled>查看完整結果</button></div>
+<div class="card"><div class="label">Previous Research Run（上一次研究 Run）</div><h2 id="previousTitle">—</h2><div id="previousResult"></div></div>
+</section>
+
+<section class="card"><div class="label">Progress Timeline（進度時間軸）</div><h2>專案每天真的前進了什麼</h2><div id="timeline"></div></section>
+
+<section class="card"><div class="label">Project Map（專案地圖）</div><h2>固定 5 Phase 主線</h2><div id="phases"></div></section>
+
+<section class="card"><div class="sectionHeader"><div><div class="label">Result Reports（結果報告）</div><h2>HTML / PDF</h2></div><button id="openReportFolder" class="secondary">Open Drive Folder（開啟 Drive 結果資料夾）</button></div>
+<div id="reports"></div>
+</section>
+
+<section class="grid2">
+<div class="card"><div class="label">Run History（執行歷史）</div><h2>最近執行</h2><div id="history"></div></div>
+<div class="card sticky"><div class="sectionHeader"><div><div class="label">Run Summary（執行摘要）</div><h2 id="runTitle">選擇一筆 Run</h2></div><button id="copySummary" class="copybtn" disabled>Copy Summary（複製摘要）</button></div><div id="runDetail" class="muted">點選左側 Run，看 Purpose、Process、Action、Result、Improvement、Next Goal。</div></div>
+</section>
+</main><script src="app.js"></script><script src="yoyo_v3_predelivery_progress_20261004.js"></script><script data-yoyo-safe-v2="1" src="/yoyo_ui_safe_v2.js?v=2"></script>
+<script src="yoyo_auto_progress_feed.js"></script><script src="/yoyo_phase2_work_progress.js"></script>
+</body></html>
+
+
+

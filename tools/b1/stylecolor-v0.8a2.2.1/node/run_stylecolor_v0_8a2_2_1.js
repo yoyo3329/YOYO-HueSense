@@ -6,7 +6,7 @@ function write(p,x){fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n')}
 function sha(p){return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')}
 function stamp(){return new Date().toISOString().replace(/[-:]/g,'').replace(/\..+/,'').replace('T','_')}
 function main(){
-  const root=path.resolve(arg('--root','C:/xampp/htdocs/color-search-test/tools/b1'));
+  const root=path.resolve(arg('--root', process.env.YOYO_B1_ROOT || path.resolve(__dirname,'..','..')));
   const a22=path.resolve(arg('--a22-run'));
   const py=arg('--python');
   const penv=path.resolve(arg('--postprocess-env'));

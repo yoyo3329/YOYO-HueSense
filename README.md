@@ -1,3 +1,48 @@
+<!-- YOYO_CURRENT_ARCHITECTURE_START -->
+## YOYO / HueSense current architecture
+
+The current canonical architecture is:
+
+```text
+Canonical code authority
+  YOYO_CODE_ROOT
+  Local example: D:\docker\color-search-test
+
+Windows Local Runner
+  Research execution host
+
+Certified Python environment
+  YOYO_PYTHON_EXE
+  Local example: C:\yoyo_env\a21_clean_repro\Scripts\python.exe
+
+Local research data root
+  YOYO_DATA_ROOT
+  Local example: D:\YOYO_DATA
+
+Docker
+  Control Center / Web runtime
+
+C:\xampp\htdocs\color-search-test
+  LEGACY / ROLLBACK ARCHIVE ONLY
+  Never use as current runner, config root, model-lock source, or current source root.
+```
+
+Important boundaries:
+
+- Research inference remains on the Windows certified Python environment.
+- Do not move SAM2 / OpenCLIP inference into Docker merely for consistency.
+- Docker remains the Control Center / Web runtime.
+- `--root` and all A2 authority inputs are explicit; there is no XAMPP silent fallback.
+- Datasets, generated runs, model weights, result reports, secrets, and local runtime state are not GitHub backup material.
+- Current DEV45 research state:
+  - A2.1 DEV = `PASS_DEV45_A2_READY_FOR_REBASE`
+  - Rebase DEV = READY
+  - B1 DEV = WAIT
+  - B2 = `HOLD_COLOR_EVIDENCE_AUTHORITY`
+
+For teammate setup, see [`docs/DEVELOPMENT_SETUP.md`](docs/DEVELOPMENT_SETUP.md).
+<!-- YOYO_CURRENT_ARCHITECTURE_END -->
+
 # Color Search Test — OpenRouter＋SerpApi Reference＋三圖庫 Display
 
 本專案使用：
@@ -110,23 +155,19 @@ openai_model
 
 ## 4. 執行方式
 
-將資料夾放到：
+目前正式架構不再以 XAMPP 作為 current execution root。
+
+請先依 [`docs/DEVELOPMENT_SETUP.md`](docs/DEVELOPMENT_SETUP.md) 設定：
 
 ```text
-C:\xampp\htdocs\color-search-test
+YOYO_CODE_ROOT
+YOYO_PYTHON_EXE
+YOYO_DATA_ROOT
 ```
 
-啟動 Apache，開啟：
+Web / Control Center 使用 Docker；研究 inference 使用 Windows Local Runner 與 certified Python environment。
 
-```text
-http://localhost/color-search-test/
-```
-
-修改 JavaScript 後可按：
-
-```text
-Ctrl + F5
-```
+`C:\xampp\htdocs\color-search-test` 僅為 legacy / rollback archive，不參與 current execution。
 
 ## 5. 未設定或 API 失敗時
 

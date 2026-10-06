@@ -1,0 +1,40 @@
+{
+  "schema": "YOYO_PACKAGE_V1",
+  "package_id": "YOYO_STAGE_PACKAGE_EXAMPLE_V1",
+  "package_version": "1.0.0",
+  "package_kind": "RESEARCH_STAGE",
+  "phase": 1,
+  "stage": "P1_A2_DEV",
+  "mode": "DEV",
+  "run_mode": "FULL",
+  "formal_claim_allowed": false,
+  "requires_manual_formal_confirmation": false,
+  "required_dataset": {
+    "dataset_id": "REFERENCE_DATASET_Y2K_DEV_20260923_002757_Y2K",
+    "manifest_sha256": "6d6a91ec0b1ac340e90cc99dc07846afe56aec550d77d7999aa6dcb8041f529e",
+    "reference_count": 49
+  },
+  "required_upstream": [
+    {
+      "stage": "P1_CONTRACT",
+      "gate": "PASS_PHASE1_CONTRACT_HARDENING_READY_FOR_A2_DEV"
+    }
+  ],
+  "entrypoint": {
+    "type": "python",
+    "file": "runner/main.py",
+    "arguments": [
+      "--run-dir",
+      "${RUN_DIR}"
+    ]
+  },
+  "install_plan": [],
+  "expected_outputs": [
+    "run_manifest.json",
+    "gate.json",
+    "summary.json"
+  ],
+  "success_gate": "PASS_DEV_A2_READY_FOR_REBASE",
+  "timeout_seconds": 10800,
+  "mainline_effect": "STAGE_GATE"
+}

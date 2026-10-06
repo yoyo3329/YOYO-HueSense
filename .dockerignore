@@ -1,0 +1,13 @@
+.git
+**/.git
+**/__pycache__
+**/.pytest_cache
+**/venv
+**/.venv
+tools.zip
+benchmark-output
+benchmark-output.zip
+control_center_v2/runs
+control_center_v2/state
+package_staging
+runtime

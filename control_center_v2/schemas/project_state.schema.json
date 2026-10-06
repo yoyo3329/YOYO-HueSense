@@ -1,0 +1,14 @@
+{
+  "schema": "YOYO_PROJECT_STATE_SCHEMA_V1",
+  "stage_statuses": [
+    "NOT_STARTED",
+    "READY",
+    "RUNNING",
+    "PASS",
+    "HOLD",
+    "FAIL",
+    "STALE"
+  ],
+  "rule": "PASS comes from Gate/manifest evidence, never file existence alone.",
+  "stale_rule": "If an upstream input fingerprint changes, downstream PASS is invalidated to STALE."
+}

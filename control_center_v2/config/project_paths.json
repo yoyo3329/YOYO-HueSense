@@ -1,0 +1,26 @@
+{
+  "schema": "YOYO_CONTROL_CENTER_PROJECT_PATHS_V2_1",
+  "control_center_version": "2.1.0",
+  "repo_root": "D:\\docker\\color-search-test",
+  "dev_job_root": "D:\\我的雲端硬碟\\畢業專題\\執行結果\\yoyo_autopilot\\jobs\\20260923_002757_Y2K",
+  "dataset_manifest": "D:\\YOYO_DATA\\runs\\legacy\\20260923_002757_Y2K\\03_dataset\\reference_dataset.json",
+  "a1_bridge_root": "D:\\我的雲端硬碟\\畢業專題\\執行結果\\yoyo_autopilot\\jobs\\20260923_002757_Y2K\\07_a1_atomic_bridge",
+  "a1_gate_glob": "D:\\我的雲端硬碟\\畢業專題\\執行結果\\yoyo_autopilot\\jobs\\20260923_002757_Y2K\\07_a1_atomic_bridge\\runs\\*\\A1_BRIDGE_GATE.json",
+  "v12_final_gate": "D:\\我的雲端硬碟\\畢業專題\\執行結果\\yoyo_autopilot\\jobs\\20260923_002757_Y2K\\FINAL_GATE_V1_2.json",
+  "contract_hardening_archive_root": "D:\\我的雲端硬碟\\畢業專題\\執行結果\\yoyo_mainline_v2",
+  "incoming_packages": "D:\\YOYO_DATA\\packages\\inbox",
+  "package_staging": "D:\\YOYO_WORKSPACE\\package_staging",
+  "package_archive": "D:\\我的雲端硬碟\\畢業專題\\執行結果\\YOYO_PACKAGE_ARCHIVE",
+  "pipeline_root": "D:\\docker\\color-search-test\\pipeline",
+  "plugin_root": "D:\\docker\\color-search-test\\control_center_plugins",
+  "workspace_root": "D:\\YOYO_WORKSPACE\\package_runs",
+  "backup_root": "D:\\YOYO_WORKSPACE\\package_backups",
+  "cloud_inbox_local": "D:\\我的雲端硬碟\\畢業專題\\執行結果\\YOYO_PACKAGE_INBOX",
+  "local_inbox_fallback": "C:\\xampp\\htdocs\\color-search-test\\incoming_packages",
+  "package_inboxes": [
+    "D:\\我的雲端硬碟\\畢業專題\\執行結果\\YOYO_PACKAGE_INBOX",
+    "C:\\xampp\\htdocs\\color-search-test\\incoming_packages"
+  ],
+  "result_reports_root": "D:\\我的雲端硬碟\\畢業專題\\進度文件\\YOYO_RESULT_REPORTS",
+  "progress_journal_model": "YOYO_PROGRESS_JOURNAL_V1"
+}

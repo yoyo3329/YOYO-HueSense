@@ -4,7 +4,7 @@ function arg(n,d=null){const i=process.argv.indexOf(n);return i>=0?process.argv[
 function shaText(s){return crypto.createHash('sha256').update(s).digest('hex')}
 function codeHash(root,files){const h=crypto.createHash('sha256');for(const f of files){const p=path.join(root,f);h.update(f);h.update(fs.readFileSync(p))}return h.digest('hex')}
 function main(){
- const root=path.resolve(arg('--root','C:/xampp/htdocs/color-search-test/tools/b1')),a1=path.resolve(arg('--a1-run')),py=arg('--python'),configPath=path.resolve(arg('--config',path.join(__dirname,'..','config','stylecolor_v0_8a2_1.config.json'))),modelLockPath=path.resolve(arg('--model-lock')),mode=arg('--mode','real'),cfg=read(configPath),modelLock=read(modelLockPath);
+ const root=path.resolve(arg('--root', process.env.YOYO_B1_ROOT || path.resolve(__dirname,'..','..'))),a1=path.resolve(arg('--a1-run')),py=arg('--python'),configPath=path.resolve(arg('--config',path.join(__dirname,'..','config','stylecolor_v0_8a2_1.config.json'))),modelLockPath=path.resolve(arg('--model-lock')),mode=arg('--mode','real'),cfg=read(configPath),modelLock=read(modelLockPath);
  const obs=read(path.join(a1,'atomic_region_observations.json')),a1ManifestPath=path.join(a1,'run_manifest.json');
  const outBase=path.resolve(arg('--out-base',path.join(root,'stylecolor-v0.8a2.1','runs')));fs.mkdirSync(outBase,{recursive:true});
  const buildRoot=path.resolve(__dirname,'..');

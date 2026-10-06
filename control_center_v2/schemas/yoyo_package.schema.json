@@ -1,0 +1,50 @@
+{
+  "schema": "YOYO_PACKAGE_SCHEMA_V1",
+  "required": [
+    "schema",
+    "package_id",
+    "package_version",
+    "phase",
+    "stage",
+    "mode",
+    "formal_claim_allowed",
+    "required_dataset",
+    "entrypoint",
+    "install_plan",
+    "expected_outputs",
+    "success_gate",
+    "timeout_seconds"
+  ],
+  "enums": {
+    "schema": [
+      "YOYO_PACKAGE_V1"
+    ],
+    "mode": [
+      "DEV",
+      "FORMAL"
+    ],
+    "run_mode": [
+      "SMOKE",
+      "MINI",
+      "REGRESSION",
+      "FULL",
+      "UTILITY"
+    ],
+    "entrypoint.type": [
+      "cmd",
+      "python",
+      "node"
+    ],
+    "mainline_effect": [
+      "STAGE_GATE",
+      "TEST_ONLY",
+      "NONE"
+    ]
+  },
+  "notes": [
+    "Manifest must exist at ZIP root as yoyo_package.json.",
+    "Entrypoint must be a relative path inside the package root.",
+    "Formal packages must set requires_manual_formal_confirmation=true.",
+    "Outputs are relative to YOYO_RUN_DIR unless explicitly declared otherwise."
+  ]
+}

@@ -17,7 +17,7 @@ function requestJson(method, url, body=null, timeoutMs=5000){
   });
 }
 
-async function health(base='http://127.0.0.1:8765'){
+async function health(base=(process.env.YOYO_CLIP_SERVICE_URL || 'http://127.0.0.1:8765')){
   try{ const x=await requestJson('GET',base+'/health',null,2500); return {available:!!x.ok, ...x}; }
   catch(e){ return {available:false,error:String(e.message||e)}; }
 }
@@ -40,7 +40,7 @@ function startAssetServer(rootDir, port=8791){
   });
 }
 
-async function scoreRegions({regions, concept, clipBase='http://127.0.0.1:8765', assetBase, batchSize=8, timeoutMs=120000}){
+async function scoreRegions({regions, concept, clipBase=(process.env.YOYO_CLIP_SERVICE_URL || 'http://127.0.0.1:8765'), assetBase, batchSize=8, timeoutMs=120000}){
   const scored=new Map(); const errors=new Map();
   const items=regions.map(r=>({id:r.region_id,image_url:`${assetBase}/${r.crop_asset.replace(/\\/g,'/')}`}));
   async function send(chunk){

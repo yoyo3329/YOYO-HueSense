@@ -1,0 +1,22 @@
+{
+  "schema": "YOYO_PROGRESS_JOURNAL_SCHEMA_V1",
+  "required": [
+    "run_id",
+    "phase",
+    "stage",
+    "status",
+    "purpose",
+    "process",
+    "actions",
+    "result_summary",
+    "improvements",
+    "next_goal",
+    "progress_before",
+    "progress_after"
+  ],
+  "notes": [
+    "App / HTML / PDF must render from the same journal/summary data.",
+    "New research packages should emit the rich summary fields directly.",
+    "Legacy summaries are normalized for backward compatibility."
+  ]
+}

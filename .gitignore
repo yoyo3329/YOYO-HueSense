@@ -1,4 +1,4 @@
-﻿
+
 # ===== FINAL YOYO / HueSense Git exclusions =====
 
 # Secrets / local config
@@ -130,3 +130,15 @@ tools/physical_audit_lab/data/*
 .local-models/
 .local-cache/
 
+
+# YOYO commit-prep: generated backups / runtime state
+*.bak
+*.before_*
+control_center_v2/state/*.json
+control_center_v2/state/packages/
+MIGRATION_*_REPORT.txt
+PARITY_PERSISTENCE_REPORT_*.txt
+
+# Local Docker secrets - do not commit
+.env.docker
+!/.env.docker.example

@@ -1,0 +1,26 @@
+﻿<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOYO Automation V2.1</title><link rel="stylesheet" href="styles.css"></head><body>
+<header><div><div class="eyebrow">YOYO / HueSense</div><h1>Automation Agent <span class="version">V2.1</span></h1>
+<div>未來不用下載 ZIP、解壓、搬到 C 槽、找 CMD。AI 把 package 放到 Google Drive Inbox 後，本機同步到 D 槽，Control Center 自動接手。</div></div>
+<nav><a href="/">總覽</a><a class="active" href="/automation.html">自動執行</a></nav></header>
+<main>
+<section class="grid2">
+<div class="card"><div class="label">ZERO-MOVE PACKAGE WATCHER</div><h2 id="watch">—</h2>
+<div id="syncStatus" class="syncbox">—</div>
+<h3>Google Drive 同步 Inbox</h3><div class="path" id="cloudPath">—</div>
+<h3>本機備援 Inbox</h3><div class="path" id="fallbackPath">—</div>
+<div id="settings"></div><p class="muted">正常情況下你不需要碰這兩個資料夾；未來執行包由 AI 放到雲端 Inbox。</p></div>
+
+<div class="card"><div class="label">LIVE EXECUTION</div><h2 id="active">目前沒有執行</h2>
+<div class="bar"><div id="livebar"></div></div><div class="executionMeta"><span id="pct">—</span><span id="currentItem">—</span></div>
+<div id="livelog" class="live">等待 package...</div></div>
+</section>
+
+<section class="card"><div class="label">QUEUE</div><div class="queueHeader"><h2>自動化佇列</h2><div id="lastEvent" class="muted">—</div></div><div id="queue"></div></section>
+
+<section class="card"><div class="label">HOW IT WORKS</div><h2>你之後真正的操作</h2>
+<div class="flow"><div>AI 產 Package</div><span>→</span><div>Google Drive</div><span>→</span><div>自動同步 D 槽</div><span>→</span><div>Control Center</div><span>→</span><div>驗證 / 執行 / Gate</div><span>→</span><div>Mainline 更新</div></div>
+</section>
+</main><script src="automation.js"></script><script data-yoyo-safe-v2="1" src="/yoyo_ui_safe_v2.js?v=2"></script>
+</body></html>
+

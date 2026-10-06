@@ -1,0 +1,41 @@
+{
+  "schema": "YOYO_AUTOMATION_SETTINGS_V1_1",
+  "watch_enabled": true,
+  "watch_interval_seconds": 1,
+  "stable_file_scans_required": 3,
+  "auto_run_dev_packages": true,
+  "auto_run_formal_packages": false,
+  "auto_open_results": false,
+  "auto_archive_completed_zip": true,
+  "max_zip_files": 5000,
+  "max_zip_uncompressed_bytes": 2000000000,
+  "max_single_file_uncompressed_bytes": 1000000000,
+  "max_compression_ratio": 250,
+  "allowed_entrypoint_types": [
+    "cmd",
+    "python",
+    "node"
+  ],
+  "allowed_install_prefixes": [
+    "pipeline",
+    "control_center_plugins"
+  ],
+  "protected_repo_prefixes": [
+    ".git",
+    "api",
+    "cache",
+    "config",
+    "data",
+    "logs",
+    "public",
+    "src",
+    "tools",
+    "published_profiles",
+    "runtime",
+    "control_center_v2",
+    "incoming_packages",
+    "package_staging",
+    "package_archive"
+  ],
+  "prefer_cloud_synced_inbox": true
+}

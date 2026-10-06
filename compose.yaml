@@ -1,0 +1,38 @@
+services:
+
+  web:
+    build:
+      context: ./docker/web
+    ports:
+      - "8081:80"
+    volumes:
+      - ./:/var/www/html/color-search-test
+    working_dir: /var/www/html/color-search-test
+
+  control-center:
+    build:
+      context: ./docker/control-center
+    ports:
+      - "8765:8765"
+    environment:
+      YOYO_CONTROL_HOST: "0.0.0.0"
+      YOYO_CONTROL_PORT: "8765"
+      YOYO_APP_ROOT: "/app"
+      YOYO_DATA_ROOT: "/data"
+      YOYO_CLIP_SERVICE_URL: "http://clip-service:8765"
+    volumes:
+      - ./control_center_v2:/app/control_center_v2
+      - ./control_center_v2/config/project_paths.docker.json:/app/control_center_v2/config/project_paths.json:ro
+      - D:/YOYO_DATA:/data
+    working_dir: /app/control_center_v2
+
+  clip-service:
+    build:
+      context: ./services/clip-service
+    ports:
+      - "8766:8765"
+    environment:
+      YOYO_CLIP_HOST: "0.0.0.0"
+      YOYO_CLIP_PORT: "8765"
+    volumes:
+      - D:/YOYO_DATA/models:/root/.cache

@@ -1,0 +1,140 @@
+{
+  "schema": "YOYO_CONTROL_CENTER_PACKAGE_MANIFEST_V2_1",
+  "version": "2.1.0",
+  "created_at": "2026-09-26T06:48:00.039472+00:00",
+  "file_count": 33,
+  "files": {
+    "README_FIRST.txt": {
+      "sha256": "3c10d62228c0e946d7edc13a165da87143df7b729a48737c17ebc9a540fdd4d6",
+      "size": 1161
+    },
+    "START_YOYO_CONTROL_CENTER_V2.cmd": {
+      "sha256": "0dc18045776a55508a213df557ed3f56a7eafb47109eaabb88e114fe30e65f2e",
+      "size": 659
+    },
+    "START_YOYO_CONTROL_CENTER_V2_1.cmd": {
+      "sha256": "a22eabca9a82696daa91c175de12bd6854dec5e9b9751bdd7d2e3affc6021dff",
+      "size": 608
+    },
+    "app/common.py": {
+      "sha256": "842f7f4b88796ae2b4f0f446ae44c024958db204a638f8fd820af595cb232297",
+      "size": 1673
+    },
+    "app/diff_engine.py": {
+      "sha256": "15885b2c71a1659e2cb6545150b466143e7f9b6c864e10c4fa22759732b72df7",
+      "size": 906
+    },
+    "app/gate_parser.py": {
+      "sha256": "eb82088837a41ace475c1d474020d4d60a7e2b6f7899f3630ea4823eb5f06fb3",
+      "size": 708
+    },
+    "app/history.py": {
+      "sha256": "ab170a0e95b8fd0bf4a4759742f10f267ed015d2d268bb83ebb272298510cbb6",
+      "size": 1211
+    },
+    "app/result_view.py": {
+      "sha256": "86ea612871131c2f6edb3f24982c5d935d7ee035dc0e3ad61be90ca9dd96f60e",
+      "size": 1358
+    },
+    "app/server.py": {
+      "sha256": "45cfe3eba244c03f52ddfff05e2fe99c51fcf1157ad9526889c89a5c6904cc5d",
+      "size": 5072
+    },
+    "app/state_engine.py": {
+      "sha256": "32e83728a395932305512e1a0b6dc24a8ff55ea290c5c83495ec3427aabb2ec3",
+      "size": 2846
+    },
+    "app/watcher.py": {
+      "sha256": "52e5aaaa1d6d6bf421a55b4743672c36e4adcd9926972eebcd280423ef69c3ab",
+      "size": 1521
+    },
+    "automation/package_contract.py": {
+      "sha256": "7d3aebc58f0ff57ca62043b44c831a5fb629466e266c56847cccb353948c3193",
+      "size": 3791
+    },
+    "automation/package_manager.py": {
+      "sha256": "ac87f77c062db54c90c8fc86cd23045d675aafb544af91a4069ddd9a257e7b83",
+      "size": 23711
+    },
+    "automation/security.py": {
+      "sha256": "c2ffb661868a08d5fd3f9ba75bbd582f4f746544614d5422a0a5ab81a9c55b31",
+      "size": 4688
+    },
+    "bundled_packages/YOYO_CONTROL_CENTER_V2_1_FIRST_BOOT_SELFTEST.zip": {
+      "sha256": "f0dac1c434f18e80f01e3b48e9f52b84906c5f7a8c656cd0deed9b37030f7692",
+      "size": 1466
+    },
+    "config/automation_settings.json": {
+      "sha256": "9edcd21b4e3ddaf8d5ab1b9f51d4dcf67bff08c191093505375bca277afb7e19",
+      "size": 905
+    },
+    "config/project_paths.json": {
+      "sha256": "40cbfbd8e8fc511140c490769f6fe110ad315c70237bde703291aa27cdae0af4",
+      "size": 1822
+    },
+    "config/stage_explanations.zh-TW.json": {
+      "sha256": "c2f909e9488d4db226553c94b86497422d8ec24e81d60d96c9dea653c11c8337",
+      "size": 1419
+    },
+    "config/stage_registry.json": {
+      "sha256": "cbefcf40c94262ffbec8000ce1011e74bc4f3c8f9ef8bc91c8dead76ba36956d",
+      "size": 9410
+    },
+    "docs/PACKAGE_CONTRACT.md": {
+      "sha256": "747268cdb7a4b2ffa88ff06f7b896de7f2d15b62896d3014014d422bf72d964a",
+      "size": 649
+    },
+    "importers/existing_results.py": {
+      "sha256": "47ca664f569b4a13adb41804dc8e12e45d55a5518c794a04c5d24a65a57b8c1c",
+      "size": 8352
+    },
+    "package_templates/YOYO_PACKAGE_V1_TEMPLATE/runner/main.py": {
+      "sha256": "11035bc27b7ec09f8800b0d48967902cacd056aa7a7ceeb255d8f80f53501284",
+      "size": 102
+    },
+    "package_templates/YOYO_PACKAGE_V1_TEMPLATE/yoyo_package.json": {
+      "sha256": "45a65107897d08dcc85b2cfa594fda8175967320b86f9204f919f8af78a0077f",
+      "size": 1019
+    },
+    "schemas/diff.schema.json": {
+      "sha256": "9282c0bd1a3149b5d911aeb8818de7029ff542ab352aa8760f2b8c4c87f650cf",
+      "size": 122
+    },
+    "schemas/project_state.schema.json": {
+      "sha256": "1a64658c8d8a00608c57fd13590ebbf55162f0425e5a368e155e5a50612ad275",
+      "size": 352
+    },
+    "schemas/run_manifest.schema.json": {
+      "sha256": "b287d1c799a6e79a3be059bdab1a0f2a4f86900a8a19dae76378c685bcc9e546",
+      "size": 604
+    },
+    "schemas/yoyo_package.schema.json": {
+      "sha256": "10ffbf49f41fa3bdc744590aece2860b2ab4bd9f0a14618c2f5199cb6106d501",
+      "size": 987
+    },
+    "testsets/YOYO_MINI_TESTSET_V1.json": {
+      "sha256": "cc35ba40992b2c9a175c267849093fe05c1a3c2588364f8d9448c357f708a1f8",
+      "size": 937
+    },
+    "web/app.js": {
+      "sha256": "c8dce7acd956876df2c0328e58db72a7acdc28cc0928ea8802bfb074fcf11012",
+      "size": 7555
+    },
+    "web/automation.html": {
+      "sha256": "9171509177bded9ee76efe0645fbbc646c3f7e023669b21209193ad0c09ca7f6",
+      "size": 2006
+    },
+    "web/automation.js": {
+      "sha256": "8b52bb63716cabdcf040f5fa8cc50b270f26c858412534c24e1cddd67b1f88b9",
+      "size": 3828
+    },
+    "web/index.html": {
+      "sha256": "64e65752e1a91e9c9ca7ff47a7d553bf2b69a2e3d59d9f1b5bce34a5826f6424",
+      "size": 2635
+    },
+    "web/styles.css": {
+      "sha256": "aeb110816c4eb2f6f7a2131f7b3ea6d17ef86795bbcfce49cc1e57969ac87f76",
+      "size": 6891
+    }
+  }
+}

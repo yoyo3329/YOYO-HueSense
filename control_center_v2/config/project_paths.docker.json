@@ -1,0 +1,25 @@
+{
+  "schema": "YOYO_CONTROL_CENTER_PROJECT_PATHS_V2_1",
+  "control_center_version": "2.1.0",
+  "repo_root": "/app",
+  "dev_job_root": "/data/runs/legacy/20260923_002757_Y2K",
+  "dataset_manifest": "/data/runs/legacy/20260923_002757_Y2K/03_dataset/reference_dataset.json",
+  "a1_bridge_root": "/data/runs/legacy/20260923_002757_Y2K/07_a1_atomic_bridge",
+  "a1_gate_glob": "/data/runs/legacy/20260923_002757_Y2K/07_a1_atomic_bridge/runs/*/A1_BRIDGE_GATE.json",
+  "v12_final_gate": "/data/runs/legacy/20260923_002757_Y2K/FINAL_GATE_V1_2.json",
+  "contract_hardening_archive_root": "/data/archives/yoyo_mainline_v2",
+  "incoming_packages": "/data/packages/inbox",
+  "package_staging": "/data/packages/staging",
+  "package_archive": "/data/packages/archive",
+  "pipeline_root": "/app/pipeline",
+  "plugin_root": "/app/control_center_plugins",
+  "workspace_root": "/data/package_runs",
+  "backup_root": "/data/package_backups",
+  "cloud_inbox_local": "/data/packages/inbox",
+  "local_inbox_fallback": "/data/packages/inbox",
+  "package_inboxes": [
+    "/data/packages/inbox"
+  ],
+  "result_reports_root": "/data/reports",
+  "progress_journal_model": "YOYO_PROGRESS_JOURNAL_V1"
+}

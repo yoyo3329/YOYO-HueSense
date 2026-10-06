@@ -30,6 +30,7 @@ concept 建議固定測兩輪，不要一開始就加 metallic / flip phone / pi
 
 from __future__ import annotations
 
+import os
 import argparse
 import json
 import statistics
@@ -42,7 +43,7 @@ from urllib.parse import urlparse
 # ======================================================================
 # CLIP_INTERFACE — 已接上本地 CLIP service (http://127.0.0.1:8765/score)
 # ======================================================================
-CLIP_SERVICE_URL = "http://127.0.0.1:8765/score"
+CLIP_SERVICE_URL = os.getenv("YOYO_CLIP_SCORE_URL", os.getenv("YOYO_CLIP_SERVICE_URL", "http://127.0.0.1:8765").rstrip("/") + "/score")
 CLIP_BATCH_SIZE = 20  # 一次送太多張怕單一 request timeout，分批送
 CLIP_TIMEOUT_SECONDS = 60
 

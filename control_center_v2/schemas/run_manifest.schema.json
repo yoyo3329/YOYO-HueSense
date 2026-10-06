@@ -1,0 +1,38 @@
+{
+  "schema": "YOYO_RUN_MANIFEST_SCHEMA_V1",
+  "required": [
+    "run_id",
+    "phase",
+    "stage",
+    "run_mode",
+    "dataset_id",
+    "dataset_manifest_sha256",
+    "code_version",
+    "config_sha256",
+    "environment_fingerprint",
+    "started_at",
+    "finished_at",
+    "input_count",
+    "output_count",
+    "status",
+    "formal_claim_allowed",
+    "previous_run_id"
+  ],
+  "run_modes": [
+    "SMOKE",
+    "MINI",
+    "REGRESSION",
+    "FULL",
+    "IMPORTED",
+    "MOCK"
+  ],
+  "statuses": [
+    "NOT_STARTED",
+    "READY",
+    "RUNNING",
+    "PASS",
+    "HOLD",
+    "FAIL",
+    "STALE"
+  ]
+}

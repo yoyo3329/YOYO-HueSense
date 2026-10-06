@@ -1,0 +1,52 @@
+{
+  "schema": "YOYO_PHASE2_WORK_PROGRESS_DISPLAY_V2",
+  "updated_at": "2026-10-02T13:59:13.409084+00:00",
+  "display_only": true,
+  "official_stage_state_mutated": false,
+  "candidate_dataset_id": null,
+  "completed": 0,
+  "total": 6,
+  "overall_work_status": "HOLD",
+  "official_mainline_status": "AWAITING_PHASE1_COMPLETION",
+  "official_mainline_pass": false,
+  "query_family_status": "UNAVAILABLE_HISTORICAL_METADATA",
+  "query_family_used_as_fasttrack_gate": false,
+  "stages": [
+    {
+      "id": "PHASE2_1",
+      "name": "Coverage Matrix",
+      "work_status": "PENDING",
+      "mainline_status": "PREPARED"
+    },
+    {
+      "id": "PHASE2_2",
+      "name": "Targeted Expansion",
+      "work_status": "PENDING",
+      "mainline_status": "PREPARED"
+    },
+    {
+      "id": "PHASE2_3",
+      "name": "Duplicate Audit",
+      "work_status": "PENDING",
+      "mainline_status": "PREPARED"
+    },
+    {
+      "id": "PHASE2_4",
+      "name": "Diversity Audit",
+      "work_status": "PENDING",
+      "mainline_status": "PREPARED"
+    },
+    {
+      "id": "PHASE2_5",
+      "name": "Saturation",
+      "work_status": "PENDING",
+      "mainline_status": "PREPARED"
+    },
+    {
+      "id": "PHASE2_6",
+      "name": "Dataset Freeze",
+      "work_status": "PENDING",
+      "mainline_status": "CANDIDATE_NOT_FROZEN"
+    }
+  ]
+}

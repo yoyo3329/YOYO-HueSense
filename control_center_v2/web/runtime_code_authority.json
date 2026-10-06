@@ -1,0 +1,14 @@
+{
+  "schema": "YOYO_CODE_AUTHORITY_V1",
+  "status": "ACTIVE",
+  "package_manager": {
+    "installed_sha256": "981c0250cc092889c21535a422c41de210c59192c6861ca775cc8eaf12cdf46e",
+    "running_sha256": "981c0250cc092889c21535a422c41de210c59192c6861ca775cc8eaf12cdf46e",
+    "status": "ACTIVE"
+  },
+  "state_engine": {
+    "installed_sha256": "e2ba9808112ca9fae791160485bf5e3533b91c2f2bf144e96f5d9f738609d454",
+    "running_sha256": "e2ba9808112ca9fae791160485bf5e3533b91c2f2bf144e96f5d9f738609d454",
+    "status": "ACTIVE"
+  }
+}

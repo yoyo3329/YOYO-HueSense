@@ -1,0 +1,28 @@
+{
+  "SOURCE_ANALYSIS_SHA256_MATCH": {
+    "pass": "分析圖片均與 Canonical Dataset 紀錄一致，沒有讀錯圖片。",
+    "fail": "至少一張分析圖片的 SHA 與 Canonical Dataset 不一致，可能讀到錯誤或被改過的圖片。"
+  },
+  "IDENTITY_SET_MATCH": {
+    "pass": "A1 處理到的圖片身份集合與輸入 Dataset 一致，沒有掉圖或多出別張圖。",
+    "fail": "A1 的圖片身份集合和 Dataset 不一致，需要先確認掉圖、重複或 ID 映射問題。"
+  },
+  "ATOMIC_REGIONS_NONEMPTY": {
+    "pass": "每張圖片都成功產生至少一個 Atomic Region。",
+    "fail": "至少一張圖片沒有產生 Atomic Region，後續 A2/B1 不應繼續。"
+  },
+  "NO_DESTRUCTIVE_MERGE": {
+    "pass": "A1 沒有破壞性合併 Atomic Regions，後續仍可追溯原始區域。",
+    "fail": "偵測到 destructive merge，違反 A1 contract。"
+  },
+  "FORMAL_CLAIM_ALLOWED": {
+    "false": "目前結果只能作 DEV 工程驗證，不能當正式研究結論。",
+    "true": "此 Run 允許進入正式 claim 範圍，但仍需依各 Stage Gate 解讀。"
+  },
+  "PASS_PHASE1_CONTRACT_HARDENING_READY_FOR_A2_DEV": {
+    "plain": "Dataset、Bridge、A1 與執行 contract 已通過 DEV Hardening；下一個研究 Stage 是 A2.1 DEV。"
+  },
+  "DEV_A1_READY_FOR_A2_1": {
+    "pass": "A1 的 DEV Gate 已通過，允許把這份 A1 輸出交給後續 DEV A2.1。"
+  }
+}

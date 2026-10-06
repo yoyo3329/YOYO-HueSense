@@ -1,0 +1,16 @@
+{
+  "schema": "YOYO_RUN_SUMMARY_SCHEMA_V2",
+  "required": [
+    "purpose",
+    "process",
+    "actions",
+    "result_summary",
+    "improvements",
+    "next_goal"
+  ],
+  "next_goal_required": [
+    "stage",
+    "objective",
+    "pass_conditions"
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "schema": "YOYO_STAGE_REGISTRY_V1",
+  "phases": [
+    {
+      "id": 1,
+      "name": "DEV Engineering"
+    },
+    {
+      "id": 2,
+      "name": "Reference Dataset V2"
+    },
+    {
+      "id": 3,
+      "name": "Formal Image Evidence"
+    },
+    {
+      "id": 4,
+      "name": "Human Perception + Decision Engine"
+    },
+    {
+      "id": 5,
+      "name": "External Validation + Publish"
+    }
+  ],
+  "stages": [
+    {
+      "id": "P1_CANONICAL",
+      "phase": 1,
+      "order": 1,
+      "name": "Canonical Dataset",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "建立固定且可追溯的 DEV Reference Dataset。",
+      "next": "P1_A1_BRIDGE"
+    },
+    {
+      "id": "P1_A1_BRIDGE",
+      "phase": 1,
+      "order": 2,
+      "name": "A1 Bridge",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "把 Canonical Dataset 轉成 A1 可讀格式，同時保留圖片身份與 SHA。",
+      "next": "P1_A1"
+    },
+    {
+      "id": "P1_A1",
+      "phase": 1,
+      "order": 3,
+      "name": "A1",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "建立不可破壞的 Atomic Regions，作為後續 Evidence 的基礎。",
+      "next": "P1_CONTRACT"
+    },
+    {
+      "id": "P1_CONTRACT",
+      "phase": 1,
+      "order": 4,
+      "name": "Contract Hardening",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "鎖定 Dataset、Bridge、A1、環境與 A2 consumer contract，防止跑錯資料或接錯 runner。",
+      "next": "P1_A2_DEV"
+    },
+    {
+      "id": "P1_A2_DEV",
+      "phase": 1,
+      "order": 5,
+      "name": "A2.1 DEV",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "在 DEV Dataset 上加入 SAM2 / OpenCLIP foundation evidence，但不得修改 A1 Atomic Regions。",
+      "next": "P1_REBASE_DEV"
+    },
+    {
+      "id": "P1_REBASE_DEV",
+      "phase": 1,
+      "order": 6,
+      "name": "Rebase DEV",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "把 A2.1 evidence 轉為可供 B1 使用的 current-job evidence layer。",
+      "next": "P1_B1_DEV"
+    },
+    {
+      "id": "P1_B1_DEV",
+      "phase": 1,
+      "order": 7,
+      "name": "B1 DEV",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "確認整條 DEV 單圖色彩 Evidence pipeline 能跑通。",
+      "next": "P2_COVERAGE"
+    },
+    {
+      "id": "P2_COVERAGE",
+      "phase": 2,
+      "order": 1,
+      "name": "Coverage Matrix",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "分析 source / query / domain / visual type / era 的缺口。",
+      "next": "P2_EXPANSION"
+    },
+    {
+      "id": "P2_EXPANSION",
+      "phase": 2,
+      "order": 2,
+      "name": "Targeted Expansion",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "針對資訊缺口補 Reference，而不是只增加張數。",
+      "next": "P2_DUPLICATE"
+    },
+    {
+      "id": "P2_DUPLICATE",
+      "phase": 2,
+      "order": 3,
+      "name": "Duplicate Audit",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "排除 exact / near duplicate 與同 origin-group 過度採樣。",
+      "next": "P2_DIVERSITY"
+    },
+    {
+      "id": "P2_DIVERSITY",
+      "phase": 2,
+      "order": 4,
+      "name": "Diversity Audit",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "確認來源、query、domain、visual type 的資訊多樣性。",
+      "next": "P2_SATURATION"
+    },
+    {
+      "id": "P2_SATURATION",
+      "phase": 2,
+      "order": 5,
+      "name": "Saturation",
+      "dev_formal": "DEV",
+      "weight": 1,
+      "purpose": "觀察持續加入新資料後核心 family 是否趨於穩定。",
+      "next": "P2_FREEZE"
+    },
+    {
+      "id": "P2_FREEZE",
+      "phase": 2,
+      "order": 6,
+      "name": "Dataset Freeze",
+      "dev_formal": "FORMAL_BOUNDARY",
+      "weight": 1,
+      "purpose": "把通過 Coverage / Diversity / Saturation 的 Reference Dataset 鎖成正式版本。",
+      "next": "P3_A1_FORMAL"
+    },
+    {
+      "id": "P3_A1_FORMAL",
+      "phase": 3,
+      "order": 1,
+      "name": "A1 Formal",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "對 Frozen Dataset V2 正式建立 Atomic Regions。",
+      "next": "P3_A2_FORMAL"
+    },
+    {
+      "id": "P3_A2_FORMAL",
+      "phase": 3,
+      "order": 2,
+      "name": "A2.1 Formal",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "對 Frozen Dataset V2 建立鎖定模型與環境的 foundation evidence。",
+      "next": "P3_REBASE_FORMAL"
+    },
+    {
+      "id": "P3_REBASE_FORMAL",
+      "phase": 3,
+      "order": 3,
+      "name": "Rebase Formal",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "建立正式 current-job Evidence Layer。",
+      "next": "P3_B1_FORMAL"
+    },
+    {
+      "id": "P3_B1_FORMAL",
+      "phase": 3,
+      "order": 4,
+      "name": "B1 Formal",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "建立正式單圖色彩 Evidence。",
+      "next": "P3_B2"
+    },
+    {
+      "id": "P3_B2",
+      "phase": 3,
+      "order": 5,
+      "name": "B2",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "跨圖片聚合穩定 Color Families。",
+      "next": "P3_B3"
+    },
+    {
+      "id": "P3_B3",
+      "phase": 3,
+      "order": 6,
+      "name": "B3",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "建立小型、可解釋、可驗證的 Style / Substyle Profile。",
+      "next": "P3_STYLE_EVIDENCE"
+    },
+    {
+      "id": "P3_STYLE_EVIDENCE",
+      "phase": 3,
+      "order": 7,
+      "name": "Style Evidence",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "封裝正式 Style Evidence，供 Decision Engine 使用。",
+      "next": "P4_DATASET_REGISTRY"
+    },
+    {
+      "id": "P4_DATASET_REGISTRY",
+      "phase": 4,
+      "order": 1,
+      "name": "Public Dataset Registry",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "登錄公開人類感知實驗資料與 evidence type。",
+      "next": "P4_EVIDENCE_ADAPTERS"
+    },
+    {
+      "id": "P4_EVIDENCE_ADAPTERS",
+      "phase": 4,
+      "order": 2,
+      "name": "Evidence Adapters",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "依資料集測量型態轉成統一但不混淆的 Evidence Records。",
+      "next": "P4_SEMANTIC_DB"
+    },
+    {
+      "id": "P4_SEMANTIC_DB",
+      "phase": 4,
+      "order": 3,
+      "name": "Semantic Evidence DB",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "建立帶 measurement type、population、uncertainty 的 Human Perception Evidence DB。",
+      "next": "P4_HUMAN_PROFILE"
+    },
+    {
+      "id": "P4_HUMAN_PROFILE",
+      "phase": 4,
+      "order": 4,
+      "name": "Human Perception Profile",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "整理可被 B4 查詢的 Human Perception Profile。",
+      "next": "P4_B4"
+    },
+    {
+      "id": "P4_B4",
+      "phase": 4,
+      "order": 5,
+      "name": "B4 Decision Engine",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "融合 Style Evidence + Human Evidence + User Modifiers，生成 A/B/C 色票。",
+      "next": "P4_PALETTE"
+    },
+    {
+      "id": "P4_PALETTE",
+      "phase": 4,
+      "order": 6,
+      "name": "Palette A/B/C",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "輸出角色化、可解釋、來源可追溯的三組色票。",
+      "next": "P5_LOCKED_DATA"
+    },
+    {
+      "id": "P5_LOCKED_DATA",
+      "phase": 5,
+      "order": 1,
+      "name": "Locked External Datasets / LODO",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "準備未參與建置的外部資料作為獨立驗證。",
+      "next": "P5_DIRECTION"
+    },
+    {
+      "id": "P5_DIRECTION",
+      "phase": 5,
+      "order": 2,
+      "name": "Semantic Direction",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "檢查 YOYO 輸出是否符合既有人類感知資料的方向。",
+      "next": "P5_DISTRIBUTION"
+    },
+    {
+      "id": "P5_DISTRIBUTION",
+      "phase": 5,
+      "order": 3,
+      "name": "Distribution Compatibility",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "檢查輸出是否落在人類 evidence distribution 的合理範圍。",
+      "next": "P5_CROSS_DATASET"
+    },
+    {
+      "id": "P5_CROSS_DATASET",
+      "phase": 5,
+      "order": 4,
+      "name": "Cross-dataset Consistency",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "檢查不同獨立 Dataset 對同一語意是否給出相容證據。",
+      "next": "P5_CONTRADICTION"
+    },
+    {
+      "id": "P5_CONTRADICTION",
+      "phase": 5,
+      "order": 5,
+      "name": "Contradiction Audit",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "統計高可信度、方向明確的矛盾案例。",
+      "next": "P5_GATE"
+    },
+    {
+      "id": "P5_GATE",
+      "phase": 5,
+      "order": 6,
+      "name": "External Validation Gate",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "依預先定義 Gate 決定 PASS / HOLD。",
+      "next": "P5_PUBLISH"
+    },
+    {
+      "id": "P5_PUBLISH",
+      "phase": 5,
+      "order": 7,
+      "name": "Immutable Publish",
+      "dev_formal": "FORMAL",
+      "weight": 1,
+      "purpose": "以 immutable package + atomic registry swap 發布。",
+      "next": null
+    }
+  ]
+}

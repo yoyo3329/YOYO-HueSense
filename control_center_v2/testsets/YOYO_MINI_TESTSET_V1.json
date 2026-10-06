@@ -1,0 +1,33 @@
+{
+  "schema": "YOYO_MINI_TESTSET_V1",
+  "version": "1.0.0",
+  "formal_claim_allowed": false,
+  "selection_policy": "FIXED_ENGINEERING_SET_NOT_RANDOM",
+  "reference_ids": [
+    "Y2KREF_DEV_001",
+    "Y2KREF_DEV_004",
+    "Y2KREF_DEV_008",
+    "Y2KREF_DEV_010",
+    "Y2KREF_DEV_014",
+    "Y2KREF_DEV_018",
+    "Y2KREF_DEV_023",
+    "Y2KREF_DEV_028",
+    "Y2KREF_DEV_033",
+    "Y2KREF_DEV_035",
+    "Y2KREF_DEV_040",
+    "Y2KREF_DEV_045"
+  ],
+  "coverage_intent": {
+    "legacy_query_families": [
+      "core",
+      "fashion",
+      "graphic",
+      "lifestyle"
+    ],
+    "brightness_coverage": "UNVERIFIED_UNTIL_METADATA_AUDIT",
+    "chroma_coverage": "UNVERIFIED_UNTIL_METADATA_AUDIT",
+    "composition_complexity": "UNVERIFIED_UNTIL_METADATA_AUDIT",
+    "technology_domain": "UNVERIFIED_UNTIL_DATASET_V2_METADATA_NORMALIZATION"
+  },
+  "note": "This set is only for engineering MINI runs. It must not produce formal research claims."
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "YOYO_RUN_DIFF_SCHEMA_V1",
+  "sections": [
+    "ADDED",
+    "REMOVED",
+    "CHANGED",
+    "UNCHANGED"
+  ]
+}

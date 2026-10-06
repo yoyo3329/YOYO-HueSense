@@ -1,0 +1,83 @@
+﻿{
+    "schema":  "YOYO_AUTO_PROGRESS_FEED_V1",
+    "updated_at":  "2026-10-02T11:36:07.1318943+08:00",
+    "display_only":  true,
+    "research_authority_mutated":  false,
+    "research_state":  {
+                           "phase":  1,
+                           "phase_name":  "DEV Engineering",
+                           "passed":  5,
+                           "total":  33,
+                           "progress_percent":  15.2,
+                           "current_stage":  "P1_REBASE_DEV",
+                           "current_stage_name":  "Rebase DEV",
+                           "a2_status":  "PASS",
+                           "rebase_status":  "NOT EXECUTED",
+                           "b1_status":  "WAIT",
+                           "b2_status":  "HOLD_COLOR_EVIDENCE_AUTHORITY"
+                       },
+    "dataset":  {
+                    "dataset_id":  "REFERENCE_DATASET_Y2K_DEV_V2_CANDIDATE_20260927_45",
+                    "reference_count":  45,
+                    "manifest_sha256":  "9a9f7933bddda397e4d0a67e264d49a5abbacb61ad10fb1b360b9d137d520811"
+                },
+    "corrected_rebase_package":  {
+                                     "package_id":  "YOYO_P1_REBASE_DEV_DEV45_CURRENT_V2_0_1_CONTRACT_FIX",
+                                     "package_version":  "2.0.1",
+                                     "zip_sha256":  "20485fd419439afc7416e088875ffd3fd3f9f503a755c88aba672f9f56b56d3d",
+                                     "exact_audit":  "PASS",
+                                     "enqueued":  false,
+                                     "authority_migration_applied":  false
+                                 },
+    "queue_identity_audit":  {
+                                 "status":  "PASS",
+                                 "report":  "D:\\YOYO_DATA\\control_center_progress\\audits\\20260930_231800\\OLD_REBASE_QUEUE_IDENTITY_READ_ONLY_V2.txt"
+                             },
+    "next_action":  "HOLD_SCHEDULER_P0_REGRESSION",
+    "events":  [
+                   {
+                       "time":  "2026-10-02T11:36:07.0746253+08:00",
+                       "title":  "Scheduler P0 Completion V2.2",
+                       "status":  "HOLD",
+                       "detail":  "RuntimeError: REBASE_EXECUTION_COUNT_NOT_ZERO_BEFORE_REPAIR:3. No Authority Migration/Rebase/enqueue performed.",
+                       "report_path":  "D:\\YOYO_DATA\\scheduler_p0_completion\\20261002_113605\\SCHEDULER_P0_COMPLETION_V2_2_REPORT.txt"
+                   }
+               ],
+    "reports":  [
+                    {
+                        "title":  "Scheduler P0 Completion V2.2",
+                        "path":  "D:\\YOYO_DATA\\scheduler_p0_completion\\20261002_113605\\SCHEDULER_P0_COMPLETION_V2_2_REPORT.txt",
+                        "status":  "HOLD"
+                    },
+                    {
+                        "title":  "Scheduler P0 Completion V2.1",
+                        "path":  "D:\\YOYO_DATA\\scheduler_p0_completion\\20261002_102447\\SCHEDULER_P0_COMPLETION_V2_1_REPORT.txt",
+                        "status":  "HOLD"
+                    },
+                    {
+                        "title":  "Authority Map Migration V2",
+                        "path":  "D:\\YOYO_DATA\\control_center_authority_migration_v2\\20261002_095908\\AUTHORITY_MAP_MIGRATION_V2_1_REPORT.txt",
+                        "status":  "PASS"
+                    },
+                    {
+                        "title":  "Authority Map Migration V2",
+                        "path":  "D:\\YOYO_DATA\\control_center_authority_migration_v2\\20261002_095211\\AUTHORITY_MAP_MIGRATION_V2_REPORT.txt",
+                        "status":  "HOLD"
+                    },
+                    {
+                        "title":  "Authority Map Migration V2",
+                        "path":  "D:\\YOYO_DATA\\control_center_authority_migration_v2\\20260930_232914\\AUTHORITY_MAP_MIGRATION_V2_REPORT.txt",
+                        "status":  "HOLD"
+                    },
+                    {
+                        "title":  "OLD Rebase Queue Identity · READ-ONLY",
+                        "path":  "D:\\YOYO_DATA\\control_center_progress\\audits\\20260930_231800\\OLD_REBASE_QUEUE_IDENTITY_READ_ONLY_V2.txt",
+                        "status":  "PASS"
+                    },
+                    {
+                        "title":  "Corrected Rebase Package Exact Audit",
+                        "path":  "YOYO_P1_REBASE_DEV_CURRENT_PACKAGE_REBUILD_AUDIT_V1.txt",
+                        "status":  "PASS"
+                    }
+                ]
+}

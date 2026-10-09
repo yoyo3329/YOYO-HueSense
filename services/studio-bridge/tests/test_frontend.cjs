@@ -1,0 +1,20 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const root=require('path').resolve(__dirname,'../../../public/studio');
+const html=fs.readFileSync(root+'/editor/index.html','utf8');const source=fs.readFileSync(root+'/editor/app.js','utf8');
+const ids=[...html.matchAll(/id="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,'unique IDs');
+for(const m of source.matchAll(/\$\('([^']+)'\)/g))assert(ids.includes(m[1]),'missing element '+m[1]);
+for(const path of ['index.html','editor/index.html','editor/app.js','editor/style.css','assets/posters/p02_bauhaus_playground.svg'])assert(fs.existsSync(root+'/'+path));
+const noop=()=>{};const element=()=>({classList:{add:noop,remove:noop,toggle:noop},style:{},append:noop,replaceChildren:noop,setAttribute:noop,addEventListener:noop,clientWidth:800,value:'',getContext:noop});
+const els=Object.fromEntries(ids.map(id=>[id,element()]));
+const context={document:{getElementById:id=>els[id],querySelectorAll:()=>[],createElement:element,addEventListener:noop},window:{addEventListener:noop,innerHeight:900},crypto:require('crypto').webcrypto,location:{hostname:'example.invalid',protocol:'https:'},console,setTimeout,clearTimeout,confirm:()=>true,AbortController};
+vm.createContext(context);vm.runInContext(source,context);vm.runInContext(fs.readFileSync(root+'/editor/ai.js','utf8'),context);
+vm.runInContext(`
+const testLayer={id:'t',name:'test',color:'#7558dc',strength:80,feather:0,luminance:true,confirmed:false,shapes:[{type:'rect',x:.1,y:.2,w:.4,h:.3}]};
+validateLayers([testLayer]);
+let invalid=false;try{validateLayers([{...testLayer,color:'<script>'}])}catch(e){invalid=true}if(!invalid)throw Error('accepted invalid hex');
+invalid=false;try{validateLayers([{...testLayer,shapes:[{type:'rect',x:3,y:0,w:1,h:1}]}])}catch(e){invalid=true}if(!invalid)throw Error('accepted invalid coordinates');
+layers=[clone(testLayer)];selected=0;if(setColor('#123456')!==false)throw Error('unconfirmed color change');if(layers[0].color!=='#7558dc')throw Error('mutated unconfirmed layer');
+layers[0].confirmed=true;setColor('#123456');if(layers[0].color!=='#123456')throw Error('color not set');
+$('undo').onclick();if(layers[0].color!=='#7558dc')throw Error('undo failed');$('redo').onclick();if(layers[0].color!=='#123456')throw Error('redo failed');
+validateLayers([{...testLayer,shapes:[{type:'rle',width:4,height:4,runs:[[0,2],[8,4]]}]}]);let failed=false;try{validateLayers([{...testLayer,shapes:[{type:'rle',width:4,height:4,runs:[[15,3]]}]}])}catch(e){failed=true}if(!failed)throw Error('invalid RLE accepted');let snap=state();layers[0].shapes[0].x=.9;if(snap.layers[0].shapes[0].x!==.1)throw Error('snapshot is mutable');
+`,context);console.log('PASS: asset routes, UI bindings, valid/invalid project schema, confirmation gate, color change, undo/redo, independent snapshots.');

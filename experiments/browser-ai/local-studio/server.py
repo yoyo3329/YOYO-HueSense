@@ -50,7 +50,6 @@ def validate_prompt(payload):
     return rid,points,box
 
 def decode_image(src):
-    from PIL import Image, ImageOps
     if not isinstance(src,str):
         raise ValueError("IMAGE_REQUIRED")
     match=re.fullmatch(r"data:image/(png|jpeg);base64,([A-Za-z0-9+/=]+)",src)
@@ -62,6 +61,7 @@ def decode_image(src):
         raise ValueError("INVALID_IMAGE_BASE64") from exc
     if not 0<len(raw)<=MAX_IMAGE_BYTES:
         raise ValueError("IMAGE_BYTES_LIMIT")
+    from PIL import Image, ImageOps
     try:
         with Image.open(BytesIO(raw)) as original:
             if original.format not in ("PNG","JPEG"):

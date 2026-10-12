@@ -1,0 +1,139 @@
+{
+  "runtime": "1.31.0",
+  "models": {
+    "sam2.1_hiera_tiny.encoder.ort": {
+      "inputs": [
+        {
+          "name": "image",
+          "shape": [
+            1,
+            3,
+            1024,
+            1024
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "high_res_feats_0",
+          "shape": [
+            1,
+            32,
+            256,
+            256
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "high_res_feats_1",
+          "shape": [
+            1,
+            64,
+            128,
+            128
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "image_embed",
+          "shape": [
+            1,
+            256,
+            64,
+            64
+          ],
+          "type": "tensor(float)"
+        }
+      ]
+    },
+    "sam2.1_hiera_tiny.decoder.onnx": {
+      "inputs": [
+        {
+          "name": "image_embed",
+          "shape": [
+            1,
+            256,
+            64,
+            64
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "high_res_feats_0",
+          "shape": [
+            1,
+            32,
+            256,
+            256
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "high_res_feats_1",
+          "shape": [
+            1,
+            64,
+            128,
+            128
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "point_coords",
+          "shape": [
+            "num_labels",
+            "num_points",
+            2
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "point_labels",
+          "shape": [
+            "num_labels",
+            "num_points"
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "mask_input",
+          "shape": [
+            "num_labels",
+            1,
+            256,
+            256
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "has_mask_input",
+          "shape": [
+            "num_labels"
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "masks",
+          "shape": [
+            "Clipmasks_dim_0",
+            "Clipmasks_dim_1",
+            "Clipmasks_dim_2",
+            "Clipmasks_dim_3"
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "iou_predictions",
+          "shape": [
+            "Sliceiou_predictions_dim_0",
+            3
+          ],
+          "type": "tensor(float)"
+        }
+      ]
+    }
+  }
+}

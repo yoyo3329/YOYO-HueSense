@@ -1,0 +1,6 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> huesense-browser-ai-rnd@0.1.0 prepare:runtime
+> node scripts/prepare-runtime.mjs
+
+Prepared same-origin ONNX Runtime 1.24.3: /workspace/huesense-browser-ai-rnd/experiments/browser-ai/vendor/

@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: image validation rejects malformed buffers, overflow and invalid dimensions
+ok 1 - image validation rejects malformed buffers, overflow and invalid dimensions
+  ---
+  duration_ms: 6.358315
+  type: 'test'
+  ...
+# Subtest: prompt validation rejects NaN, out-of-range coordinates, inverted boxes and oversized masks
+ok 2 - prompt validation rejects NaN, out-of-range coordinates, inverted boxes and oversized masks
+  ---
+  duration_ms: 6.942781
+  type: 'test'
+  ...
+# Subtest: non-square normalized coordinates stretch independently; box labels precede points
+ok 3 - non-square normalized coordinates stretch independently; box labels precede points
+  ---
+  duration_ms: 5.983513
+  type: 'test'
+  ...
+# Subtest: RGB CHW normalization and transparent white compositing
+ok 4 - RGB CHW normalization and transparent white compositing
+  ---
+  duration_ms: 3.656112
+  type: 'test'
+  ...
+# Subtest: antialiased downsampling preserves constant inputs and averages high frequencies
+ok 5 - antialiased downsampling preserves constant inputs and averages high frequencies
+  ---
+  duration_ms: 1.862782
+  type: 'test'
+  ...
+# Subtest: half pixel interpolation has correct edges and midpoint
+ok 6 - half pixel interpolation has correct edges and midpoint
+  ---
+  duration_ms: 1.714019
+  type: 'test'
+  ...
+# Subtest: RLE exact row-major golden and foreground-first zero run
+ok 7 - RLE exact row-major golden and foreground-first zero run
+  ---
+  duration_ms: 5.123568
+  type: 'test'
+  ...
+# Subtest: RLE roundtrip exhaustive small masks and empty/full boundaries
+ok 8 - RLE roundtrip exhaustive small masks and empty/full boundaries
+  ---
+  duration_ms: 23.496665
+  type: 'test'
+  ...
+# Subtest: RLE rejects COCO, overflow, fractional/negative runs, zero interior and truncated data
+ok 9 - RLE rejects COCO, overflow, fractional/negative runs, zero interior and truncated data
+  ---
+  duration_ms: 1.925212
+  type: 'test'
+  ...
+# Subtest: binary brush mask becomes bounded feedback logits
+ok 10 - binary brush mask becomes bounded feedback logits
+  ---
+  duration_ms: 31.658675
+  type: 'test'
+  ...
+# Subtest: best candidate mask follows scores, keeps logits, thresholds only after resize
+ok 11 - best candidate mask follows scores, keeps logits, thresholds only after resize
+  ---
+  duration_ms: 15.585324
+  type: 'test'
+  ...
+# Subtest: MOCK: embeddings reused across prompts and identical pixels; changed image releases cache
+ok 12 - MOCK: embeddings reused across prompts and identical pixels; changed image releases cache
+  ---
+  duration_ms: 4.7994
+  type: 'test'
+  ...
+# Subtest: MOCK: switching image during encoding discards and releases old features
+ok 13 - MOCK: switching image during encoding discards and releases old features
+  ---
+  duration_ms: 1.993261
+  type: 'test'
+  ...
+# Subtest: MOCK: latest prompt wins even if decoder already running; errors do not poison queue
+ok 14 - MOCK: latest prompt wins even if decoder already running; errors do not poison queue
+  ---
+  duration_ms: 3.499447
+  type: 'test'
+  ...
+# Subtest: MOCK: decoder cannot reuse features from another epoch or predict before init
+ok 15 - MOCK: decoder cannot reuse features from another epoch or predict before init
+  ---
+  duration_ms: 1.552201
+  type: 'test'
+  ...
+# Subtest: MOCK integration: Provider → message transport → serial pipeline; copy, isolation, release
+ok 16 - MOCK integration: Provider → message transport → serial pipeline; copy, isolation, release
+  ---
+  duration_ms: 16.31547
+  type: 'test'
+  ...
+# Subtest: MOCK: timeout kills worker and rejects all promises; explicit init can recover
+ok 17 - MOCK: timeout kills worker and rejects all promises; explicit init can recover
+  ---
+  duration_ms: 18.9091
+  type: 'test'
+  ...
+# Subtest: MOCK: arbitrary late/out-of-order Worker messages cannot resolve another image request
+ok 18 - MOCK: arbitrary late/out-of-order Worker messages cannot resolve another image request
+  ---
+  duration_ms: 1.847621
+  type: 'test'
+  ...
+# Subtest: MOCK: WebGPU checks secure context, missing adapter, and reports isolation separately
+ok 19 - MOCK: WebGPU checks secure context, missing adapter, and reports isolation separately
+  ---
+  duration_ms: 6.374248
+  type: 'test'
+  ...
+# Subtest: MOCK: stream reports progress and enforces exact bytes + SHA256
+ok 20 - MOCK: stream reports progress and enforces exact bytes + SHA256
+  ---
+  duration_ms: 29.256611
+  type: 'test'
+  ...
+# Subtest: MOCK: ORT adapter feeds float32 prompts, mask flag and releases temporary tensors
+ok 21 - MOCK: ORT adapter feeds float32 prompts, mask flag and releases temporary tensors
+  ---
+  duration_ms: 27.361435
+  type: 'test'
+  ...
+# Subtest: static delivery resolves index/Worker/runtime and rejects traversal/private paths without launching a server
+ok 22 - static delivery resolves index/Worker/runtime and rejects traversal/private paths without launching a server
+  ---
+  duration_ms: 20.269689
+  type: 'test'
+  ...
+# Subtest: MOCK integration: actual Node Worker thread, transferred RGBA, protocol and cache
+ok 23 - MOCK integration: actual Node Worker thread, transferred RGBA, protocol and cache
+  ---
+  duration_ms: 353.088112
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1059.828318

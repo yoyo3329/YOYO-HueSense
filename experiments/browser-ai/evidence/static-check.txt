@@ -1,0 +1,1 @@
+CHECK PASS: 17 JavaScript modules; relative imports resolve.

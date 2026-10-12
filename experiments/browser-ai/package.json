@@ -1,0 +1,13 @@
+{
+  "name": "huesense-browser-ai-rnd",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:runtime": "node scripts/prepare-runtime.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "start": "node scripts/serve.mjs"
+  },
+  "dependencies": { "onnxruntime-web": "1.24.3" }
+}

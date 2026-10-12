@@ -1,0 +1,12 @@
+node_modules/
+vendor/
+models/
+*.onnx
+*.ort
+*.wasm
+*.data
+*.npy
+*.npz
+*.log
+__pycache__/
+*.pyc

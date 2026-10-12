@@ -1,0 +1,512 @@
+{
+  "captured_at": "2026-10-12",
+  "site_url": "https://huesense-color-studio.brinyvenus4.chatgpt.site/",
+  "project_id": "appgprj_6ac8e0ccffdc8191a05031a8452c30d8",
+  "source_commit": "8112719bf6d6ec4e5978c2bcfbeb1e1bd1a09375",
+  "saved_version": 2,
+  "source_file_count": 49,
+  "source_bytes": 426455,
+  "pr2_head": "dc6f5b3af8bcc07dacbc343a00fac6c685ac589a",
+  "comparison": {
+    "method": "Git blob SHA-1 equality of Sites dist/ and PR #2 public/studio/",
+    "matched": 47,
+    "changed": 0,
+    "missing": 0,
+    "extra": 0,
+    "svg_templates": 42,
+    "runtime_tested": false
+  },
+  "scope": "Complete tracked Sites source snapshot, not a Git history mirror or platform/runtime state backup. README.md and .openai/hosting.json are original unmodified Sites files. All files retained byte-for-byte. Snapshot V2 remains RED HOLD; no research authority or gate changes.",
+  "files": [
+    {
+      "source_path": ".openai/hosting.json",
+      "backup_path": "sites/huesense-color-studio/source/.openai/hosting.json",
+      "mode": "100644",
+      "git_blob_sha": "28ba7c8aa090c014f3daee02777e469adbc3853f",
+      "sha256": "d91d3765d6ef948dc91906cb7d05c5bfff699c5ce08f5515f38f28d75d330e28",
+      "bytes": 106,
+      "pr2_path": null,
+      "pr2_identical": null
+    },
+    {
+      "source_path": "README.md",
+      "backup_path": "sites/huesense-color-studio/source/README.md",
+      "mode": "100644",
+      "git_blob_sha": "16414935975cfca86fc45e186538d6e6b77693c9",
+      "sha256": "93a157ba72e22549adcd49d4dc5c63a30ce7b9bd3a45887cc279c95d69a607f3",
+      "bytes": 2651,
+      "pr2_path": null,
+      "pr2_identical": null
+    },
+    {
+      "source_path": "dist/assets/posters/p01_orbit_theory.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p01_orbit_theory.svg",
+      "mode": "100644",
+      "git_blob_sha": "e89511ff56170028fe6c3eb7d0a9968bca32dd25",
+      "sha256": "181f1075dfc4b06199e7b35abd395a41b019b4a769fe857c34875b5d9e80879c",
+      "bytes": 2003,
+      "pr2_path": "public/studio/assets/posters/p01_orbit_theory.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p02_bauhaus_playground.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p02_bauhaus_playground.svg",
+      "mode": "100644",
+      "git_blob_sha": "8875b47d21582099e348852dc6743bd4957ba4bc",
+      "sha256": "c00dd776fa6ee47cd558b0844e5cdb16e2a83d3f875ea2545370df019ec3e1eb",
+      "bytes": 2085,
+      "pr2_path": "public/studio/assets/posters/p02_bauhaus_playground.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p03_sound_in_shapes.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p03_sound_in_shapes.svg",
+      "mode": "100644",
+      "git_blob_sha": "180df95b167a320b5a171182afd9b6ba80ea13b2",
+      "sha256": "8edb41dd48877be2f0d179a7f941ec68cfe1cf806a9a5096c2b3c87d8da462db",
+      "bytes": 3835,
+      "pr2_path": "public/studio/assets/posters/p03_sound_in_shapes.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p04_new_horizon.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p04_new_horizon.svg",
+      "mode": "100644",
+      "git_blob_sha": "26b43cb31b3cbe45cb884d27b77694f48ef2d273",
+      "sha256": "f0f923a63396db352e807c3ba241554a9edf9124109814f78ee769a66fe932a7",
+      "bytes": 2223,
+      "pr2_path": "public/studio/assets/posters/p04_new_horizon.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p05_modulo_09.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p05_modulo_09.svg",
+      "mode": "100644",
+      "git_blob_sha": "5c91b46d132700bae538b7a2aef5afeb5864a298",
+      "sha256": "8670880a93ee4f14e3db756385f07d549843b57e099e07bf3057a62c0c793d6d",
+      "bytes": 6788,
+      "pr2_path": "public/studio/assets/posters/p05_modulo_09.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p06_color_blocks.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p06_color_blocks.svg",
+      "mode": "100644",
+      "git_blob_sha": "55c869f6f612bdcffad02f5f88c49807ae1b401f",
+      "sha256": "d755103acab0eed6f05fb150635aca46054f15d9a25a2a457cb696f28f6e0118",
+      "bytes": 1971,
+      "pr2_path": "public/studio/assets/posters/p06_color_blocks.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p07_playful_pattern.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p07_playful_pattern.svg",
+      "mode": "100644",
+      "git_blob_sha": "9e7c0d52d65e9ba7aa1a2eda497dd11541aaf30f",
+      "sha256": "2e662a50639cbe45bd84cf628fb281bfdf9da7c7f6c0e54fb212942c00983cec",
+      "bytes": 5169,
+      "pr2_path": "public/studio/assets/posters/p07_playful_pattern.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p08_topographic.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p08_topographic.svg",
+      "mode": "100644",
+      "git_blob_sha": "e1117b0759db48dbac87fd7dde424ee90f219bfe",
+      "sha256": "2f6e26ef1015025602106539bf93e1772b83cd9a482e8020b51a927918658601",
+      "bytes": 4008,
+      "pr2_path": "public/studio/assets/posters/p08_topographic.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p09_flow_state.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p09_flow_state.svg",
+      "mode": "100644",
+      "git_blob_sha": "e04c6c2acf200a2dcd1e4df61f1d795bcbf4b480",
+      "sha256": "169125b901a1c9507c59b14c32a17646982f210493cba9c1479340ee03ccd522",
+      "bytes": 2879,
+      "pr2_path": "public/studio/assets/posters/p09_flow_state.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p10_dot_perception.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p10_dot_perception.svg",
+      "mode": "100644",
+      "git_blob_sha": "1decc813931f507d5c5464b34c38c6482b751ce9",
+      "sha256": "551b15aa29fe97a0f5cd70ae56944a526daba0961269fe548ea0a43de1ea7560",
+      "bytes": 20099,
+      "pr2_path": "public/studio/assets/posters/p10_dot_perception.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p11_signal_-_01.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p11_signal_-_01.svg",
+      "mode": "100644",
+      "git_blob_sha": "0fcf2aad6779e6061b29ff7bdfcfc555375c0c43",
+      "sha256": "1cb21b073c7eebe205173e82ccad1593994bd268c233066c1eec0cea9a6ee62a",
+      "bytes": 2707,
+      "pr2_path": "public/studio/assets/posters/p11_signal_-_01.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p12_arch_studies.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p12_arch_studies.svg",
+      "mode": "100644",
+      "git_blob_sha": "8329678fdff4bf8ca8d2423d61720a13dbb3b56c",
+      "sha256": "d00188e21ebc4f3bf71a3cfb7f72cadc5e9e27f5374e0668c0ed9b4e5eefa152",
+      "bytes": 2004,
+      "pr2_path": "public/studio/assets/posters/p12_arch_studies.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p13_stacked_forms.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p13_stacked_forms.svg",
+      "mode": "100644",
+      "git_blob_sha": "d536d4472d951c98d229aeb5070af35409cb2d8e",
+      "sha256": "76c07a8d4eee73abab7d2501fdb03a0fe11eb375546cb0990af8695e6803c0bb",
+      "bytes": 2107,
+      "pr2_path": "public/studio/assets/posters/p13_stacked_forms.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p14_solar_burst.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p14_solar_burst.svg",
+      "mode": "100644",
+      "git_blob_sha": "68a4d0b9e0ed1e05a053134895d05264d97f8f75",
+      "sha256": "5d4e6bf174cbca03a8ebe0730a717bd1dbc0f108bd65d261e04c52f90137d01d",
+      "bytes": 5223,
+      "pr2_path": "public/studio/assets/posters/p14_solar_burst.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p15_type_-_shift.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p15_type_-_shift.svg",
+      "mode": "100644",
+      "git_blob_sha": "2f6b7c924a7eab78591a5960e09eab160e8abf78",
+      "sha256": "6b1708fbff5feb4ea71dda0307afa54fe8efcff8b6538d2dde0a8d5a51ee03e1",
+      "bytes": 1847,
+      "pr2_path": "public/studio/assets/posters/p15_type_-_shift.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p16_bloom_theory.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p16_bloom_theory.svg",
+      "mode": "100644",
+      "git_blob_sha": "c0c2466ea760eb61891ec024f3aef37081a8148a",
+      "sha256": "9f40aa86a82ad384db46dcbaf843aad721d9b0f5cfd983d2e1876d16104a1819",
+      "bytes": 2784,
+      "pr2_path": "public/studio/assets/posters/p16_bloom_theory.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p17_construct_no._7.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p17_construct_no._7.svg",
+      "mode": "100644",
+      "git_blob_sha": "7782b11a6a128e84afad0929250f0f983588f86f",
+      "sha256": "c92dd0b901b8bf900e6501c6c4306d988cc4b9138fc66f5e821dce8093a52d5f",
+      "bytes": 1813,
+      "pr2_path": "public/studio/assets/posters/p17_construct_no._7.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p18_capsule_lab.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p18_capsule_lab.svg",
+      "mode": "100644",
+      "git_blob_sha": "2018eb29f32e680490eb441ed83aea0d97bbf7e2",
+      "sha256": "3a1d1f76203e63dcb3004bd77a10f4b6efab7f30ca327ad6a88d429a2539977b",
+      "bytes": 4460,
+      "pr2_path": "public/studio/assets/posters/p18_capsule_lab.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p19_geometry_club.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p19_geometry_club.svg",
+      "mode": "100644",
+      "git_blob_sha": "c189d3676754f25ad12d44d998322c806599a500",
+      "sha256": "89d15a5c3fca0ba2487441117d627e61f55531636a173520c9fade529aeee092",
+      "bytes": 3233,
+      "pr2_path": "public/studio/assets/posters/p19_geometry_club.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p20_diagonal_motion.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p20_diagonal_motion.svg",
+      "mode": "100644",
+      "git_blob_sha": "dffa0bf29d307d176fb6a596c40864266ec5e5cd",
+      "sha256": "4ed534c72b269d4fdfd106466046ad4718a1f9b879c15b039d38343b873fd7f5",
+      "bytes": 2753,
+      "pr2_path": "public/studio/assets/posters/p20_diagonal_motion.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p21_eclipse.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p21_eclipse.svg",
+      "mode": "100644",
+      "git_blob_sha": "9a777c0fb696dd92e9fb0766626d669a2269ec02",
+      "sha256": "1afd279837d5f882c994ec11b61a1da54c0d2579bd88150c7f74eac58402beb9",
+      "bytes": 2718,
+      "pr2_path": "public/studio/assets/posters/p21_eclipse.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p22_divide_&_unite.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p22_divide_&_unite.svg",
+      "mode": "100644",
+      "git_blob_sha": "954cc5993105a3f323f87924e455fc566fa4f46e",
+      "sha256": "ab6e4053815e17765e3149cdf3c15cae4429799bbb24399c5a19222bb1048db5",
+      "bytes": 1799,
+      "pr2_path": "public/studio/assets/posters/p22_divide_&_unite.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p23_zig_zag.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p23_zig_zag.svg",
+      "mode": "100644",
+      "git_blob_sha": "24de54c1ab50f2073e81713d0d5b1392a7f70a27",
+      "sha256": "c9113e503ccfbfa9810ba5befd9b56a70188436a4e351bf21f1ca8ac417790e9",
+      "bytes": 2859,
+      "pr2_path": "public/studio/assets/posters/p23_zig_zag.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p24_art_deco_sun.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p24_art_deco_sun.svg",
+      "mode": "100644",
+      "git_blob_sha": "193510f7aed868bac6c5c02b3e2e4f3903e872b0",
+      "sha256": "6c706062cf703645f43ea0c54f9b6e8ec613ff60cb82baf5ff609d1e9a8ba348",
+      "bytes": 2745,
+      "pr2_path": "public/studio/assets/posters/p24_art_deco_sun.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p25_swiss_dots.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p25_swiss_dots.svg",
+      "mode": "100644",
+      "git_blob_sha": "eec0d2759a9abf200e901d7e7e54eafa31e796c4",
+      "sha256": "2e37a94e151d44af375e54a06930ab92085d5c626e7c4aa74d371e9ecbba0073",
+      "bytes": 10273,
+      "pr2_path": "public/studio/assets/posters/p25_swiss_dots.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p26_shape_language.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p26_shape_language.svg",
+      "mode": "100644",
+      "git_blob_sha": "2f4773a348d494b7f55ee46abc7b724d659c3bda",
+      "sha256": "120f6feec689984bf06099c77958abda269429ce7eb286b4419f24388aa39310",
+      "bytes": 1739,
+      "pr2_path": "public/studio/assets/posters/p26_shape_language.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p27_chromatic_window.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p27_chromatic_window.svg",
+      "mode": "100644",
+      "git_blob_sha": "814d04538b10debc66b1780cb84e4219ddbb79f1",
+      "sha256": "c53efd5a00f2b5ee4948eae11fb2bddc0dd3fb9a21a994e9309a9874cdc560f6",
+      "bytes": 1961,
+      "pr2_path": "public/studio/assets/posters/p27_chromatic_window.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p28_phase_shift.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p28_phase_shift.svg",
+      "mode": "100644",
+      "git_blob_sha": "fbc7f7a58c72185b55498f925eb50b31ece5e907",
+      "sha256": "698ebd3f9a799ae5853c798ac54ee707b1bf28e2840c669dfba057e4159c0b78",
+      "bytes": 2757,
+      "pr2_path": "public/studio/assets/posters/p28_phase_shift.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p29_radial_study.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p29_radial_study.svg",
+      "mode": "100644",
+      "git_blob_sha": "3ba2ef288b1c09f0e27019a4505f21290cdb6a86",
+      "sha256": "101780eb02ceedb062bbde29c5aa94ef889802c7e0076b452aa1c8065af582d3",
+      "bytes": 4305,
+      "pr2_path": "public/studio/assets/posters/p29_radial_study.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/posters/p30_open_spaces.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/posters/p30_open_spaces.svg",
+      "mode": "100644",
+      "git_blob_sha": "92b9275b600dd015b536bc0d7941d32778178881",
+      "sha256": "d0ca705ad71ed5e503c0d44229124df96edd3702f048e0cae085f422e0b1ae12",
+      "bytes": 1781,
+      "pr2_path": "public/studio/assets/posters/p30_open_spaces.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/01_palette_lab.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/01_palette_lab.svg",
+      "mode": "100644",
+      "git_blob_sha": "7ebf96c3315bbf300a06d8166bfcacd4a00692ec",
+      "sha256": "be06ac840cef2f6421ea5e76b192f6c559b7dadc8303a83a67d5a0d8c87f745e",
+      "bytes": 3589,
+      "pr2_path": "public/studio/assets/svgs/01_palette_lab.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/02_web_builder.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/02_web_builder.svg",
+      "mode": "100644",
+      "git_blob_sha": "cf83378688e8ab2897f93fd32d8b7ea3f859784b",
+      "sha256": "580d6a87cf5dfaf170808d46e602e9767f6d59c2e312198f3ff427816b11fdd3",
+      "bytes": 3302,
+      "pr2_path": "public/studio/assets/svgs/02_web_builder.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/03_poster_maker.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/03_poster_maker.svg",
+      "mode": "100644",
+      "git_blob_sha": "57788b36d44fec49a791c8a361a097fa5f9ff89a",
+      "sha256": "71440cff8e76efd04be76d11898990f67787d29f0ee6012a2ba4de9254b6309b",
+      "bytes": 2404,
+      "pr2_path": "public/studio/assets/svgs/03_poster_maker.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/04_packaging.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/04_packaging.svg",
+      "mode": "100644",
+      "git_blob_sha": "964444a9407dcb96c71d6dd05154db586defc188",
+      "sha256": "635a13a72f1dd67df31b304917a84cdc540485b57f7af15f6c7a95fa95ef7d56",
+      "bytes": 2123,
+      "pr2_path": "public/studio/assets/svgs/04_packaging.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/05_mobile_ux.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/05_mobile_ux.svg",
+      "mode": "100644",
+      "git_blob_sha": "ed306df8ab26f5477689470a5d690bac4873799d",
+      "sha256": "2f0623d5d20117d97a8b6d1d4db0276205a38fe0743fe1eaf0f39cf06d8d669a",
+      "bytes": 3115,
+      "pr2_path": "public/studio/assets/svgs/05_mobile_ux.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/06_user_research.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/06_user_research.svg",
+      "mode": "100644",
+      "git_blob_sha": "3c9584fa3ee9ec585ce402df58fad3aae779b063",
+      "sha256": "6f0c817a436c5cf5c14d2fffa6f2ab35eddbb4b2ce64e1f6512e71bf286710d6",
+      "bytes": 3475,
+      "pr2_path": "public/studio/assets/svgs/06_user_research.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/07_memory_archive.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/07_memory_archive.svg",
+      "mode": "100644",
+      "git_blob_sha": "b9d388520fdc9c8782c4423399a00bbcaf7d394b",
+      "sha256": "13a12278e8a4ffdb8d20512745806336099318ffb31f163be25300f00cc7b82e",
+      "bytes": 2443,
+      "pr2_path": "public/studio/assets/svgs/07_memory_archive.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/08_team_workspace.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/08_team_workspace.svg",
+      "mode": "100644",
+      "git_blob_sha": "da5aa221584b551e658240563b7c190b12e56aaf",
+      "sha256": "b99edae88a209509d493d46d39b7bad4c752868c7b398c478bbbf500ff9821a3",
+      "bytes": 4345,
+      "pr2_path": "public/studio/assets/svgs/08_team_workspace.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/09_photo_editor.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/09_photo_editor.svg",
+      "mode": "100644",
+      "git_blob_sha": "c4e4906062efcf9305a461b815c287bcb5736435",
+      "sha256": "84e686f7918e7abbd7ad610fb24e4cf18a730b840c5d41b0b1548b1bda2ba353",
+      "bytes": 3524,
+      "pr2_path": "public/studio/assets/svgs/09_photo_editor.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/10_data_flow.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/10_data_flow.svg",
+      "mode": "100644",
+      "git_blob_sha": "f8c8cd94e2240805ac2c98ee9e3d1dbf4e58e37a",
+      "sha256": "80584e4707b1451a2dfb489ecc1cd68babb1664eddfd5d6659b80bc1c6aeee0e",
+      "bytes": 2812,
+      "pr2_path": "public/studio/assets/svgs/10_data_flow.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/11_icon_atlas.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/11_icon_atlas.svg",
+      "mode": "100644",
+      "git_blob_sha": "801fdbffb721ee2cb046a80a45b7f56b980ca43b",
+      "sha256": "03973ba13a6699f43c77be0aaa2fcc22936693f9b5f0dd94cd22c6c608380ef2",
+      "bytes": 3602,
+      "pr2_path": "public/studio/assets/svgs/11_icon_atlas.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/assets/svgs/12_abstract_art.svg",
+      "backup_path": "sites/huesense-color-studio/source/dist/assets/svgs/12_abstract_art.svg",
+      "mode": "100644",
+      "git_blob_sha": "5eb5e7f9ee29c448b98b869f2e7b268bf331f6e9",
+      "sha256": "3ea0c0a7e97429aa8de905a363719aae48f1ae8dad220aad53ce087b8872a497",
+      "bytes": 2053,
+      "pr2_path": "public/studio/assets/svgs/12_abstract_art.svg",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/editor/ai.js",
+      "backup_path": "sites/huesense-color-studio/source/dist/editor/ai.js",
+      "mode": "100644",
+      "git_blob_sha": "3dd1ef5ed8b4aa1c750eb49ef32e8a078da11eb1",
+      "sha256": "880c74705be8b8dd99e5470c88fc61a42bf19f8e4c17a86f4ab24dbe6fae127b",
+      "bytes": 8855,
+      "pr2_path": "public/studio/editor/ai.js",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/editor/app.js",
+      "backup_path": "sites/huesense-color-studio/source/dist/editor/app.js",
+      "mode": "100644",
+      "git_blob_sha": "816c8b9cfeff7b5fe504618223268b1ccbc68ab1",
+      "sha256": "13846589c7401c5c09bb13aeed4e43c592c3a945787b9f81ae5734caef569d4e",
+      "bytes": 22012,
+      "pr2_path": "public/studio/editor/app.js",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/editor/index.html",
+      "backup_path": "sites/huesense-color-studio/source/dist/editor/index.html",
+      "mode": "100644",
+      "git_blob_sha": "93637296a647f47cab46c3d945bc3e05d2af355e",
+      "sha256": "e091736de807236aeecab8b9ae03e7bf1c06c85c1e220054237248d3cd58bece",
+      "bytes": 9186,
+      "pr2_path": "public/studio/editor/index.html",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/editor/style.css",
+      "backup_path": "sites/huesense-color-studio/source/dist/editor/style.css",
+      "mode": "100644",
+      "git_blob_sha": "1b44bdf2ed7c68cde338176e9fb0fa694e4b21df",
+      "sha256": "14dc8004e96d1d5ebd5a545a7f04470eb5c5356ce2644b7c0e7f2e69f3c710b8",
+      "bytes": 11034,
+      "pr2_path": "public/studio/editor/style.css",
+      "pr2_identical": true
+    },
+    {
+      "source_path": "dist/index.html",
+      "backup_path": "sites/huesense-color-studio/source/dist/index.html",
+      "mode": "100644",
+      "git_blob_sha": "64841bb71d35a603a0817b660b95ff9ef391b2f8",
+      "sha256": "fcfd478e0c717cdb6bc3389883bc20bc461f39a3be6f3734619bab61782325f3",
+      "bytes": 222896,
+      "pr2_path": "public/studio/index.html",
+      "pr2_identical": true
+    }
+  ]
+}

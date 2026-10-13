@@ -69,7 +69,7 @@ Contract tests need no real AI model; RLE test skips if NumPy is unavailable. Th
 - Model SHA-256/length: **PASS** from user-supplied Windows `certutil` preflight, dated 2026-10-13.
 - Relevant code available: **PASS** (committed to this R&D branch).
 - Isolated D: Python runtime: **NOT YET VERIFIED**.
-- SAM2.1 real interactive dog/object photo: **NOT YET VERIFIED**.
+- SAM2.1 real interactive dog/object photo: **USER SCREENSHOT OBSERVED — POSITIVE-POINT SEGMENTATION AND CANVAS MASK DISPLAY WORKING (2026-10-13)**. User screenshot shows local CPU AI connected, two positive points on a dog, a plausible purple object mask and an enabled confirmation button. This is visual evidence, not a recorded model latency, quantitative accuracy measure, or independent automated E2E test.
 - Negative point/box mask correction: **NOT YET VERIFIED**.
 - HueSense recolor → PNG export: **NOT YET VERIFIED**.
 - OpenCLIP in same 8779 studio: **NOT IMPLEMENTED** (separate existing Docker OpenCLIP available in 8778).
@@ -82,3 +82,7 @@ Contract tests need no real AI model; RLE test skips if NumPy is unavailable. Th
 - No cloud/public GPU service is deployed; Sites cannot directly fetch user's localhost.
 - Browser-level screenshot and visual quality must be checked by user on Windows.
 - Existing research certification is read-only reference, not authorization for new research gates.
+
+## 2026-10-13 interactive local evidence note
+
+The user's local preview showed `SAM2.1 真實模型已連線（本機 CPU）` and `AI 選區已產生`, with a dog covered by a purple mask after two positive-point prompts. The `確認此區域` action is enabled, and most visible grass is unmasked. **This evidence is derived from an in-chat screenshot; the image itself and any browser token are intentionally not stored in Git.** No negative prompt, box refinement, confirmed recolor, unchanged-background pixel comparison, or PNG export has yet been verified. Keep those statuses pending.

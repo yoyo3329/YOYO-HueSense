@@ -71,6 +71,12 @@
   "recent_events": [
     {
       "date": "2026-10-16",
+      "title": "產品進度同步正式採 GitHub 優先",
+      "status": "DOCUMENTED",
+      "evidence": "Control Center roadmap panel polls this branch's docs/huesense-program/CURRENT_STATUS.json every 60 seconds while open. Google Drive is archival, not a dashboard dependency. Existing 8765 installation already uses this path."
+    },
+    {
+      "date": "2026-10-16",
       "title": "建立產品 × 研究總藍圖",
       "status": "DOCUMENTED",
       "evidence": "Google Drive roadmap folder and GitHub docs/huesense-program/BLUEPRINT.md"
@@ -90,7 +96,18 @@
   ],
   "warnings": [
     "This overlay does not read or change Gate/Queue/Authority.",
-    "No claim that Drive Docs auto-update on GitHub changes.",
+    "Google Drive Docs are optional human-readable archives and do not auto-update when GitHub status changes.",
     "Data current only through updated_at; if sync fails show STALE."
-  ]
+  ],
+  "sync_policy": {
+    "primary_source": "GitHub",
+    "mode": "GITHUB_POLL_READONLY",
+    "branch": "feature/huesense-browser-ai-rnd",
+    "canonical_path": "docs/huesense-program/CURRENT_STATUS.json",
+    "poll_seconds_while_control_center_open": 60,
+    "drive_role": "ARCHIVE_AND_HUMAN_READABLE_DOCS_ONLY",
+    "offline_behavior": "Show STALE and local last-deployed snapshot; never claim fresh GitHub state",
+    "research_gate_is_separate": true,
+    "note": "No Drive sync is required for Control Center's HueSense product roadmap. Updating this GitHub JSON updates the installed roadmap panel on its next successful fetch."
+  }
 }

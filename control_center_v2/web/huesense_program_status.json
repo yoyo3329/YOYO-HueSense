@@ -1,0 +1,96 @@
+{
+  "schema": "HUESENSE_PROGRAM_STATUS_V1",
+  "updated_at": "2026-10-16",
+  "display_only": true,
+  "formal_claim_allowed": false,
+  "authority_mutation": false,
+  "source_of_truth": "GitHub product roadmap snapshot; separate from research Gate authority",
+  "site": "HueSense / Semantic-Driven Personalized Color Decision Support System",
+  "source_branch": "feature/huesense-browser-ai-rnd",
+  "drive_folder": "https://drive.google.com/drive/folders/1Ms11mLdq5TbKWmfzL7hp9IqoLVtvjtcB",
+  "drive_blueprint": "https://docs.google.com/document/d/1Tl94oc8VP8_iePrfFc5ENnYX9FLRKgv-WgazGj7NG5c/edit",
+  "drive_progress": "https://docs.google.com/document/d/1l8Qf6JCbzntiXA8v4q0WMXW8xTnseNNf3SqqiUEpPQU/edit",
+  "research_gate_message": "Snapshot V2 RED HOLD / research Gate not modified by Product Roadmap. Consult existing authenticated Control Center Gate sources for actual current state.",
+  "current_focus": "P1: Semantics → evidence-backed A/B/C palettes → 42 SVG preview → explicit preference selection",
+  "overall_product_status": "PRODUCT_ROADMAP_DOCUMENTED; END_TO_END_NOT_VERIFIED",
+  "research_benchmark": {
+    "status": "HISTORICAL_VERIFIED",
+    "label": "2026-09 Y2K CLIP 80 reference images, AUC 0.786, 13 disagreement human review",
+    "note": "Not E2E palette recommendation accuracy"
+  },
+  "milestones": [
+    {
+      "id": "P0",
+      "title": "研究 × 產品 × 網站來源／Gate 對照",
+      "status": "DOCUMENTED",
+      "detail": "Master blueprint / dated snapshot stored on Drive and GitHub; validate code-to-Gate mapping next."
+    },
+    {
+      "id": "P1",
+      "title": "語意 → A/B/C 色票 → SVG → 選擇回饋",
+      "status": "NOT_E2E_VERIFIED",
+      "detail": "Highest-priority research-product demonstration; Authority/Gate remains separate."
+    },
+    {
+      "id": "P2",
+      "title": "預設與演算法色票庫",
+      "status": "PLANNED",
+      "detail": "Provenance tags, 5 design roles, search, dedupe, quality checks. ~300 is target only."
+    },
+    {
+      "id": "P3",
+      "title": "上傳攝影／藝術作品萃取色票",
+      "status": "PLANNED",
+      "detail": "Color clustering and optional SAM2-selected region; license-aware."
+    },
+    {
+      "id": "P4",
+      "title": "喜歡／收藏／修改 → 個人化偏好更新",
+      "status": "PLANNED",
+      "detail": "Preference events with privacy and offline evaluation."
+    },
+    {
+      "id": "P5",
+      "title": "有來源與日期的趨勢色彩情報",
+      "status": "PLANNED",
+      "detail": "Separate official trends, editorial curation and genuine site popularity."
+    },
+    {
+      "id": "P6",
+      "title": "SAM2 遮罩 × 設計溝通換色",
+      "status": "PARTIAL_LOCAL_EVIDENCE",
+      "detail": "Pinned SAM2 CPU loaded, dog mask and preliminary recolor observed. PNG E2E still pending."
+    },
+    {
+      "id": "FUTURE",
+      "title": "互動 3D 包裝與開盒",
+      "status": "BACKLOG",
+      "detail": "Deferred until 2D design decision loop proves useful."
+    }
+  ],
+  "recent_events": [
+    {
+      "date": "2026-10-16",
+      "title": "建立產品 × 研究總藍圖",
+      "status": "DOCUMENTED",
+      "evidence": "Google Drive roadmap folder and GitHub docs/huesense-program/BLUEPRINT.md"
+    },
+    {
+      "date": "2026-10",
+      "title": "SAM2.1 真實小狗分割於本機 Canvas",
+      "status": "PARTIAL_LOCAL_EVIDENCE",
+      "evidence": "User observed CPU-connected studio, green positive points and purple segmentation mask; no quantitative accuracy claim"
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Y2K OpenCLIP reference benchmark",
+      "status": "HISTORICAL_VERIFIED",
+      "evidence": "80 reference images; AUC 0.786; not color recommendation E2E"
+    }
+  ],
+  "warnings": [
+    "This overlay does not read or change Gate/Queue/Authority.",
+    "No claim that Drive Docs auto-update on GitHub changes.",
+    "Data current only through updated_at; if sync fails show STALE."
+  ]
+}

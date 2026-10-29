@@ -51,9 +51,9 @@ jobs:
           from pathlib import Path
           sql=Path("research/palette_seed/sql/001_palette_seed.sql").read_text()
           cur=c.cursor()
-          for s in sql.split(";"):
-              stmt="\n".join(line for line in s.splitlines() if not line.lstrip().startswith("--")).strip()
-              if stmt: cur.execute(stmt)
+          clean="\n".join(line for line in sql.splitlines() if not line.lstrip().startswith("--"))
+          for s in clean.split(";"):
+              if s.strip(): cur.execute(s.strip())
           c.commit()
           cur.close()
           c.close()

@@ -21,7 +21,7 @@ class B2Test(unittest.TestCase):
             with self.assertRaises(ValueError): normalize_hex(bad)
 
     def test_real_dataset(self):
-        doc, pool = read_pool()
+        doc, pool, _metadata = read_pool()
         self.assertEqual(len(doc["palettes"]), 63)
         self.assertEqual(len(pool), 291)
         self.assertEqual(len(read_pool(source="carto")[1]), len(set(

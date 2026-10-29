@@ -208,14 +208,21 @@ def import_database(database: Path, output: Path, *, table_arg: str | None = Non
                     key = stable_row_key(child_table, row, child_meta["pk_cols"])
                     records_by_hex[hex_code][key] = {"table": child_table, "row": row}
 
-        # Follow each color and direct relation record one hop to retain source/evidence/name rows.
+        # Follow declared/clear ID relationships transitively, so a color relation
+        # can retain evidence and then its linked source without inventing a join.
         for hex_code, record_map in records_by_hex.items():
-            initial = list(record_map.values())
-            for record in initial:
+            queue = list(record_map.values())
+            visited = set(record_map.keys())
+            while queue:
+                record = queue.pop(0)
                 for target_table, target_row in resolve_fk_rows(schema, record["table"], record["row"]):
                     target_meta = schema[target_table]
                     key = stable_row_key(target_table, target_row, target_meta["pk_cols"])
-                    record_map[key] = {"table": target_table, "row": target_row}
+                    if key not in visited:
+                        visited.add(key)
+                        item = {"table": target_table, "row": target_row}
+                        record_map[key] = item
+                        queue.append(item)
 
         output_colors = []
         for hex_code in sorted(records_by_hex):

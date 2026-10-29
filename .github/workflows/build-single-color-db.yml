@@ -1,0 +1,30 @@
+name: Build HueSense single-color research database
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/single-color-research-db-v1-20261029]
+    paths:
+      - "research/palette_seed/data/xkcd_color_survey_949.csv"
+      - "research/palette_seed/data/core_five_seeds.json"
+      - "research/palette_seed/scripts/build_single_color_db.py"
+      - ".github/workflows/build-single-color-db.yml"
+permissions:
+  contents: read
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build SQLite database and verify source counts
+        run: python research/palette_seed/scripts/build_single_color_db.py
+      - name: Run automated tests
+        run: python -m unittest research/palette_seed/tests/test_single_color_db_build.py -v
+      - name: Upload SQLite and validation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: HueSense-SingleColor-Research-v1
+          path: |
+            research/palette_seed/data/HueSense_SingleColor_Research_v1.sqlite
+            research/palette_seed/data/build_report.json
+          if-no-files-found: error
+          retention-days: 90

@@ -1,0 +1,32 @@
+name: HueSense B2 - Greedy Single-Color Selection
+on:
+  push:
+    branches:
+      - feat/lesson1-seed-query-20261029
+    paths:
+      - 'research/palette_seed/**'
+      - '.github/workflows/seed-b2-greedy.yml'
+  pull_request:
+    paths:
+      - 'research/palette_seed/**'
+      - '.github/workflows/seed-b2-greedy.yml'
+jobs:
+  b2-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests - B2 using 291 HEX pool
+        run: python -m unittest discover -s research/palette_seed/tests -p 'test_b2_greedy_select.py' -v
+      - name: CLI - reproducibility with user anchor
+        run: |
+          python research/palette_seed/scripts/b2_greedy_select.py --anchor '#A85C45' > /tmp/b2-first.json
+          python research/palette_seed/scripts/b2_greedy_select.py --anchor '#A85C45' > /tmp/b2-second.json
+          diff /tmp/b2-first.json /tmp/b2-second.json
+      - name: Produce B2 sample artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: huesense-b2-5-color-result
+          path: /tmp/b2-first.json

@@ -74,7 +74,7 @@ class B2Test(unittest.TestCase):
             path = Path(temp) / "single.json"
             path.write_text(json.dumps({"version":"test","sources":{"carto":{}},
                 "palettes":[{"id":"only","source":"carto","colors":["#000000","#111111","#222222","#333333","#444444"]}]}))
-            with self.assertRaisesRegex(ValueError, "INSUFFICIENT_POOL_CANDIDATES"):
+            with self.assertRaisesRegex(ValueError, "EMPTY_COLOR_POOL"):
                 generate("#A85C45", dataset_path=path, count=5) if False else generate("#A85C45", dataset_path=path, count=5) if False else self._insufficient(path)
 
     def _insufficient(self, path):

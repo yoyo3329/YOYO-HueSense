@@ -29,9 +29,10 @@ ID_ALIASES = {
     "reference": {"reference", "references", "citation", "citations", "source"},
 }
 NAME_COLUMNS = {
-    "name", "colorname", "colourname", "word", "wordzh", "worden",
-    "term", "label", "conceptname", "tagzh", "tagen", "categoryname",
-    "originalname", "displayname",
+    "name", "nameen", "namezh", "colorname", "colourname",
+    "colornameen", "colournameen", "colornamezh", "colournamezh",
+    "word", "wordzh", "worden", "term", "label", "conceptname",
+    "tagzh", "tagen", "categoryname", "originalname", "displayname",
 }
 
 def ident(value: str) -> str:
@@ -227,7 +228,8 @@ def import_database(database: Path, output: Path, *, table_arg: str | None = Non
         output_colors = []
         for hex_code in sorted(records_by_hex):
             records = sorted(records_by_hex[hex_code].values(), key=lambda rec: (rec["table"].lower(), stable_row_key(rec["table"], rec["row"], schema[rec["table"]]["pk_cols"])))
-            names, source_refs, evidence_refs, color_ids = [], [], [], []
+            names, all_source_refs, evidence_refs, color_ids = [], [], [], []
+            direct_source_ids = set()
             for record in records:
                 table_name, row = record["table"], record["row"]
                 tnorm = norm_name(table_name)
@@ -235,6 +237,12 @@ def import_database(database: Path, output: Path, *, table_arg: str | None = Non
                     for col in id_cols:
                         if row.get(col) is not None:
                             color_ids.append(str(row[col]))
+                has_name_value = any(
+                    norm_name(col) in NAME_COLUMNS and row.get(col) is not None and str(row.get(col)).strip()
+                    for col in row
+                )
+                if has_name_value and row.get("source_id") is not None:
+                    direct_source_ids.add(str(row["source_id"]))
                 for col, value in row.items():
                     cnorm = norm_name(col)
                     if value is None or not isinstance(value, (str, int, float)):
@@ -245,16 +253,25 @@ def import_database(database: Path, output: Path, *, table_arg: str | None = Non
                             names.append(item)
                 ref = {"table": table_name, "record_key": stable_row_key(table_name, row, schema[table_name]["pk_cols"]), "row": row}
                 if "source" in tnorm or "reference" in tnorm or "citation" in tnorm:
-                    if ref not in source_refs:
-                        source_refs.append(ref)
+                    if ref not in all_source_refs:
+                        all_source_refs.append(ref)
                 if "evidence" in tnorm or any(k in {norm_name(c) for c in row} for k in {"evidencetype", "claimsummary", "measurementvalue", "evidencestatus"}):
                     if ref not in evidence_refs:
                         evidence_refs.append(ref)
+            # Separate direct name provenance from indirect sources reached through a
+            # category/lexical mapping. Both remain available, but neither is itself a
+            # psychological score; actual evidence must exist in an evidence record.
+            if direct_source_ids:
+                source_refs = [ref for ref in all_source_refs if str(ref["row"].get("source_id")) in direct_source_ids]
+                related_source_refs = [ref for ref in all_source_refs if str(ref["row"].get("source_id")) not in direct_source_ids]
+            else:
+                source_refs, related_source_refs = all_source_refs, []
             output_colors.append({
                 "hex": hex_code,
                 "color_ids": sorted(set(color_ids)),
                 "names": names,
                 "source_refs": source_refs,
+                "related_source_refs": related_source_refs,
                 "evidence_refs": evidence_refs,
                 "records": records,
             })

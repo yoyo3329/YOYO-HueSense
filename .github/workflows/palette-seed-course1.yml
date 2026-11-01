@@ -1,0 +1,28 @@
+name: HueSense Palette Seed Course 1
+on:
+  push:
+    branches:
+      - feat/lesson1-seed-query-20261029
+    paths:
+      - 'research/palette_seed/**'
+      - '.github/workflows/palette-seed-course1.yml'
+  pull_request:
+    paths:
+      - 'research/palette_seed/**'
+      - '.github/workflows/palette-seed-course1.yml'
+jobs:
+  python-offline-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Confirm source seed data
+        run: python research/palette_seed/scripts/check_palette_seeds.py
+      - name: Run query formatter and prepared-SQL unit tests
+        run: python -m unittest discover -s research/palette_seed/tests -v
+      - name: Validate query Python syntax
+        run: python -m py_compile research/palette_seed/scripts/query_palette_seeds.py
+      - name: Confirm all imported seed JSON records are exactly five HEX
+        run: python research/palette_seed/scripts/import_palette_seeds.py --validate-only

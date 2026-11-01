@@ -1,0 +1,76 @@
+name: HueSense Course 1 - MySQL 8.4 Integration
+on:
+  push:
+    branches:
+      - feat/lesson1-seed-query-20261029
+    paths:
+      - "research/palette_seed/**"
+      - ".github/workflows/seed-course1-mysql-integration.yml"
+  pull_request:
+    paths:
+      - "research/palette_seed/**"
+      - ".github/workflows/seed-course1-mysql-integration.yml"
+jobs:
+  real-mysql-integration:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: test_only_root
+          MYSQL_DATABASE: huesense_seed
+          MYSQL_USER: huesense_seed
+          MYSQL_PASSWORD: test_only_password
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -ptest_only_root"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=20
+    env:
+      HUESENSE_DB_HOST: 127.0.0.1
+      HUESENSE_DB_PORT: 3306
+      HUESENSE_DB_NAME: huesense_seed
+      HUESENSE_DB_USER: huesense_seed
+      HUESENSE_DB_PASSWORD: test_only_password
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned MySQL driver
+        run: python -m pip install -r research/palette_seed/requirements.course1.txt
+      - name: Create source schema
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,"research/palette_seed/scripts")
+          from query_palette_seeds import connect
+          c=connect("127.0.0.1",3306,"huesense_seed","huesense_seed","test_only_password")
+          from pathlib import Path
+          sql=Path("research/palette_seed/sql/001_palette_seed.sql").read_text()
+          cur=c.cursor()
+          clean="\n".join(line for line in sql.splitlines() if not line.lstrip().startswith("--"))
+          for s in clean.split(";"):
+              if s.strip(): cur.execute(s.strip())
+          c.commit()
+          cur.close()
+          c.close()
+          PY
+      - name: Import 63 five-swatch palettes
+        run: python research/palette_seed/scripts/import_palette_seeds.py --host 127.0.0.1 --port 3306 --user huesense_seed --database huesense_seed
+      - name: Verify read-only SQL JOIN on real MySQL
+        run: python research/palette_seed/tests/mysql_integration_course1.py
+      - name: Test CLI JSON and missing ID
+        run: |
+          python research/palette_seed/scripts/query_palette_seeds.py --seed-id carto:Peach:5 > /tmp/peach.json
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/peach.json"))
+          assert len(d["colors"])==5 and d["source"]["key"]=="carto"
+          PY
+      - name: Re-import to check idempotency
+        run: |
+          python research/palette_seed/scripts/import_palette_seeds.py --host 127.0.0.1 --port 3306 --user huesense_seed --database huesense_seed
+          python research/palette_seed/tests/mysql_integration_course1.py

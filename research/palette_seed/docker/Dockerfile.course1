@@ -1,0 +1,6 @@
+FROM python:3.12-slim
+WORKDIR /app
+COPY requirements.course1.txt /app/requirements.course1.txt
+RUN pip install --no-cache-dir -r /app/requirements.course1.txt
+COPY data/core_five_seeds.json /app/data/core_five_seeds.json
+COPY scripts/ /app/scripts/

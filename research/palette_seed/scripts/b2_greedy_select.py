@@ -74,6 +74,7 @@ def read_pool(dataset_path: Path = SOURCE_FILE, source: str = "all"):
             metadata[hex_code] = {
                 "names": color.get("names", []),
                 "source_refs": color.get("source_refs", []),
+                "related_source_refs": color.get("related_source_refs", []),
                 "evidence_refs": color.get("evidence_refs", []),
                 "color_ids": color.get("color_ids", []),
                 "record_count": len(color.get("records", [])),
@@ -111,6 +112,11 @@ def generate(anchor: str = "#A85C45", *, source: str = "all",
             "evaluated_candidates": len(remaining),
             "from_seed_ids": provenance[best_hex],
             "source_metadata": metadata.get(best_hex, {}),
+            "source_color_ids": metadata.get(best_hex, {}).get("color_ids", []),
+            "source_record_count": metadata.get(best_hex, {}).get("record_count"),
+            "direct_source_count": len(metadata.get(best_hex, {}).get("source_refs", [])),
+            "related_source_count": len(metadata.get(best_hex, {}).get("related_source_refs", [])),
+            "evidence_reference_count": len(metadata.get(best_hex, {}).get("evidence_refs", [])),
             "selection_reason": "MAXIMIZE_MINIMUM_OKLAB_DISTANCE",
         })
         selected.append(best_hex)
